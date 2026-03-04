@@ -385,13 +385,32 @@ function Clients() {
 }
 
 function Footer() {
+  const quickTools = [
+    { name: 'IP Lookup', action: () => window.open('https://whatismyipaddress.com', '_blank') },
+    { name: 'DNS Checker', action: () => window.open('https://mxtoolbox.com', '_blank') },
+    { name: 'Port Scanner', action: () => window.open('https://www.portscan.org', '_blank') },
+    { name: 'Regex Tester', action: () => window.open('https://regex101.com', '_blank') },
+    { name: 'JSON Viewer', action: () => window.open('https://jsoncrack.com', '_blank') },
+    { name: 'YAML Parser', action: () => window.open('https://www.yamllint.com', '_blank') }
+  ]
+
   return (
     <div style={styles.footer}>
+      <div style={styles.footerTools}>
+        <p style={{margin: '0 0 10px', fontSize: '12px', color: '#38bdf8'}}>Quick DevOps Tools</p>
+        <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px'}}>
+          {quickTools.map((tool, i) => (
+            <button key={i} onClick={tool.action} style={styles.footerBtn}>
+              {tool.name}
+            </button>
+          ))}
+        </div>
+      </div>
       <p>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
     </div>
   )
-}
+}}
 
 const styles = {
   canvas: {
@@ -554,6 +573,25 @@ const styles = {
     fontSize: '12px',
     textAlign: 'center',
     opacity: .9
+  },
+
+  footerTools: {
+    marginBottom: '20px',
+    padding: '16px',
+    background: 'rgba(15,23,42,.65)',
+    border: '1px solid #23314d',
+    borderRadius: '12px'
+  },
+  footerBtn: {
+    padding: '6px 12px',
+    background: '#1e293b',
+    border: '1px solid #38bdf8',
+    borderRadius: '6px',
+    color: '#38bdf8',
+    cursor: 'pointer',
+    fontSize: '11px',
+    fontFamily: 'monospace',
+    transition: 'all 0.3s ease'
   },
   terminal: {
     background: 'rgba(15,23,42,0.95)',
