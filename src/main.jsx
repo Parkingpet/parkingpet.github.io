@@ -8,12 +8,22 @@ function Router() {
   const [page, setPage] = useState('home')
 
   useEffect(() => {
-    const path = window.location.pathname
-    if (path.includes('prompts')) setPage('prompts')
-    else setPage('home')
+    const handleNavigation = () => {
+      const path = window.location.pathname
+      setPage(path.includes('prompts') ? 'prompts' : 'home')
+    }
+    
+    handleNavigation()
+    window.addEventListener('popstate', handleNavigation)
+    return () => window.removeEventListener('popstate', handleNavigation)
   }, [])
 
-  return page === 'prompts' ? <Prompts /> : <App />
+  const navigate = (path) => {
+    window.history.pushState(null, '', path)
+    setPage(path.includes('prompts') ? 'prompts' : 'home')
+  }
+
+  return page === 'prompts' ? <Prompts navigate={navigate} /> : <App navigate={navigate} />
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

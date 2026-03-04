@@ -59,6 +59,7 @@ export default function App() {
           <CLITools />
           <InfrastructureTools />
           <GraphTools />
+          <GoogleAITools />
           <Footer />
         </div>
       </div>
@@ -77,13 +78,13 @@ function ParticleBackground() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    const particles = Array.from({length: 50}, () => (({
+    const particles = Array.from({length: 30}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 1.5
-    })))
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      r: Math.random() * 1
+    }))
     
     const animate = () => {
       ctx.fillStyle = 'rgba(11, 18, 32, 0.1)'
@@ -137,36 +138,10 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
-      <pre style={styles.ascii}>{`
-  ╔═══════════════════════════════════════════════════════════╗
-  ║  > SYSTEMS ENGINEER | DEVOPS | INFRASTRUCTURE AUTOMATION  ║
-  ║  > 25+ YEARS EXPERIENCE | CLOUD HYBRID OPERATIONS         ║
-  ╚═══════════════════════════════════════════════════════════╝
-      `}</pre>
-      <h1 style={styles.h1}>{resumeData.personal.name}</h1>
-      <p style={styles.subtitle}>{resumeData.personal.title}</p>
-      
-      <div style={styles.badges}>
-        <img src="https://img.shields.io/badge/Experience-25%2B_Years-38bdf8?style=flat-square" alt="Experience" />
-        <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white&style=flat-square" alt="AWS" />
-        <img src="https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker" />
-        <img src="https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?logo=kubernetes&logoColor=white&style=flat-square" alt="Kubernetes" />
-        <img src="https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white&style=flat-square" alt="Python" />
-        <img src="https://img.shields.io/badge/Linux-Systems-FCC624?logo=linux&logoColor=black&style=flat-square" alt="Linux" />
-      </div>
-      
-      <p style={styles.meta}>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.location}</span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={`tel:${resumeData.personal.phone.replace(/\s+/g, '')}`} aria-label={`Call ${resumeData.personal.phone}`}>{resumeData.personal.phone}</a>
-        </span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
-      </p>
+      <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
       <nav style={styles.nav}>
-        <a href="/" style={styles.navLink}>Home</a>
-        <a href="/prompts" style={styles.navLink}>Prompts</a>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
+        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
         <a href="#summary" style={styles.navLink}>Summary</a>
         <a href="#competencies" style={styles.navLink}>Competencies</a>
         <a href="#skills" style={styles.navLink}>Technical</a>
@@ -176,6 +151,25 @@ function Header() {
         <a href="#education" style={styles.navLink}>Education</a>
         <a href="#clients" style={styles.navLink}>Clients</a>
       </nav>
+      <div style={styles.lcdScreen}>
+        <div style={styles.lcdText}>{resumeData.personal.title}</div>
+      </div>
+      <p style={styles.subtitle}>{resumeData.personal.title}</p>
+      <div style={styles.badges}>
+        <img src="https://img.shields.io/badge/Experience-25%2B_Years-38bdf8?style=flat-square" alt="Experience" />
+        <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white&style=flat-square" alt="AWS" />
+        <img src="https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker" />
+        <img src="https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?logo=kubernetes&logoColor=white&style=flat-square" alt="Kubernetes" />
+        <img src="https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white&style=flat-square" alt="Python" />
+        <img src="https://img.shields.io/badge/Linux-Systems-FCC624?logo=linux&logoColor=black&style=flat-square" alt="Linux" />
+      </div>
+      <p style={styles.meta}>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer">{resumeData.personal.location}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}>{resumeData.personal.phone}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
+      </p>
     </div>
   )
 }
@@ -495,14 +489,40 @@ function GraphTools() {
   )
 }
 
+function GoogleAITools() {
+  const tools = [
+    { name: 'Gemini', url: 'https://gemini.google.com/', icon: '✨' },
+    { name: 'Vertex AI', url: 'https://cloud.google.com/vertex-ai', icon: '🤖' },
+    { name: 'Google Cloud AI', url: 'https://cloud.google.com/ai', icon: '☁️' },
+    { name: 'Bard', url: 'https://bard.google.com/', icon: '💬' },
+    { name: 'Google Colab', url: 'https://colab.research.google.com/', icon: '📓' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/', icon: '🧠' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Google AI & ML Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function Footer() {
   return (
     <div style={styles.footer}>
       <pre style={styles.ascii}>{`
-  ╔════════════════════════════════════════════════════════════╗
-  ║  [DEVOPS_TOOLS] [MICROSOFT_ADMIN] [INFRASTRUCTURE_CODE]   ║
-  ║  Status: ONLINE | Uptime: 25+ YEARS | Mode: PRODUCTION   ║
-  ╚════════════════════════════════════════════════════════════╝
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Teckguy | Independent IT Consulting & Support                                │
+│ Website: teckguy.com | Email: mustafa.mclinn@outlook.com | Phone: 510-296-0233 │
+│ Services: System Administration | Cloud Infrastructure | DevOps Automation     │
+└──────────────────────────────────────────────────────────────────────────────┘
       `}</pre>
       <p style={{marginTop: '16px'}}>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
@@ -536,20 +556,20 @@ const styles = {
     position: 'fixed',
     inset: 0,
     background: `
-      linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px)
+      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
     `,
     backgroundSize: '50px 50px',
     pointerEvents: 'none',
-    animation: 'gridMove 20s linear infinite'
+    animation: 'gridMove 40s linear infinite'
   },
   scanline: {
     position: 'fixed',
     inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.02) 50%)',
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
     backgroundSize: '100% 4px',
     pointerEvents: 'none',
-    animation: 'scanline 8s linear infinite'
+    animation: 'scanline 15s linear infinite'
   },
   content: {
     position: 'relative',
@@ -571,21 +591,14 @@ const styles = {
     padding: '22px 22px 18px',
     boxShadow: '0 10px 30px rgba(0,0,0,.35)'
   },
-  h1: {
-    margin: '0 0 6px',
-    fontSize: '34px',
-    letterSpacing: '.2px',
-    color: '#38bdf8'
-  },
-  subtitle: {
-    margin: '0 0 10px',
-    color: '#e2e8f0',
-    fontSize: '16px'
-  },
-  meta: {
-    margin: 0,
-    color: '#94a3b8',
-    fontSize: '14px'
+  headerName: {
+    margin: '0 0 16px 0',
+    fontSize: '28px',
+    fontWeight: 'bold',
+    color: '#38bdf8',
+    textAlign: 'center',
+    letterSpacing: '2px',
+    textShadow: '0 0 15px rgba(56,189,248,0.7)'
   },
   nav: {
     marginTop: '14px',
@@ -617,190 +630,11 @@ const styles = {
     color: '#38bdf8',
     letterSpacing: '.2px'
   },
-  gridLayout: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '14px'
-  },
-  chips: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '8px',
-    margin: '8px 0 10px'
-  },
-  chip: {
-    background: '#15213b',
-    border: '1px solid #23314d',
-    borderRadius: '999px',
-    padding: '7px 10px',
-    fontSize: '13px',
-    color: '#e2e8f0'
-  },
-  role: {
-    padding: '14px 14px 12px',
-    border: '1px solid #23314d',
-    borderRadius: '16px',
-    background: 'rgba(17,28,51,.55)',
-    marginBottom: '12px'
-  },
-  roleTop: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    gap: '8px',
-    marginBottom: '8px'
-  },
-  company: {
-    fontWeight: 700,
-    color: '#e2e8f0'
-  },
-  title: {
-    color: '#94a3b8',
-    fontWeight: 600
-  },
-  date: {
-    color: '#94a3b8',
-    fontSize: '13px',
-    whiteSpace: 'nowrap'
-  },
   footer: {
     marginTop: '18px',
     color: '#94a3b8',
     fontSize: '12px',
     textAlign: 'center',
     opacity: .9
-  },
-  terminal: {
-    background: 'rgba(15,23,42,0.95)',
-    border: '1px solid #38bdf8',
-    borderRadius: '8px',
-    width: '500px',
-    maxWidth: '90vw',
-    boxShadow: '0 0 50px rgba(56,189,248,0.3)',
-    fontFamily: 'monospace',
-    overflow: 'hidden'
-  },
-  terminalHeader: {
-    background: '#1e293b',
-    padding: '12px 16px',
-    color: '#38bdf8',
-    borderBottom: '1px solid #38bdf8',
-    fontSize: '14px'
-  },
-  terminalBody: {
-    padding: '20px',
-    color: '#94a3b8',
-    fontSize: '13px',
-    lineHeight: '1.8'
-  },
-  progress: {
-    height: '4px',
-    background: '#1e293b',
-    borderRadius: '2px',
-    margin: '16px 0',
-    overflow: 'hidden'
-  },
-  progressBar: {
-    height: '100%',
-    background: 'linear-gradient(90deg, #38bdf8, #0ea5e9)',
-    transition: 'width 0.3s ease',
-    boxShadow: '0 0 10px #38bdf8'
-  },
-  blink: {
-    color: '#38bdf8',
-    animation: 'blink 1s step-end infinite'
-  },
-  toolTabs: {
-    display: 'flex',
-    gap: '4px',
-    padding: '12px',
-    borderBottom: '1px solid #1e293b',
-    overflowX: 'auto'
-  },
-  toolTab: {
-    padding: '8px 16px',
-    background: 'transparent',
-    border: '1px solid #1e293b',
-    borderRadius: '6px',
-    color: '#94a3b8',
-    cursor: 'pointer',
-    fontSize: '13px',
-    fontFamily: 'monospace',
-    whiteSpace: 'nowrap'
-  },
-  toolTabActive: {
-    background: '#1e293b',
-    color: '#38bdf8',
-    borderColor: '#38bdf8'
-  },
-  toolBody: {
-    padding: '16px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '12px',
-    flex: 1,
-    overflow: 'auto'
-  },
-  toolTextarea: {
-    background: '#1e293b',
-    border: '1px solid #334155',
-    borderRadius: '6px',
-    color: '#e2e8f0',
-    padding: '12px',
-    fontFamily: 'monospace',
-    fontSize: '13px',
-    minHeight: '120px',
-    resize: 'vertical'
-  },
-  toolActions: {
-    display: 'flex',
-    gap: '8px',
-    flexWrap: 'wrap'
-  },
-  toolBtn: {
-    padding: '8px 16px',
-    background: '#1e293b',
-    border: '1px solid #38bdf8',
-    borderRadius: '6px',
-    color: '#38bdf8',
-    cursor: 'pointer',
-    fontSize: '12px',
-    fontFamily: 'monospace',
-    textTransform: 'uppercase'
-  },
-  badges: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '8px',
-    margin: '12px 0'
-  },
-  toolGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '12px',
-    marginTop: '12px'
-  },
-  toolLink: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '12px 14px',
-    background: 'rgba(17,28,51,.55)',
-    border: '1px solid #23314d',
-    borderRadius: '12px',
-    color: '#38bdf8',
-    textDecoration: 'none',
-    fontSize: '14px',
-    fontWeight: 500,
-    transition: 'all 0.2s ease',
-    cursor: 'pointer'
-  },
-  ascii: {
-    color: '#38bdf8',
-    fontSize: '11px',
-    fontFamily: 'monospace',
-    margin: '0 0 12px 0',
-    lineHeight: '1.2',
-    textShadow: '0 0 10px rgba(56,189,248,0.5)',
-    animation: 'glow 2s ease-in-out infinite'
   }
 }
