@@ -222,7 +222,14 @@ const styles = {
     marginTop: '10px',
     color: '#38bdf8',
     textDecoration: 'none',
-    fontSize: '14px'
+    fontSize: '14px',
+    padding: '6px 12px',
+    border: '2px solid #38bdf8',
+    borderRadius: '4px',
+    background: 'rgba(56,189,248,0.1)',
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
+    fontWeight: 'bold'
   },
   section: {
     marginTop: '22px',
