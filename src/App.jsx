@@ -534,11 +534,11 @@ function Footer() {
   return (
     <div style={styles.footer}>
       <pre style={styles.ascii}>{`
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Teckguy | Independent IT Consulting & Support
-  Website: teckguy.com | Email: mustafa.mclinn@outlook.com | Phone: 510-296-0233
-  Services: System Administration | Cloud Infrastructure | DevOps Automation
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Teckguy | Independent IT Consulting & Support                                │
+│ Website: teckguy.com | Email: mustafa.mclinn@outlook.com | Phone: 510-296-0233 │
+│ Services: System Administration | Cloud Infrastructure | DevOps Automation     │
+└──────────────────────────────────────────────────────────────────────────────┘
       `}</pre>
       <p style={{marginTop: '16px'}}>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
