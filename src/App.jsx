@@ -839,8 +839,9 @@ const styles = {
     margin: '0 0 16px 0',
     lineHeight: '1.1',
     textShadow: '0 0 15px rgba(56,189,248,0.7)',
-    animation: 'glow 3s ease-in-out infinite',
-    letterSpacing: '-1px'
+    animation: 'slideIn 1.5s ease-out, glow 3s ease-in-out infinite 1.5s',
+    letterSpacing: '-1px',
+    overflow: 'hidden'
   },
   lcdScreen: {
     background: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
