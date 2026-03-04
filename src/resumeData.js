@@ -7,7 +7,7 @@ export const resumeData = {
     phone: "510 296 0233",
     email: "mustafa.mclinn@outlook.com",
     github: "https://github.com/Parkingpet",
-    linkedin: "https://linkedin.com/in/mustafa-mclinn"
+    linkedin: "https://www.linkedin.com/in/mustafa-mclinn-a55a9a9"
   },
   
   summary: [
