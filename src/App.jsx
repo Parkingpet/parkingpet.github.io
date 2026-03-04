@@ -155,9 +155,6 @@ function Header() {
         <a href="#education" style={styles.navLink}>Education</a>
         <a href="#clients" style={styles.navLink}>Clients</a>
       </nav>
-      <div style={styles.lcdScreen}>
-        <div style={styles.lcdText}>{resumeData.personal.title}</div>
-      </div>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       <div style={styles.badges}>
         <img src="https://img.shields.io/badge/Experience-25%2B_Years-38bdf8?style=flat-square" alt="Experience" />
