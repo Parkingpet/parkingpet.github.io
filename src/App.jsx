@@ -647,5 +647,38 @@ const styles = {
     lineHeight: '10px',
     whiteSpace: 'pre',
     color: '#94a3b8'
+  },
+  terminal: {
+    background: 'rgba(15,23,42,.9)',
+    border: '1px solid #38bdf8',
+    borderRadius: '8px',
+    padding: '20px',
+    fontFamily: 'monospace',
+    color: '#38bdf8',
+    minWidth: '400px'
+  },
+  terminalHeader: {
+    color: '#38bdf8',
+    marginBottom: '10px',
+    fontSize: '14px'
+  },
+  terminalBody: {
+    fontSize: '12px',
+    lineHeight: '1.4'
+  },
+  progress: {
+    background: 'rgba(56,189,248,0.1)',
+    height: '4px',
+    borderRadius: '2px',
+    margin: '10px 0',
+    overflow: 'hidden'
+  },
+  progressBar: {
+    background: '#38bdf8',
+    height: '100%',
+    transition: 'width 0.3s ease'
+  },
+  blink: {
+    animation: 'blink 1s infinite'
   }
 }
