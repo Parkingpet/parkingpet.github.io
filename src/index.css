@@ -33,6 +33,17 @@
   50% { transform: translateY(-10px); }
 }
 
+@keyframes lcdFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+@keyframes lcdLoad {
+  0% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+
 body {
   margin: 0;
   overflow-x: hidden;

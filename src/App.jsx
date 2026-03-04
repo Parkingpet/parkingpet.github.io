@@ -138,16 +138,24 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
-      <pre style={styles.ascii}>{`
-╔════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                ║
-║  ▓▓▓▓▓▓▓▓  > SYSTEMS ENGINEER | DEVOPS | INFRASTRUCTURE AUTOMATION             ║
-║  ▓▓▓▓▓▓▓▓  > 25+ YEARS EXPERIENCE | CLOUD HYBRID OPERATIONS                    ║
-║  ▓▓▓▓▓▓▓▓                                                                       ║
-║                                                                                ║
-╚════════════════════════════════════════════════════════════════════════════════╝
+      <pre style={styles.asciiName}>{`
+  ███╗   ███╗██╗   ██╗███████╗████████╗ █████╗ ███████╗ █████╗ 
+  ████╗ ████║██║   ██║██╔════╝╚══██╔══╝██╔══██╗██╔════╝██╔══██╗
+  ██╔████╔██║██║   ██║███████╗   ██║   ███████║█████╗  ███████║
+  ██║╚██╔╝██║██║   ██║╚════██║   ██║   ██╔══██║██╔══╝  ██╔══██║
+  ██║ ╚═╝ ██║╚██████╔╝███████║   ██║   ██║  ██║██║     ██║  ██║
+  ╚═╝     ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+                                                                   
+  ███╗   ███╗ ██████╗██╗     ██╗███╗   ██╗███╗   ██╗            
+  ████╗ ████║██╔════╝██║     ██║████╗  ██║████╗  ██║            
+  ██╔████╔██║██║     ██║     ██║██╔██╗ ██║██╔██╗ ██║            
+  ██║╚██╔╝██║██║     ██║     ██║██║╚██╗██║██║╚██╗██║            
+  ██║ ╚═╝ ██║╚██████╗███████╗██║██║ ╚████║██║ ╚████║            
+  ╚═╝     ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝            
       `}</pre>
-      <h1 style={styles.h1}>{resumeData.personal.name}</h1>
+      <div style={styles.lcdScreen}>
+        <div style={styles.lcdText}>{resumeData.personal.title}</div>
+      </div>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       
       <div style={styles.badges}>
@@ -824,14 +832,32 @@ const styles = {
     transition: 'all 0.2s ease',
     cursor: 'pointer'
   },
-  ascii: {
+  asciiName: {
     color: '#38bdf8',
-    fontSize: '12px',
+    fontSize: '10px',
     fontFamily: 'monospace',
-    margin: '0 0 12px 0',
-    lineHeight: '1.2',
-    textShadow: '0 0 10px rgba(56,189,248,0.5)',
-    animation: 'glow 2s ease-in-out infinite',
-    letterSpacing: '0.5px'
-  }
+    margin: '0 0 16px 0',
+    lineHeight: '1.1',
+    textShadow: '0 0 15px rgba(56,189,248,0.7)',
+    animation: 'glow 3s ease-in-out infinite',
+    letterSpacing: '-1px'
+  },
+  lcdScreen: {
+    background: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
+    border: '2px solid #38bdf8',
+    borderRadius: '8px',
+    padding: '12px 16px',
+    marginTop: '12px',
+    boxShadow: 'inset 0 0 10px rgba(56,189,248,0.3), 0 0 20px rgba(56,189,248,0.2)',
+    animation: 'lcdFlicker 0.15s infinite'
+  },
+  lcdText: {
+    color: '#38bdf8',
+    fontSize: '14px',
+    fontFamily: 'monospace',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    textShadow: '0 0 8px rgba(56,189,248,0.8)',
+    animation: 'lcdLoad 2s ease-out'
+  },
 }
