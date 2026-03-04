@@ -139,10 +139,13 @@ function Header() {
   return (
     <div style={styles.header} id="top">
       <pre style={styles.ascii}>{`
-  ╔═══════════════════════════════════════════════════════════╗
-  ║  > SYSTEMS ENGINEER | DEVOPS | INFRASTRUCTURE AUTOMATION  ║
-  ║  > 25+ YEARS EXPERIENCE | CLOUD HYBRID OPERATIONS         ║
-  ╚═══════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║  ▓▓▓▓▓▓▓▓  > SYSTEMS ENGINEER | DEVOPS | INFRASTRUCTURE AUTOMATION             ║
+║  ▓▓▓▓▓▓▓▓  > 25+ YEARS EXPERIENCE | CLOUD HYBRID OPERATIONS                    ║
+║  ▓▓▓▓▓▓▓▓                                                                       ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
       `}</pre>
       <h1 style={styles.h1}>{resumeData.personal.name}</h1>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
@@ -523,10 +526,13 @@ function Footer() {
   return (
     <div style={styles.footer}>
       <pre style={styles.ascii}>{`
-  ╔════════════════════════════════════════════════════════════╗
-  ║  [DEVOPS_TOOLS] [MICROSOFT_ADMIN] [INFRASTRUCTURE_CODE]   ║
-  ║  Status: ONLINE | Uptime: 25+ YEARS | Mode: PRODUCTION   ║
-  ╚════════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║  ▓▓▓▓▓▓▓▓  [DEVOPS_TOOLS] [MICROSOFT_ADMIN] [INFRASTRUCTURE_CODE]             ║
+║  ▓▓▓▓▓▓▓▓  Status: ONLINE | Uptime: 25+ YEARS | Mode: PRODUCTION             ║
+║  ▓▓▓▓▓▓▓▓                                                                       ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
       `}</pre>
       <p style={{marginTop: '16px'}}>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
@@ -820,11 +826,12 @@ const styles = {
   },
   ascii: {
     color: '#38bdf8',
-    fontSize: '11px',
+    fontSize: '12px',
     fontFamily: 'monospace',
     margin: '0 0 12px 0',
     lineHeight: '1.2',
     textShadow: '0 0 10px rgba(56,189,248,0.5)',
-    animation: 'glow 2s ease-in-out infinite'
+    animation: 'glow 2s ease-in-out infinite',
+    letterSpacing: '0.5px'
   }
 }
