@@ -134,6 +134,12 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
+      <pre style={styles.ascii}>{`
+  ╔═══════════════════════════════════════════════════════════╗
+  ║  > SYSTEMS ENGINEER | DEVOPS | INFRASTRUCTURE AUTOMATION  ║
+  ║  > 25+ YEARS EXPERIENCE | CLOUD HYBRID OPERATIONS         ║
+  ╚═══════════════════════════════════════════════════════════╝
+      `}</pre>
       <h1 style={styles.h1}>{resumeData.personal.name}</h1>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       
@@ -405,6 +411,12 @@ function Footer() {
           />
         </div>
       </div>
+      <pre style={styles.ascii}>{`
+  ╔════════════════════════════════════════════════════════════╗
+  ║  [DEVOPS_TOOLS] [MICROSOFT_ADMIN] [INFRASTRUCTURE_CODE]   ║
+  ║  Status: ONLINE | Uptime: 25+ YEARS | Mode: PRODUCTION   ║
+  ╚════════════════════════════════════════════════════════════╝
+      `}</pre>
       <p style={{marginTop: '16px'}}>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
     </div>
@@ -694,5 +706,14 @@ const styles = {
     fontWeight: 500,
     transition: 'all 0.2s ease',
     cursor: 'pointer'
+  },
+  ascii: {
+    color: '#38bdf8',
+    fontSize: '11px',
+    fontFamily: 'monospace',
+    margin: '0 0 12px 0',
+    lineHeight: '1.2',
+    textShadow: '0 0 10px rgba(56,189,248,0.5)',
+    animation: 'glow 2s ease-in-out infinite'
   }
 }
