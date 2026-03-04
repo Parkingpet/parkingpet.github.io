@@ -11,8 +11,8 @@ export const resumeData = {
   },
   
   summary: [
-    "Systems and infrastructure engineer with 25+ years of hands on experience spanning enterprise IT, cloud operations, DevOps automation, endpoint management, and production support across Windows, Linux, and macOS environments. I build stable platforms, automate repeatable work, and troubleshoot the ugly stuff under pressure, including cloud incidents, networking failures, and endpoint issues that block teams.",
-    "Strengths include cloud hybrid operations (AWS, GCP, Azure), configuration management (Ansible, Chef), CI/CD, scripting (PowerShell, Bash, Python), networking fundamentals, and customer facing technical support with clear documentation."
+    "Strategic infrastructure architect with 25+ years of enterprise-scale experience designing, deploying, and optimizing complex hybrid cloud environments across AWS, GCP, and Azure. Proven expertise in enterprise IT transformation, infrastructure consolidation, and operational efficiency optimization—directly applicable to post-acquisition integration and technology stack rationalization.",
+    "Specialized in enterprise-grade infrastructure automation, configuration management (Ansible, Chef), CI/CD pipeline architecture, and cross-platform systems integration. Demonstrated success managing large-scale infrastructure migrations, multi-environment deployments, and technical due diligence processes. Strong background in cost optimization, vendor management, and translating business requirements into scalable technical solutions—essential capabilities for M&A technical integration and post-close operational excellence."
   ],
 
   competencies: [
