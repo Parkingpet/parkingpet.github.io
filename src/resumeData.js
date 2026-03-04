@@ -1,6 +1,6 @@
 export const resumeData = {
   personal: {
-    name: "Mustafa McLinn",
+    name: "Mustafa \"Moose\" Mclinn",
     title: "Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations",
     tagline: "is a must hire",
     location: "Oakland / San Francisco, CA",
