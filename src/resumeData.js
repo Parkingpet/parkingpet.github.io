@@ -79,6 +79,7 @@ export const resumeData = {
         "Provided technical consulting for managed service provider infrastructure optimization"
       ]
     },
+    {
       company: "RevisionFX",
       title: "Systems Administrator | Tier I II Support",
       date: "Feb 2004 to Feb 2024",
