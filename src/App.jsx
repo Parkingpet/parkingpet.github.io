@@ -78,13 +78,13 @@ function ParticleBackground() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    const particles = Array.from({length: 50}, () => (({
+    const particles = Array.from({length: 30}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 1.5
-    })))
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      r: Math.random() * 1
+    }))
     
     const animate = () => {
       ctx.fillStyle = 'rgba(11, 18, 32, 0.1)'
@@ -574,20 +574,20 @@ const styles = {
     position: 'fixed',
     inset: 0,
     background: `
-      linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px)
+      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
     `,
     backgroundSize: '50px 50px',
     pointerEvents: 'none',
-    animation: 'gridMove 20s linear infinite'
+    animation: 'gridMove 40s linear infinite'
   },
   scanline: {
     position: 'fixed',
     inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.02) 50%)',
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
     backgroundSize: '100% 4px',
     pointerEvents: 'none',
-    animation: 'scanline 8s linear infinite'
+    animation: 'scanline 15s linear infinite'
   },
   content: {
     position: 'relative',
