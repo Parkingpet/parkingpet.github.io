@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Tools from './Tools'
 import { resumeData } from './resumeData'
 
@@ -44,6 +44,7 @@ export default function App() {
     <>
       <div style={styles.grid} />
       <div style={styles.scanline} />
+      <ParticleBackground />
       <div style={styles.content}>
         <div style={styles.container}>
           <Header />
@@ -61,6 +62,74 @@ export default function App() {
       <Tools />
     </>
   )
+}
+
+function ParticleBackground() {
+  const canvasRef = useRef(null)
+  
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    
+    const particles = Array.from({length: 50}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: Math.random() * 1.5
+    }))
+    
+    const animate = () => {
+      ctx.fillStyle = 'rgba(11, 18, 32, 0.1)'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      ctx.fillStyle = '#38bdf8'
+      ctx.globalAlpha = 0.3
+      
+      particles.forEach(p => {
+        p.x += p.vx
+        p.y += p.vy
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fill()
+      })
+      
+      ctx.globalAlpha = 0.1
+      ctx.strokeStyle = '#38bdf8'
+      particles.forEach((p1, i) => {
+        particles.slice(i + 1).forEach(p2 => {
+          const dx = p1.x - p2.x
+          const dy = p1.y - p2.y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < 150) {
+            ctx.beginPath()
+            ctx.moveTo(p1.x, p1.y)
+            ctx.lineTo(p2.x, p2.y)
+            ctx.stroke()
+          }
+        })
+      })
+      
+      requestAnimationFrame(animate)
+    }
+    
+    animate()
+    
+    const handleResize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+  
+  return <canvas ref={canvasRef} style={styles.canvas} />
 }
 
 function Header() {
@@ -325,6 +394,16 @@ function Footer() {
 }
 
 const styles = {
+  canvas: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    pointerEvents: 'none',
+    zIndex: 0,
+    opacity: 0.5
+  },
   loader: {
     position: 'fixed',
     inset: 0,
@@ -515,5 +594,63 @@ const styles = {
   blink: {
     color: '#38bdf8',
     animation: 'blink 1s step-end infinite'
+  },
+  toolTabs: {
+    display: 'flex',
+    gap: '4px',
+    padding: '12px',
+    borderBottom: '1px solid #1e293b',
+    overflowX: 'auto'
+  },
+  toolTab: {
+    padding: '8px 16px',
+    background: 'transparent',
+    border: '1px solid #1e293b',
+    borderRadius: '6px',
+    color: '#94a3b8',
+    cursor: 'pointer',
+    fontSize: '13px',
+    fontFamily: 'monospace',
+    whiteSpace: 'nowrap'
+  },
+  toolTabActive: {
+    background: '#1e293b',
+    color: '#38bdf8',
+    borderColor: '#38bdf8'
+  },
+  toolBody: {
+    padding: '16px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+    flex: 1,
+    overflow: 'auto'
+  },
+  toolTextarea: {
+    background: '#1e293b',
+    border: '1px solid #334155',
+    borderRadius: '6px',
+    color: '#e2e8f0',
+    padding: '12px',
+    fontFamily: 'monospace',
+    fontSize: '13px',
+    minHeight: '120px',
+    resize: 'vertical'
+  },
+  toolActions: {
+    display: 'flex',
+    gap: '8px',
+    flexWrap: 'wrap'
+  },
+  toolBtn: {
+    padding: '8px 16px',
+    background: '#1e293b',
+    border: '1px solid #38bdf8',
+    borderRadius: '6px',
+    color: '#38bdf8',
+    cursor: 'pointer',
+    fontSize: '12px',
+    fontFamily: 'monospace',
+    textTransform: 'uppercase'
   }
 }
