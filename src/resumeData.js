@@ -11,8 +11,8 @@ export const resumeData = {
   },
   
   summary: [
-    "Strategic infrastructure architect with 25+ years of enterprise-scale experience designing, deploying, and optimizing complex hybrid cloud environments across AWS, GCP, and Azure. Proven expertise in enterprise IT transformation, infrastructure consolidation, and operational efficiency optimization—directly applicable to post-acquisition integration and technology stack rationalization.",
-    "Specialized in enterprise-grade infrastructure automation, configuration management (Ansible, Chef), CI/CD pipeline architecture, and cross-platform systems integration. Demonstrated success managing large-scale infrastructure migrations, multi-environment deployments, and technical due diligence processes. Strong background in cost optimization, vendor management, and translating business requirements into scalable technical solutions—essential capabilities for M&A technical integration and post-close operational excellence."
+    "Infrastructure architect specializing in enterprise-scale hybrid cloud environments (AWS, GCP, Azure). Expert in infrastructure-as-code (Terraform, Ansible, Chef), containerization (Docker, Kubernetes), and CI/CD pipeline design. Proficient in multi-cloud orchestration, zero-downtime deployments, and infrastructure consolidation strategies applicable to post-acquisition technical integration and platform rationalization.",
+    "Technical depth spans configuration management, container orchestration, infrastructure automation, and cross-platform systems integration. Experienced with infrastructure migrations, multi-environment deployments, technical due diligence, and cost optimization through resource consolidation. Strong foundation in scripting (Bash, PowerShell, Python), network architecture, security hardening, and translating infrastructure requirements into scalable, maintainable solutions—critical for M&A technical integration and operational excellence."
   ],
 
   competencies: [
