@@ -160,6 +160,37 @@ function Header() {
 ██║ ╚═╝ ██║╚██████╗███████╗██║██║ ╚████║██║ ╚████║
 ╚═╝     ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝
       `}</pre>
+      <nav style={styles.nav}>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
+        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
+        <a href="#summary" style={styles.navLink}>Summary</a>
+        <a href="#competencies" style={styles.navLink}>Competencies</a>
+        <a href="#skills" style={styles.navLink}>Technical</a>
+        <a href="#tools" style={styles.navLink}>DevOps Tools</a>
+        <a href="#projects" style={styles.navLink}>Projects</a>
+        <a href="#experience" style={styles.navLink}>Experience</a>
+        <a href="#education" style={styles.navLink}>Education</a>
+        <a href="#clients" style={styles.navLink}>Clients</a>
+      </nav>
+      <div style={styles.lcdScreen}>
+        <div style={styles.lcdText}>{resumeData.personal.title}</div>
+      </div>
+      <p style={styles.subtitle}>{resumeData.personal.title}</p>
+      <div style={styles.badges}>
+        <img src="https://img.shields.io/badge/Experience-25%2B_Years-38bdf8?style=flat-square" alt="Experience" />
+        <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white&style=flat-square" alt="AWS" />
+        <img src="https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker" />
+        <img src="https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?logo=kubernetes&logoColor=white&style=flat-square" alt="Kubernetes" />
+        <img src="https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white&style=flat-square" alt="Python" />
+        <img src="https://img.shields.io/badge/Linux-Systems-FCC624?logo=linux&logoColor=black&style=flat-square" alt="Linux" />
+      </div>
+      <p style={styles.meta}>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer">{resumeData.personal.location}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}>{resumeData.personal.phone}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
+      </p>
     </div>
   )
 }
