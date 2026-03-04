@@ -59,6 +59,7 @@ export default function App() {
           <CLITools />
           <InfrastructureTools />
           <GraphTools />
+          <GoogleAITools />
           <Footer />
         </div>
       </div>
@@ -481,6 +482,31 @@ function GraphTools() {
   return (
     <div style={styles.section}>
       <h2 style={styles.h2}>Monitoring & Visualization Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GoogleAITools() {
+  const tools = [
+    { name: 'Gemini', url: 'https://gemini.google.com/', icon: '✨' },
+    { name: 'Vertex AI', url: 'https://cloud.google.com/vertex-ai', icon: '🤖' },
+    { name: 'Google Cloud AI', url: 'https://cloud.google.com/ai', icon: '☁️' },
+    { name: 'Bard', url: 'https://bard.google.com/', icon: '💬' },
+    { name: 'Google Colab', url: 'https://colab.research.google.com/', icon: '📓' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/', icon: '🧠' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Google AI & ML Tools</h2>
       <div style={styles.toolGrid}>
         {tools.map((tool, i) => (
           <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
