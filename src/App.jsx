@@ -138,7 +138,7 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
-
+      <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
       <nav style={styles.nav}>
         <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
         <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
