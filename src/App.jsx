@@ -60,7 +60,6 @@ export default function App() {
           <InfrastructureTools />
           <GraphTools />
           <GoogleAITools />
-          <PromptsPreview />
           <Footer />
         </div>
       </div>
@@ -500,34 +499,6 @@ function GoogleAITools() {
             {tool.name}
           </a>
         ))}
-      </div>
-    </div>
-  )
-}
-
-function PromptsPreview() {
-  const prompts = [
-    { title: 'DevOps Code Review', description: 'Review infrastructure code for best practices' },
-    { title: 'AWS Architecture', description: 'Design scalable AWS infrastructure' },
-    { title: 'Kubernetes Deployment', description: 'Deploy and manage Kubernetes clusters' },
-    { title: 'CI/CD Pipeline', description: 'Build automated deployment pipelines' },
-    { title: 'Security Hardening', description: 'Secure infrastructure and applications' },
-    { title: 'Monitoring & Logging', description: 'Setup observability and alerting' }
-  ]
-
-  return (
-    <div style={styles.section}>
-      <h2 style={styles.h2}>Prompt Repository</h2>
-      <div style={styles.promptGrid}>
-        {prompts.map((prompt, i) => (
-          <div key={i} style={styles.promptCard}>
-            <h3 style={styles.promptTitle}>{prompt.title}</h3>
-            <p style={styles.promptDesc}>{prompt.description}</p>
-          </div>
-        ))}
-      </div>
-      <div style={{textAlign: 'center', marginTop: '16px'}}>
-        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={{...styles.navLink, display: 'inline-block'}}>View All Prompts →</a>
       </div>
     </div>
   )
