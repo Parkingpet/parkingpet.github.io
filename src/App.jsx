@@ -157,7 +157,9 @@ function Header() {
       
       <p style={styles.meta}>
         <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.location}</span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.phone}</span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}>
+          <a href={`tel:${resumeData.personal.phone.replace(/\s+/g, '')}`} aria-label={`Call ${resumeData.personal.phone}`}>{resumeData.personal.phone}</a>
+        </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
