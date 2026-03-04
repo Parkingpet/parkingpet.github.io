@@ -1,4 +1,4 @@
-# 🚀 Mustafa McLinn | DevOps Resume Site
+# Mustafa McLinn | DevOps Resume Site
 
 [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
@@ -7,21 +7,21 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/Parkingpet/parkingpet.github.io)
 
-## 🎯 Live Resume
+## Live Resume
 
-**[→ View Interactive Resume](https://parkingpet.github.io)** | **[→ GitHub Repository](https://github.com/Parkingpet/parkingpet.github.io)**
+**[View Interactive Resume](https://parkingpet.github.io)** | **[GitHub Repository](https://github.com/Parkingpet/parkingpet.github.io)**
 
 ---
 
-## 👨💻 About Mustafa McLinn
+## About Mustafa McLinn
 
 **Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations**
 
-📍 Oakland / San Francisco, CA  
-📧 mustafa.mclinn@outlook.com  
-📱 510 296 0233  
+Oakland / San Francisco, CA  
+mustafa.mclinn@outlook.com  
+510 296 0233  
 
-### 🎖️ Professional Summary
+### Professional Summary
 
 Systems and infrastructure engineer with **25+ years** of hands-on experience spanning enterprise IT, cloud operations, DevOps automation, endpoint management, and production support across Windows, Linux, and macOS environments. I build stable platforms, automate repeatable work, and troubleshoot critical issues under pressure.
 
@@ -35,22 +35,22 @@ Systems and infrastructure engineer with **25+ years** of hands-on experience sp
 
 ---
 
-## 🔥 Resume Site Features
+## Resume Site Features
 
-### 🖥️ **Terminal-Style Loading Experience**
+### Terminal-Style Loading Experience
 - Authentic CLI boot sequence with real-time progress
 - Cyberpunk aesthetic with animated grid background
 - Professional DevOps terminal simulation
 
-### ⚡ **Integrated DevOps Toolkit**
+### Integrated DevOps Toolkit
 Built-in tools accessible directly on the resume:
 - **Base64** encoder/decoder for data transformation
 - **JSON** formatter & minifier for API work
-- **Timestamp** converter (Unix ↔ ISO) for log analysis
+- **Timestamp** converter (Unix to ISO) for log analysis
 - **SHA-256** hash generator for security tasks
 - **Regex** pattern tester for text processing
 
-### 🎨 **High-Tech Visual Design**
+### High-Tech Visual Design
 - Animated matrix-style grid overlay
 - CRT scanline effects for retro-tech feel
 - Neon blue accent colors throughout
@@ -59,35 +59,35 @@ Built-in tools accessible directly on the resume:
 
 ---
 
-## 🛠️ Technical Expertise
+## Technical Expertise
 
-### **Cloud Platforms**
+### Cloud Platforms
 - **AWS**: EC2, S3, IAM, CloudFormation
 - **Google Cloud Platform**: Compute Engine, Container Registry
 - **Microsoft Azure**: Virtual Machines, Active Directory
 
-### **DevOps & Automation**
+### DevOps & Automation
 - **Configuration Management**: Ansible, Chef, Puppet
 - **CI/CD**: Jenkins, GitLab CI, GitHub Actions
 - **Infrastructure as Code**: Terraform, CloudFormation
 - **Containerization**: Docker, Kubernetes, CoreOS
 
-### **Operating Systems**
+### Operating Systems
 - **Linux**: CentOS, Ubuntu, CoreOS, RedHat
 - **Windows**: Server 2016/2019/2022, Windows 10/11
 - **macOS**: System administration and support
 
-### **Scripting & Programming**
+### Scripting & Programming
 - **Shell**: Bash, PowerShell, Zsh
 - **Languages**: Python, Ruby, Node.js
 - **Automation**: Custom scripts for deployment and monitoring
 
-### **Networking & Security**
+### Networking & Security
 - **Network**: LAN/WAN, VPN, Firewalls, VLANs
 - **Hardware**: Cisco, HP networking equipment
 - **Security**: IAM, 2FA, access controls, network security protocols
 
-### **Databases & Tools**
+### Databases & Tools
 - **Databases**: MySQL, PostgreSQL, MSSQL, NoSQL
 - **Monitoring**: Splunk, Nagios, custom dashboards
 - **Collaboration**: Jira, GitHub, Artifactory
@@ -95,9 +95,9 @@ Built-in tools accessible directly on the resume:
 
 ---
 
-## 💼 Professional Experience Highlights
+## Professional Experience Highlights
 
-### **Current Role: Independent Consultant (1995 - Present)**
+### Current Role: Independent Consultant (1995 - Present)
 **Teckguy | System Administration and IT Support**
 
 - Provide IT consulting across healthcare, insurance, legal, arts, nonprofit, and MSP environments
@@ -106,7 +106,7 @@ Built-in tools accessible directly on the resume:
 - Build and support ticketing, streaming, NAS, and web solutions
 - Manage mixed-environment infrastructure including printers, specialized devices, switches, routers, and hybrid backup strategies
 
-### **Recent Corporate Experience**
+### Recent Corporate Experience
 
 **RevisionFX (Feb 2021 - Feb 2024)**  
 *Systems Administrator | Tier I/II Support*
@@ -132,7 +132,7 @@ Built-in tools accessible directly on the resume:
 
 ---
 
-## 🎓 Education & Certifications
+## Education & Certifications
 
 - **Golden Gate University**: Management (2012-2014)
 - **Lincoln University**: Computer Science (2003-2005)
@@ -142,9 +142,9 @@ Built-in tools accessible directly on the resume:
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
-### **Frontend**
+### Frontend
 ```bash
 React 18.2          # Modern component architecture
 Vite 5.0            # Lightning-fast build tool
@@ -152,7 +152,7 @@ JavaScript ES6+     # Modern syntax and features
 CSS-in-JS          # Styled components approach
 ```
 
-### **DevOps Pipeline**
+### DevOps Pipeline
 ```bash
 GitHub Actions      # Automated CI/CD pipeline
 GitHub Pages        # Static site hosting
@@ -160,7 +160,7 @@ npm                 # Package management
 Vite Build         # Optimized production builds
 ```
 
-### **Development Workflow**
+### Development Workflow
 ```bash
 # Local development
 npm install         # Install dependencies
@@ -171,7 +171,7 @@ npm run preview    # Preview production build
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -195,14 +195,14 @@ docs/
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
-### **Prerequisites**
+### Prerequisites
 - Node.js 18+ installed
 - Git for version control
 - Modern web browser
 
-### **Installation**
+### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/Parkingpet/parkingpet.github.io.git
@@ -213,10 +213,10 @@ npm install
 
 # Start development server
 npm run dev
-# → Opens http://localhost:5173
+# Opens http://localhost:5173
 ```
 
-### **Customization**
+### Customization
 1. **Update Resume Data**: Edit `src/resumeData.js`
 2. **Modify Styling**: Update styles in `src/App.jsx`
 3. **Add Tools**: Extend the tools object in `src/Tools.jsx`
@@ -224,19 +224,19 @@ npm run dev
 
 ---
 
-## 🔧 DevOps Tools Reference
+## DevOps Tools Reference
 
 | Tool | Purpose | Use Case | Example |
 |------|---------|----------|---------|
 | **Base64** | Encode/decode data | API tokens, data transmission | `echo "hello" \| base64` |
 | **JSON** | Format & validate | API responses, config files | Pretty-print JSON responses |
-| **Timestamp** | Unix ↔ human time | Log analysis, debugging | Convert `1640995200` to `2022-01-01` |
+| **Timestamp** | Unix to human time | Log analysis, debugging | Convert `1640995200` to `2022-01-01` |
 | **Hash** | Generate SHA-256 | File integrity, passwords | Verify file checksums |
 | **Regex** | Pattern matching | Log parsing, validation | Extract IPs from logs |
 
 ---
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **Build Time**: ~2 seconds
 - **Bundle Size**: <100KB gzipped
@@ -247,41 +247,41 @@ npm run dev
 
 ---
 
-## 🤝 Notable Client Projects
+## Notable Client Projects
 
-### **Long-term Partnerships**
+### Long-term Partnerships
 - **RevisionFX** (2004-2024): 20-year partnership providing desktop hardware support, production environments, and developer-adjacent troubleshooting
 - **Dr. Rathod Dental Office** (2019-2025): X-ray systems, Dentrix support, backups, Server 2022 administration
 - **Flo Solutions** (2024-2025): HaloPSA API configuration, Microsoft 365 automation for MSP operations
 
-### **Specialized Projects**
+### Specialized Projects
 - **Poor Magazine** (2019-2020): Radio station build, remote studio setup, NAS implementation
 - **LANgineers** (2014): Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones
 - **Dr. Cox Dental Office** (1997-2019): 22-year partnership providing Dentrix database support and digital X-ray systems
 
 ---
 
-## 🎯 Why This Resume Approach?
+## Why This Resume Approach?
 
-✅ **Technical Demonstration**: Shows actual coding and DevOps skills  
-✅ **Interactive Experience**: Engages recruiters and hiring managers  
-✅ **Modern Architecture**: Demonstrates current technology proficiency  
-✅ **Performance Optimized**: Fast loading, mobile-responsive design  
-✅ **DevOps Integration**: Built-in tools showcase daily workflow expertise  
-✅ **Automated Deployment**: CI/CD pipeline demonstrates DevOps practices  
-✅ **Open Source**: Transparent code available for technical review  
+- **Technical Demonstration**: Shows actual coding and DevOps skills
+- **Interactive Experience**: Engages recruiters and hiring managers
+- **Modern Architecture**: Demonstrates current technology proficiency
+- **Performance Optimized**: Fast loading, mobile-responsive design
+- **DevOps Integration**: Built-in tools showcase daily workflow expertise
+- **Automated Deployment**: CI/CD pipeline demonstrates DevOps practices
+- **Open Source**: Transparent code available for technical review
 
 ---
 
-## 📈 Deployment & Monitoring
+## Deployment & Monitoring
 
-### **Automated Deployment**
+### Automated Deployment
 - **Trigger**: Push to `main` branch
 - **Build**: Vite production build
 - **Deploy**: GitHub Pages automatic deployment
 - **Monitoring**: GitHub Actions workflow status
 
-### **Performance Monitoring**
+### Performance Monitoring
 - Lighthouse CI integration
 - Bundle size tracking
 - Load time monitoring
@@ -289,7 +289,7 @@ npm run dev
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Interested in contributing to this resume site template?
 
@@ -301,24 +301,24 @@ Interested in contributing to this resume site template?
 
 ---
 
-## 📄 License
+## License
 
 MIT License - Feel free to use this as a template for your own resume site!
 
 ---
 
-## 🚀 Contact & Collaboration
+## Contact & Collaboration
 
 **Ready to discuss your next DevOps challenge?**
 
-📧 **Email**: mustafa.mclinn@outlook.com  
-📱 **Phone**: 510 296 0233  
-📍 **Location**: Oakland / San Francisco Bay Area  
-🔗 **GitHub**: [View Repository](https://github.com/Parkingpet/parkingpet.github.io)  
-🌐 **Live Site**: [parkingpet.github.io](https://parkingpet.github.io)  
+Email: mustafa.mclinn@outlook.com  
+Phone: 510 296 0233  
+Location: Oakland / San Francisco Bay Area  
+GitHub: [View Repository](https://github.com/Parkingpet/parkingpet.github.io)  
+Live Site: [parkingpet.github.io](https://parkingpet.github.io)  
 
 ---
 
-*"Because your resume should be as automated and reliable as your infrastructure."*
+"Because your resume should be as automated and reliable as your infrastructure."
 
-**Built by a DevOps Engineer, for DevOps Teams** 🛠️⚡
+**Built by a DevOps Engineer, for DevOps Teams**
