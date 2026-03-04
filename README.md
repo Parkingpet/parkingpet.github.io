@@ -39,21 +39,15 @@ Built-in tools accessible directly on the resume:
 
 ## Tech Stack
 
-### Frontend
-```bash
-React 18.2          # Modern component architecture
-Vite 7.3            # Lightning-fast build tool
-JavaScript ES6+     # Modern syntax and features
-CSS-in-JS          # Styled components approach
-```
+- **[React 18.2](https://reactjs.org/)** - Modern component architecture
+- **[Vite 7.3](https://vitejs.dev/)** - Lightning-fast build tool
+- **[JavaScript ES6+](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - Modern syntax and features
+- **CSS-in-JS** - Styled components approach
 
-### DevOps Pipeline
-```bash
-GitHub Actions      # Automated CI/CD pipeline
-GitHub Pages        # Static site hosting
-npm                 # Package management
-Vite Build         # Optimized production builds
-```
+- **[GitHub Actions](https://github.com/features/actions)** - Automated CI/CD pipeline
+- **[GitHub Pages](https://pages.github.com/)** - Static site hosting
+- **[npm](https://www.npmjs.com/)** - Package management
+- **Vite Build** - Optimized production builds
 
 ---
 
