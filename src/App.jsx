@@ -150,6 +150,7 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.phone}</span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
       </p>
       <nav style={styles.nav}>
         <a href="#summary" style={styles.navLink}>Summary</a>
@@ -181,6 +182,35 @@ function Competencies() {
       <div style={styles.chips}>
         {resumeData.competencies.map((comp, i) => (
           <span key={i} style={styles.chip}>{comp}</span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function SkillsChart() {
+  const skillCategories = [
+    { name: 'Cloud', level: 95 },
+    { name: 'DevOps', level: 90 },
+    { name: 'Scripting', level: 88 },
+    { name: 'Networking', level: 85 },
+    { name: 'Security', level: 82 }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Expertise Levels</h2>
+      <div style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
+        {skillCategories.map((skill, i) => (
+          <div key={i}>
+            <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '4px'}}>
+              <span style={{fontSize: '13px'}}>{skill.name}</span>
+              <span style={{fontSize: '12px', color: '#38bdf8'}}>{skill.level}%</span>
+            </div>
+            <div style={{background: '#1e293b', borderRadius: '4px', height: '8px', overflow: 'hidden'}}>
+              <div style={{background: 'linear-gradient(90deg, #38bdf8, #0ea5e9)', height: '100%', width: `${skill.level}%`, transition: 'width 0.5s ease'}} />
+            </div>
+          </div>
         ))}
       </div>
     </div>
@@ -579,6 +609,7 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.phone}</span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
       </p>
       <nav style={styles.nav}>
         <a href="#summary" style={styles.navLink}>Summary</a>
