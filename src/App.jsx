@@ -162,6 +162,8 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
       </p>
       <nav style={styles.nav}>
+        <a href="/" style={styles.navLink}>Home</a>
+        <a href="/prompts" style={styles.navLink}>Prompts</a>
         <a href="#summary" style={styles.navLink}>Summary</a>
         <a href="#competencies" style={styles.navLink}>Competencies</a>
         <a href="#skills" style={styles.navLink}>Technical</a>
