@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react'
-import Tools from './Tools'
 import { resumeData } from './resumeData'
 
 export default function App() {
@@ -51,15 +50,19 @@ export default function App() {
           <Summary />
           <Competencies />
           <Skills />
-          <DevOpsTools />
           <Projects />
           <Experience />
           <Education />
           <Clients />
+          <MicrosoftTools />
+          <DevOpsTools />
+          <CLITools />
+          <InfrastructureTools />
+          <GraphTools />
+          <GoogleAITools />
           <Footer />
         </div>
       </div>
-      <Tools />
     </>
   )
 }
@@ -75,12 +78,12 @@ function ParticleBackground() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    const particles = Array.from({length: 50}, () => ({
+    const particles = Array.from({length: 30}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 1.5
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      r: Math.random() * 1
     }))
     
     const animate = () => {
@@ -134,10 +137,24 @@ function ParticleBackground() {
 
 function Header() {
   return (
-    <div style={styles.header} id="top">
-      <h1 style={styles.h1}>{resumeData.personal.name}</h1>
+    <div style={styles.topNav}>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/"); window.location.reload()}} style={styles.iconLink}>🏠</a>
+        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/prompts"); window.location.reload()}} style={styles.iconLink}>📝</a>
+        <a href="#summary" style={styles.iconLink}>📋</a>
+        <a href="#competencies" style={styles.iconLink}>⚡</a>
+        <a href="#skills" style={styles.iconLink}>🔧</a>
+        <a href="#tools" style={styles.iconLink}>🛠️</a>
+        <a href="#projects" style={styles.iconLink}>🚀</a>
+        <a href="#experience" style={styles.iconLink}>💼</a>
+        <a href="#education" style={styles.iconLink}>🎓</a>
+        <a href="#clients" style={styles.iconLink}>👥</a>
+      </div>
+      <div style={styles.header} id="top">
+      <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
+      <div style={styles.lcdScreen}>
+        <div style={styles.lcdText}>{resumeData.personal.title}</div>
+      </div>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
-      
       <div style={styles.badges}>
         <img src="https://img.shields.io/badge/Experience-25%2B_Years-38bdf8?style=flat-square" alt="Experience" />
         <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white&style=flat-square" alt="AWS" />
@@ -146,23 +163,13 @@ function Header() {
         <img src="https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white&style=flat-square" alt="Python" />
         <img src="https://img.shields.io/badge/Linux-Systems-FCC624?logo=linux&logoColor=black&style=flat-square" alt="Linux" />
       </div>
-      
       <p style={styles.meta}>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.location}</span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.phone}</span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer">{resumeData.personal.location}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}>{resumeData.personal.phone}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
       </p>
-      <nav style={styles.nav}>
-        <a href="#summary" style={styles.navLink}>Summary</a>
-        <a href="#competencies" style={styles.navLink}>Competencies</a>
-        <a href="#skills" style={styles.navLink}>Technical</a>
-        <a href="#tools" style={styles.navLink}>DevOps Tools</a>
-        <a href="#projects" style={styles.navLink}>Projects</a>
-        <a href="#experience" style={styles.navLink}>Experience</a>
-        <a href="#education" style={styles.navLink}>Education</a>
-        <a href="#clients" style={styles.navLink}>Clients</a>
-      </nav>
     </div>
   )
 }
@@ -212,7 +219,85 @@ function Skills() {
   )
 }
 
-const listStyle = {margin: '8px 0 0', paddingLeft: '18px', color: '#e2e8f0'}
+function Projects() {
+  return (
+    <div style={styles.section} id="projects">
+      <h2 style={styles.h2}>Projects</h2>
+      {resumeData.projects.map((project, i) => (
+        <div key={i} style={styles.role}>
+          <div style={styles.roleTop}>
+            <div>
+              <div style={styles.company}>{project.company}</div>
+              <div style={styles.title}>{project.title}</div>
+            </div>
+            <div style={styles.date}>
+              <a href={project.link}>Repo</a>
+            </div>
+          </div>
+          <ul style={listStyle}>
+            {project.achievements.map((achievement, j) => (
+              <li key={j}>{achievement}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function Experience() {
+  return (
+    <div style={styles.section} id="experience">
+      <h2 style={styles.h2}>Professional Experience</h2>
+      {resumeData.experience.map((job, i) => (
+        <div key={i} style={styles.role}>
+          <div style={styles.roleTop}>
+            <div>
+              <div style={styles.company}>{job.company}</div>
+              <div style={styles.title}>{job.title}</div>
+            </div>
+            <div style={styles.date}>{job.date}</div>
+          </div>
+          <ul style={listStyle}>
+            {job.achievements.map((achievement, j) => (
+              <li key={j}>{achievement}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function Education() {
+  return (
+    <div style={styles.section} id="education">
+      <h2 style={styles.h2}>Education</h2>
+      <div style={styles.role}>
+        <ul style={listStyle}>
+          {resumeData.education.map((edu, i) => (
+            <li key={i}>{edu}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+function Clients() {
+  return (
+    <div style={styles.section} id="clients">
+      <h2 style={styles.h2}>Consulting Clients</h2>
+      <div style={styles.role}>
+        <ul style={listStyle}>
+          {resumeData.clients.map((client, i) => (
+            <li key={i}>{client}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
 
 function DevOpsTools() {
   const [activeTab, setActiveTab] = useState('base64')
@@ -304,81 +389,126 @@ function DevOpsTools() {
   )
 }
 
-function Projects() {
-  return (
-    <div style={styles.section} id="projects">
-      <h2 style={styles.h2}>Projects</h2>
-      {resumeData.projects.map((project, i) => (
-        <div key={i} style={styles.role}>
-          <div style={styles.roleTop}>
-            <div>
-              <div style={styles.company}>{project.company}</div>
-              <div style={styles.title}>{project.title}</div>
-            </div>
-            <div style={styles.date}>
-              <a href={project.link}>Repo</a>
-            </div>
-          </div>
-          <ul style={listStyle}>
-            {project.achievements.map((achievement, j) => (
-              <li key={j}>{achievement}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  )
-}
+function MicrosoftTools() {
+  const tools = [
+    { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱' },
+    { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️' },
+    { name: 'Entra ID', url: 'https://entra.microsoft.com', icon: '🔐' },
+    { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️' },
+    { name: 'Endpoint Manager', url: 'https://endpoint.microsoft.com', icon: '🖥️' },
+    { name: 'Microsoft Graph', url: 'https://graph.microsoft.com', icon: '🔗' }
+  ]
 
-function Experience() {
   return (
-    <div style={styles.section} id="experience">
-      <h2 style={styles.h2}>Professional Experience</h2>
-      {resumeData.experience.map((job, i) => (
-        <div key={i} style={styles.role}>
-          <div style={styles.roleTop}>
-            <div>
-              <div style={styles.company}>{job.company}</div>
-              <div style={styles.title}>{job.title}</div>
-            </div>
-            <div style={styles.date}>{job.date}</div>
-          </div>
-          <ul style={listStyle}>
-            {job.achievements.map((achievement, j) => (
-              <li key={j}>{achievement}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function Education() {
-  return (
-    <div style={styles.section} id="education">
-      <h2 style={styles.h2}>Education</h2>
-      <div style={styles.role}>
-        <ul style={listStyle}>
-          {resumeData.education.map((edu, i) => (
-            <li key={i}>{edu}</li>
-          ))}
-        </ul>
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Microsoft Admin Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
       </div>
     </div>
   )
 }
 
-function Clients() {
+function CLITools() {
+  const tools = [
+    { name: 'Bash', url: 'https://www.gnu.org/software/bash/', icon: '🖥️' },
+    { name: 'PowerShell', url: 'https://github.com/PowerShell/PowerShell', icon: '⚡' },
+    { name: 'Git', url: 'https://git-scm.com/', icon: '🔗' },
+    { name: 'Docker CLI', url: 'https://docs.docker.com/engine/reference/commandline/cli/', icon: '🚢' },
+    { name: 'Kubectl', url: 'https://kubernetes.io/docs/reference/kubectl/', icon: '☸️' },
+    { name: 'Terraform', url: 'https://www.terraform.io/docs/cli/', icon: '📄' }
+  ]
+
   return (
-    <div style={styles.section} id="clients">
-      <h2 style={styles.h2}>Consulting Clients</h2>
-      <div style={styles.role}>
-        <ul style={listStyle}>
-          {resumeData.clients.map((client, i) => (
-            <li key={i}>{client}</li>
-          ))}
-        </ul>
+    <div style={styles.section}>
+      <h2 style={styles.h2}>CLI Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function InfrastructureTools() {
+  const tools = [
+    { name: 'Ansible', url: 'https://www.ansible.com/', icon: '🤖' },
+    { name: 'Chef', url: 'https://www.chef.io/', icon: '👨‍👩‍👧‍👦' },
+    { name: 'Prometheus', url: 'https://prometheus.io/', icon: '📊' },
+    { name: 'ELK Stack', url: 'https://www.elastic.co/what-is/elk-stack', icon: '🔍' },
+    { name: 'Jenkins', url: 'https://www.jenkins.io/', icon: '🔧' },
+    { name: 'Jules Prompt', url: 'https://gist.github.com/Parkingpet/jules-prompt', icon: '📝' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Infrastructure & Automation Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GraphTools() {
+  const tools = [
+    { name: 'Grafana', url: 'https://grafana.com/', icon: '📊' },
+    { name: 'Datadog', url: 'https://www.datadoghq.com/', icon: '📈' },
+    { name: 'New Relic', url: 'https://newrelic.com/', icon: '🔍' },
+    { name: 'Splunk', url: 'https://www.splunk.com/', icon: '🔎' },
+    { name: 'Kibana', url: 'https://www.elastic.co/kibana', icon: '📉' },
+    { name: 'Tableau', url: 'https://www.tableau.com/', icon: '📋' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Monitoring & Visualization Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GoogleAITools() {
+  const tools = [
+    { name: 'Gemini', url: 'https://gemini.google.com/', icon: '✨' },
+    { name: 'Vertex AI', url: 'https://cloud.google.com/vertex-ai', icon: '🤖' },
+    { name: 'Google Cloud AI', url: 'https://cloud.google.com/ai', icon: '☁️' },
+    { name: 'Bard', url: 'https://bard.google.com/', icon: '💬' },
+    { name: 'Google Colab', url: 'https://colab.research.google.com/', icon: '📓' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/', icon: '🧠' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Google AI & ML Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
       </div>
     </div>
   )
@@ -387,11 +517,20 @@ function Clients() {
 function Footer() {
   return (
     <div style={styles.footer}>
-      <p>Last updated March 2026</p>
+      <pre style={styles.ascii}>{`
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Teckguy | Independent IT Consulting & Support                                │
+│ Website: teckguy.com | Email: mustafa.mclinn@outlook.com | Phone: 510-296-0233 │
+│ Services: System Administration | Cloud Infrastructure | DevOps Automation     │
+└──────────────────────────────────────────────────────────────────────────────┘
+      `}</pre>
+      <p style={{marginTop: '16px'}}>Last updated March 2026</p>
       <p><a href="#top">Back to top</a></p>
     </div>
   )
 }
+
+const listStyle = {margin: '8px 0 0', paddingLeft: '18px', color: '#e2e8f0'}
 
 const styles = {
   canvas: {
@@ -417,20 +556,20 @@ const styles = {
     position: 'fixed',
     inset: 0,
     background: `
-      linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px)
+      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
     `,
     backgroundSize: '50px 50px',
     pointerEvents: 'none',
-    animation: 'gridMove 20s linear infinite'
+    animation: 'gridMove 40s linear infinite'
   },
   scanline: {
     position: 'fixed',
     inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.02) 50%)',
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
     backgroundSize: '100% 4px',
     pointerEvents: 'none',
-    animation: 'scanline 8s linear infinite'
+    animation: 'scanline 15s linear infinite'
   },
   content: {
     position: 'relative',
@@ -452,25 +591,14 @@ const styles = {
     padding: '22px 22px 18px',
     boxShadow: '0 10px 30px rgba(0,0,0,.35)'
   },
-  h1: {
-    margin: '0 0 6px',
-    fontSize: '34px',
-    letterSpacing: '.2px',
-    color: '#38bdf8'
-  },
-  subtitle: {
-    margin: '0 0 10px',
-    color: '#e2e8f0',
-    fontSize: '16px'
-  },
-  meta: {
-    margin: 0,
-    color: '#94a3b8',
-    fontSize: '14px'
-  },
-  'meta span': {
-    display: 'inline-block',
-    marginRight: '10px'
+  headerName: {
+    margin: '0 0 16px 0',
+    fontSize: '28px',
+    fontWeight: 'bold',
+    color: '#38bdf8',
+    textAlign: 'center',
+    letterSpacing: '2px',
+    textShadow: '0 0 15px rgba(56,189,248,0.7)'
   },
   nav: {
     marginTop: '14px',
@@ -502,51 +630,28 @@ const styles = {
     color: '#38bdf8',
     letterSpacing: '.2px'
   },
-  gridLayout: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '14px'
+  topNav: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    background: "rgba(15,23,42,0.95)",
+    border: "1px solid #23314d",
+    padding: "8px 16px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "16px",
+    zIndex: 1000,
+    backdropFilter: "blur(10px)"
   },
-  chips: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '8px',
-    margin: '8px 0 10px'
-  },
-  chip: {
-    background: '#15213b',
-    border: '1px solid #23314d',
-    borderRadius: '999px',
-    padding: '7px 10px',
-    fontSize: '13px',
-    color: '#e2e8f0'
-  },
-  role: {
-    padding: '14px 14px 12px',
-    border: '1px solid #23314d',
-    borderRadius: '16px',
-    background: 'rgba(17,28,51,.55)',
-    marginBottom: '12px'
-  },
-  roleTop: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    gap: '8px',
-    marginBottom: '8px'
-  },
-  company: {
-    fontWeight: 700,
-    color: '#e2e8f0'
-  },
-  title: {
-    color: '#94a3b8',
-    fontWeight: 600
-  },
-  date: {
-    color: '#94a3b8',
-    fontSize: '13px',
-    whiteSpace: 'nowrap'
+  iconLink: {
+    fontSize: "20px",
+    textDecoration: "none",
+    padding: "8px",
+    borderRadius: "8px",
+    transition: "all 0.2s ease",
+    background: "rgba(56,189,248,0.1)",
+    border: "1px solid rgba(56,189,248,0.3)"
   },
   footer: {
     marginTop: '18px',
@@ -554,103 +659,5 @@ const styles = {
     fontSize: '12px',
     textAlign: 'center',
     opacity: .9
-  },
-  terminal: {
-    background: 'rgba(15,23,42,0.95)',
-    border: '1px solid #38bdf8',
-    borderRadius: '8px',
-    width: '500px',
-    maxWidth: '90vw',
-    boxShadow: '0 0 50px rgba(56,189,248,0.3)',
-    fontFamily: 'monospace',
-    overflow: 'hidden'
-  },
-  terminalHeader: {
-    background: '#1e293b',
-    padding: '12px 16px',
-    color: '#38bdf8',
-    borderBottom: '1px solid #38bdf8',
-    fontSize: '14px'
-  },
-  terminalBody: {
-    padding: '20px',
-    color: '#94a3b8',
-    fontSize: '13px',
-    lineHeight: '1.8'
-  },
-  progress: {
-    height: '4px',
-    background: '#1e293b',
-    borderRadius: '2px',
-    margin: '16px 0',
-    overflow: 'hidden'
-  },
-  progressBar: {
-    height: '100%',
-    background: 'linear-gradient(90deg, #38bdf8, #0ea5e9)',
-    transition: 'width 0.3s ease',
-    boxShadow: '0 0 10px #38bdf8'
-  },
-  blink: {
-    color: '#38bdf8',
-    animation: 'blink 1s step-end infinite'
-  },
-  toolTabs: {
-    display: 'flex',
-    gap: '4px',
-    padding: '12px',
-    borderBottom: '1px solid #1e293b',
-    overflowX: 'auto'
-  },
-  toolTab: {
-    padding: '8px 16px',
-    background: 'transparent',
-    border: '1px solid #1e293b',
-    borderRadius: '6px',
-    color: '#94a3b8',
-    cursor: 'pointer',
-    fontSize: '13px',
-    fontFamily: 'monospace',
-    whiteSpace: 'nowrap'
-  },
-  toolTabActive: {
-    background: '#1e293b',
-    color: '#38bdf8',
-    borderColor: '#38bdf8'
-  },
-  toolBody: {
-    padding: '16px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '12px',
-    flex: 1,
-    overflow: 'auto'
-  },
-  toolTextarea: {
-    background: '#1e293b',
-    border: '1px solid #334155',
-    borderRadius: '6px',
-    color: '#e2e8f0',
-    padding: '12px',
-    fontFamily: 'monospace',
-    fontSize: '13px',
-    minHeight: '120px',
-    resize: 'vertical'
-  },
-  toolActions: {
-    display: 'flex',
-    gap: '8px',
-    flexWrap: 'wrap'
-  },
-  toolBtn: {
-    padding: '8px 16px',
-    background: '#1e293b',
-    border: '1px solid #38bdf8',
-    borderRadius: '6px',
-    color: '#38bdf8',
-    cursor: 'pointer',
-    fontSize: '12px',
-    fontFamily: 'monospace',
-    textTransform: 'uppercase'
   }
 }
