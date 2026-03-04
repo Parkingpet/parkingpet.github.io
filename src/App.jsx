@@ -730,5 +730,78 @@ const styles = {
     color: '#38bdf8',
     cursor: 'pointer',
     fontSize: '13px'
+  },
+  subtitle: {
+    margin: '12px 0',
+    fontSize: '14px',
+    color: '#94a3b8',
+    textAlign: 'center'
+  },
+  badges: {
+    display: 'flex',
+    gap: '8px',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    margin: '16px 0'
+  },
+  meta: {
+    fontSize: '13px',
+    color: '#94a3b8',
+    textAlign: 'center',
+    marginTop: '12px'
+  },
+  chips: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '8px'
+  },
+  chip: {
+    padding: '6px 12px',
+    background: 'rgba(56,189,248,.1)',
+    border: '1px solid #23314d',
+    borderRadius: '16px',
+    fontSize: '12px',
+    color: '#38bdf8'
+  },
+  gridLayout: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '20px'
+  },
+  role: {
+    marginBottom: '16px'
+  },
+  roleTop: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '8px'
+  },
+  company: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: '#38bdf8'
+  },
+  title: {
+    fontSize: '14px',
+    color: '#94a3b8'
+  },
+  date: {
+    fontSize: '13px',
+    color: '#64748b'
+  },
+  toolGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gap: '12px'
+  },
+  toolLink: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '12px',
+    background: 'rgba(17,28,51,.6)',
+    border: '1px solid #23314d',
+    borderRadius: '8px',
+    color: '#38bdf8',
+    textDecoration: 'none'
   }
 }
