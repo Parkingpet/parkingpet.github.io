@@ -42,10 +42,8 @@ export const resumeData = {
     "CI CD Pipelines and Deployment Strategies",
     "Network Administration and Security",
     "Scripting Bash PowerShell Python",
-    "Troubleshooting and Technical Support",
     "Virtualization and Containerization Docker Kubernetes",
-    "IT Consulting and Solution Architecture",
-    "Endpoint Management and Software Deployment"
+    "IT Consulting and Solution Architecture"
   ],
 
   skills: {
@@ -78,23 +76,14 @@ export const resumeData = {
       date: "1995 to Present",
       achievements: [
         "Provided IT consulting and technical support across healthcare, insurance, legal, arts, nonprofit, and MSP environments with critical analysis and resource-based methodologies",
-        "Configured and managed HaloPSA and RMM workflows for small MSP operations, including Microsoft 365 administration via Admin Center, Teams, Graph API, and automation",
+        "Configured and managed HaloPSA and RMM workflows for Flo.Solutions MSP operations, including Microsoft 365 administration via Admin Center, Teams, Graph API, and automation",
         "Built and supported ticketing, streaming, NAS, and web solutions for remote and onsite use cases including cPanel and WordPress implementations",
         "Managed mixed environment infrastructure for Windows, macOS, and Linux including printers, specialized devices, switches, routers, and hybrid backup strategies with failover",
         "Supported personal projects requiring CI/CD, Git repos, and LLM implementations on multiple stacks",
         "Demonstrated commitment to ethical practices through observation and understanding of unique diverse empirical concepts"
       ]
     },
-    {
-      company: "Flo.Solutions",
-      title: "MSP Consultant | HaloPSA Configuration & Automation",
-      date: "2024 to Present",
-      achievements: [
-        "Configured and connected HaloPSA/Remote Management software and automation for small MSP operations",
-        "Implemented RMM workflows and automation strategies to streamline MSP service delivery",
-        "Provided technical consulting for managed service provider infrastructure optimization"
-      ]
-    },
+
     {
       company: "RevisionFX",
       title: "Systems Administrator | Tier I II Support",

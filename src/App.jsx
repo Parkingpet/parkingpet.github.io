@@ -138,7 +138,11 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
-      <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
+      <h1 style={styles.headerName}>
+        <pre style={{...styles.ascii, margin: 0, fontSize: '8px', lineHeight: '8px', color: '#38bdf8'}}>
+{resumeData.personal.name}
+        </pre>
+      </h1>
       <nav style={styles.nav}>
         <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
         <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
@@ -636,5 +640,12 @@ const styles = {
     fontSize: '12px',
     textAlign: 'center',
     opacity: .9
+  },
+  ascii: {
+    fontFamily: 'monospace',
+    fontSize: '10px',
+    lineHeight: '10px',
+    whiteSpace: 'pre',
+    color: '#94a3b8'
   }
 }
