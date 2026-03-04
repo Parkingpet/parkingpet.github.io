@@ -1,1 +1,16 @@
-{\n  "name": "react-resume-project",\n  "version": "1.0.0",\n  "scripts": {\n    "start": "vite",\n    "build": "vite build"\n  },\n  "dependencies": {\n    "react": "^17.0.2",\n    "react-dom": "^17.0.2",\n    "@octokit/rest": "^2.4.1"\n  },\n  "devDependencies": {\n    "vite": "^2.6.12"\n  }\n}
+{
+  "name": "react-resume-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@octokit/rest": "^2.4.1"
+  },
+  "devDependencies": {
+    "vite": "^2.6.12"
+  }
+}
