@@ -55,6 +55,7 @@ export default function App() {
           <Education />
           <Clients />
           <DevOpsTools />
+          <MicrosoftTools />
           <Footer />
         </div>
       </div>
@@ -286,6 +287,31 @@ function Clients() {
             <li key={i}>{client}</li>
           ))}
         </ul>
+      </div>
+    </div>
+  )
+}
+
+function MicrosoftTools() {
+  const tools = [
+    { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱' },
+    { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️' },
+    { name: 'Entra ID', url: 'https://entra.microsoft.com', icon: '🔐' },
+    { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️' },
+    { name: 'Endpoint Manager', url: 'https://endpoint.microsoft.com', icon: '🖥️' },
+    { name: 'Microsoft Graph', url: 'https://graph.microsoft.com', icon: '🔗' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Microsoft Admin Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
       </div>
     </div>
   )
@@ -648,5 +674,25 @@ const styles = {
     flexWrap: 'wrap',
     gap: '8px',
     margin: '12px 0'
+  },
+  toolGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gap: '12px',
+    marginTop: '12px'
+  },
+  toolLink: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '12px 14px',
+    background: 'rgba(17,28,51,.55)',
+    border: '1px solid #23314d',
+    borderRadius: '12px',
+    color: '#38bdf8',
+    textDecoration: 'none',
+    fontSize: '14px',
+    fontWeight: 500,
+    transition: 'all 0.2s ease',
+    cursor: 'pointer'
   }
 }
