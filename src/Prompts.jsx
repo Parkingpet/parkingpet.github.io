@@ -93,7 +93,7 @@ export default function Prompts() {
           <div style={styles.header}>
             <h1 style={styles.h1}>Prompt Repository</h1>
             <p style={styles.subtitle}>DevOps & Infrastructure Automation Prompts</p>
-            <a href="/" style={styles.backLink}>← Back to Resume</a>
+            <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.backLink}>← Back to Resume</a>
           </div>
 
           <div style={styles.section}>
