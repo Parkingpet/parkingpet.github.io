@@ -137,20 +137,20 @@ function ParticleBackground() {
 
 function Header() {
   return (
-    <div style={styles.header} id="top">
+    <div style={styles.topNav}>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/"); window.location.reload()}} style={styles.iconLink}>🏠</a>
+        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/prompts"); window.location.reload()}} style={styles.iconLink}>📝</a>
+        <a href="#summary" style={styles.iconLink}>📋</a>
+        <a href="#competencies" style={styles.iconLink}>⚡</a>
+        <a href="#skills" style={styles.iconLink}>🔧</a>
+        <a href="#tools" style={styles.iconLink}>🛠️</a>
+        <a href="#projects" style={styles.iconLink}>🚀</a>
+        <a href="#experience" style={styles.iconLink}>💼</a>
+        <a href="#education" style={styles.iconLink}>🎓</a>
+        <a href="#clients" style={styles.iconLink}>👥</a>
+      </div>
+      <div style={styles.header} id="top">
       <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
-      <nav style={styles.nav}>
-        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
-        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
-        <a href="#summary" style={styles.navLink}>Summary</a>
-        <a href="#competencies" style={styles.navLink}>Competencies</a>
-        <a href="#skills" style={styles.navLink}>Technical</a>
-        <a href="#tools" style={styles.navLink}>DevOps Tools</a>
-        <a href="#projects" style={styles.navLink}>Projects</a>
-        <a href="#experience" style={styles.navLink}>Experience</a>
-        <a href="#education" style={styles.navLink}>Education</a>
-        <a href="#clients" style={styles.navLink}>Clients</a>
-      </nav>
       <div style={styles.lcdScreen}>
         <div style={styles.lcdText}>{resumeData.personal.title}</div>
       </div>
@@ -629,6 +629,29 @@ const styles = {
     fontSize: '18px',
     color: '#38bdf8',
     letterSpacing: '.2px'
+  },
+  topNav: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    background: "rgba(15,23,42,0.95)",
+    border: "1px solid #23314d",
+    padding: "8px 16px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "16px",
+    zIndex: 1000,
+    backdropFilter: "blur(10px)"
+  },
+  iconLink: {
+    fontSize: "20px",
+    textDecoration: "none",
+    padding: "8px",
+    borderRadius: "8px",
+    transition: "all 0.2s ease",
+    background: "rgba(56,189,248,0.1)",
+    border: "1px solid rgba(56,189,248,0.3)"
   },
   footer: {
     marginTop: '18px',
