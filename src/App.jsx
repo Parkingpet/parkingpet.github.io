@@ -168,8 +168,8 @@ function Header() {
       </div>
       
       <p style={styles.meta}>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.location}</span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>{resumeData.personal.phone}</span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer">{resumeData.personal.location}</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}>{resumeData.personal.phone}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
