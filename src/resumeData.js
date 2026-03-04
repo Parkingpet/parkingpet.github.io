@@ -65,6 +65,9 @@ export const resumeData = {
         "Configured and managed HaloPSA and RMM workflows for Flo.Solutions MSP operations, including Microsoft 365 administration via Admin Center, Teams, Graph API, and automation",
         "Built and supported ticketing, streaming, NAS, and web solutions for remote and onsite use cases including cPanel and WordPress implementations",
         "Managed mixed environment infrastructure for Windows, macOS, and Linux including printers, specialized devices, switches, routers, and hybrid backup strategies with failover",
+        "Implemented PowerShell and Bash automation scripts for endpoint management, user provisioning, and system monitoring across heterogeneous environments",
+        "Configured and maintained Active Directory, Group Policy, DNS, DHCP, and certificate services for enterprise authentication and network infrastructure",
+        "Deployed and managed virtualization platforms including VMware ESXi, Hyper-V, and Proxmox for development and production workloads",
         "Supported personal projects requiring CI/CD, Git repos, and LLM implementations on multiple stacks",
         "Demonstrated commitment to ethical practices through observation and understanding of unique diverse empirical concepts"
       ]
@@ -76,6 +79,8 @@ export const resumeData = {
       achievements: [
         "Configured and connected HaloPSA/Remote Management software and automation for small MSP operations",
         "Implemented RMM workflows and automation strategies to streamline MSP service delivery",
+        "Integrated Microsoft Graph API for automated user provisioning, license management, and tenant administration",
+        "Configured PowerShell scripts for automated ticket creation, asset management, and client reporting workflows",
         "Provided technical consulting for managed service provider infrastructure optimization"
       ]
     },
@@ -85,10 +90,12 @@ export const resumeData = {
       date: "Feb 2004 to Feb 2024",
       achievements: [
         "Delivered 24/7 support for global customers across Japan, Russia, India, and other regions supporting 40+ plugins across 15+ applications on Windows, macOS, and Linux",
-        "Maintained cloud infrastructure and rolled updates to AWS production environments with zero downtime",
+        "Maintained cloud infrastructure and rolled updates to AWS production environments with zero downtime using blue-green deployment strategies",
+        "Managed EC2 instances, S3 buckets, CloudFront distributions, and Route 53 DNS configurations for production workloads",
         "Supported Microsoft 365 for internal staff and assisted with endpoint and account troubleshooting",
         "Diagnosed complex hardware issues including CUDA GPU conflicts, network card problems, and low-level configuration resource conflicts",
         "Built automation scripts and environment fixes using PowerShell, Bash, and shell tooling to resolve licensing, network, and OS specific issues",
+        "Developed Python scripts for log analysis, automated testing, and customer data migration tasks",
         "Mocked up AI/chat support automation to replace Tier I involvement and improve efficiency",
         "Provided onsite hardware break-fix for complex issues and occasional remote services backup for production environments"
       ]
@@ -100,6 +107,8 @@ export const resumeData = {
       achievements: [
         "Rebuilt CoreOS-driven Docker containers using Ansible on Google Cloud Platform",
         "Used GitLab CI/CD tools and Jira to manage workflows and deployments",
+        "Implemented Ansible playbooks for automated container orchestration, configuration management, and application deployment",
+        "Configured Docker Compose and Kubernetes manifests for microservices architecture on GCP",
         "Audited GCP infrastructure and optimized cloud resource management and reliability",
         "Removed build artifacts from development architectures to reduce cloud costs and improve performance",
         "Performed onboarding procedures and personal environment setup for infrastructure automation"
@@ -113,7 +122,9 @@ export const resumeData = {
         "Maintained Splunk Cloud services in high-intensity production environment with 24/7 support across multiple time zones",
         "Worked in intense environment with twelve-hour shifts and weekend rotations to maintain cloud service availability",
         "Resolved complex Splunk issues, performed instance rebuilds, and optimized AWS EC2 stacks for performance and cost",
+        "Configured Splunk forwarders, indexers, and search heads for distributed log aggregation and analysis",
         "Developed and refined automation scripts in Bash, Ruby, and Node.js to improve operational workflows",
+        "Implemented monitoring and alerting using Splunk queries, dashboards, and scheduled searches for proactive incident response",
         "Used Jira, Jenkins, GitHub, Artifactory, and various 2FA tools for infrastructure management",
         "Supported Ubuntu-based infrastructure with limited resources on AWS EC2 stacks"
       ]
@@ -125,10 +136,12 @@ export const resumeData = {
       achievements: [
         "Managed Chef server nodes and supported CentOS upgrades with documented best practices and methodology tracking",
         "Executed 4,500+ CentOS live upgrades across global production environments, silos, and Chef nodes with zero downtime",
+        "Developed Chef cookbooks and recipes for automated configuration management and compliance enforcement",
         "Completed upgrade efforts ahead of schedule through coordinated environment and role owner collaboration",
         "Developed and improved Bash, Ruby, and Python scripts supporting automation and operations",
         "Created instructional video documentation to enable self-service upgrades and reduced support load",
         "Supported team effort resolving DirtyCow security vulnerability across all global datacenters",
+        "Implemented Knife commands and Chef workflows for node bootstrapping, cookbook deployment, and environment management",
         "Supported servers running Zookeeper, Kafka, Jira, Bitbucket, Docker, and other critical infrastructure",
         "Used Gerrit for collaborative development and Jenkins for testing and deployment"
       ]
@@ -141,9 +154,11 @@ export const resumeData = {
         "Supported hybrid enterprise infrastructure in healthcare environment focused on patient safety, uptime, and operational efficiency",
         "Maintained LAN and NOC performance and security safeguards with 24/7 availability and little to no supervision",
         "Coordinated with LAN team to plan and implement future state network architecture for healthcare organization",
+        "Configured Cisco switches, routers, and wireless controllers for VLAN segmentation and network security",
         "Provided Level III technical and escalation support for Office 365, Exchange, Active Directory, and Epic configuration",
         "Managed network provisions, performance tuning, port assignment, error tracking, and data movement",
         "Automated onboarding and provisioning using PowerShell and Azure tooling for incoming students and staff",
+        "Implemented network monitoring using SNMP, NetFlow, and packet capture tools for troubleshooting and capacity planning",
         "Supported systems integration and core enterprise network operational efficiency and security safeguards"
       ]
     },
