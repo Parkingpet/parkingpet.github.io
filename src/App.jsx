@@ -58,6 +58,7 @@ export default function App() {
           <DevOpsTools />
           <CLITools />
           <InfrastructureTools />
+          <GraphTools />
           <Footer />
         </div>
       </div>
@@ -455,6 +456,31 @@ function InfrastructureTools() {
   return (
     <div style={styles.section}>
       <h2 style={styles.h2}>Infrastructure & Automation Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GraphTools() {
+  const tools = [
+    { name: 'Grafana', url: 'https://grafana.com/', icon: '📊' },
+    { name: 'Datadog', url: 'https://www.datadoghq.com/', icon: '📈' },
+    { name: 'New Relic', url: 'https://newrelic.com/', icon: '🔍' },
+    { name: 'Splunk', url: 'https://www.splunk.com/', icon: '🔎' },
+    { name: 'Kibana', url: 'https://www.elastic.co/kibana', icon: '📉' },
+    { name: 'Tableau', url: 'https://www.tableau.com/', icon: '📋' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Monitoring & Visualization Tools</h2>
       <div style={styles.toolGrid}>
         {tools.map((tool, i) => (
           <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
