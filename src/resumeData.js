@@ -6,7 +6,8 @@ export const resumeData = {
     location: "Oakland / San Francisco, CA",
     phone: "510 296 0233",
     email: "mustafa.mclinn@outlook.com",
-    github: "https://github.com/"
+    github: "https://github.com/Parkingpet",
+    linkedin: "https://linkedin.com/in/mustafa-mclinn"
   },
   
   summary: [
@@ -59,19 +60,22 @@ export const resumeData = {
         "Provided IT consulting and technical support across healthcare, insurance, legal, arts, nonprofit, and MSP environments",
         "Configured and managed HaloPSA and RMM workflows for small MSP operations, including Microsoft 365 administration via Admin Center, Teams, Graph, and automation",
         "Built and supported ticketing, streaming, NAS, and web solutions for remote and onsite use cases",
-        "Managed mixed environment infrastructure for Windows, macOS, and Linux including printers, specialized devices, switches, routers, and hybrid backup strategies with failover"
+        "Managed mixed environment infrastructure for Windows, macOS, and Linux including printers, specialized devices, switches, routers, and hybrid backup strategies with failover",
+        "Supported personal projects requiring CI/CD, Git repos, and LLM implementations on multiple stacks including cPanel and WordPress"
       ]
     },
     {
       company: "RevisionFX",
       title: "Systems Administrator | Tier I II Support",
-      date: "Feb 2021 to Feb 2024",
+      date: "Feb 2004 to Feb 2024",
       achievements: [
         "Delivered 24/7 support for global customers and production environments across multiple time zones, supporting 40+ plugins across 15+ apps on Windows, macOS, and Linux",
         "Maintained cloud infrastructure and rolled updates to AWS production environments",
         "Supported Microsoft 365 for internal staff and assisted with endpoint and account troubleshooting",
         "Diagnosed hardware issues including CUDA GPU and network card problems down to low level configuration and resource conflicts",
-        "Built automation scripts and environment fixes using PowerShell, Bash, and shell tooling to resolve licensing, network, and OS specific issues"
+        "Built automation scripts and environment fixes using PowerShell, Bash, and shell tooling to resolve licensing, network, and OS specific issues",
+        "Mocked up automation for FAQ using AI/chat support services to replace Tier I involvement",
+        "Provided onsite hardware break-fix for complex issues and occasional remote services backup"
       ]
     },
     {
@@ -81,38 +85,44 @@ export const resumeData = {
       achievements: [
         "Rebuilt CoreOS driven Docker containers using Ansible on GCP",
         "Used GitLab CI and Jira to manage workflows and deployments",
-        "Audited GCP infrastructure and improved resource usage and reliability"
+        "Audited GCP infrastructure and improved resource usage and reliability",
+        "Removed build artifacts from development architectures to optimize cloud resources"
       ]
     },
     {
       company: "Splunk",
       title: "Systems Engineer",
-      date: "Jan 2018 to May 2018",
+      date: "Mar 2018 to May 2018",
       achievements: [
-        "Maintained Splunk Cloud services in a high intensity production environment",
+        "Maintained Splunk Cloud services in a high intensity production environment with 24/7 support",
         "Resolved complex issues, performed instance rebuilds, and optimized AWS EC2 stacks",
-        "Developed and refined automation scripts in Bash, Ruby, and Node.js to improve operational workflows"
+        "Developed and refined automation scripts in Bash, Ruby, and Node.js to improve operational workflows",
+        "Worked in intense environment with twelve-hour shifts and weekend rotations to maintain cloud service"
       ]
     },
     {
       company: "Workday",
       title: "Systems Engineer",
-      date: "Apr 2016 to Sep 2017",
+      date: "May 2016 to Aug 2017",
       achievements: [
         "Managed Chef server nodes and supported CentOS upgrades with documented best practices",
-        "Executed 4,500+ CentOS live upgrades across global production environments, completing ahead of schedule",
+        "Executed 4,500+ CentOS live upgrades across global production environments, completing ahead of schedule with zero downtime",
         "Developed and improved Bash, Ruby, and Python scripts supporting automation and operations",
-        "Created instructional video documentation to enable self service upgrades and reduced support load"
+        "Created instructional video documentation to enable self service upgrades and reduced support load",
+        "Supported team effort resolving DirtyCow security vulnerability across global datacenters",
+        "Supported servers running Zookeeper, Kafka, Jira, Bitbucket, Docker, and other infrastructure"
       ]
     },
     {
       company: "John Muir Health",
       title: "LAN Engineer",
-      date: "Feb 2015 to Mar 2016",
+      date: "Mar 2015 to Mar 2016",
       achievements: [
         "Supported hybrid enterprise infrastructure in a healthcare environment focused on safety, uptime, and operational efficiency",
         "Maintained LAN and NOC performance and security safeguards, coordinating across teams when needed",
-        "Automated onboarding and provisioning using PowerShell and Azure tooling"
+        "Automated onboarding and provisioning using PowerShell and Azure tooling",
+        "Provided Level III technical and escalation support for Office 365, Exchange, Active Directory, and Epic configuration",
+        "Managed network provisions, performance tuning, and port assignment with error tracking and data movement"
       ]
     },
     {
@@ -166,7 +176,7 @@ export const resumeData = {
     "Dr. Cox Dental Office (1997-2019): 22-year partnership providing Dentrix database support and digital X-ray systems",
     "David Quan Insurance (2012-2014): Infrastructure and Microsoft Office and email support",
     "LMI (2012): Broad small business tech support",
-    "Charles Bonner Law (2004-2005): Litigation support and technical assistance",
-    "Osha Neumann (1995-2023): Long-term personal support and voice-to-text tooling configuration"
+    "Charles Bonner Law (2004-2005): Litigation support and technical assistance during litigation and arbitrations",
+    "Osha Neumann (1995-2023): Long-term personal support and voice-to-text tooling configuration for two decades"
   ]
 }
