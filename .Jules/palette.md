@@ -5,3 +5,7 @@
 ## 2026-03-04 - Semantic Contact Links
 **Learning:** Making phone numbers into interactive links with the `tel:` protocol is highly valuable for mobile users, turning static text into actionable, click-to-call items. Including an `aria-label` further clarifies the intent for screen readers (e.g., "Call [number]" instead of just reading the number).
 **Action:** Always wrap phone numbers in an anchor tag with a `tel:` href and an appropriate `aria-label` when displaying contact information.
+
+## 2024-05-18 - Keyboard Navigation and Skip Links
+**Learning:** For static sites, keyboard users and screen reader users can get easily fatigued tabbing through navigation links before reaching the main content. This is especially true on one-page resumes where the navigation is present at the top of the page.
+**Action:** Always add a visually hidden "Skip to main content" link as the first focusable element on the page for single-page static sites. Ensure it becomes visible on focus to provide a clear indicator.

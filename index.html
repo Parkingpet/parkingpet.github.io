@@ -152,10 +152,31 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
   text-align: center;
   opacity: .9;
 }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s ease-in-out;
+  border-bottom-right-radius: 8px;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--text);
+  outline-offset: -2px;
+  text-decoration: none;
+}
 </style>
 </head>
 
 <body>
+<a href="#summary" class="skip-link">Skip to main content</a>
 <div class="container">
 
   <div class="header" id="top">
