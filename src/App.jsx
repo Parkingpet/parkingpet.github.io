@@ -54,7 +54,12 @@ export default function App() {
           <Experience />
           <Education />
           <Clients />
+          <MicrosoftTools />
           <DevOpsTools />
+          <CLITools />
+          <InfrastructureTools />
+          <GraphTools />
+          <GoogleAITools />
           <Footer />
         </div>
       </div>
@@ -132,20 +137,20 @@ function ParticleBackground() {
 
 function Header() {
   return (
-    <div style={styles.topNav}>
-        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/"); window.location.reload()}} style={styles.iconLink}>🏠</a>
-        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, "", "/prompts"); window.location.reload()}} style={styles.iconLink}>📝</a>
-        <a href="#summary" style={styles.iconLink}>📋</a>
-        <a href="#competencies" style={styles.iconLink}>⚡</a>
-        <a href="#skills" style={styles.iconLink}>🔧</a>
-        <a href="#tools" style={styles.iconLink}>🛠️</a>
-        <a href="#projects" style={styles.iconLink}>🚀</a>
-        <a href="#experience" style={styles.iconLink}>💼</a>
-        <a href="#education" style={styles.iconLink}>🎓</a>
-        <a href="#clients" style={styles.iconLink}>👥</a>
-      </div>
-      <div style={styles.header} id="top">
+    <div style={styles.header} id="top">
       <h1 style={styles.headerName}>Mustafa "Moose" Mclinn</h1>
+      <nav style={styles.nav}>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
+        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
+        <a href="#summary" style={styles.navLink}>Summary</a>
+        <a href="#competencies" style={styles.navLink}>Competencies</a>
+        <a href="#skills" style={styles.navLink}>Technical</a>
+        <a href="#tools" style={styles.navLink}>DevOps Tools</a>
+        <a href="#projects" style={styles.navLink}>Projects</a>
+        <a href="#experience" style={styles.navLink}>Experience</a>
+        <a href="#education" style={styles.navLink}>Education</a>
+        <a href="#clients" style={styles.navLink}>Clients</a>
+      </nav>
       <div style={styles.lcdScreen}>
         <div style={styles.lcdText}>{resumeData.personal.title}</div>
       </div>
@@ -384,10 +389,130 @@ function DevOpsTools() {
   )
 }
 
+function MicrosoftTools() {
+  const tools = [
+    { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱' },
+    { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️' },
+    { name: 'Entra ID', url: 'https://entra.microsoft.com', icon: '🔐' },
+    { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️' },
+    { name: 'Endpoint Manager', url: 'https://endpoint.microsoft.com', icon: '🖥️' },
+    { name: 'Microsoft Graph', url: 'https://graph.microsoft.com', icon: '🔗' }
+  ]
 
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Microsoft Admin Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
 
+function CLITools() {
+  const tools = [
+    { name: 'Bash', url: 'https://www.gnu.org/software/bash/', icon: '🖥️' },
+    { name: 'PowerShell', url: 'https://github.com/PowerShell/PowerShell', icon: '⚡' },
+    { name: 'Git', url: 'https://git-scm.com/', icon: '🔗' },
+    { name: 'Docker CLI', url: 'https://docs.docker.com/engine/reference/commandline/cli/', icon: '🚢' },
+    { name: 'Kubectl', url: 'https://kubernetes.io/docs/reference/kubectl/', icon: '☸️' },
+    { name: 'Terraform', url: 'https://www.terraform.io/docs/cli/', icon: '📄' }
+  ]
 
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>CLI Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
 
+function InfrastructureTools() {
+  const tools = [
+    { name: 'Ansible', url: 'https://www.ansible.com/', icon: '🤖' },
+    { name: 'Chef', url: 'https://www.chef.io/', icon: '👨‍👩‍👧‍👦' },
+    { name: 'Prometheus', url: 'https://prometheus.io/', icon: '📊' },
+    { name: 'ELK Stack', url: 'https://www.elastic.co/what-is/elk-stack', icon: '🔍' },
+    { name: 'Jenkins', url: 'https://www.jenkins.io/', icon: '🔧' },
+    { name: 'Jules Prompt', url: 'https://gist.github.com/Parkingpet/jules-prompt', icon: '📝' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Infrastructure & Automation Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GraphTools() {
+  const tools = [
+    { name: 'Grafana', url: 'https://grafana.com/', icon: '📊' },
+    { name: 'Datadog', url: 'https://www.datadoghq.com/', icon: '📈' },
+    { name: 'New Relic', url: 'https://newrelic.com/', icon: '🔍' },
+    { name: 'Splunk', url: 'https://www.splunk.com/', icon: '🔎' },
+    { name: 'Kibana', url: 'https://www.elastic.co/kibana', icon: '📉' },
+    { name: 'Tableau', url: 'https://www.tableau.com/', icon: '📋' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Monitoring & Visualization Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GoogleAITools() {
+  const tools = [
+    { name: 'Gemini', url: 'https://gemini.google.com/', icon: '✨' },
+    { name: 'Vertex AI', url: 'https://cloud.google.com/vertex-ai', icon: '🤖' },
+    { name: 'Google Cloud AI', url: 'https://cloud.google.com/ai', icon: '☁️' },
+    { name: 'Bard', url: 'https://bard.google.com/', icon: '💬' },
+    { name: 'Google Colab', url: 'https://colab.research.google.com/', icon: '📓' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/', icon: '🧠' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Google AI & ML Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 function Footer() {
   return (
@@ -504,29 +629,6 @@ const styles = {
     fontSize: '18px',
     color: '#38bdf8',
     letterSpacing: '.2px'
-  },
-  topNav: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    background: "rgba(15,23,42,0.95)",
-    border: "1px solid #23314d",
-    padding: "8px 16px",
-    display: "flex",
-    justifyContent: "center",
-    gap: "16px",
-    zIndex: 1000,
-    backdropFilter: "blur(10px)"
-  },
-  iconLink: {
-    fontSize: "20px",
-    textDecoration: "none",
-    padding: "8px",
-    borderRadius: "8px",
-    transition: "all 0.2s ease",
-    background: "rgba(56,189,248,0.1)",
-    border: "1px solid rgba(56,189,248,0.3)"
   },
   footer: {
     marginTop: '18px',
