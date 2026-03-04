@@ -145,7 +145,6 @@ function Header() {
       </h1>
       <nav style={styles.nav}>
         <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
-        <a href="/prompts" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/prompts'); window.location.reload()}} style={styles.navLink}>Prompts</a>
         <a href="#summary" style={styles.navLink}>Summary</a>
         <a href="#competencies" style={styles.navLink}>Competencies</a>
         <a href="#skills" style={styles.navLink}>Technical</a>
