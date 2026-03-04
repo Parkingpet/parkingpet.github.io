@@ -66,6 +66,16 @@ export const resumeData = {
       ]
     },
     {
+      company: "Flo.Solutions",
+      title: "MSP Consultant | HaloPSA Configuration & Automation",
+      date: "2024 to Present",
+      achievements: [
+        "Configured and connected HaloPSA/Remote Management software and automation for small MSP operations",
+        "Implemented RMM workflows and automation strategies to streamline MSP service delivery",
+        "Provided technical consulting for managed service provider infrastructure optimization"
+      ]
+    },
+    {
       company: "RevisionFX",
       title: "Systems Administrator | Tier I II Support",
       date: "Feb 2004 to Feb 2024",
