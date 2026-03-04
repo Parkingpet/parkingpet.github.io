@@ -3,12 +3,9 @@
 [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Experience](https://img.shields.io/badge/Experience-25%2B_Years-38bdf8)](https://parkingpet.github.io)
-
-![DevOps](https://img.shields.io/badge/DevOps-Terminal_UI-38bdf8?style=for-the-badge)
-![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white&style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white&style=for-the-badge)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?logo=kubernetes&logoColor=white&style=for-the-badge)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/Parkingpet/parkingpet.github.io)
 
 ## 🎯 Live Resume
 
