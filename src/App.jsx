@@ -54,6 +54,7 @@ export default function App() {
           <Experience />
           <Education />
           <Clients />
+          <DevOpsTools />
           <Footer />
         </div>
       </div>
