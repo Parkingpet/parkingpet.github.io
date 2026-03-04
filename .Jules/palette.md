@@ -1,0 +1,3 @@
+## 2024-03-04 - Static Site Accessibility and Intra-page Navigation
+**Learning:** Single-page static sites need explicit CSS for smooth scrolling (`scroll-behavior: smooth`) to give spatial context during internal anchor link navigation. Additionally, they often lack a build tool to inject accessibility polyfills, making manual `:focus-visible` styles critical for keyboard users navigating through anchor links.
+**Action:** When working on purely static single-page sites, explicitly check for and add `scroll-behavior: smooth` to the HTML root and custom `:focus-visible` styles to interactive elements like `<a>` tags.

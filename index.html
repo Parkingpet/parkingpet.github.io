@@ -23,10 +23,11 @@
 }
 
 *{ box-sizing: border-box; }
-html, body{ margin:0; padding:0; background: var(--bg); color: var(--text); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; line-height: 1.55; }
+html, body{ margin:0; padding:0; background: var(--bg); color: var(--text); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; line-height: 1.55; scroll-behavior: smooth; }
 
 a{ color: var(--accent); text-decoration: none; }
 a:hover{ text-decoration: underline; }
+a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .container{ max-width: var(--max); margin: 0 auto; padding: 36px 22px 60px; }
 
@@ -167,7 +168,7 @@ a:hover{ text-decoration: underline; }
       <span><a href="https://github.com/">GitHub</a></span>
     </p>
 
-    <div class="nav">
+    <nav class="nav" aria-label="Main Navigation">
       <a href="#summary">Summary</a>
       <a href="#competencies">Competencies</a>
       <a href="#skills">Technical</a>
@@ -175,7 +176,7 @@ a:hover{ text-decoration: underline; }
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#clients">Clients</a>
-    </div>
+    </nav>
   </div>
 
   <div class="section" id="summary">
