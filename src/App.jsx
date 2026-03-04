@@ -56,6 +56,8 @@ export default function App() {
           <Clients />
           <MicrosoftTools />
           <DevOpsTools />
+          <CLITools />
+          <InfrastructureTools />
           <Footer />
         </div>
       </div>
@@ -401,6 +403,56 @@ function MicrosoftTools() {
   return (
     <div style={styles.section}>
       <h2 style={styles.h2}>Microsoft Admin Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function CLITools() {
+  const tools = [
+    { name: 'Bash', url: 'https://www.gnu.org/software/bash/', icon: '🖥️' },
+    { name: 'PowerShell', url: 'https://github.com/PowerShell/PowerShell', icon: '⚡' },
+    { name: 'Git', url: 'https://git-scm.com/', icon: '🔗' },
+    { name: 'Docker CLI', url: 'https://docs.docker.com/engine/reference/commandline/cli/', icon: '🚢' },
+    { name: 'Kubectl', url: 'https://kubernetes.io/docs/reference/kubectl/', icon: '☸️' },
+    { name: 'Terraform', url: 'https://www.terraform.io/docs/cli/', icon: '📄' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>CLI Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function InfrastructureTools() {
+  const tools = [
+    { name: 'Ansible', url: 'https://www.ansible.com/', icon: '🤖' },
+    { name: 'Chef', url: 'https://www.chef.io/', icon: '👨‍👩‍👧‍👦' },
+    { name: 'Prometheus', url: 'https://prometheus.io/', icon: '📊' },
+    { name: 'ELK Stack', url: 'https://www.elastic.co/what-is/elk-stack', icon: '🔍' },
+    { name: 'Jenkins', url: 'https://www.jenkins.io/', icon: '🔧' },
+    { name: 'Jules Prompt', url: 'https://gist.github.com/Parkingpet/jules-prompt', icon: '📝' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Infrastructure & Automation Tools</h2>
       <div style={styles.toolGrid}>
         {tools.map((tool, i) => (
           <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
