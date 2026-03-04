@@ -54,8 +54,8 @@ export default function App() {
           <Experience />
           <Education />
           <Clients />
-          <DevOpsTools />
           <MicrosoftTools />
+          <DevOpsTools />
           <Footer />
         </div>
       </div>
@@ -298,32 +298,7 @@ function Clients() {
   )
 }
 
-function MicrosoftTools() {
-  const tools = [
-    { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱' },
-    { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️' },
-    { name: 'Entra ID', url: 'https://entra.microsoft.com', icon: '🔐' },
-    { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️' },
-    { name: 'Endpoint Manager', url: 'https://endpoint.microsoft.com', icon: '🖥️' },
-    { name: 'Microsoft Graph', url: 'https://graph.microsoft.com', icon: '🔗' }
-  ]
-
-  return (
-    <div style={styles.section}>
-      <h2 style={styles.h2}>Microsoft Admin Tools</h2>
-      <div style={styles.toolGrid}>
-        {tools.map((tool, i) => (
-          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
-            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
-            {tool.name}
-          </a>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function Footer() {
+function DevOpsTools() {
   const [activeTab, setActiveTab] = useState('base64')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
@@ -371,46 +346,76 @@ function Footer() {
   }
 
   return (
-    <div style={styles.footer}>
-      <div style={styles.section} id="tools">
-        <h2 style={styles.h2}>DevOps Tools</h2>
+    <div style={styles.section} id="tools">
+      <h2 style={styles.h2}>DevOps Tools</h2>
+      
+      <div style={styles.toolTabs}>
+        {Object.entries(tools).map(([key, tool]) => (
+          <button
+            key={key}
+            onClick={() => setActiveTab(key)}
+            style={{...styles.toolTab, ...(activeTab === key ? styles.toolTabActive : {})}}
+          >
+            {tool.name}
+          </button>
+        ))}
+      </div>
+
+      <div style={styles.toolBody}>
+        <textarea
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          placeholder="Input..."
+          style={styles.toolTextarea}
+        />
         
-        <div style={styles.toolTabs}>
-          {Object.entries(tools).map(([key, tool]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              style={{...styles.toolTab, ...(activeTab === key ? styles.toolTabActive : {})}}
-            >
-              {tool.name}
+        <div style={styles.toolActions}>
+          {Object.entries(tools[activeTab]).filter(([k]) => k !== 'name').map(([key, fn]) => (
+            <button key={key} onClick={fn} style={styles.toolBtn}>
+              {key}
             </button>
           ))}
         </div>
 
-        <div style={styles.toolBody}>
-          <textarea
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            placeholder="Input..."
-            style={styles.toolTextarea}
-          />
-          
-          <div style={styles.toolActions}>
-            {Object.entries(tools[activeTab]).filter(([k]) => k !== 'name').map(([key, fn]) => (
-              <button key={key} onClick={fn} style={styles.toolBtn}>
-                {key}
-              </button>
-            ))}
-          </div>
-
-          <textarea
-            value={output}
-            readOnly
-            placeholder="Output..."
-            style={styles.toolTextarea}
-          />
-        </div>
+        <textarea
+          value={output}
+          readOnly
+          placeholder="Output..."
+          style={styles.toolTextarea}
+        />
       </div>
+    </div>
+  )
+}
+
+function MicrosoftTools() {
+  const tools = [
+    { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱' },
+    { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️' },
+    { name: 'Entra ID', url: 'https://entra.microsoft.com', icon: '🔐' },
+    { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️' },
+    { name: 'Endpoint Manager', url: 'https://endpoint.microsoft.com', icon: '🖥️' },
+    { name: 'Microsoft Graph', url: 'https://graph.microsoft.com', icon: '🔗' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>Microsoft Admin Tools</h2>
+      <div style={styles.toolGrid}>
+        {tools.map((tool, i) => (
+          <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
+            {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+    <div style={styles.footer}>
       <pre style={styles.ascii}>{`
   ╔════════════════════════════════════════════════════════════╗
   ║  [DEVOPS_TOOLS] [MICROSOFT_ADMIN] [INFRASTRUCTURE_CODE]   ║
