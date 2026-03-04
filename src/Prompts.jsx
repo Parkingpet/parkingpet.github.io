@@ -1,7 +1,17 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 export default function Prompts() {
   const canvasRef = useRef(null)
+  const [prompts, setPrompts] = useState(() => {
+    const saved = localStorage.getItem('userPrompts')
+    return saved ? JSON.parse(saved) : []
+  })
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+
+  useEffect(() => {
+    localStorage.setItem('userPrompts', JSON.stringify(prompts))
+  }, [prompts])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -11,12 +21,12 @@ export default function Prompts() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    const particles = Array.from({length: 50}, () => ({
+    const particles = Array.from({length: 30}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 1.5
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      r: Math.random() * 1
     }))
     
     const animate = () => {
@@ -49,7 +59,20 @@ export default function Prompts() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const prompts = [
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (title.trim()) {
+      setPrompts([...prompts, { id: Date.now(), title, description, date: new Date().toLocaleDateString() }])
+      setTitle('')
+      setDescription('')
+    }
+  }
+
+  const handleDelete = (id) => {
+    setPrompts(prompts.filter(p => p.id !== id))
+  }
+
+  const defaultPrompts = [
     { title: 'DevOps Code Review', description: 'Review infrastructure code for best practices', url: 'https://gist.github.com/Parkingpet/devops-code-review' },
     { title: 'AWS Architecture', description: 'Design scalable AWS infrastructure', url: 'https://gist.github.com/Parkingpet/aws-architecture' },
     { title: 'Kubernetes Deployment', description: 'Deploy and manage Kubernetes clusters', url: 'https://gist.github.com/Parkingpet/k8s-deployment' },
@@ -74,9 +97,45 @@ export default function Prompts() {
           </div>
 
           <div style={styles.section}>
-            <h2 style={styles.h2}>Available Prompts</h2>
+            <h2 style={styles.h2}>Submit New Prompt</h2>
+            <form onSubmit={handleSubmit} style={styles.form}>
+              <input
+                type="text"
+                placeholder="Prompt Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                style={styles.input}
+              />
+              <textarea
+                placeholder="Prompt Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                style={styles.textarea}
+              />
+              <button type="submit" style={styles.submitBtn}>Submit Prompt</button>
+            </form>
+          </div>
+
+          {prompts.length > 0 && (
+            <div style={styles.section}>
+              <h2 style={styles.h2}>Your Saved Prompts ({prompts.length})</h2>
+              <div style={styles.promptGrid}>
+                {prompts.map((prompt) => (
+                  <div key={prompt.id} style={styles.promptCard}>
+                    <h3 style={styles.promptTitle}>{prompt.title}</h3>
+                    <p style={styles.promptDesc}>{prompt.description}</p>
+                    <p style={styles.promptDate}>{prompt.date}</p>
+                    <button onClick={() => handleDelete(prompt.id)} style={styles.deleteBtn}>Delete</button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div style={styles.section}>
+            <h2 style={styles.h2}>Featured Prompts</h2>
             <div style={styles.promptGrid}>
-              {prompts.map((prompt, i) => (
+              {defaultPrompts.map((prompt, i) => (
                 <a key={i} href={prompt.url} target="_blank" rel="noopener noreferrer" style={styles.promptCard}>
                   <h3 style={styles.promptTitle}>{prompt.title}</h3>
                   <p style={styles.promptDesc}>{prompt.description}</p>
@@ -111,20 +170,20 @@ const styles = {
     position: 'fixed',
     inset: 0,
     background: `
-      linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px)
+      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
     `,
     backgroundSize: '50px 50px',
     pointerEvents: 'none',
-    animation: 'gridMove 20s linear infinite'
+    animation: 'gridMove 40s linear infinite'
   },
   scanline: {
     position: 'fixed',
     inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.02) 50%)',
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
     backgroundSize: '100% 4px',
     pointerEvents: 'none',
-    animation: 'scanline 8s linear infinite'
+    animation: 'scanline 15s linear infinite'
   },
   content: {
     position: 'relative',
@@ -179,6 +238,42 @@ const styles = {
     color: '#38bdf8',
     letterSpacing: '.2px'
   },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+    marginTop: '12px'
+  },
+  input: {
+    background: '#1e293b',
+    border: '1px solid #334155',
+    borderRadius: '6px',
+    color: '#e2e8f0',
+    padding: '12px',
+    fontFamily: 'monospace',
+    fontSize: '13px'
+  },
+  textarea: {
+    background: '#1e293b',
+    border: '1px solid #334155',
+    borderRadius: '6px',
+    color: '#e2e8f0',
+    padding: '12px',
+    fontFamily: 'monospace',
+    fontSize: '13px',
+    minHeight: '100px',
+    resize: 'vertical'
+  },
+  submitBtn: {
+    padding: '10px 16px',
+    background: '#38bdf8',
+    border: 'none',
+    borderRadius: '6px',
+    color: '#0b1220',
+    cursor: 'pointer',
+    fontSize: '13px',
+    fontWeight: 'bold'
+  },
   promptGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -207,11 +302,25 @@ const styles = {
     fontSize: '14px',
     color: '#94a3b8'
   },
+  promptDate: {
+    margin: '0 0 8px',
+    fontSize: '12px',
+    color: '#64748b'
+  },
   promptLink: {
     display: 'inline-block',
     color: '#38bdf8',
     fontSize: '13px',
     fontWeight: 500
+  },
+  deleteBtn: {
+    padding: '6px 12px',
+    background: '#ef4444',
+    border: 'none',
+    borderRadius: '4px',
+    color: 'white',
+    cursor: 'pointer',
+    fontSize: '12px'
   },
   footer: {
     marginTop: '36px',
