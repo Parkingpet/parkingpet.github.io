@@ -2,6 +2,7 @@ export const resumeData = {
   personal: {
     name: "Mustafa McLinn",
     title: "Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations",
+    tagline: "is a must hire",
     location: "Oakland / San Francisco, CA",
     phone: "510 296 0233",
     email: "mustafa.mclinn@outlook.com",
