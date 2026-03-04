@@ -524,4 +524,117 @@ function Footer() {
 │ Services: System Administration | Cloud Infrastructure | DevOps Automation     │
 └──────────────────────────────────────────────────────────────────────────────┘
       `}</pre>
+      <p style={{marginTop: '16px'}}>Last updated March 2026</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  )
+}
+
+const listStyle = {margin: '8px 0 0', paddingLeft: '18px', color: '#e2e8f0'}
+
+const styles = {
+  canvas: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    pointerEvents: 'none',
+    zIndex: 0,
+    opacity: 0.5
+  },
+  loader: {
+    position: 'fixed',
+    inset: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#0b1220',
+    zIndex: 9999
+  },
+  grid: {
+    position: 'fixed',
+    inset: 0,
+    background: `
+      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
+    `,
+    backgroundSize: '50px 50px',
+    pointerEvents: 'none',
+    animation: 'gridMove 40s linear infinite'
+  },
+  scanline: {
+    position: 'fixed',
+    inset: 0,
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
+    backgroundSize: '100% 4px',
+    pointerEvents: 'none',
+    animation: 'scanline 15s linear infinite'
+  },
+  content: {
+    position: 'relative',
+    zIndex: 1,
+    animation: 'fadeIn 0.8s ease-out'
+  },
+  container: {
+    maxWidth: '1100px',
+    margin: '0 auto',
+    padding: '36px 22px 60px',
+    color: '#e2e8f0',
+    fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
+    lineHeight: 1.55
+  },
+  header: {
+    background: 'linear-gradient(180deg, rgba(56,189,248,.10), rgba(56,189,248,0))',
+    border: '1px solid #23314d',
+    borderRadius: '18px',
+    padding: '22px 22px 18px',
+    boxShadow: '0 10px 30px rgba(0,0,0,.35)'
+  },
+  headerName: {
+    margin: '0 0 16px 0',
+    fontSize: '28px',
+    fontWeight: 'bold',
+    color: '#38bdf8',
+    textAlign: 'center',
+    letterSpacing: '2px',
+    textShadow: '0 0 15px rgba(56,189,248,0.7)'
+  },
+  nav: {
+    marginTop: '14px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '10px'
+  },
+  navLink: {
+    display: 'inline-block',
+    padding: '8px 10px',
+    border: '1px solid #23314d',
+    background: 'rgba(17,28,51,.6)',
+    borderRadius: '12px',
+    fontSize: '13px',
+    color: '#38bdf8',
+    textDecoration: 'none'
+  },
+  section: {
+    marginTop: '22px',
+    background: 'rgba(15,23,42,.65)',
+    border: '1px solid #23314d',
+    borderRadius: '18px',
+    padding: '18px 18px 8px',
+    boxShadow: '0 10px 26px rgba(0,0,0,.35)'
+  },
+  h2: {
+    margin: '0 0 10px',
+    fontSize: '18px',
+    color: '#38bdf8',
+    letterSpacing: '.2px'
+  },
+  footer: {
+    marginTop: '18px',
+    color: '#94a3b8',
+    fontSize: '12px',
+    textAlign: 'center',
+    opacity: .9
+  }
 }
