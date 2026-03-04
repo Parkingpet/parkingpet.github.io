@@ -605,17 +605,21 @@ const styles = {
     marginTop: '14px',
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '10px'
+    gap: '2px',
+    borderBottom: '2px solid #38bdf8'
   },
   navLink: {
     display: 'inline-block',
-    padding: '8px 10px',
+    padding: '10px 16px',
     border: '1px solid #23314d',
+    borderBottom: 'none',
     background: 'rgba(17,28,51,.6)',
-    borderRadius: '12px',
+    borderRadius: '8px 8px 0 0',
     fontSize: '13px',
     color: '#38bdf8',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    position: 'relative',
+    top: '2px'
   },
   section: {
     marginTop: '22px',
@@ -677,5 +681,54 @@ const styles = {
   },
   blink: {
     animation: 'blink 1s infinite'
+  },
+  toolTabs: {
+    display: 'flex',
+    gap: '8px',
+    marginBottom: '16px'
+  },
+  toolTab: {
+    padding: '8px 16px',
+    background: 'rgba(17,28,51,.6)',
+    border: '1px solid #23314d',
+    borderRadius: '8px',
+    color: '#38bdf8',
+    cursor: 'pointer',
+    fontSize: '13px'
+  },
+  toolTabActive: {
+    background: 'rgba(56,189,248,.2)',
+    borderColor: '#38bdf8'
+  },
+  toolBody: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px'
+  },
+  toolTextarea: {
+    width: '100%',
+    minHeight: '100px',
+    padding: '12px',
+    background: 'rgba(11,18,32,.8)',
+    border: '1px solid #23314d',
+    borderRadius: '8px',
+    color: '#e2e8f0',
+    fontFamily: 'monospace',
+    fontSize: '13px',
+    resize: 'vertical'
+  },
+  toolActions: {
+    display: 'flex',
+    gap: '8px',
+    flexWrap: 'wrap'
+  },
+  toolBtn: {
+    padding: '8px 16px',
+    background: 'rgba(56,189,248,.2)',
+    border: '1px solid #38bdf8',
+    borderRadius: '8px',
+    color: '#38bdf8',
+    cursor: 'pointer',
+    fontSize: '13px'
   }
 }
