@@ -18,6 +18,37 @@
   51%, 100% { opacity: 0; }
 }
 
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(56,189,248,0.3), inset 0 0 10px rgba(56,189,248,0.1); }
+  50% { box-shadow: 0 0 20px rgba(56,189,248,0.6), inset 0 0 20px rgba(56,189,248,0.2); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes lcdFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+@keyframes lcdLoad {
+  0% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -27,10 +58,12 @@ body {
 a {
   color: #38bdf8;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  text-shadow: 0 0 10px rgba(56,189,248,0.5);
 }
 
 .nav a {
@@ -42,9 +75,55 @@ a:hover {
   font-size: 13px;
   color: #38bdf8;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .nav a:hover {
   background: rgba(17,28,51,.8);
   border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56,189,248,0.4);
+  animation: pulse 1s ease-in-out;
+}
+
+.section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.section:hover {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.chip {
+  transition: all 0.3s ease;
+}
+
+.chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.role {
+  transition: all 0.3s ease;
+}
+
+.role:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(56,189,248,0.3);
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
