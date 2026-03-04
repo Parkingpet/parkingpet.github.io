@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react'
-import Tools from './Tools'
 import { resumeData } from './resumeData'
 
 export default function App() {
@@ -59,7 +58,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-      <Tools />
     </>
   )
 }
@@ -430,7 +428,6 @@ function Footer() {
     </div>
   )
 }import { useEffect, useState, useRef } from 'react'
-import Tools from './Tools'
 import { resumeData } from './resumeData'
 
 export default function App() {
@@ -490,7 +487,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-      <Tools />
     </>
   )
 }
