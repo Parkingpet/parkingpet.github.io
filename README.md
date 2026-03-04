@@ -182,7 +182,7 @@ src/
 └── index.css         # Global styles and animations
 
 public/
-├── resume.txt        # Legacy HTML version (backup)
+├── resume.txt        # Plain text version
 └── favicon.ico       # Site favicon
 
 .github/workflows/
