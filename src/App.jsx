@@ -165,6 +165,8 @@ function Header() {
       <nav style={styles.nav}>
         <a href="/" style={styles.navLink}>Home</a>
         <a href="/prompts" style={styles.navLink}>Prompts</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={styles.navLinkSpecial}>Resume (PDF)</a>
+        <a href="/resume.txt" target="_blank" rel="noopener noreferrer" style={styles.navLinkSpecial}>Resume (TXT)</a>
         <a href="#summary" style={styles.navLink}>Summary</a>
         <a href="#competencies" style={styles.navLink}>Competencies</a>
         <a href="#skills" style={styles.navLink}>Technical</a>
@@ -346,6 +348,25 @@ function DevOpsTools() {
           const regex = new RegExp(pattern || input, flags)
           setOutput(`Test string: "${output}" - Match: ${regex.test(output) ? 'YES' : 'NO'}`)
         } catch { setOutput('Invalid regex') }
+      }
+    },
+    jwt: {
+      name: 'JWT',
+      decode: () => {
+        try {
+          const parts = input.split('.')
+          if (parts.length !== 3) throw new Error('Invalid JWT')
+          const header = JSON.parse(atob(parts[0]))
+          const payload = JSON.parse(atob(parts[1]))
+          setOutput(JSON.stringify({ header, payload }, null, 2))
+        } catch { setOutput('Invalid JWT format') }
+      }
+    },
+    url: {
+      name: 'URL',
+      encode: () => setOutput(encodeURIComponent(input)),
+      decode: () => {
+        try { setOutput(decodeURIComponent(input)) } catch { setOutput('Invalid URL encoding') }
       }
     }
   }
@@ -600,6 +621,17 @@ const styles = {
     fontSize: '13px',
     color: '#38bdf8',
     textDecoration: 'none'
+  },
+  navLinkSpecial: {
+    display: 'inline-block',
+    padding: '8px 10px',
+    border: '1px solid #38bdf8',
+    background: 'rgba(56,189,248,.1)',
+    borderRadius: '12px',
+    fontSize: '13px',
+    color: '#38bdf8',
+    textDecoration: 'none',
+    fontWeight: 'bold'
   },
   section: {
     marginTop: '22px',

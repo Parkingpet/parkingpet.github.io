@@ -4,12 +4,15 @@ import App from './App'
 import Prompts from './Prompts'
 import './index.css'
 
+// eslint-disable-next-line react-refresh/only-export-components
 function Router() {
   const [page, setPage] = useState('home')
 
   useEffect(() => {
     const path = window.location.pathname
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (path.includes('prompts')) setPage('prompts')
+
     else setPage('home')
   }, [])
 
