@@ -54,12 +54,12 @@ export default function App() {
           <Experience />
           <Education />
           <Clients />
-          <MicrosoftTools />
           <DevOpsTools />
           <CLITools />
           <InfrastructureTools />
           <GraphTools />
           <GoogleAITools />
+          <MicrosoftTools />
           <Footer />
         </div>
       </div>
