@@ -605,7 +605,8 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '2px',
-    borderBottom: '2px solid #38bdf8'
+    borderBottom: '2px solid #38bdf8',
+    justifyContent: 'center'
   },
   navLink: {
     display: 'inline-block',
