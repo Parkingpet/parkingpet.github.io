@@ -43,17 +43,28 @@ export const resumeData = {
     "Tools": "Jira, GitHub, Artifactory, Splunk, SCCM, XenApp"
   },
 
-  projects: [{
-    company: "ParkingPet",
-    title: "Smart parking platform concept and public project site",
-    link: "https://github.com/Parkingpet/parkingpet.github.io",
-    achievements: [
-      "Current GitHub Pages repo used for public facing presence and iteration: Parkingpet/parkingpet.github.io",
-      "Foundation oriented build intended to evolve into a platform with strong emphasis on reliability, automation, and clean deploy patterns",
-      "React-based resume site with terminal UI, DevOps tools integration, and automated CI/CD deployment",
-      "Features animated grid backgrounds, CRT effects, and integrated Base64, JSON, Hash, Regex, and Timestamp tools"
-    ]
-  }],
+  projects: [
+    {
+      company: "ParkingPet",
+      title: "Smart parking platform concept and public project site",
+      link: "https://github.com/Parkingpet/parkingpet.github.io",
+      achievements: [
+        "Current GitHub Pages repo used for public facing presence and iteration: Parkingpet/parkingpet.github.io",
+        "Foundation oriented build intended to evolve into a platform with strong emphasis on reliability, automation, and clean deploy patterns",
+        "React-based resume site with terminal UI, DevOps tools integration, and automated CI/CD deployment",
+        "Features animated grid backgrounds, CRT effects, and integrated Base64, JSON, Hash, Regex, and Timestamp tools"
+      ]
+    },
+    {
+      company: "Pleynice",
+      title: "Personal GitHub profile and project portfolio",
+      link: "https://github.com/pleynice",
+      achievements: [
+        "Personal GitHub account showcasing various technical projects and contributions",
+        "Repository collection demonstrating coding skills and project work"
+      ]
+    }
+  ],
 
   experience: [
     {
