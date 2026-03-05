@@ -56,6 +56,24 @@ export const resumeData = {
       ]
     },
     {
+      company: "RevisionFX.tech",
+      title: "Technical support and development resources",
+      link: "https://github.com/endorfinized",
+      achievements: [
+        "GitHub repository for RevisionFX technical resources and support tools",
+        "Development work supporting video plugin infrastructure and customer solutions"
+      ]
+    },
+    {
+      company: "Teckguy",
+      title: "Technical consulting and IT support GitHub profile",
+      link: "https://github.com/teckguy",
+      achievements: [
+        "GitHub profile for Teckguy consulting services and technical projects",
+        "Repository collection for IT infrastructure and automation work"
+      ]
+    },
+    {
       company: "Pleynice",
       title: "Personal GitHub profile and project portfolio",
       link: "https://github.com/pleynice",
