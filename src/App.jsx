@@ -101,24 +101,30 @@ function ParticleBackground() {
       
       ctx.globalAlpha = 0.1
       ctx.strokeStyle = '#38bdf8'
-      particles.forEach((p1, i) => {
-        particles.slice(i + 1).forEach(p2 => {
+
+      // Optimize: Avoid allocating new arrays with slice in animation loop
+      // Optimize: Use squared distance to avoid expensive Math.sqrt calls
+      const len = particles.length
+      for (let i = 0; i < len; i++) {
+        const p1 = particles[i]
+        for (let j = i + 1; j < len; j++) {
+          const p2 = particles[j]
           const dx = p1.x - p2.x
           const dy = p1.y - p2.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < 150) {
+          // 150 * 150 = 22500
+          if (dx * dx + dy * dy < 22500) {
             ctx.beginPath()
             ctx.moveTo(p1.x, p1.y)
             ctx.lineTo(p2.x, p2.y)
             ctx.stroke()
           }
-        })
-      })
+        }
+      }
       
-      requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
     }
     
-    animate()
+    let animationFrameId = requestAnimationFrame(animate)
     
     const handleResize = () => {
       canvas.width = window.innerWidth
@@ -126,7 +132,10 @@ function ParticleBackground() {
     }
     
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      cancelAnimationFrame(animationFrameId)
+    }
   }, [])
   
   return <canvas ref={canvasRef} style={styles.canvas} />
