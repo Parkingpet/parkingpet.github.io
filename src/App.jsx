@@ -46,6 +46,7 @@ export default function App() {
       <ParticleBackground />
       <div style={styles.content}>
         <div style={styles.container}>
+          <a href="#summary" className="skip-link">Skip to main content</a>
           <Header />
           <Summary />
           <Competencies />
@@ -365,6 +366,7 @@ function DevOpsTools() {
 
       <div style={styles.toolBody}>
         <textarea
+          aria-label={`${tools[activeTab].name} Input`}
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Input..."
@@ -380,6 +382,7 @@ function DevOpsTools() {
         </div>
 
         <textarea
+          aria-label={`${tools[activeTab].name} Output`}
           value={output}
           readOnly
           placeholder="Output..."
