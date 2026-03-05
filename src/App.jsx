@@ -139,6 +139,11 @@ function ParticleBackground() {
 function Header() {
   return (
     <div style={styles.header} id="top">
+      <div style={styles.resumeDownloadContainer}>
+        <a href="/Mustafa_McLinn_Resume.pdf" download style={styles.resumeDownloadBtn}>
+          📄 Download Resume PDF
+        </a>
+      </div>
       <h1 style={styles.headerName}>
         <pre style={{...styles.ascii, margin: 0, fontSize: '8px', lineHeight: '8px', color: '#38bdf8'}}>
 {resumeData.personal.name}
@@ -623,6 +628,25 @@ const styles = {
     textAlign: 'center',
     letterSpacing: '2px',
     textShadow: '0 0 15px rgba(56,189,248,0.7)'
+  },
+  resumeDownloadContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginBottom: '10px'
+  },
+  resumeDownloadBtn: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    padding: '8px 16px',
+    background: 'rgba(56,189,248,.1)',
+    border: '1px solid #38bdf8',
+    borderRadius: '4px',
+    color: '#38bdf8',
+    textDecoration: 'none',
+    fontSize: '12px',
+    fontWeight: 'bold',
+    transition: 'all 0.2s',
+    boxShadow: '0 0 10px rgba(56,189,248,0.2)'
   },
   nav: {
     marginTop: '14px',
