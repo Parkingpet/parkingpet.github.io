@@ -60,6 +60,7 @@ export default function App() {
           <GraphTools />
           <GoogleAITools />
           <MicrosoftTools />
+          <MCPRegistries />
           <Footer />
         </div>
       </div>
@@ -507,6 +508,29 @@ function GoogleAITools() {
           <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
             <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
             {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function MCPRegistries() {
+  const registries = [
+    { name: 'MCP Registry', url: 'https://github.com/modelcontextprotocol/servers', icon: '📦' },
+    { name: 'Smithery', url: 'https://smithery.ai/', icon: '🔨' },
+    { name: 'Awesome MCP Servers', url: 'https://github.com/punkpeye/awesome-mcp-servers', icon: '⭐' },
+    { name: 'MCP Hub', url: 'https://mcp-hub.com/', icon: '🌐' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>MCP Registries</h2>
+      <div style={styles.toolGrid}>
+        {registries.map((registry, i) => (
+          <a key={i} href={registry.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{registry.icon}</span>
+            {registry.name}
           </a>
         ))}
       </div>
