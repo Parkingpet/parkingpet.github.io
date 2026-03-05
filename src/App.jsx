@@ -520,7 +520,7 @@ function MCPRegistries() {
     { name: 'MCP Registry', url: 'https://github.com/modelcontextprotocol/servers', icon: '📦' },
     { name: 'Smithery', url: 'https://smithery.ai/', icon: '🔨' },
     { name: 'Awesome MCP Servers', url: 'https://github.com/punkpeye/awesome-mcp-servers', icon: '⭐' },
-    { name: 'MCP Hub', url: 'https://mcp-hub.com/', icon: '🌐' }
+    { name: 'MCP Hub', url: 'https://mcpserverhub.com/', icon: '🌐' }
   ]
 
   return (
