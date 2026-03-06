@@ -351,10 +351,14 @@ function DevOpsTools() {
     <div style={styles.section} id="tools">
       <h2 style={styles.h2}>DevOps Tools</h2>
       
-      <div style={styles.toolTabs}>
+      <div style={styles.toolTabs} role="tablist" aria-label="DevOps Tools Selection">
         {Object.entries(tools).map(([key, tool]) => (
           <button
             key={key}
+            id={`tab-${key}`}
+            role="tab"
+            aria-selected={activeTab === key}
+            aria-controls="tool-panel"
             onClick={() => setActiveTab(key)}
             style={{...styles.toolTab, ...(activeTab === key ? styles.toolTabActive : {})}}
           >
@@ -363,17 +367,18 @@ function DevOpsTools() {
         ))}
       </div>
 
-      <div style={styles.toolBody}>
+      <div style={styles.toolBody} role="tabpanel" id="tool-panel" aria-labelledby={`tab-${activeTab}`}>
         <textarea
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Input..."
+          aria-label={`${tools[activeTab].name} input`}
           style={styles.toolTextarea}
         />
         
         <div style={styles.toolActions}>
           {Object.entries(tools[activeTab]).filter(([k]) => k !== 'name').map(([key, fn]) => (
-            <button key={key} onClick={fn} style={styles.toolBtn}>
+            <button key={key} onClick={fn} style={styles.toolBtn} aria-label={`Execute ${key} on ${tools[activeTab].name}`}>
               {key}
             </button>
           ))}
@@ -383,6 +388,7 @@ function DevOpsTools() {
           value={output}
           readOnly
           placeholder="Output..."
+          aria-label={`${tools[activeTab].name} output`}
           style={styles.toolTextarea}
         />
       </div>
