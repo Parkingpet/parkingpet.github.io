@@ -170,6 +170,7 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/Mustafa_McLinn_Resume.pdf" download="Mustafa_McLinn_Resume.pdf" style={{color: '#38bdf8', fontWeight: 'bold'}}>📥 Download Resume PDF</a></span>
       </p>
     </div>
   )
@@ -343,6 +344,27 @@ function DevOpsTools() {
           const regex = new RegExp(pattern || input, flags)
           setOutput(`Test string: "${output}" - Match: ${regex.test(output) ? 'YES' : 'NO'}`)
         } catch { setOutput('Invalid regex') }
+      }
+    },
+    jwt: {
+      name: 'JWT',
+      decode: () => {
+        try {
+          const parts = input.split('.')
+          if (parts.length !== 3) throw new Error('Invalid JWT')
+          const header = JSON.parse(atob(parts[0].replace(/-/g, '+').replace(/_/g, '/')))
+          const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')))
+          setOutput(JSON.stringify({ header, payload }, null, 2))
+        } catch { setOutput('Invalid JWT format') }
+      }
+    },
+    url: {
+      name: 'URL',
+      encode: () => {
+        try { setOutput(encodeURIComponent(input)) } catch { setOutput('Error encoding URL') }
+      },
+      decode: () => {
+        try { setOutput(decodeURIComponent(input)) } catch { setOutput('Error decoding URL') }
       }
     }
   }
