@@ -57,6 +57,7 @@ export default function App() {
           <DevOpsTools />
           <CLITools />
           <InfrastructureTools />
+          <DevOpsCheatSheets />
           <GraphTools />
           <GoogleAITools />
           <MicrosoftTools />
@@ -170,6 +171,7 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/Mustafa_McLinn_Resume.pdf" download>Resume PDF</a></span>
       </p>
     </div>
   )
@@ -344,6 +346,17 @@ function DevOpsTools() {
           setOutput(`Test string: "${output}" - Match: ${regex.test(output) ? 'YES' : 'NO'}`)
         } catch { setOutput('Invalid regex') }
       }
+    },
+    jwt: {
+      name: 'JWT',
+      decode: () => {
+        try {
+          const parts = input.split('.')
+          if (parts.length !== 3) throw new Error()
+          const payload = JSON.parse(atob(parts[1]))
+          setOutput(JSON.stringify(payload, null, 2))
+        } catch { setOutput('Invalid JWT') }
+      }
     }
   }
 
@@ -458,6 +471,31 @@ function InfrastructureTools() {
           <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
             <span style={{fontSize: '20px', marginRight: '8px'}}>{tool.icon}</span>
             {tool.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function DevOpsCheatSheets() {
+  const sheets = [
+    { name: 'Docker', url: 'https://docs.docker.com/get-started/docker_cheatsheet.pdf', icon: '🐳' },
+    { name: 'Kubernetes', url: 'https://kubernetes.io/docs/reference/kubectl/cheatsheet/', icon: '☸️' },
+    { name: 'Git', url: 'https://education.github.com/git-cheat-sheet-education.pdf', icon: '🐙' },
+    { name: 'Linux Commands', url: 'https://www.guru99.com/linux-commands-cheat-sheet.html', icon: '🐧' },
+    { name: 'Bash Scripting', url: 'https://devhints.io/bash', icon: '🐚' },
+    { name: 'Vim', url: 'https://vim.rtorr.com/', icon: '📝' }
+  ]
+
+  return (
+    <div style={styles.section}>
+      <h2 style={styles.h2}>DevOps Cheat Sheets</h2>
+      <div style={styles.toolGrid}>
+        {sheets.map((sheet, i) => (
+          <a key={i} href={sheet.url} target="_blank" rel="noopener noreferrer" style={styles.toolLink}>
+            <span style={{fontSize: '20px', marginRight: '8px'}}>{sheet.icon}</span>
+            {sheet.name}
           </a>
         ))}
       </div>
