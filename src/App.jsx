@@ -304,6 +304,7 @@ function DevOpsTools() {
   const [activeTab, setActiveTab] = useState('base64')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
+  const [copied, setCopied] = useState(false)
 
   const tools = {
     base64: {
@@ -347,6 +348,13 @@ function DevOpsTools() {
     }
   }
 
+  const handleCopy = () => {
+    if (!output) return
+    navigator.clipboard.writeText(output)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <div style={styles.section} id="tools">
       <h2 style={styles.h2}>DevOps Tools</h2>
@@ -365,21 +373,33 @@ function DevOpsTools() {
 
       <div style={styles.toolBody}>
         <textarea
+          aria-label={`${tools[activeTab].name} Input`}
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Input..."
           style={styles.toolTextarea}
         />
         
-        <div style={styles.toolActions}>
-          {Object.entries(tools[activeTab]).filter(([k]) => k !== 'name').map(([key, fn]) => (
-            <button key={key} onClick={fn} style={styles.toolBtn}>
-              {key}
-            </button>
-          ))}
+        <div style={{ ...styles.toolActions, justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {Object.entries(tools[activeTab]).filter(([k]) => k !== 'name').map(([key, fn]) => (
+              <button key={key} onClick={fn} style={styles.toolBtn}>
+                {key}
+              </button>
+            ))}
+          </div>
+          <button
+            onClick={handleCopy}
+            style={{ ...styles.toolBtn, opacity: output ? 1 : 0.5, cursor: output ? 'pointer' : 'not-allowed' }}
+            disabled={!output}
+            aria-label="Copy output to clipboard"
+          >
+            {copied ? 'Copied!' : 'Copy'}
+          </button>
         </div>
 
         <textarea
+          aria-label={`${tools[activeTab].name} Output`}
           value={output}
           readOnly
           placeholder="Output..."
