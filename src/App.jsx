@@ -170,6 +170,8 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={`mailto:${resumeData.personal.email}`}>{resumeData.personal.email}</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/Mustafa_Resume2024_4QA_OLD.pdf" target="_blank" rel="noopener noreferrer">Resume PDF</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/Mustafa.Mclinn-RezSkillz-2025Q2DTEST.pdf" target="_blank" rel="noopener noreferrer">Tech Resume PDF</a></span>
       </p>
     </div>
   )
@@ -343,6 +345,57 @@ function DevOpsTools() {
           const regex = new RegExp(pattern || input, flags)
           setOutput(`Test string: "${output}" - Match: ${regex.test(output) ? 'YES' : 'NO'}`)
         } catch { setOutput('Invalid regex') }
+      }
+    },
+    jwt: {
+      name: 'JWT',
+      decode: () => {
+        try {
+          const parts = input.split('.')
+          if (parts.length !== 3) throw new Error('Invalid JWT format')
+          const header = JSON.parse(atob(parts[0].replace(/-/g, '+').replace(/_/g, '/')))
+          const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')))
+          setOutput(JSON.stringify({ header, payload }, null, 2))
+        } catch { setOutput('Invalid JWT') }
+      }
+    },
+    uuid: {
+      name: 'UUID',
+      generate: () => {
+        if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+          setOutput(crypto.randomUUID())
+        } else {
+          setOutput('UUID generation not supported in this environment')
+        }
+      }
+    },
+    cidr: {
+      name: 'CIDR',
+      calculate: () => {
+        try {
+          const [ip, prefix] = input.split('/')
+          if (!ip || !prefix) throw new Error()
+
+          const ipParts = ip.split('.').map(Number)
+          if (ipParts.length !== 4 || ipParts.some(p => isNaN(p) || p < 0 || p > 255)) throw new Error()
+
+          const maskNum = parseInt(prefix)
+          if (isNaN(maskNum) || maskNum < 0 || maskNum > 32) throw new Error()
+
+          const ipNum = (ipParts[0] << 24) | (ipParts[1] << 16) | (ipParts[2] << 8) | ipParts[3]
+          const mask = -1 << (32 - maskNum)
+
+          const networkNum = ipNum & mask
+          const broadcastNum = networkNum | ~mask
+
+          const numToIp = num => [(num >>> 24) & 255, (num >>> 16) & 255, (num >>> 8) & 255, num & 255].join('.')
+
+          const network = numToIp(networkNum)
+          const broadcast = numToIp(broadcastNum)
+          const hostCount = maskNum === 32 ? 1 : maskNum === 31 ? 2 : Math.max(0, Math.pow(2, 32 - maskNum) - 2)
+
+          setOutput(`Network:   ${network}\nBroadcast: ${broadcast}\nHosts:     ${hostCount}`)
+        } catch { setOutput('Invalid CIDR format (e.g., 192.168.1.0/24)') }
       }
     }
   }
