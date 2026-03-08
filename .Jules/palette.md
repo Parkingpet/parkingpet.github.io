@@ -9,3 +9,6 @@
 ## 2024-05-18 - Keyboard Navigation and Skip Links
 **Learning:** For static sites, keyboard users and screen reader users can get easily fatigued tabbing through navigation links before reaching the main content. This is especially true on one-page resumes where the navigation is present at the top of the page.
 **Action:** Always add a visually hidden "Skip to main content" link as the first focusable element on the page for single-page static sites. Ensure it becomes visible on focus to provide a clear indicator.
+## 2026-03-04 - Standalone Textareas Without Labels
+**Learning:** Textareas operating purely on `placeholder` attributes are inaccessible to screen readers. If a component lacks a visual `<label>` (like utility input/output boxes), it requires an explicit `aria-label` to be accessible.
+**Action:** Ensure all interactive input elements have either an associated `<label>` element or an `aria-label` attribute if relying on visual placement/placeholders alone.

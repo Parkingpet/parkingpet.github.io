@@ -368,6 +368,7 @@ function DevOpsTools() {
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Input..."
+          aria-label="Tool input"
           style={styles.toolTextarea}
         />
         
@@ -383,6 +384,7 @@ function DevOpsTools() {
           value={output}
           readOnly
           placeholder="Output..."
+          aria-label="Tool output"
           style={styles.toolTextarea}
         />
       </div>
