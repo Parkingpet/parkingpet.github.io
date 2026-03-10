@@ -12,6 +12,31 @@
 
 ---
 
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User] --> B[GitHub Pages]
+    B --> C[React App]
+    C --> D[Terminal Loading]
+    C --> E[ASCII Art Header]
+    C --> F[DevOps Tools]
+    C --> G[Particle Background]
+    
+    F --> H[Base64 Encoder/Decoder]
+    F --> I[JSON Formatter]
+    F --> J[Timestamp Converter]
+    F --> K[SHA-256 Hash]
+    F --> L[Regex Tester]
+    
+    M[GitHub Actions] --> N[Vite Build]
+    N --> O[Deploy to Pages]
+    
+    style A fill:#38bdf8
+    style C fill:#61DAFB
+    style M fill:#2088ff
+```
+
 ## Features
 
 ### Terminal-Style Loading Experience
@@ -33,11 +58,38 @@ Built-in tools accessible directly on the resume:
 - Neon blue accent colors throughout
 - Smooth fade transitions and animations
 - Mobile-responsive design
-- ASCII art animations
+- ASCII art animations with glitch effects
 
 ---
 
 ## Tech Stack
+
+```mermaid
+graph LR
+    subgraph "Frontend"
+        A[React 18.2] --> B[Vite 7.3]
+        B --> C[JavaScript ES6+]
+        C --> D[CSS-in-JS]
+    end
+    
+    subgraph "DevOps"
+        E[GitHub Actions] --> F[GitHub Pages]
+        F --> G[npm]
+        G --> H[Vite Build]
+    end
+    
+    subgraph "Tools Integration"
+        I[Microsoft Graph API]
+        J[MCP Registries]
+        K[CLI Tools]
+        L[Infrastructure Tools]
+    end
+    
+    style A fill:#61DAFB
+    style B fill:#646CFF
+    style E fill:#2088ff
+    style F fill:#181717
+```
 
 - **[React 18.2](https://reactjs.org/)** - Modern component architecture
 - **[Vite 7.3](https://vitejs.dev/)** - Lightning-fast build tool
@@ -48,6 +100,25 @@ Built-in tools accessible directly on the resume:
 - **[GitHub Pages](https://pages.github.com/)** - Static site hosting
 - **[npm](https://www.npmjs.com/)** - Package management
 - **Vite Build** - Optimized production builds
+
+---
+
+## Performance Metrics
+
+```mermaid
+xychart-beta
+    title "Performance Benchmarks"
+    x-axis ["Build Time", "Bundle Size", "Lighthouse", "Load Time", "FCP", "TTI"]
+    y-axis "Score/Time" 0 --> 100
+    bar [1, 180, 95, 1, 0.8, 1.2]
+```
+
+- **Build Time**: ~1 second
+- **Bundle Size**: <180KB gzipped
+- **Lighthouse Score**: 95+ across all metrics
+- **Load Time**: <1 second on 3G
+- **First Contentful Paint**: <0.8s
+- **Time to Interactive**: <1.2s
 
 ---
 
@@ -107,28 +178,21 @@ git push origin main
 
 ---
 
-## Customization
+## Deployment Pipeline
 
-1. **Update Resume Data**: Edit `src/resumeData.js`
-2. **Modify Styling**: Update styles in `src/App.jsx`
-3. **Add Tools**: Extend the tools object in `src/App.jsx`
-4. **Change Animations**: Modify `src/index.css`
-5. **Update Prompts**: Edit `src/Prompts.jsx`
-
----
-
-## Performance Metrics
-
-- **Build Time**: ~1 second
-- **Bundle Size**: <180KB gzipped
-- **Lighthouse Score**: 95+ across all metrics
-- **Load Time**: <1 second on 3G
-- **First Contentful Paint**: <0.8s
-- **Time to Interactive**: <1.2s
-
----
-
-## Deployment
+```mermaid
+flowchart LR
+    A[Push to main] --> B[GitHub Actions]
+    B --> C[Install Dependencies]
+    C --> D[Run Tests]
+    D --> E[Vite Build]
+    E --> F[Deploy to Pages]
+    F --> G[Live Site]
+    
+    style A fill:#2088ff
+    style B fill:#2088ff
+    style G fill:#38bdf8
+```
 
 ### Automated Deployment
 - **Trigger**: Push to `main` branch
@@ -144,9 +208,32 @@ git push origin main
 
 ---
 
+## Customization
+
+1. **Update Resume Data**: Edit `src/resumeData.js`
+2. **Modify Styling**: Update styles in `src/App.jsx`
+3. **Add Tools**: Extend the tools object in `src/App.jsx`
+4. **Change Animations**: Modify `src/index.css`
+5. **Update Tool Links**: Edit tool grids for Microsoft, CLI, Infrastructure, etc.
+
+---
+
 ## Contributing
 
 Interested in contributing to this resume site template?
+
+```mermaid
+flowchart TD
+    A[Fork Repository] --> B[Create Feature Branch]
+    B --> C[Make Changes]
+    C --> D[Test Thoroughly]
+    D --> E[Submit PR]
+    E --> F[Code Review]
+    F --> G[Merge]
+    
+    style A fill:#2088ff
+    style G fill:#38bdf8
+```
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-enhancement`
