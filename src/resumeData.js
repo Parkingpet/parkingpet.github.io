@@ -47,7 +47,7 @@ export const resumeData = {
     {
       company: "ParkingPet",
       title: "Smart parking platform concept and public project site",
-      link: "https://github.com/Parkingpet/parkingpet.github.io",
+      link: "https://github.com/Parkingpet",
       achievements: [
         "Current GitHub Pages repo used for public facing presence and iteration: Parkingpet/parkingpet.github.io",
         "Foundation oriented build intended to evolve into a platform with strong emphasis on reliability, automation, and clean deploy patterns",
