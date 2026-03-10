@@ -306,6 +306,14 @@ function DevOpsTools() {
   const [activeTab, setActiveTab] = useState('base64')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    if (!output) return
+    navigator.clipboard.writeText(output)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   const tools = {
     base64: {
@@ -381,6 +389,7 @@ function DevOpsTools() {
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Input..."
+          aria-label={`${tools[activeTab].name} input`}
           style={styles.toolTextarea}
         />
         
@@ -392,12 +401,36 @@ function DevOpsTools() {
           ))}
         </div>
 
-        <textarea
-          value={output}
-          readOnly
-          placeholder="Output..."
-          style={styles.toolTextarea}
-        />
+        <div style={{ position: 'relative' }}>
+          <textarea
+            value={output}
+            readOnly
+            placeholder="Output..."
+            aria-label={`${tools[activeTab].name} output`}
+            style={{ ...styles.toolTextarea, paddingRight: '60px' }}
+          />
+          {output && (
+            <button
+              onClick={handleCopy}
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: copied ? 'rgba(34,197,94,.2)' : 'rgba(56,189,248,.2)',
+                border: `1px solid ${copied ? '#22c55e' : '#38bdf8'}`,
+                borderRadius: '6px',
+                color: copied ? '#22c55e' : '#38bdf8',
+                cursor: 'pointer',
+                padding: '4px 8px',
+                fontSize: '12px',
+                transition: 'all 0.3s ease'
+              }}
+              aria-label="Copy output to clipboard"
+            >
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+          )}
+        </div>
       </div>
     </div>
   )
