@@ -237,7 +237,7 @@ export const resumeData = {
     "RevisionFX (2004-2024): 20-year partnership providing desktop hardware support, production and testing environments, developer-adjacent troubleshooting",
     "Poor Magazine (2019-2020): Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services",
     "Dr. Rathod Dental Office (2019-2025): X-ray systems, Dentrix support, backups, printers, Server 2022 administration",
-    "Flo Solutions (2024-2025): HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations",
+    "Flo Solutions (May 2024 to May 2025): HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations",
     "Eastside Arts Alliance: Endpoint support, printer setups, Office instruction, email configuration",
     "LANgineers (2014): Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones",
     "Dr. Cox Dental Office (1997-2019): 22-year partnership providing Dentrix database support and digital X-ray systems",
