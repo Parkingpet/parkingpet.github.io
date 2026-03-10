@@ -1,5 +1,5 @@
 {
-  "name": "parkingpet-resume",
+  "name": "@parkingpet/resume",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
