@@ -140,7 +140,7 @@ function Header() {
   return (
     <div style={styles.header} id="top">
       <h1 style={styles.headerName}>
-        <pre style={{...styles.ascii, margin: 0, fontSize: '8px', lineHeight: '8px', color: '#38bdf8'}}>
+        <pre style={{...styles.ascii, margin: 0, fontSize: '8px', lineHeight: '8px', color: '#38bdf8', animation: 'glitch 3s infinite'}}>
 {resumeData.personal.name}
         </pre>
       </h1>

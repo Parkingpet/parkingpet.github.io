@@ -49,6 +49,29 @@
   100% { transform: translateX(0); opacity: 1; }
 }
 
+@keyframes glitch {
+  0%, 90%, 100% {
+    transform: translate(0);
+    text-shadow: 0 0 15px rgba(56,189,248,0.7);
+  }
+  91% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff00de, -2px 0 #00ffff;
+  }
+  92% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 0 #ff00de, 2px 0 #00ffff;
+  }
+  93% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff00de, -2px 0 #00ffff;
+  }
+  94% {
+    transform: translate(0);
+    text-shadow: 0 0 15px rgba(56,189,248,0.7);
+  }
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
