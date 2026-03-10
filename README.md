@@ -155,20 +155,20 @@ git clone https://github.com/Parkingpet/parkingpet.github.io.git
 cd parkingpet.github.io
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm run dev
 # Opens http://localhost:5173
 ```
 
 ### Build & Deploy
 ```bash
 # Create production build
-npm run build
+pnpm run build
 
 # Preview production build
-npm run preview
+pnpm run preview
 
 # Deploy to GitHub Pages (automatic on push to main)
 git add .
@@ -238,7 +238,7 @@ flowchart TD
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-enhancement`
 3. Make your changes with clear commit messages
-4. Test thoroughly: `npm run build && npm run preview`
+4. Test thoroughly: `pnpm run build && pnpm run preview`
 5. Submit a pull request with detailed description
 
 ---

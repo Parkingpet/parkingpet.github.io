@@ -357,6 +357,21 @@ function DevOpsTools() {
           setOutput(JSON.stringify(payload, null, 2))
         } catch { setOutput('Invalid JWT') }
       }
+    },
+    uuid: {
+      name: 'UUID',
+      generate: () => {
+        try { setOutput(crypto.randomUUID()) } catch { setOutput('UUID generation failed') }
+      }
+    },
+    url: {
+      name: 'URL',
+      encode: () => {
+        try { setOutput(encodeURIComponent(input)) } catch { setOutput('Invalid URL encoding') }
+      },
+      decode: () => {
+        try { setOutput(decodeURIComponent(input)) } catch { setOutput('Invalid URL decoding') }
+      }
     }
   }
 
