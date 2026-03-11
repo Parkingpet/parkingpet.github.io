@@ -103,7 +103,7 @@ export const resumeData = {
     },
     {
       company: "Flo.Solutions",
-      title: "MSP Consultant | HaloPSA Configuration & Automation",
+      title: "MSP Consultant | HaloPSA Configuration & Automation | Tech Support Tier I-II",
       date: "2024",
       achievements: [
         "Configured and connected HaloPSA/Remote Management software and automation for small MSP operations",
