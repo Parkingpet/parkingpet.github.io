@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/header/Header';
 import Loading from './components/loading/Loading';
+import Summary from './components/summary/Summary';
 import Tools from './components/tools/Tools';
 import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
@@ -40,6 +41,7 @@ export default function App() {
         <div style={styles.container}>
           <a href="#summary" className="skip-link">Skip to main content</a>
           <Header />
+          <Summary />
           <Skills />
           <Experience />
           <div id="tools">
