@@ -49,9 +49,7 @@ Disallow: /.vscode/
 Disallow: /.Jules/
 Disallow: /dist/
 Disallow: /src/
-Disallow: /public/Mustafa_McLinn_Resume.pdf
 Disallow: /public/Mustafa_McLinn_Resume_2025.pdf
-Disallow: /public/Mustafa_Resume2024_4QA_OLD.pdf
 Disallow: /public/resume.txt
 
 # ============================================================================

@@ -12,7 +12,7 @@
 <h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px;">
 <span style="color: #38bdf8; font-weight: 600;">README</span> 
 <span style="color: #94a3b8; font-weight: 300;">for</span> 
-<span style="color: #10b981; font-weight: 600;">Resume Page</span>
+<span style="color: #38bdf8; font-weight: 600;">Resume Page</span>
 </h1>
 
 <p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #64748b; margin-top: 5px; letter-spacing: 1px;">
@@ -43,7 +43,7 @@ Live Demo
 
 <div align="center">
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #e2e8f0; font-weight: 500; margin: 20px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #10b981; font-weight: 500; margin: 20px 0 15px 0;">
 Interactive DevOps Resume
 </h3>
 
@@ -72,7 +72,7 @@ DevOps Resume Images
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #f59e0b; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
 Quick Links
 </h3>
 
@@ -84,7 +84,7 @@ Quick Links
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #8b5cf6; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
 Key Features
 </h3>
 
@@ -116,7 +116,7 @@ Neon blue theme with particle effects
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #ef4444; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
 Performance Metrics
 </h3>
 
@@ -133,7 +133,7 @@ Time to Interactive: <1.2s
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Table of Contents
 </h2>
 
@@ -151,11 +151,11 @@ Table of Contents
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Features
 </h2>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
 Terminal-Style Loading Experience
 </h3>
 - **Authentic CLI boot sequence** with real-time progress simulation
@@ -222,7 +222,7 @@ Integrated DevOps Toolkit
 
 </details>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #f59e0b; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
 High-Tech Visual Design
 </h3>
 - **Animated matrix-style grid** overlay with particle effects
@@ -233,7 +233,7 @@ High-Tech Visual Design
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #8b5cf6; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
 GraphQL API Integration
 </h3>
 - **Query Optimization** - Automatic query optimization and caching
@@ -245,7 +245,7 @@ GraphQL API Integration
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Architecture
 </h2>
 
@@ -418,7 +418,7 @@ Tech Stack
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 GraphQL Integration Guide
 </h2>
 
@@ -474,7 +474,7 @@ export default client;
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Performance
 </h2>
 
@@ -496,7 +496,7 @@ Performance
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Project Structure
 </h2>
 
@@ -534,7 +534,7 @@ public/
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Quick Start
 </h2>
 
@@ -644,8 +644,6 @@ const { loading, error, data } = useQuery(GET_RESUME_DATA);
 ```
 
 ### 5. Update Configuration
-
-### 4. Update Configuration
 Modify configuration files:
 - `vite.config.js` - Build configuration
 - `package.json` - Dependencies and scripts
@@ -653,7 +651,7 @@ Modify configuration files:
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Contributing
 </h2>
 
@@ -678,7 +676,7 @@ Contributing
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 License
 </h2>
 
@@ -699,7 +697,7 @@ For questions, issues, or support:
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Why This Approach?
 </h2>
 
@@ -726,7 +724,7 @@ Why This Approach?
 
 
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
 Angular-Style Component Architecture
 </h2>
 

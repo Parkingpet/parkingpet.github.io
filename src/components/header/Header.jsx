@@ -52,10 +52,7 @@ export default function Header() {
           <a href={resumeData.personal.linkedin}>LinkedIn</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/Mustafa_McLinn_Resume.pdf" download>Resume PDF</a>
-        </span>
-        <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/Mustafa_McLinn_Resume_2025.pdf" download>Resume PDF 2025</a>
+          <a href="/Mustafa_McLinn_Resume_2025.pdf" download>Resume PDF</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
           <a href="/resume.txt" download>Resume TXT</a>
