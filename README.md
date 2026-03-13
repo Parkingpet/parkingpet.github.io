@@ -1,6 +1,4 @@
-/\/\__/\_/\      /\_/\__/\/\          \____/          /'----_____       ____----'| 0 0  \_|_/     //o)  (o/l \_\=====//
-
-<div align="center" style="margin-bottom: 30px; background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(20, 30, 50, 0.8) 100%); padding: 40px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+<div align="center" style="margin-bottom: 30px; background: #000000; padding: 40px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
 
 <h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">
 Mustafa McLinn - DevOps Professional
