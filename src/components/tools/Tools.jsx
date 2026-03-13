@@ -44,6 +44,91 @@ export default function Tools() {
         catch { setOutput('Invalid URL encoding') }
       }
     },
+    sha256: {
+      name: 'SHA-256',
+      hash: async () => {
+        try {
+          const encoder = new TextEncoder();
+          const data = encoder.encode(input);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+          setOutput(hashHex);
+        } catch { setOutput('Error generating hash') }
+      }
+    },
+    regex: {
+      name: 'Regex',
+      test: () => {
+        try {
+          const [pattern, flags] = input.split('\n');
+          const regex = new RegExp(pattern, flags || '');
+          setOutput(regex.test(input) ? 'Match found' : 'No match');
+        } catch { setOutput('Invalid regex') }
+      },
+      match: () => {
+        try {
+          const [pattern, flags] = input.split('\n');
+          const regex = new RegExp(pattern, flags || 'g');
+          const matches = input.match(regex);
+          setOutput(matches ? matches.join('\n') : 'No matches');
+        } catch { setOutput('Invalid regex') }
+      }
+    },
+    jwt: {
+      name: 'JWT Decoder',
+      decode: () => {
+        try {
+          const parts = input.split('.');
+          if (parts.length !== 3) throw new Error('Invalid JWT');
+          const payload = JSON.parse(atob(parts[1]));
+          setOutput(JSON.stringify(payload, null, 2));
+        } catch { setOutput('Invalid JWT token') }
+      }
+    },
+    yaml: {
+      name: 'YAML to JSON',
+      convert: () => {
+        try {
+          const lines = input.split('\n');
+          const obj = {};
+          lines.forEach(line => {
+            const [key, value] = line.split(':').map(s => s.trim());
+            if (key) obj[key] = value;
+          });
+          setOutput(JSON.stringify(obj, null, 2));
+        } catch { setOutput('Error converting YAML') }
+      }
+    },
+    cli: {
+      name: 'CLI Commands',
+      docker: () => setOutput('docker ps\ndocker build -t image:tag .\ndocker run -d image:tag'),
+      kubectl: () => setOutput('kubectl get pods\nkubectl apply -f deployment.yaml\nkubectl logs pod-name'),
+      git: () => setOutput('git clone <repo>\ngit checkout -b feature\ngit push origin feature'),
+      terraform: () => setOutput('terraform init\nterraform plan\nterraform apply'),
+      aws: () => setOutput('aws s3 ls\naws ec2 describe-instances\naws lambda list-functions')
+    },
+    infrastructure: {
+      name: 'Infrastructure',
+      ports: () => setOutput('HTTP: 80\nHTTPS: 443\nSSH: 22\nPostgreSQL: 5432\nMongoDB: 27017\nRedis: 6379'),
+      cidr: () => setOutput('10.0.0.0/8 - Private\n172.16.0.0/12 - Private\n192.168.0.0/16 - Private'),
+      dns: () => setOutput('8.8.8.8 - Google DNS\n1.1.1.1 - Cloudflare DNS\n208.67.222.222 - OpenDNS'),
+      ssl: () => setOutput('Generate: openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365')
+    },
+    devops: {
+      name: 'DevOps Tools',
+      cicd: () => setOutput('GitHub Actions\nGitLab CI\nJenkins\nCircleCI\nTravis CI'),
+      monitoring: () => setOutput('Prometheus\nGrafana\nDatadog\nNew Relic\nElasticsearch'),
+      containers: () => setOutput('Docker\nPodman\nContainerd\nCRI-O'),
+      orchestration: () => setOutput('Kubernetes\nDocker Swarm\nNomad\nOpenShift')
+    },
+    msadmin: {
+      name: 'MS Admin',
+      adcommands: () => setOutput('Get-ADUser -Filter *\nNew-ADUser -Name "User"\nSet-ADUser -Identity user -Title "Title"'),
+      powershell: () => setOutput('Get-Process\nGet-Service\nRestart-Computer\nStop-Service -Name ServiceName'),
+      exchange: () => setOutput('Get-Mailbox\nNew-Mailbox -Name "User"\nSet-Mailbox -Identity user -ForwardingAddress admin@domain.com'),
+      sharepoint: () => setOutput('Connect-PnPOnline -Url https://tenant.sharepoint.com\nGet-PnPList\nNew-PnPList -Title "List"')
+    },
     contact: {
       name: 'Contact',
       email: resumeData.personal.email,
