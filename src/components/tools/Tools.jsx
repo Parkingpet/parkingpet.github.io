@@ -121,6 +121,57 @@ export default function Tools() {
       dns: () => setOutput('8.8.8.8 - Google DNS\n1.1.1.1 - Cloudflare DNS\n208.67.222.222 - OpenDNS'),
       ssl: () => setOutput('Generate: openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365')
     },
+    subnet: {
+      name: 'Subnet Calc',
+      calculate: () => {
+        try {
+          const cidrPattern = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\/(\d{1,2})$/;
+          const match = input.match(cidrPattern);
+          if (!match) {
+            setOutput('Invalid CIDR format. Use format: 192.168.1.0/24');
+            return;
+          }
+
+          const octets = match.slice(1, 5).map(Number);
+          const prefix = Number(match[5]);
+
+          if (octets.some(o => o > 255 || o < 0) || prefix < 0 || prefix > 32) {
+            setOutput('Invalid IP or Prefix. Octets must be 0-255, Prefix 0-32.');
+            return;
+          }
+
+          const ipNum = (octets[0] << 24 | octets[1] << 16 | octets[2] << 8 | octets[3]) >>> 0;
+          const maskNum = (0xffffffff << (32 - prefix)) >>> 0;
+          const networkNum = (ipNum & maskNum) >>> 0;
+          const broadcastNum = (networkNum | ~maskNum) >>> 0;
+
+          const toIP = (num) => [
+            (num >>> 24) & 255,
+            (num >>> 16) & 255,
+            (num >>> 8) & 255,
+            num & 255
+          ].join('.');
+
+          const mask = toIP(maskNum);
+          const network = toIP(networkNum);
+          const broadcast = toIP(broadcastNum);
+          const hosts = prefix >= 31 ? 0 : Math.pow(2, 32 - prefix) - 2;
+          const firstHost = prefix >= 31 ? 'N/A' : toIP(networkNum + 1);
+          const lastHost = prefix >= 31 ? 'N/A' : toIP(broadcastNum - 1);
+
+          setOutput(
+            `IP Address: ${octets.join('.')}\n` +
+            `Subnet Mask: ${mask}\n` +
+            `Network Address: ${network}\n` +
+            `Broadcast Address: ${broadcast}\n` +
+            `Total Usable Hosts: ${hosts}\n` +
+            `Host Range: ${firstHost} - ${lastHost}`
+          );
+        } catch {
+          setOutput('Error calculating subnet');
+        }
+      }
+    },
     devops: {
       name: 'DevOps Tools',
       cicd: () => setOutput('GitHub Actions\nGitLab CI\nJenkins\nCircleCI\nTravis CI'),
@@ -134,6 +185,9 @@ export default function Tools() {
       powershell: () => setOutput('Get-Process\nGet-Service\nRestart-Computer\nStop-Service -Name ServiceName'),
       exchange: () => setOutput('Get-Mailbox\nNew-Mailbox -Name "User"\nSet-Mailbox -Identity user -ForwardingAddress admin@domain.com'),
       sharepoint: () => setOutput('Connect-PnPOnline -Url https://tenant.sharepoint.com\nGet-PnPList\nNew-PnPList -Title "List"')
+    },
+    downloads: {
+      name: 'Downloads',
     },
     contact: {
       name: 'Contact',
@@ -166,6 +220,39 @@ export default function Tools() {
   };
 
   const renderToolContent = () => {
+    if (activeTab === 'downloads') {
+      return (
+        <div style={styles.contactContainer}>
+          <div style={styles.contactCard}>
+            <h3 style={styles.contactTitle}>Mustafa McLinn Resume 2025 (PDF)</h3>
+            <div style={styles.contactNote}>
+              <p>Download the official PDF format of the resume.</p>
+            </div>
+            <a
+              href="/Mustafa_McLinn_Resume_2025.pdf"
+              download
+              style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
+            >
+              Download PDF
+            </a>
+          </div>
+          <div style={styles.contactCard}>
+            <h3 style={styles.contactTitle}>Mustafa McLinn Resume (TXT)</h3>
+            <div style={styles.contactNote}>
+              <p>Download the plain text format of the resume for ATS parsing.</p>
+            </div>
+            <a
+              href="/resume.txt"
+              download
+              style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
+            >
+              Download TXT
+            </a>
+          </div>
+        </div>
+      );
+    }
+
     if (activeTab === 'contact') {
       return (
         <div style={styles.contactContainer}>
@@ -198,7 +285,7 @@ export default function Tools() {
     }
 
     // Tools that don't need input (reference/lookup tools)
-    const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin'];
+    const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin', 'downloads'];
     const needsInput = !noInputTools.includes(activeTab);
     const isCollapsed = collapsedTools[activeTab];
     
