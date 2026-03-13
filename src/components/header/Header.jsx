@@ -31,31 +31,31 @@ export default function Header() {
       </div>
       <p style={styles.meta}>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer">
+          <a href="https://maps.google.com/?q=Oakland+San+Francisco+CA" target="_blank" rel="noopener noreferrer" style={styles.metaLink}>
             {resumeData.personal.location}
           </a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}>
+          <a href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`} style={styles.metaLink}>
             {resumeData.personal.phone}
           </a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={`mailto:${resumeData.personal.email}`}>
+          <a href={`mailto:${resumeData.personal.email}`} style={styles.metaLink}>
             {resumeData.personal.email}
           </a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={resumeData.personal.github}>GitHub</a>
+          <a href={resumeData.personal.github} style={styles.metaLink}>GitHub</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={resumeData.personal.linkedin}>LinkedIn</a>
+          <a href={resumeData.personal.linkedin} style={styles.metaLink}>LinkedIn</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/Mustafa_McLinn_Resume_2025.pdf" download>Resume PDF</a>
+          <a href="/Mustafa_McLinn_Resume_2025.pdf" download style={styles.metaLink}>Resume PDF</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/resume.txt" download>Resume TXT</a>
+          <a href="/resume.txt" download style={styles.metaLink}>Resume TXT</a>
         </span>
       </p>
     </div>
@@ -118,6 +118,12 @@ const styles = {
     color: '#94a3b8',
     textAlign: 'center',
     marginTop: '12px'
+  },
+  metaLink: {
+    color: '#38bdf8',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    transition: 'color 0.3s ease',
   },
   ascii: {
     fontFamily: 'monospace',
