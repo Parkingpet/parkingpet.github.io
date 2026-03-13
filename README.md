@@ -6,147 +6,226 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## Live Demo
+## 🚀 Live Demo
 
-**[View Interactive Resume](https://parkingpet.github.io)** | **[GitHub Repository](https://github.com/Parkingpet/parkingpet.github.io)**
+<div align="center">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 24px; margin: 40px 0;">
+    
+    <!-- Hero Image -->
+    <div style="position: relative; width: 100%; max-width: 1200px;">
+      <img src="https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/screenshot.png" 
+           alt="DevOps Resume Site Screenshot" 
+           style="width: 100%; border-radius: 20px; box-shadow: 0 25px 50px rgba(56, 189, 248, 0.3); border: 3px solid rgba(56, 189, 248, 0.2);" />
+      <div style="position: absolute; top: 20px; right: 20px; background: rgba(11, 18, 32, 0.9); padding: 12px 24px; border-radius: 12px; border: 2px solid #38bdf8;">
+        <span style="color: #38bdf8; font-weight: bold; font-size: 18px;">🚀 Interactive DevOps Resume</span>
+      </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; margin-top: 32px;">
+      <a href="https://parkingpet.github.io" target="_blank" 
+         style="display: inline-flex; align-items: center; gap: 12px; padding: 20px 48px; background: linear-gradient(135deg, #38bdf8 0%, #61DAFB 100%); color: #0b1220; font-weight: bold; text-decoration: none; border-radius: 16px; font-size: 20px; box-shadow: 0 12px 32px rgba(56, 189, 248, 0.4); transition: transform 0.3s, box-shadow 0.3s;">
+        <span style="font-size: 24px;">🚀</span>
+        <span>View Interactive Resume</span>
+      </a>
+      
+      <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" 
+         style="display: inline-flex; align-items: center; gap: 12px; padding: 20px 48px; background: #0b1220; color: #38bdf8; font-weight: bold; text-decoration: none; border: 3px solid #38bdf8; border-radius: 16px; font-size: 20px; box-shadow: 0 12px 32px rgba(56, 189, 248, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+        <span style="font-size: 24px;">📦</span>
+        <span>GitHub Repository</span>
+      </a>
+    </div>
+    
+    <!-- Feature Highlights -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; width: 100%; max-width: 1200px;">
+      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">Fast Performance</h3>
+        <p style="color: #94a3b8; margin: 0;">Sub-second load times with optimized builds</p>
+      </div>
+      
+      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 32px; margin-bottom: 12px;">🛠️</div>
+        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">DevOps Tools</h3>
+        <p style="color: #94a3b8; margin: 0;">Built-in utilities for daily DevOps tasks</p>
+      </div>
+      
+      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 32px; margin-bottom: 12px;">🎨</div>
+        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">Modern Design</h3>
+        <p style="color: #94a3b8; margin: 0;">Cyberpunk aesthetic with responsive layout</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
-## Architecture Overview
+## 📋 Table of Contents
 
-```mermaid
-graph TD
-    A[User] --> B[GitHub Pages]
-    B --> C[React App]
-    C --> D[Terminal Loading]
-    C --> E[ASCII Art Header]
-    C --> F[DevOps Tools]
-    C --> G[Particle Background]
-    
-    F --> H[Base64 Encoder/Decoder]
-    F --> I[JSON Formatter]
-    F --> J[Timestamp Converter]
-    F --> K[SHA-256 Hash]
-    F --> L[Regex Tester]
-    
-    M[GitHub Actions] --> N[Vite Build]
-    N --> O[Deploy to Pages]
-    
-    style A fill:#38bdf8
-    style C fill:#61DAFB
-    style M fill:#2088ff
-```
-
-## Features
-
-### Terminal-Style Loading Experience
-- Authentic CLI boot sequence with real-time progress
-- Cyberpunk aesthetic with animated grid background
-- Professional DevOps terminal simulation
-
-### Integrated DevOps Toolkit
-Built-in tools accessible directly on the resume:
-- **Base64** encoder/decoder for data transformation
-- **JSON** formatter & minifier for API work
-- **Timestamp** converter (Unix to ISO) for log analysis
-- **SHA-256** hash generator for security tasks
-- **Regex** pattern tester for text processing
-
-### High-Tech Visual Design
-- Animated matrix-style grid overlay
-- CRT scanline effects for retro-tech feel
-- Neon blue accent colors throughout
-- Smooth fade transitions and animations
-- Mobile-responsive design
-- ASCII art animations with glitch effects
+- [🚀 Live Demo](#-live-demo)
+- [✨ Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📊 Performance](#-performance)
+- [📁 Project Structure](#-project-structure)
+- [⚡ Quick Start](#-quick-start)
+- [🎨 Customization](#-customization)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-## Tech Stack
+## ✨ Features
 
-```mermaid
-graph LR
-    subgraph "Frontend"
-        A[React 18.2] --> B[Vite 7.3]
-        B --> C[JavaScript ES6+]
-        C --> D[CSS-in-JS]
-    end
-    
-    subgraph "DevOps"
-        E[GitHub Actions] --> F[GitHub Pages]
-        F --> G[npm]
-        G --> H[Vite Build]
-    end
-    
-    subgraph "Tools Integration"
-        I[Microsoft Graph API]
-        J[MCP Registries]
-        K[CLI Tools]
-        L[Infrastructure Tools]
-    end
-    
-    style A fill:#61DAFB
-    style B fill:#646CFF
-    style E fill:#2088ff
-    style F fill:#181717
+### 🖥️ Terminal-Style Loading Experience
+- **Authentic CLI boot sequence** with real-time progress simulation
+- **Cyberpunk aesthetic** with animated grid background
+- **Professional DevOps terminal** simulation with ASCII art
+- **Loading animations** with progress bars and status indicators
+
+### 🛠️ Integrated DevOps Toolkit
+- **Base64 encoder/decoder** - Data transformation utilities
+- **JSON formatter & minifier** - API development and debugging
+- **Timestamp converter** - Unix to ISO format conversion for log analysis
+- **SHA-256 hash generator** - Security and data integrity tasks
+- **Regex pattern tester** - Text processing and validation
+- **UUID generator** - Unique identifier creation
+- **URL encoder/decoder** - Web encoding utilities
+
+### 🎨 High-Tech Visual Design
+- **Animated matrix-style grid** overlay with particle effects
+- **CRT scanline effects** for retro-tech feel
+- **Neon blue accent colors** with gradient transitions
+- **Smooth fade animations** and hover effects
+- **Mobile-responsive design** with adaptive layouts
+- **ASCII art animations** with glitch effects
+- **Particle background** with interactive connections
+
+---
+
+## 🏗️ Architecture
+
+### Component-Based Structure
+The application follows a modular component architecture:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Application Root                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │   Header    │  │   Loading   │  │   Tools     │         │
+│  │  Component  │  │  Component  │  │  Component  │         │
+│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│                                                             │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │ Experience  │  │   Skills    │  │   Footer    │         │
+│  │  Component  │  │  Component  │  │  Component  │         │
+│  └─────────────┘  └─────────────┘  └─────────────┘         │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-- **[React 18.2](https://reactjs.org/)** - Modern component architecture
-- **[Vite 7.3](https://vitejs.dev/)** - Lightning-fast build tool
-- **[JavaScript ES6+](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - Modern syntax and features
-- **CSS-in-JS** - Styled components approach
+### Data Flow
+- **Centralized Data Store**: `resumeData.js` provides structured content
+- **Component Props**: Data flows from parent to child components
+- **State Management**: React hooks for local component state
+- **Event Handling**: User interactions trigger state updates
 
-- **[GitHub Actions](https://github.com/features/actions)** - Automated CI/CD pipeline
-- **[GitHub Pages](https://pages.github.com/)** - Static site hosting
-- **[npm](https://www.npmjs.com/)** - Package management
+### Styling Approach
+- **CSS-in-JS**: Component-scoped styles with dynamic theming
+- **Theme Variables**: Centralized color scheme and design tokens
+- **Responsive Design**: Mobile-first approach with breakpoints
+- **Animation System**: Keyframe animations and transitions
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend Framework
+- **React 18.2** - Modern component architecture with hooks
+- **Vite 7.3** - Lightning-fast build tool with HMR
+- **JavaScript ES6+** - Modern syntax and features
+
+### Styling & Design
+- **CSS-in-JS** - Component-scoped styling approach
+- **CSS Animations** - Keyframe-based animations
+- **Responsive Design** - Mobile-first responsive layouts
+
+### DevOps & Deployment
+- **GitHub Actions** - Automated CI/CD pipeline
+- **GitHub Pages** - Static site hosting
+- **npm** - Package management
 - **Vite Build** - Optimized production builds
 
----
-
-## Performance Metrics
-
-```mermaid
-xychart-beta
-    title "Performance Benchmarks"
-    x-axis ["Build Time", "Bundle Size", "Lighthouse", "Load Time", "FCP", "TTI"]
-    y-axis "Score/Time" 0 --> 100
-    bar [1, 180, 95, 1, 0.8, 1.2]
-```
-
-- **Build Time**: ~1 second
-- **Bundle Size**: <180KB gzipped
-- **Lighthouse Score**: 95+ across all metrics
-- **Load Time**: <1 second on 3G
-- **First Contentful Paint**: <0.8s
-- **Time to Interactive**: <1.2s
+### Development Tools
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Git** - Version control
 
 ---
 
-## Project Structure
+## 📊 Performance
+
+### Build Performance
+- **Build Time**: ~1 second with Vite's optimized build system
+- **Bundle Size**: <180KB gzipped with tree shaking and code splitting
+- **Cache Optimization**: Efficient caching strategies for repeat visits
+
+### Runtime Performance
+- **First Contentful Paint**: <0.8s with optimized asset loading
+- **Time to Interactive**: <1.2s with minimal JavaScript execution
+- **Lighthouse Score**: 95+ across all metrics (Performance, Accessibility, Best Practices, SEO)
+
+### Network Optimization
+- **HTTP/2 Support**: Modern protocol for faster loading
+- **Asset Compression**: Gzip and Brotli compression
+- **Image Optimization**: Responsive images with modern formats
+- **Code Splitting**: Dynamic imports for faster initial load
+
+---
+
+## 📁 Project Structure
 
 ```
 src/
-├── App.jsx           # Main application with loading sequence
-├── Prompts.jsx       # Prompts repository page
-├── resumeData.js     # Resume content as structured data
-├── main.jsx          # React application entry point
-└── index.css         # Global styles and animations
+├── components/           # Reusable UI components
+│   ├── Header/          # Navigation and branding
+│   ├── Loading/         # Terminal loading sequence
+│   ├── Tools/           # DevOps utilities
+│   ├── Experience/      # Work history display
+│   ├── Skills/          # Technical skills showcase
+│   └── Footer/          # Site footer and contact
+├── App.jsx              # Main application component
+├── resumeData.js        # Structured resume content
+├── main.jsx             # Application entry point
+└── index.css            # Global styles and animations
 
 public/
-└── favicon.ico       # Site favicon
+├── favicon.ico          # Site favicon
+├── screenshot.png       # Demo screenshot
+└── resume.pdf           # Downloadable resume
 
 .github/workflows/
-└── deploy.yml        # Automated deployment pipeline
+└── deploy.yml           # CI/CD deployment pipeline
 ```
+
+### Component Responsibilities
+- **App.jsx**: Root component orchestrating all features
+- **Header Component**: Navigation and personal branding
+- **Loading Component**: Terminal-style loading experience
+- **Tools Component**: Interactive DevOps utilities
+- **Experience Component**: Professional work history
+- **Skills Component**: Technical competencies display
+- **Footer Component**: Contact information and links
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 ### Prerequisites
-- Node.js 18+ installed
-- Git for version control
-- Modern web browser
+- **Node.js 18+** - JavaScript runtime
+- **Git** - Version control system
+- **Modern Web Browser** - Chrome, Firefox, Safari, or Edge
 
 ### Installation
 ```bash
@@ -159,106 +238,229 @@ npm install
 
 # Start development server
 npm run dev
-# Opens http://localhost:5173
+# Application available at http://localhost:5173
 ```
 
-### Build & Deploy
+### Development
 ```bash
-# Create production build
+# Run development server with hot reload
+npm run dev
+
+# Build for production
 npm run build
 
-# Preview production build
+# Preview production build locally
 npm run preview
 
-# Deploy to GitHub Pages (automatic on push to main)
+# Run linting checks
+npm run lint
+```
+
+### Deployment
+```bash
+# Deploy to GitHub Pages (automatic via CI/CD)
 git add .
-git commit -m "your message"
+git commit -m "feat: update resume content"
 git push origin main
 ```
 
 ---
 
-## Deployment Pipeline
+## 🎨 Customization
 
-```mermaid
-flowchart LR
-    A[Push to main] --> B[GitHub Actions]
-    B --> C[Install Dependencies]
-    C --> D[Run Tests]
-    D --> E[Vite Build]
-    E --> F[Deploy to Pages]
-    F --> G[Live Site]
-    
-    style A fill:#2088ff
-    style B fill:#2088ff
-    style G fill:#38bdf8
-```
+### 1. Update Resume Content
+Edit `src/resumeData.js` to modify:
+- Personal information and contact details
+- Professional experience and achievements
+- Technical skills and competencies
+- Education and certifications
+- Project portfolio and case studies
 
-### Automated Deployment
-- **Trigger**: Push to `main` branch
-- **Build**: Vite production build
-- **Deploy**: GitHub Pages automatic deployment
-- **Monitoring**: GitHub Actions workflow status
+### 2. Modify Styling
+Update styles in component files to:
+- Change color schemes and themes
+- Adjust typography and spacing
+- Modify animations and transitions
+- Update responsive breakpoints
 
-### Performance Monitoring
-- Lighthouse CI integration
-- Bundle size tracking
-- Load time monitoring
-- Core Web Vitals tracking
+### 3. Add New Features
+Extend the application by:
+- Adding new DevOps tools to the tools component
+- Creating additional content sections
+- Integrating with external APIs
+- Adding interactive elements
 
----
-
-## Customization
-
-1. **Update Resume Data**: Edit `src/resumeData.js`
-2. **Modify Styling**: Update styles in `src/App.jsx`
-3. **Add Tools**: Extend the tools object in `src/App.jsx`
-4. **Change Animations**: Modify `src/index.css`
-5. **Update Tool Links**: Edit tool grids for Microsoft, CLI, Infrastructure, etc.
+### 4. Update Configuration
+Modify configuration files:
+- `vite.config.js` - Build configuration
+- `package.json` - Dependencies and scripts
+- `.github/workflows/deploy.yml` - CI/CD pipeline
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-Interested in contributing to this resume site template?
+### Development Workflow
+1. **Fork the repository** to your GitHub account
+2. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
+3. **Make your changes** with clear commit messages
+4. **Test thoroughly**: `npm run build && npm run preview`
+5. **Submit a pull request** with detailed description
 
-```mermaid
-flowchart TD
-    A[Fork Repository] --> B[Create Feature Branch]
-    B --> C[Make Changes]
-    C --> D[Test Thoroughly]
-    D --> E[Submit PR]
-    E --> F[Code Review]
-    F --> G[Merge]
-    
-    style A fill:#2088ff
-    style G fill:#38bdf8
-```
+### Code Standards
+- Follow existing code style and patterns
+- Write meaningful commit messages
+- Include appropriate documentation
+- Test changes across different browsers
+- Ensure responsive design compatibility
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-enhancement`
-3. Make your changes with clear commit messages
-4. Test thoroughly: `npm run build && npm run preview`
-5. Submit a pull request with detailed description
-
----
-
-## License
-
-MIT License - Feel free to use this as a template for your own resume site!
+### Issue Reporting
+- Use GitHub Issues to report bugs
+- Provide detailed reproduction steps
+- Include browser and environment information
+- Suggest possible solutions if available
 
 ---
 
-## Why This Approach?
+## 📄 License
 
-- **Technical Demonstration**: Shows actual coding and DevOps skills
+### MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Usage Rights
+- **Free to use**: Personal and commercial projects
+- **Modification allowed**: Customize for your needs
+- **Distribution permitted**: Share and distribute
+- **Attribution appreciated**: Credit the original author
+
+### Support
+For questions, issues, or support:
+- Open a GitHub Issue
+- Check existing documentation
+- Review closed issues for solutions
+
+---
+
+## 🏆 Why This Approach?
+
+### Technical Demonstration
+- **Modern Architecture**: Demonstrates current React best practices
+- **Performance Focus**: Optimized for speed and user experience
+- **DevOps Integration**: Shows practical DevOps tool implementation
+- **Code Quality**: Clean, maintainable, and well-documented code
+
+### Professional Value
 - **Interactive Experience**: Engages recruiters and hiring managers
-- **Modern Architecture**: Demonstrates current technology proficiency
-- **Performance Optimized**: Fast loading, mobile-responsive design
-- **DevOps Integration**: Built-in tools showcase daily workflow expertise
-- **Automated Deployment**: CI/CD pipeline demonstrates DevOps practices
+- **Skill Showcase**: Demonstrates technical competencies in practice
+- **Portfolio Piece**: Serves as a living example of development skills
 - **Open Source**: Transparent code available for technical review
 
+### Future Enhancements
+- **Additional Tools**: Expand DevOps utility collection
+- **Theming System**: Multiple color scheme options
+- **Internationalization**: Multi-language support
+- **Analytics Integration**: Usage tracking and insights
+- **API Integration**: Connect with external services
+
 ---
 
-**Built with React, Vite, and DevOps best practices**
+<div align="center" style="margin-top: 60px; padding: 40px; background: rgba(15, 23, 42, 0.5); border-radius: 20px; border: 2px solid #23314d;">
+  <h3 style="color: #38bdf8; margin-bottom: 20px;">🚀 Ready to Build Your DevOps Resume?</h3>
+  <p style="color: #94a3b8; max-width: 800px; margin: 0 auto 30px;">
+    This template provides everything you need to create an impressive, interactive DevOps resume. 
+    Fork it, customize it, and deploy your own version in minutes!
+  </p>
+  <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" 
+     style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 40px; background: linear-gradient(135deg, #38bdf8 0%, #61DAFB 100%); color: #0b1220; font-weight: bold; text-decoration: none; border-radius: 12px; font-size: 18px; box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);">
+    <span style="font-size: 22px;">🍴</span>
+    <span>Fork This Repository</span>
+  </a>
+</div>
+
+## 🏗️ Angular-Style Component Architecture
+
+This project follows Angular-inspired component architecture principles:
+
+### Component Structure
+```
+src/components/
+├── header/          # Header component with navigation
+├── loading/         # Terminal loading animation
+├── tools/           # DevOps tools (Base64, JSON, etc.)
+├── experience/      # Professional experience
+├── skills/          # Technical skills display
+├── footer/          # Footer with contact info
+└── (more components as needed)
+```
+
+### Key Architectural Decisions
+
+1. **Component-Based Architecture**
+   - Each component is self-contained
+   - Clear separation of concerns
+   - Reusable, testable components
+
+2. **Data Flow**
+   - Centralized data store (`resumeData.js`)
+   - Unidirectional data flow
+   - Props-based component communication
+
+3. **Styling Approach**
+   - CSS-in-JS for component-scoped styles
+   - Consistent design tokens
+   - Responsive design patterns
+
+4. **Performance Optimizations**
+   - Code splitting by component
+   - Lazy loading where appropriate
+   - Memoization for expensive computations
+
+### Development Workflow
+
+1. **Add New Components**
+   ```bash
+   # Create new component directory
+   mkdir -p src/components/new-component
+   # Add component files
+   # Update imports in App.jsx
+   ```
+
+2. **Update Data**
+   - Edit `src/resumeData.js` for content changes
+   - Components automatically reflect updates
+
+3. **Add New Features**
+   - Create new component in appropriate directory
+   - Import and use in App.jsx
+   - Update data structure if needed
+
+### Best Practices
+
+1. **Component Design**
+   - Single responsibility principle
+   - Reusable, composable components
+   - Clear prop interfaces
+
+2. **State Management**
+   - Local state for UI state
+   - Props for data flow
+   - Context for shared state (if needed)
+
+3. **Performance**
+   - Memoize expensive calculations
+   - Lazy load heavy components
+   - Optimize re-renders with React.memo
+
+### Testing
+- Unit tests for business logic
+- Component snapshot tests
+- Integration tests for user flows
+
+### Deployment
+- Builds optimized for production
+- GitHub Pages deployment
+- Automated CI/CD pipeline
+
+---
+
+For more details, see the [Component Architecture Documentation](COMPONENT_STRUCTURE.md).
