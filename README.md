@@ -59,8 +59,8 @@ DevOps Resume Images
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
   <div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/devops-resume-banner.svg" alt="DevOps Resume Banner" width="400" style="border: 1px solid #23314d; border-radius: 8px;">
-    <p><strong>DevOps Resume Banner</strong><br>Comprehensive banner with DevOps tool icons</p>
+    <img src="https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/moose-as-a-service.png" alt="Moose as a Service" width="400" style="border: 1px solid #23314d; border-radius: 8px;">
+    <p><strong>Moose as a Service</strong><br>Professional DevOps service emblem</p>
   </div>
   <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/devops-resume-logo.svg" alt="DevOps Resume Logo" width="200" style="border: 1px solid #23314d; border-radius: 8px;">
