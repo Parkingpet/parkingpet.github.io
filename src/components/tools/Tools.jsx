@@ -1,58 +1,57 @@
 import React, { useState } from 'react';
 import { resumeData } from '../../resumeData';
 
-export default function Tools() {
-  const [activeTab, setActiveTab] = useState('base64');
-  const [input, setInput] = useState('');
-  const [output, setOutput] = useState('');
-  const [collapsedTools, setCollapsedTools] = useState({});
-  const [collapsedLinks, setCollapsedLinks] = useState({
-    quickLinks: true,
-    azure: true,
-    aws: true,
-    gcp: true
-  });
-
-  const tools = {
-    base64: {
-      name: 'Base64',
-      encode: () => setOutput(btoa(input)),
-      decode: () => {
+const TOOLS_CONFIG = {
+  base64: {
+    name: 'Base64',
+    actions: {
+      encode: (input, setOutput) => setOutput(btoa(input)),
+      decode: (input, setOutput) => {
         try { setOutput(atob(input)) } catch { setOutput('Invalid base64') }
       }
-    },
-    json: {
-      name: 'JSON',
-      format: () => {
+    }
+  },
+  json: {
+    name: 'JSON',
+    actions: {
+      format: (input, setOutput) => {
         try { setOutput(JSON.stringify(JSON.parse(input), null, 2)) } 
         catch { setOutput('Invalid JSON') }
       },
-      minify: () => {
+      minify: (input, setOutput) => {
         try { setOutput(JSON.stringify(JSON.parse(input))) } 
         catch { setOutput('Invalid JSON') }
       }
-    },
-    timestamp: {
-      name: 'Timestamp',
-      toDate: () => setOutput(new Date(parseInt(input) * 1000).toISOString()),
-      toUnix: () => setOutput(Math.floor(new Date(input).getTime() / 1000).toString()),
-      now: () => setOutput(Math.floor(Date.now() / 1000).toString())
-    },
-    uuid: {
-      name: 'UUID',
-      generate: () => setOutput(crypto.randomUUID())
-    },
-    url: {
-      name: 'URL',
-      encode: () => setOutput(encodeURIComponent(input)),
-      decode: () => {
+    }
+  },
+  timestamp: {
+    name: 'Timestamp',
+    actions: {
+      toDate: (input, setOutput) => setOutput(new Date(parseInt(input) * 1000).toISOString()),
+      toUnix: (input, setOutput) => setOutput(Math.floor(new Date(input).getTime() / 1000).toString()),
+      now: (input, setOutput) => setOutput(Math.floor(Date.now() / 1000).toString())
+    }
+  },
+  uuid: {
+    name: 'UUID',
+    actions: {
+      generate: (input, setOutput) => setOutput(crypto.randomUUID())
+    }
+  },
+  url: {
+    name: 'URL',
+    actions: {
+      encode: (input, setOutput) => setOutput(encodeURIComponent(input)),
+      decode: (input, setOutput) => {
         try { setOutput(decodeURIComponent(input)) } 
         catch { setOutput('Invalid URL encoding') }
       }
-    },
-    sha256: {
-      name: 'SHA-256',
-      hash: async () => {
+    }
+  },
+  sha256: {
+    name: 'SHA-256',
+    actions: {
+      hash: async (input, setOutput) => {
         try {
           const encoder = new TextEncoder();
           const data = encoder.encode(input);
@@ -62,17 +61,19 @@ export default function Tools() {
           setOutput(hashHex);
         } catch { setOutput('Error generating hash') }
       }
-    },
-    regex: {
-      name: 'Regex',
-      test: () => {
+    }
+  },
+  regex: {
+    name: 'Regex',
+    actions: {
+      test: (input, setOutput) => {
         try {
           const [pattern, flags] = input.split('\n');
           const regex = new RegExp(pattern, flags || '');
           setOutput(regex.test(input) ? 'Match found' : 'No match');
         } catch { setOutput('Invalid regex') }
       },
-      match: () => {
+      match: (input, setOutput) => {
         try {
           const [pattern, flags] = input.split('\n');
           const regex = new RegExp(pattern, flags || 'g');
@@ -80,10 +81,12 @@ export default function Tools() {
           setOutput(matches ? matches.join('\n') : 'No matches');
         } catch { setOutput('Invalid regex') }
       }
-    },
-    jwt: {
-      name: 'JWT Decoder',
-      decode: () => {
+    }
+  },
+  jwt: {
+    name: 'JWT Decoder',
+    actions: {
+      decode: (input, setOutput) => {
         try {
           const parts = input.split('.');
           if (parts.length !== 3) throw new Error('Invalid JWT');
@@ -91,10 +94,12 @@ export default function Tools() {
           setOutput(JSON.stringify(payload, null, 2));
         } catch { setOutput('Invalid JWT token') }
       }
-    },
-    yaml: {
-      name: 'YAML to JSON',
-      convert: () => {
+    }
+  },
+  yaml: {
+    name: 'YAML to JSON',
+    actions: {
+      convert: (input, setOutput) => {
         try {
           const lines = input.split('\n');
           const obj = {};
@@ -105,25 +110,31 @@ export default function Tools() {
           setOutput(JSON.stringify(obj, null, 2));
         } catch { setOutput('Error converting YAML') }
       }
-    },
-    cli: {
-      name: 'CLI Commands',
-      docker: () => setOutput('docker ps\ndocker build -t image:tag .\ndocker run -d image:tag'),
-      kubectl: () => setOutput('kubectl get pods\nkubectl apply -f deployment.yaml\nkubectl logs pod-name'),
-      git: () => setOutput('git clone <repo>\ngit checkout -b feature\ngit push origin feature'),
-      terraform: () => setOutput('terraform init\nterraform plan\nterraform apply'),
-      aws: () => setOutput('aws s3 ls\naws ec2 describe-instances\naws lambda list-functions')
-    },
-    infrastructure: {
-      name: 'Infrastructure',
-      ports: () => setOutput('HTTP: 80\nHTTPS: 443\nSSH: 22\nPostgreSQL: 5432\nMongoDB: 27017\nRedis: 6379'),
-      cidr: () => setOutput('10.0.0.0/8 - Private\n172.16.0.0/12 - Private\n192.168.0.0/16 - Private'),
-      dns: () => setOutput('8.8.8.8 - Google DNS\n1.1.1.1 - Cloudflare DNS\n208.67.222.222 - OpenDNS'),
-      ssl: () => setOutput('Generate: openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365')
-    },
-    subnet: {
-      name: 'Subnet Calc',
-      calculate: () => {
+    }
+  },
+  cli: {
+    name: 'CLI Commands',
+    actions: {
+      docker: (input, setOutput) => setOutput('docker ps\ndocker build -t image:tag .\ndocker run -d image:tag'),
+      kubectl: (input, setOutput) => setOutput('kubectl get pods\nkubectl apply -f deployment.yaml\nkubectl logs pod-name'),
+      git: (input, setOutput) => setOutput('git clone <repo>\ngit checkout -b feature\ngit push origin feature'),
+      terraform: (input, setOutput) => setOutput('terraform init\nterraform plan\nterraform apply'),
+      aws: (input, setOutput) => setOutput('aws s3 ls\naws ec2 describe-instances\naws lambda list-functions')
+    }
+  },
+  infrastructure: {
+    name: 'Infrastructure',
+    actions: {
+      ports: (input, setOutput) => setOutput('HTTP: 80\nHTTPS: 443\nSSH: 22\nPostgreSQL: 5432\nMongoDB: 27017\nRedis: 6379'),
+      cidr: (input, setOutput) => setOutput('10.0.0.0/8 - Private\n172.16.0.0/12 - Private\n192.168.0.0/16 - Private'),
+      dns: (input, setOutput) => setOutput('8.8.8.8 - Google DNS\n1.1.1.1 - Cloudflare DNS\n208.67.222.222 - OpenDNS'),
+      ssl: (input, setOutput) => setOutput('Generate: openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365')
+    }
+  },
+  subnet: {
+    name: 'Subnet Calc',
+    actions: {
+      calculate: (input, setOutput) => {
         try {
           const cidrPattern = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\/(\d{1,2})$/;
           const match = input.match(cidrPattern);
@@ -171,42 +182,63 @@ export default function Tools() {
           setOutput('Error calculating subnet');
         }
       }
-    },
-    devops: {
-      name: 'DevOps Tools',
-      cicd: () => setOutput('GitHub Actions\nGitLab CI\nJenkins\nCircleCI\nTravis CI'),
-      monitoring: () => setOutput('Prometheus\nGrafana\nDatadog\nNew Relic\nElasticsearch'),
-      containers: () => setOutput('Docker\nPodman\nContainerd\nCRI-O'),
-      orchestration: () => setOutput('Kubernetes\nDocker Swarm\nNomad\nOpenShift')
-    },
-    msadmin: {
-      name: 'MS Admin',
-      adcommands: () => setOutput('Get-ADUser -Filter *\nNew-ADUser -Name "User"\nSet-ADUser -Identity user -Title "Title"'),
-      powershell: () => setOutput('Get-Process\nGet-Service\nRestart-Computer\nStop-Service -Name ServiceName'),
-      exchange: () => setOutput('Get-Mailbox\nNew-Mailbox -Name "User"\nSet-Mailbox -Identity user -ForwardingAddress admin@domain.com'),
-      sharepoint: () => setOutput('Connect-PnPOnline -Url https://tenant.sharepoint.com\nGet-PnPList\nNew-PnPList -Title "List"')
-    },
-    downloads: {
-      name: 'Downloads',
-    },
-    contact: {
-      name: 'Contact',
-      email: resumeData.personal.email,
-      phone: resumeData.personal.phone,
-      copyEmail: () => {
+    }
+  },
+  devops: {
+    name: 'DevOps Tools',
+    actions: {
+      cicd: (input, setOutput) => setOutput('GitHub Actions\nGitLab CI\nJenkins\nCircleCI\nTravis CI'),
+      monitoring: (input, setOutput) => setOutput('Prometheus\nGrafana\nDatadog\nNew Relic\nElasticsearch'),
+      containers: (input, setOutput) => setOutput('Docker\nPodman\nContainerd\nCRI-O'),
+      orchestration: (input, setOutput) => setOutput('Kubernetes\nDocker Swarm\nNomad\nOpenShift')
+    }
+  },
+  msadmin: {
+    name: 'MS Admin',
+    actions: {
+      adcommands: (input, setOutput) => setOutput('Get-ADUser -Filter *\nNew-ADUser -Name "User"\nSet-ADUser -Identity user -Title "Title"'),
+      powershell: (input, setOutput) => setOutput('Get-Process\nGet-Service\nRestart-Computer\nStop-Service -Name ServiceName'),
+      exchange: (input, setOutput) => setOutput('Get-Mailbox\nNew-Mailbox -Name "User"\nSet-Mailbox -Identity user -ForwardingAddress admin@domain.com'),
+      sharepoint: (input, setOutput) => setOutput('Connect-PnPOnline -Url https://tenant.sharepoint.com\nGet-PnPList\nNew-PnPList -Title "List"')
+    }
+  },
+  downloads: {
+    name: 'Downloads',
+    actions: {}
+  },
+  contact: {
+    name: 'Contact',
+    actions: {
+      copyEmail: (input, setOutput) => {
         navigator.clipboard.writeText(resumeData.personal.email);
         alert('Email copied to clipboard!');
       },
-      copyPhone: () => {
+      copyPhone: (input, setOutput) => {
         navigator.clipboard.writeText(resumeData.personal.phone);
         alert('Phone number copied to clipboard!');
       }
     }
-  };
+  }
+};
+
+export default function Tools() {
+  const [activeTab, setActiveTab] = useState('base64');
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  const [collapsedTools, setCollapsedTools] = useState({});
+  const [collapsedLinks, setCollapsedLinks] = useState({
+    quickLinks: true,
+    azure: true,
+    aws: true,
+    gcp: true
+  });
 
   const handleAction = (action) => {
     try {
-      tools[activeTab][action]();
+      const toolAction = TOOLS_CONFIG[activeTab].actions[action];
+      if (toolAction) {
+        toolAction(input, setOutput);
+      }
     } catch (error) {
       setOutput('Error: ' + error.message);
     }
@@ -258,9 +290,9 @@ export default function Tools() {
         <div style={styles.contactContainer}>
           <div style={styles.contactCard}>
             <h3 style={styles.contactTitle}>Email</h3>
-            <div style={styles.contactValue}>{tools.contact.email}</div>
+            <div style={styles.contactValue}>{resumeData.personal.email}</div>
             <button 
-              onClick={tools.contact.copyEmail}
+              onClick={() => handleAction('copyEmail')}
               style={styles.copyButton}
             >
               Copy Email
@@ -268,9 +300,9 @@ export default function Tools() {
           </div>
           <div style={styles.contactCard}>
             <h3 style={styles.contactTitle}>Phone</h3>
-            <div style={styles.contactValue}>{tools.contact.phone}</div>
+            <div style={styles.contactValue}>{resumeData.personal.phone}</div>
             <button 
-              onClick={tools.contact.copyPhone}
+              onClick={() => handleAction('copyPhone')}
               style={styles.copyButton}
             >
               Copy Phone
@@ -292,7 +324,7 @@ export default function Tools() {
     return (
       <div style={styles.toolBody}>
         <div style={styles.collapseHeader}>
-          <h3 style={styles.toolTitle}>{tools[activeTab].name} Tool</h3>
+          <h3 style={styles.toolTitle}>{TOOLS_CONFIG[activeTab].name} Tool</h3>
           <button
             onClick={() => toggleCollapse(activeTab)}
             style={styles.collapseButton}
@@ -313,8 +345,7 @@ export default function Tools() {
             )}
             
             <div style={styles.actions}>
-              {Object.entries(tools[activeTab])
-                .filter(([key]) => key !== 'name')
+              {Object.entries(TOOLS_CONFIG[activeTab].actions)
                 .map(([action]) => (
                   <button
                     key={action}
@@ -343,7 +374,7 @@ export default function Tools() {
       <h2 style={styles.sectionTitle}>DevOps Tools & Quick Links</h2>
       
       <div style={styles.tabs}>
-        {Object.entries(tools).map(([key, tool]) => (
+        {Object.entries(TOOLS_CONFIG).map(([key, tool]) => (
           <button
             key={key}
             onClick={() => setActiveTab(key)}
