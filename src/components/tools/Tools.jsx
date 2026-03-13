@@ -603,14 +603,16 @@ const styles = {
     display: 'flex',
     gap: '8px',
     marginBottom: '20px',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    borderBottom: '2px solid rgba(56, 189, 248, 0.2)',
+    paddingBottom: '12px'
   },
   tab: {
     padding: '10px 16px',
     background: 'rgba(17, 28, 51, 0.6)',
     border: '1px solid #23314d',
     borderRadius: '8px',
-    color: '#38bdf8',
+    color: '#94a3b8',
     cursor: 'pointer',
     fontSize: '13px',
     fontWeight: 500,
@@ -618,7 +620,9 @@ const styles = {
   },
   activeTab: {
     background: 'rgba(56, 189, 248, 0.2)',
-    borderColor: '#38bdf8'
+    borderColor: '#38bdf8',
+    color: '#38bdf8',
+    boxShadow: '0 0 10px rgba(56, 189, 248, 0.2)'
   },
   toolBody: {
     display: 'flex',

@@ -126,9 +126,7 @@ Time to Interactive: <1.2s
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Table of Contents
-</h2>
+## Table of Contents
 
 - [Live Demo](#live-demo)
 - [Features](#features)
@@ -143,9 +141,7 @@ Table of Contents
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Features
-</h2>
+## Features {#features}
 
 <h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Terminal-Style Loading Experience
@@ -241,9 +237,7 @@ GraphQL API Integration
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Architecture
-</h2>
+## Architecture {#architecture}
 
 ### Component-Based Structure
 The application follows a modular component architecture:
@@ -278,9 +272,7 @@ The application follows a modular component architecture:
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Tech Stack
-</h2>
+## Tech Stack {#tech-stack}
 
 ### Frontend Framework
 - **React 18.2** - Modern component architecture with hooks
@@ -313,9 +305,7 @@ Tech Stack
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Performance
-</h2>
+## Performance {#performance}
 
 ### Build Performance
 - **Build Time**: ~1 second with Vite's optimized build system
@@ -335,9 +325,7 @@ Performance
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Project Structure
-</h2>
+## Project Structure {#project-structure}
 
 ```
 src/
@@ -373,9 +361,7 @@ public/
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Quick Start
-</h2>
+## Quick Start {#quick-start}
 
 ### Prerequisites
 - **Node.js 18+** - JavaScript runtime
@@ -421,9 +407,7 @@ git push origin main
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Customization
-</h2>
+## Customization {#customization}
 
 ### 1. Update Resume Content
 Edit `src/resumeData.js` to modify:
@@ -490,9 +474,7 @@ Modify configuration files:
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-Contributing
-</h2>
+## Contributing {#contributing}
 
 ### Development Workflow
 1. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
@@ -515,9 +497,7 @@ Contributing
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
-License
-</h2>
+## License {#license}
 
 ### MIT License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
