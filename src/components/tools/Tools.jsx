@@ -294,6 +294,157 @@ export default function Tools() {
           </a>
         </div>
       </div>
+
+      <div style={styles.cloudLinksSection}>
+        <h3 style={styles.linksTitle}>Azure Products</h3>
+        <div style={styles.linksGrid}>
+          <a href="https://intune.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📱</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Microsoft Intune</div>
+              <div style={styles.linkDesc}>Device and app management</div>
+            </div>
+          </a>
+          
+          <a href="https://entra.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Microsoft Entra</div>
+              <div style={styles.linkDesc}>Identity and access management</div>
+            </div>
+          </a>
+          
+          <a href="https://admin.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚙️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Microsoft 365 Admin</div>
+              <div style={styles.linkDesc}>Organization administration</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☁️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Azure Portal</div>
+              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
+            </div>
+          </a>
+
+          <a href="https://learn.microsoft.com/en-us/azure/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📚</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Azure Documentation</div>
+              <div style={styles.linkDesc}>Learning resources and guides</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <h3 style={styles.linksTitle}>AWS Products</h3>
+        <div style={styles.linksGrid}>
+          <a href="https://console.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☁️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>AWS Management Console</div>
+              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/ec2" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🖥️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>EC2 Instances</div>
+              <div style={styles.linkDesc}>Virtual compute resources</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/s3" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📦</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>S3 Storage</div>
+              <div style={styles.linkDesc}>Object storage service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/rds" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🗄️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>RDS Databases</div>
+              <div style={styles.linkDesc}>Managed database service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/lambda" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Lambda Functions</div>
+              <div style={styles.linkDesc}>Serverless compute</div>
+            </div>
+          </a>
+
+          <a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📚</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>AWS Documentation</div>
+              <div style={styles.linkDesc}>Learning resources and guides</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <h3 style={styles.linksTitle}>Google Cloud Products</h3>
+        <div style={styles.linksGrid}>
+          <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☁️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>GCP Console</div>
+              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/compute" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🖥️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Compute Engine</div>
+              <div style={styles.linkDesc}>Virtual machine instances</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/storage" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📦</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Storage</div>
+              <div style={styles.linkDesc}>Object storage service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/sql" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🗄️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud SQL</div>
+              <div style={styles.linkDesc}>Managed database service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/functions" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Functions</div>
+              <div style={styles.linkDesc}>Serverless compute</div>
+            </div>
+          </a>
+
+          <a href="https://cloud.google.com/docs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📚</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>GCP Documentation</div>
+              <div style={styles.linkDesc}>Learning resources and guides</div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
@@ -437,6 +588,11 @@ const styles = {
     border: '1px solid #23314d'
   },
   linksSection: {
+    marginTop: '32px',
+    paddingTop: '24px',
+    borderTop: '2px solid rgba(56, 189, 248, 0.3)'
+  },
+  cloudLinksSection: {
     marginTop: '32px',
     paddingTop: '24px',
     borderTop: '2px solid rgba(56, 189, 248, 0.3)'
