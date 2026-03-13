@@ -7,11 +7,45 @@
 [![GraphQL](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white)](https://graphql.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## Live Demo
+<div align="center" style="margin-bottom: 30px;">
+
+<h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px;">
+<span style="color: #38bdf8; font-weight: 600;">README</span> 
+<span style="color: #94a3b8; font-weight: 300;">for</span> 
+<span style="color: #10b981; font-weight: 600;">Resume Page</span>
+</h1>
+
+<p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #64748b; margin-top: 5px; letter-spacing: 1px;">
+Interactive DevOps Resume • Modern Portfolio • Technical Documentation
+</p>
+
+<div style="display: flex; justify-content: center; gap: 8px; margin: 15px 0; flex-wrap: wrap;">
+  <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 20px;">
+  <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 20px;">
+  <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 20px;">
+  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 20px;">
+  <img src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white" alt="GraphQL" style="height: 20px;">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 20px;">
+</div>
+
+<div style="display: flex; justify-content: center; gap: 10px; margin: 15px 0; flex-wrap: wrap;">
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3);">React 18.2</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.3);">Vite 7.3</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.3);">DevOps Tools</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.3);">GitHub Pages</span>
+</div>
+
+</div>
+
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #38bdf8;">▸</span> Live Demo
+</h2>
 
 <div align="center">
 
-### Interactive DevOps Resume
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #e2e8f0; font-weight: 500; margin: 20px 0 15px 0;">
+Interactive DevOps Resume
+</h3>
 
 [![DevOps Resume Screenshot](https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/screenshot.png)](https://parkingpet.github.io)
 
@@ -19,7 +53,9 @@
 
 ---
 
-### DevOps Resume Images
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
+DevOps Resume Images
+</h3>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
   <div style="text-align: center;">
@@ -36,7 +72,9 @@
 
 ---
 
-### Quick Links
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #f59e0b; font-weight: 500; margin: 25px 0 15px 0;">
+Quick Links
+</h3>
 
 | Action | Link | Description |
 |--------|------|-------------|
@@ -46,7 +84,9 @@
 
 ---
 
-### Key Features
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #8b5cf6; font-weight: 500; margin: 25px 0 15px 0;">
+Key Features
+</h3>
 
 <table>
 <tr>
@@ -76,7 +116,9 @@ Neon blue theme with particle effects
 
 ---
 
-### Performance Metrics
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #ef4444; font-weight: 500; margin: 25px 0 15px 0;">
+Performance Metrics
+</h3>
 
 ```
 Build Time: ~1 second
@@ -91,7 +133,9 @@ Time to Interactive: <1.2s
 
 ---
 
-## Table of Contents
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #10b981;">▸</span> Table of Contents
+</h2>
 
 - [Live Demo](#live-demo)
 - [Features](#features)
@@ -107,15 +151,21 @@ Time to Interactive: <1.2s
 
 ---
 
-## Features
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #f59e0b;">▸</span> Features
+</h2>
 
-### Terminal-Style Loading Experience
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+Terminal-Style Loading Experience
+</h3>
 - **Authentic CLI boot sequence** with real-time progress simulation
 - **Cyberpunk aesthetic** with animated grid background
 - **Professional DevOps terminal** simulation with ASCII art
 - **Loading animations** with progress bars and status indicators
 
-### Integrated DevOps Toolkit
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
+Integrated DevOps Toolkit
+</h3>
 
 <details>
 <summary><strong>Click to expand/collapse DevOps tools list</strong></summary>
@@ -172,7 +222,9 @@ Time to Interactive: <1.2s
 
 </details>
 
-### High-Tech Visual Design
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #f59e0b; font-weight: 500; margin: 20px 0 10px 0;">
+High-Tech Visual Design
+</h3>
 - **Animated matrix-style grid** overlay with particle effects
 - **CRT scanline effects** for retro-tech feel
 - **Neon blue accent colors** with gradient transitions
@@ -181,7 +233,9 @@ Time to Interactive: <1.2s
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
 
-### GraphQL API Integration
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #8b5cf6; font-weight: 500; margin: 20px 0 10px 0;">
+GraphQL API Integration
+</h3>
 - **Query Optimization** - Automatic query optimization and caching
 - **Real-time Subscriptions** - Live data updates with GraphQL subscriptions
 - **Type Safety** - Full TypeScript support for GraphQL operations
@@ -191,7 +245,9 @@ Time to Interactive: <1.2s
 
 ---
 
-## Architecture
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #8b5cf6;">▸</span> Architecture
+</h2>
 
 ### Component-Based Structure
 The application follows a modular component architecture:
@@ -329,7 +385,9 @@ type Query {
 
 ---
 
-## Tech Stack
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #38bdf8;">▸</span> Tech Stack
+</h2>
 
 ### Frontend Framework
 - **React 18.2** - Modern component architecture with hooks
@@ -360,7 +418,9 @@ type Query {
 
 ---
 
-## GraphQL Integration Guide
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #10b981;">▸</span> GraphQL Integration Guide
+</h2>
 
 ### Why GraphQL for DevOps Resumes?
 GraphQL provides several advantages for resume sites:
@@ -414,7 +474,9 @@ export default client;
 
 ---
 
-## Performance
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #ef4444;">▸</span> Performance
+</h2>
 
 ### Build Performance
 - **Build Time**: ~1 second with Vite's optimized build system
@@ -434,7 +496,9 @@ export default client;
 
 ---
 
-## Project Structure
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #f59e0b;">▸</span> Project Structure
+</h2>
 
 ```
 src/
@@ -470,7 +534,9 @@ public/
 
 ---
 
-## Quick Start
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #8b5cf6;">▸</span> Quick Start
+</h2>
 
 ### Prerequisites
 - **Node.js 18+** - JavaScript runtime
@@ -516,7 +582,9 @@ git push origin main
 
 ---
 
-## Customization
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #38bdf8;">▸</span> Customization
+</h2>
 
 ### 1. Update Resume Content
 Edit `src/resumeData.js` to modify:
@@ -585,7 +653,9 @@ Modify configuration files:
 
 ---
 
-## Contributing
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #10b981;">▸</span> Contributing
+</h2>
 
 ### Development Workflow
 1. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
@@ -608,7 +678,9 @@ Modify configuration files:
 
 ---
 
-## License
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #ef4444;">▸</span> License
+</h2>
 
 ### MIT License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -627,7 +699,9 @@ For questions, issues, or support:
 
 ---
 
-## Why This Approach?
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #f59e0b;">▸</span> Why This Approach?
+</h2>
 
 ### Technical Demonstration
 - **Modern Architecture**: Demonstrates current React best practices
@@ -652,7 +726,9 @@ For questions, issues, or support:
 
 
 
-## Angular-Style Component Architecture
+<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<span style="color: #8b5cf6;">▸</span> Angular-Style Component Architecture
+</h2>
 
 This project follows Angular-inspired component architecture principles:
 
