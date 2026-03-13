@@ -38,7 +38,7 @@ Interactive DevOps Resume • Modern Portfolio • Technical Documentation
 </div>
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #38bdf8;">▸</span> Live Demo
+Live Demo
 </h2>
 
 <div align="center">
@@ -134,7 +134,7 @@ Time to Interactive: <1.2s
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #10b981;">▸</span> Table of Contents
+Table of Contents
 </h2>
 
 - [Live Demo](#live-demo)
@@ -152,7 +152,7 @@ Time to Interactive: <1.2s
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #f59e0b;">▸</span> Features
+Features
 </h2>
 
 <h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
@@ -246,7 +246,7 @@ GraphQL API Integration
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #8b5cf6;">▸</span> Architecture
+Architecture
 </h2>
 
 ### Component-Based Structure
@@ -386,7 +386,7 @@ type Query {
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #38bdf8;">▸</span> Tech Stack
+Tech Stack
 </h2>
 
 ### Frontend Framework
@@ -419,7 +419,7 @@ type Query {
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #10b981;">▸</span> GraphQL Integration Guide
+GraphQL Integration Guide
 </h2>
 
 ### Why GraphQL for DevOps Resumes?
@@ -475,7 +475,7 @@ export default client;
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #ef4444;">▸</span> Performance
+Performance
 </h2>
 
 ### Build Performance
@@ -497,7 +497,7 @@ export default client;
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #f59e0b;">▸</span> Project Structure
+Project Structure
 </h2>
 
 ```
@@ -535,7 +535,7 @@ public/
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #8b5cf6;">▸</span> Quick Start
+Quick Start
 </h2>
 
 ### Prerequisites
@@ -583,7 +583,7 @@ git push origin main
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #38bdf8;">▸</span> Customization
+Customization
 </h2>
 
 ### 1. Update Resume Content
@@ -654,7 +654,7 @@ Modify configuration files:
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #10b981;">▸</span> Contributing
+Contributing
 </h2>
 
 ### Development Workflow
@@ -679,7 +679,7 @@ Modify configuration files:
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #ef4444;">▸</span> License
+License
 </h2>
 
 ### MIT License
@@ -700,7 +700,7 @@ For questions, issues, or support:
 ---
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #f59e0b; border-bottom: 2px solid rgba(245, 158, 11, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #f59e0b;">▸</span> Why This Approach?
+Why This Approach?
 </h2>
 
 ### Technical Demonstration
@@ -727,7 +727,7 @@ For questions, issues, or support:
 
 
 <h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #8b5cf6; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 8px; margin-top: 30px;">
-<span style="color: #8b5cf6;">▸</span> Angular-Style Component Architecture
+Angular-Style Component Architecture
 </h2>
 
 This project follows Angular-inspired component architecture principles:

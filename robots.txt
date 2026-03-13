@@ -2,30 +2,30 @@
 # ROBOTS.TXT - Mustafa McLinn's Portfolio & Resume Site
 # ============================================================================
 # 
-# 🤖 Welcome, web crawlers! This file contains rules for accessing my portfolio
+# Welcome, web crawlers! This file contains rules for accessing my portfolio
 # and interesting facts about my 30+ year career in technology.
 #
-# 📊 ABOUT MUSTAFA MCLINN:
+# ABOUT MUSTAFA MCLINN:
 # • Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations
 # • 30+ years in IT infrastructure, cloud computing, and systems administration
 # • Based in Oakland/San Francisco, CA
 # • Contact: mustafa.mclinn@outlook.com | 510 296 0233
 #
-# 🏆 CAREER HIGHLIGHTS:
+# CAREER HIGHLIGHTS:
 # • 20-year partnership with RevisionFX (2004-2024) supporting 40+ plugins across 15+ applications
 # • Executed 4,500+ CentOS live upgrades with zero downtime at Workday
 # • Maintained Splunk Cloud services with 24/7 support across multiple time zones
 # • Rebuilt CoreOS-driven Docker containers using Ansible on Google Cloud Platform
 # • Provided IT consulting across healthcare, insurance, legal, arts, nonprofit, and MSP environments
 #
-# 🛠️ TECHNICAL EXPERTISE:
+# TECHNICAL EXPERTISE:
 # • Cloud: AWS EC2/S3/IAM, GCP, Azure
 # • DevOps: Ansible, Jenkins, Terraform, Chef, GitLab CI
 # • Scripting: Bash, PowerShell, Python, Ruby, Node.js
 # • Containerization: Docker, Kubernetes
 # • OS: Windows 10/11, Windows Server, macOS, Linux (CentOS, Ubuntu, CoreOS)
 #
-# 🎯 CURRENT PROJECTS:
+# CURRENT PROJECTS:
 # • ParkingPet: Smart parking platform concept (https://github.com/Parkingpet)
 # • RevisionFX.tech: Technical support and development resources
 # • Teckguy: Technical consulting and IT support
@@ -237,27 +237,27 @@ Allow: /
 # ADDITIONAL NOTES
 # ============================================================================
 #
-# 🎓 EDUCATION:
+# EDUCATION:
 # • Golden Gate University: Management (2012-2014)
 # • Lincoln University: Computer Science (2003-2005)
 # • Diablo Valley College: Computer Science (1999)
 # • Academy of Art University: 3D Modeling (1998)
 # • Southern University: Electrical Engineering (1993-1994)
 #
-# 🤝 LONG-TERM CLIENTS:
+# LONG-TERM CLIENTS:
 # • Dr. Cox Dental Office: 22-year partnership (1997-2019)
 # • Osha Neumann: 28-year support (1995-2023)
 # • Dr. Rathod Dental Office: 6+ years ongoing support
 # • Poor Magazine: Radio station build and streaming services
 #
-# 🚀 NOTABLE ACHIEVEMENTS:
+# NOTABLE ACHIEVEMENTS:
 # • Zero-downtime deployments across AWS, GCP, and Azure
 # • Infrastructure consolidation for post-acquisition technical integration
 # • Multi-cloud orchestration and hybrid environment management
 # • Automated provisioning using Microsoft Graph API
 # • Container orchestration with Docker and Kubernetes
 #
-# 📈 STATS:
+# STATS:
 # • 4,500+ CentOS upgrades with zero downtime
 # • 40+ plugins supported across 15+ applications
 # • 20+ years at RevisionFX
