@@ -1,11 +1,3 @@
-## 2024-03-04 - Static Site Accessibility and Intra-page Navigation
-**Learning:** Single-page static sites need explicit CSS for smooth scrolling (`scroll-behavior: smooth`) to give spatial context during internal anchor link navigation. Additionally, they often lack a build tool to inject accessibility polyfills, making manual `:focus-visible` styles critical for keyboard users navigating through anchor links.
-**Action:** When working on purely static single-page sites, explicitly check for and add `scroll-behavior: smooth` to the HTML root and custom `:focus-visible` styles to interactive elements like `<a>` tags.
-
-## 2026-03-04 - Semantic Contact Links
-**Learning:** Making phone numbers into interactive links with the `tel:` protocol is highly valuable for mobile users, turning static text into actionable, click-to-call items. Including an `aria-label` further clarifies the intent for screen readers (e.g., "Call [number]" instead of just reading the number).
-**Action:** Always wrap phone numbers in an anchor tag with a `tel:` href and an appropriate `aria-label` when displaying contact information.
-
-## 2024-05-18 - Keyboard Navigation and Skip Links
-**Learning:** For static sites, keyboard users and screen reader users can get easily fatigued tabbing through navigation links before reaching the main content. This is especially true on one-page resumes where the navigation is present at the top of the page.
-**Action:** Always add a visually hidden "Skip to main content" link as the first focusable element on the page for single-page static sites. Ensure it becomes visible on focus to provide a clear indicator.
+## 2024-03-13 - [Skip to Main Content Link Target]
+**Learning:** Found an existing `.skip-link` in `App.jsx` pointing to `href="#summary"`, but the element with `id="summary"` does not exist in the codebase, rendering the skip link non-functional for keyboard users.
+**Action:** Always verify that `#id` targets for internal navigation links (especially skip links) actually exist on the page to ensure functional accessibility.
