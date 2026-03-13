@@ -19,6 +19,7 @@ export default function Header() {
         <a href="#experience" style={styles.navLink}>Experience</a>
         <a href="#education" style={styles.navLink}>Education</a>
         <a href="#clients" style={styles.navLink}>Clients</a>
+        <a href="#mcp-servers" style={styles.navLink}>MCP Servers</a>
       </nav>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       <div style={styles.badges}>

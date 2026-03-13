@@ -8,6 +8,7 @@ import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
 import Education from './components/education/Education';
 import Clients from './components/clients/Clients';
+import MCPServers from './components/mcp/MCPServers';
 import Footer from './components/footer/Footer';
 import EmailWidget from './components/email/EmailWidget';
 
@@ -67,6 +68,9 @@ export default function App() {
             </div>
             <div id="clients">
               <Clients />
+            </div>
+            <div id="mcp-servers">
+              <MCPServers />
             </div>
           </main>
           <Footer />
