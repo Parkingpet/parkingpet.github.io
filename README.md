@@ -1,31 +1,31 @@
-<div align="center" style="margin-bottom: 40px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 80px 30px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+<div align="center" style="margin-bottom: 50px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 100px 40px; border-radius: 16px; border: 2px solid rgba(56, 189, 248, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
 
-<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 64px; color: #38bdf8; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.1;">
+<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 84px; color: #38bdf8; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 24px; line-height: 1.0; text-shadow: 0 0 30px rgba(56, 189, 248, 0.5);">
 Mustafa McLinn
 </h1>
 
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 28px; color: #10b981; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.01em;">
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 36px; color: #10b981; font-weight: 700; margin-bottom: 28px; letter-spacing: -0.02em; text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">
 DevOps Professional • Systems Engineer • Infrastructure Architect
 </p>
 
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #cbd5e1; margin-top: 16px; letter-spacing: 0em; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 22px; color: #cbd5e1; margin-top: 20px; letter-spacing: 0em; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500;">
 Interactive DevOps Resume with integrated tools, modern portfolio, and technical documentation
 </p>
 
-<div style="display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap;">
-  <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 20px;">
-  <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 20px;">
-  <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 20px;">
-  <img src="https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 20px;">
-  <img src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white" alt="GraphQL" style="height: 20px;">
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 20px;">
+<div style="display: flex; justify-content: center; gap: 12px; margin: 32px 0; flex-wrap: wrap;">
+  <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 24px;">
+  <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 24px;">
+  <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 24px;">
+  <img src="https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 24px;">
+  <img src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white" alt="GraphQL" style="height: 24px;">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 24px;">
 </div>
 
-<div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);">React 18.2</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.4);">Vite 7.3</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.4);">DevOps Tools</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.4);">GitHub Pages</span>
+<div style="display: flex; justify-content: center; gap: 16px; margin: 32px 0; flex-wrap: wrap;">
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4); font-weight: 600;">React 18.2</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 600;">Vite 7.3</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(245, 158, 11, 0.4); font-weight: 600;">DevOps Tools</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(139, 92, 246, 0.4); font-weight: 600;">GitHub Pages</span>
 </div>
 
 </div>
@@ -50,14 +50,14 @@ Interactive DevOps Resume
 DevOps Resume Images
 </h3>
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
-  <div style="text-align: center;">
-    <img src="public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="500" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
-    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 12px; color: #94a3b8;">Infrastructure automation and cloud technologies</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin: 30px 0;">
+  <div style="text-align: center; flex: 1; min-width: 400px; max-width: 500px;">
+    <img src="public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="100%" style="border: 2px solid #23314d; border-radius: 12px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
+    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 16px; font-weight: 600;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 14px; color: #94a3b8; font-weight: 400;">Infrastructure automation and cloud technologies</span></p>
   </div>
-  <div style="text-align: center;">
-    <img src="public/devops-logo.svg" alt="DevOps Terminal Logo" width="300" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
-    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 12px; color: #94a3b8;">Professional terminal-themed branding</span></p>
+  <div style="text-align: center; flex: 1; min-width: 300px; max-width: 400px;">
+    <img src="public/devops-logo.svg" alt="DevOps Terminal Logo" width="100%" style="border: 2px solid #23314d; border-radius: 12px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
+    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 16px; font-weight: 600;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 14px; color: #94a3b8; font-weight: 400;">Professional terminal-themed branding</span></p>
   </div>
 </div>
 
@@ -70,7 +70,7 @@ Quick Links
 </h3>
 
 | Action | Link | Description |
-|--------|------|-------------|
+|:------:|:----:|:-----------:|
 | **View Live Site** | [https://parkingpet.github.io](https://parkingpet.github.io) | Interactive DevOps resume with built-in tools |
 | **GitHub Repository** | [https://github.com/Parkingpet/parkingpet.github.io](https://github.com/Parkingpet/parkingpet.github.io) | Source code and documentation |
 | **Fork This Project** | [https://github.com/Parkingpet/parkingpet.github.io/fork](https://github.com/Parkingpet/parkingpet.github.io/fork) | Create your own version - Fork at your own risk |
@@ -85,30 +85,33 @@ Key Features
 <img src="public/features-overview.svg" alt="DevOps Resume Features Overview" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
 </div>
 
-<table style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
 <tr>
-<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
+<td width="33.33%" align="center" style="padding: 24px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
 
 #### Terminal Experience
 **Authentic CLI loading**  
 Cyberpunk aesthetic with animated grid  
-Real-time progress indicators
+Real-time progress indicators  
+Professional DevOps terminal simulation
 
 </td>
-<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
+<td width="33.33%" align="center" style="padding: 24px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
 
 #### DevOps Tools
 **Built-in utilities**  
 Base64, JSON, Timestamp, SHA-256, Regex  
-Copy-to-clipboard functionality
+Copy-to-clipboard functionality  
+Interactive processing interface
 
 </td>
-<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
+<td width="33.33%" align="center" style="padding: 24px; vertical-align: top;">
 
 #### Collapsible Quick Links
 **Organized link sections**  
 Expand/collapse Azure, AWS, GCP products  
-Direct console access links
+Direct console access links  
+Clean, organized navigation
 
 </td>
 </tr>
