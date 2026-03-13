@@ -1,14 +1,14 @@
-<div align="center" style="margin-bottom: 40px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 60px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+<div align="center" style="margin-bottom: 40px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 80px 30px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
 
-<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 48px; color: #38bdf8; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.2;">
+<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 64px; color: #38bdf8; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.1;">
 Mustafa McLinn
 </h1>
 
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #10b981; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.01em;">
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 28px; color: #10b981; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.01em;">
 DevOps Professional • Systems Engineer • Infrastructure Architect
 </p>
 
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 12px; letter-spacing: 0em; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #cbd5e1; margin-top: 16px; letter-spacing: 0em; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">
 Interactive DevOps Resume with integrated tools, modern portfolio, and technical documentation
 </p>
 
