@@ -66,7 +66,7 @@ const styles = {
   categoryTitle: {
     color: '#38bdf8',
     margin: '0 0 12px 0',
-    fontSize: '18px',
+    fontSize: '22px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
@@ -74,6 +74,6 @@ const styles = {
     color: '#e2e8f0',
     margin: '0',
     lineHeight: 1.6,
-    fontSize: '14px'
+    fontSize: '16px'
   }
 };

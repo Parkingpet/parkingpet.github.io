@@ -614,7 +614,7 @@ const styles = {
     borderRadius: '8px',
     color: '#94a3b8',
     cursor: 'pointer',
-    fontSize: '13px',
+    fontSize: '16px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
@@ -640,7 +640,7 @@ const styles = {
   toolTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '18px',
+    fontSize: '22px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
@@ -664,7 +664,7 @@ const styles = {
     borderRadius: '8px',
     color: '#e2e8f0',
     fontFamily: 'monospace',
-    fontSize: '13px',
+    fontSize: '16px',
     resize: 'vertical',
     fontWeight: 400
   },
@@ -680,7 +680,7 @@ const styles = {
     borderRadius: '8px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '13px',
+    fontSize: '16px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
@@ -701,13 +701,13 @@ const styles = {
   contactTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '16px',
+    fontSize: '20px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   contactValue: {
     color: '#e2e8f0',
-    fontSize: '14px',
+    fontSize: '16px',
     fontFamily: 'monospace',
     padding: '10px',
     background: 'rgba(17, 28, 51, 0.6)',
@@ -789,13 +789,13 @@ const styles = {
   },
   linkName: {
     color: '#38bdf8',
-    fontSize: '14px',
+    fontSize: '16px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   linkDesc: {
     color: '#94a3b8',
-    fontSize: '13px',
+    fontSize: '15px',
     lineHeight: 1.4
   }
 };

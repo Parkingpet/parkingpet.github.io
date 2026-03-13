@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div style={styles.header} id="top">
       <h1 style={styles.headerName}>
-        <pre style={{...styles.ascii, margin: 0, fontSize: '8px', lineHeight: '8px', color: '#38bdf8', animation: 'glitch 3s infinite'}}>
+        <pre style={{...styles.ascii, margin: 0, fontSize: '12px', lineHeight: '12px', color: '#38bdf8', animation: 'glitch 3s infinite'}}>
           {resumeData.personal.name}
         </pre>
       </h1>
@@ -72,7 +72,7 @@ const styles = {
   },
   headerName: {
     margin: '0 0 20px 0',
-    fontSize: '40px',
+    fontSize: '52px',
     fontWeight: 700,
     color: '#38bdf8',
     textAlign: 'center',
@@ -95,7 +95,7 @@ const styles = {
     borderBottom: 'none',
     background: 'rgba(17,28,51,.6)',
     borderRadius: '6px 6px 0 0',
-    fontSize: '13px',
+    fontSize: '16px',
     fontWeight: 500,
     color: '#38bdf8',
     textDecoration: 'none',
@@ -104,7 +104,7 @@ const styles = {
   },
   subtitle: {
     margin: '16px 0 0 0',
-    fontSize: '18px',
+    fontSize: '24px',
     fontWeight: 600,
     color: '#10b981',
     textAlign: 'center',
@@ -119,7 +119,7 @@ const styles = {
     alignItems: 'center'
   },
   meta: {
-    fontSize: '13px',
+    fontSize: '16px',
     color: '#94a3b8',
     textAlign: 'center',
     marginTop: '16px',

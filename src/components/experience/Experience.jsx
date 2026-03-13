@@ -54,19 +54,19 @@ const styles = {
     marginBottom: '16px'
   },
   company: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 600,
     color: '#38bdf8',
     letterSpacing: '-0.01em'
   },
   position: {
-    fontSize: '16px',
+    fontSize: '18px',
     color: '#94a3b8',
     marginTop: '6px',
     fontWeight: 500
   },
   date: {
-    fontSize: '14px',
+    fontSize: '16px',
     color: '#64748b',
     whiteSpace: 'nowrap',
     fontWeight: 500
@@ -80,6 +80,6 @@ const styles = {
     color: '#e2e8f0',
     marginBottom: '10px',
     lineHeight: 1.6,
-    fontSize: '14px'
+    fontSize: '16px'
   }
 };

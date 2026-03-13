@@ -39,7 +39,7 @@ const styles = {
   },
   ascii: {
     fontFamily: 'monospace',
-    fontSize: '11px',
+    fontSize: '14px',
     lineHeight: 1.4,
     whiteSpace: 'pre',
     color: '#94a3b8',

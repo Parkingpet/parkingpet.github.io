@@ -6,6 +6,7 @@ import Tools from './components/tools/Tools';
 import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
 import Footer from './components/footer/Footer';
+import EmailWidget from './components/email/EmailWidget';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ export default function App() {
           <Header />
           <main id="main-content">
             <Summary />
+            <EmailWidget />
             <Skills />
             <Experience />
             <div id="tools">
@@ -166,6 +168,6 @@ const styles = {
     color: '#e2e8f0',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
     lineHeight: 1.6,
-    fontSize: '14px'
+    fontSize: '20px'
   }
 };

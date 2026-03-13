@@ -52,7 +52,7 @@ const styles = {
     color: '#e2e8f0',
     margin: '0',
     lineHeight: 1.6,
-    fontSize: '14px'
+    fontSize: '18px'
   },
   competenciesGrid: {
     display: 'grid',
@@ -66,7 +66,7 @@ const styles = {
     borderRadius: '6px',
     padding: '12px 16px',
     color: '#38bdf8',
-    fontSize: '13px',
+    fontSize: '16px',
     fontWeight: 500,
     textAlign: 'center',
     transition: 'all 0.2s ease'
