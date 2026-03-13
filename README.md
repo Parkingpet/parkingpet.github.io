@@ -52,11 +52,11 @@ DevOps Resume Images
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
   <div style="text-align: center;">
-    <img src="./public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="400" style="border: 1px solid #23314d; border-radius: 8px;">
+    <img src="./public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="500" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
     <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 12px; color: #94a3b8;">Infrastructure automation and cloud technologies</span></p>
   </div>
   <div style="text-align: center;">
-    <img src="./public/devops-logo.svg" alt="DevOps Terminal Logo" width="300" style="border: 1px solid #23314d; border-radius: 8px;">
+    <img src="./public/devops-logo.svg" alt="DevOps Terminal Logo" width="300" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
     <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 12px; color: #94a3b8;">Professional terminal-themed branding</span></p>
   </div>
 </div>
@@ -267,109 +267,6 @@ The application follows a modular component architecture:
 - **Theme Variables**: Centralized color scheme and design tokens
 - **Responsive Design**: Mobile-first approach with breakpoints
 - **Animation System**: Keyframe animations and transitions
-
-### GraphQL Data Integration Example
-The resume site can be extended to fetch data from GraphQL APIs. Here's an example GraphQL query for fetching resume data:
-
-```graphql
-query GetResumeData {
-  resume {
-    personalInfo {
-      name
-      title
-      email
-      phone
-      location
-      github
-      linkedin
-    }
-    experience {
-      id
-      company
-      position
-      duration
-      description
-      technologies
-      achievements
-    }
-    skills {
-      category
-      items
-      proficiency
-    }
-    education {
-      institution
-      degree
-      year
-      gpa
-    }
-    projects {
-      name
-      description
-      technologies
-      githubUrl
-      liveUrl
-    }
-  }
-}
-```
-
-And the corresponding GraphQL schema:
-
-```graphql
-type PersonalInfo {
-  name: String!
-  title: String!
-  email: String!
-  phone: String
-  location: String!
-  github: String
-  linkedin: String
-}
-
-type Experience {
-  id: ID!
-  company: String!
-  position: String!
-  duration: String!
-  description: String!
-  technologies: [String!]!
-  achievements: [String!]!
-}
-
-type Skill {
-  category: String!
-  items: [String!]!
-  proficiency: Int!
-}
-
-type Education {
-  institution: String!
-  degree: String!
-  year: String!
-  gpa: Float
-}
-
-type Project {
-  name: String!
-  description: String!
-  technologies: [String!]!
-  githubUrl: String
-  liveUrl: String
-}
-
-type Resume {
-  personalInfo: PersonalInfo!
-  experience: [Experience!]!
-  skills: [Skill!]!
-  education: [Education!]!
-  projects: [Project!]!
-}
-
-type Query {
-  resume: Resume!
-}
-```
 
 ---
 
