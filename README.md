@@ -1,14 +1,18 @@
-<div align="center" style="margin-bottom: 30px; background: #000000; padding: 40px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+<div align="center" style="margin-bottom: 40px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 60px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
 
-<h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">
-Mustafa McLinn - DevOps Professional
+<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 48px; color: #38bdf8; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.2;">
+Mustafa McLinn
 </h1>
 
-<p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #94a3b8; margin-top: 5px; letter-spacing: 1px;">
-Interactive DevOps Resume • Modern Portfolio • Technical Documentation
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #10b981; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.01em;">
+DevOps Professional • Systems Engineer • Infrastructure Architect
 </p>
 
-<div style="display: flex; justify-content: center; gap: 8px; margin: 15px 0; flex-wrap: wrap;">
+<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 12px; letter-spacing: 0em; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+Interactive DevOps Resume with integrated tools, modern portfolio, and technical documentation
+</p>
+
+<div style="display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap;">
   <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 20px;">
   <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 20px;">
   <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 20px;">
@@ -17,22 +21,22 @@ Interactive DevOps Resume • Modern Portfolio • Technical Documentation
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 20px;">
 </div>
 
-<div style="display: flex; justify-content: center; gap: 10px; margin: 15px 0; flex-wrap: wrap;">
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);">React 18.2</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.4);">Vite 7.3</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.4);">DevOps Tools</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.4);">GitHub Pages</span>
+<div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);">React 18.2</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.4);">Vite 7.3</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.4);">DevOps Tools</span>
+  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.4);">GitHub Pages</span>
 </div>
 
 </div>
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Live Demo
 </h2>
 
 <div align="center">
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 15px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Interactive DevOps Resume
 </h3>
 
@@ -42,7 +46,7 @@ Interactive DevOps Resume
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 DevOps Resume Images
 </h3>
 
@@ -61,7 +65,7 @@ DevOps Resume Images
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Quick Links
 </h3>
 
@@ -73,7 +77,7 @@ Quick Links
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Key Features
 </h3>
 
@@ -105,7 +109,7 @@ Neon blue theme with particle effects
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Performance Metrics
 </h3>
 
@@ -122,7 +126,7 @@ Time to Interactive: <1.2s
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Table of Contents
 </h2>
 
@@ -140,11 +144,11 @@ Table of Contents
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Features
 </h2>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Terminal-Style Loading Experience
 </h3>
 - **Authentic CLI boot sequence** with real-time progress simulation
@@ -152,7 +156,7 @@ Terminal-Style Loading Experience
 - **Professional DevOps terminal** simulation with ASCII art
 - **Loading animations** with progress bars and status indicators
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Integrated DevOps Toolkit
 </h3>
 
@@ -211,7 +215,7 @@ Integrated DevOps Toolkit
 
 </details>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 High-Tech Visual Design
 </h3>
 - **Animated matrix-style grid** overlay with particle effects
@@ -222,7 +226,7 @@ High-Tech Visual Design
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 GraphQL API Integration
 </h3>
 - **Query Optimization** - Automatic query optimization and caching
@@ -234,7 +238,7 @@ GraphQL API Integration
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Architecture
 </h2>
 
@@ -374,7 +378,7 @@ type Query {
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Tech Stack
 </h2>
 
@@ -407,7 +411,7 @@ Tech Stack
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 GraphQL Integration Guide
 </h2>
 
@@ -463,7 +467,7 @@ export default client;
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Performance
 </h2>
 
@@ -485,7 +489,7 @@ Performance
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Project Structure
 </h2>
 
@@ -523,7 +527,7 @@ public/
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Quick Start
 </h2>
 
@@ -571,7 +575,7 @@ git push origin main
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Customization
 </h2>
 
@@ -640,7 +644,7 @@ Modify configuration files:
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Contributing
 </h2>
 
@@ -665,7 +669,7 @@ Contributing
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 License
 </h2>
 
@@ -686,7 +690,7 @@ For questions, issues, or support:
 
 ---
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Why This Approach?
 </h2>
 
@@ -713,7 +717,7 @@ Why This Approach?
 
 
 
-<h2 style="font-family: 'Courier New', monospace; font-size: 20px; color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 30px;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
 Angular-Style Component Architecture
 </h2>
 
