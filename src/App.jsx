@@ -40,11 +40,11 @@ export default function App() {
         <div style={styles.container}>
           <a href="#summary" className="skip-link">Skip to main content</a>
           <Header />
+          <Skills />
+          <Experience />
           <div id="tools">
             <Tools />
           </div>
-          <Skills />
-          <Experience />
           <Footer />
         </div>
       </div>

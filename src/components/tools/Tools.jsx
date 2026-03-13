@@ -242,6 +242,8 @@ export default function Tools() {
 
   return (
     <div style={styles.container}>
+      <h2 style={styles.sectionTitle}>DevOps Tools & Quick Links</h2>
+      
       <div style={styles.tabs}>
         {Object.entries(tools).map(([key, tool]) => (
           <button
@@ -258,6 +260,35 @@ export default function Tools() {
       </div>
       
       {renderToolContent()}
+      
+      <div style={styles.linksSection}>
+        <h3 style={styles.linksTitle}>Quick Links</h3>
+        <div style={styles.linksGrid}>
+          <a href="https://parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>View Live Site</div>
+              <div style={styles.linkDesc}>Interactive DevOps resume with built-in tools</div>
+            </div>
+          </a>
+          
+          <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📦</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>GitHub Repository</div>
+              <div style={styles.linkDesc}>Source code and documentation</div>
+            </div>
+          </a>
+          
+          <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🍴</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Fork This Project</div>
+              <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
@@ -269,6 +300,15 @@ const styles = {
     borderRadius: '12px',
     padding: '20px',
     marginTop: '20px'
+  },
+  sectionTitle: {
+    margin: '0 0 20px 0',
+    color: '#38bdf8',
+    fontSize: '24px',
+    fontWeight: '600',
+    letterSpacing: '-0.01em',
+    borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
+    paddingBottom: '12px'
   },
   tabs: {
     display: 'flex',
@@ -390,5 +430,52 @@ const styles = {
     background: 'rgba(17, 28, 51, 0.3)',
     borderRadius: '4px',
     border: '1px solid #23314d'
+  },
+  linksSection: {
+    marginTop: '32px',
+    paddingTop: '24px',
+    borderTop: '2px solid rgba(56, 189, 248, 0.3)'
+  },
+  linksTitle: {
+    margin: '0 0 16px 0',
+    color: '#38bdf8',
+    fontSize: '18px',
+    fontWeight: '600'
+  },
+  linksGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '16px'
+  },
+  linkCard: {
+    display: 'flex',
+    gap: '12px',
+    padding: '16px',
+    background: 'rgba(11, 18, 32, 0.8)',
+    border: '1px solid #23314d',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    color: 'inherit',
+    transition: 'all 0.2s ease',
+    cursor: 'pointer'
+  },
+  linkIcon: {
+    fontSize: '24px',
+    minWidth: '32px',
+    textAlign: 'center'
+  },
+  linkContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px'
+  },
+  linkName: {
+    color: '#38bdf8',
+    fontSize: '14px',
+    fontWeight: '600'
+  },
+  linkDesc: {
+    color: '#94a3b8',
+    fontSize: '12px'
   }
 };
