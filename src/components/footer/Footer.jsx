@@ -6,9 +6,15 @@ export default function Footer() {
       <pre style={styles.ascii}>
         {`
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│ Teckguy | Independent IT Consulting & Support                                │
-│ Website: teckguy.com | Email: mustafa.mclinn@outlook.com | Phone: 510-296-0233 │
-│ Services: System Administration | Cloud Infrastructure | DevOps Automation     │
+│                                                                              │
+│                        Teckguy Consulting                                    │
+│                 Independent IT Consulting & Support                          │
+│                                                                              │
+│  Website: teckguy.com          Email: mustafa.mclinn@outlook.com             │
+│  Phone: 510-296-0233                                                        │
+│                                                                              │
+│  Services: System Administration | Cloud Infrastructure | DevOps Automation  │
+│                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
         `}
       </pre>
@@ -33,11 +39,13 @@ const styles = {
   },
   ascii: {
     fontFamily: 'monospace',
-    fontSize: '10px',
-    lineHeight: '10px',
+    fontSize: '11px',
+    lineHeight: '1.2',
     whiteSpace: 'pre',
     color: '#94a3b8',
-    margin: '0 0 16px 0'
+    margin: '0 0 16px 0',
+    overflow: 'hidden',
+    textAlign: 'center'
   },
   info: {
     marginTop: '16px'
