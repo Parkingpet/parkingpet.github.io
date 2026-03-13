@@ -40,7 +40,7 @@ Live Demo
 Interactive DevOps Resume
 </h3>
 
-[![Moose as a Service](./public/moose-as-a-service.png)](https://parkingpet.github.io)
+[![Moose as a Service](./public/moose-as-a-service.svg)](https://parkingpet.github.io)
 
 *Click the image above to visit the live site*
 
