@@ -5,6 +5,9 @@ import Summary from './components/summary/Summary';
 import Tools from './components/tools/Tools';
 import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
+import Projects from './components/projects/Projects';
+import Education from './components/education/Education';
+import Clients from './components/clients/Clients';
 import Footer from './components/footer/Footer';
 import EmailWidget from './components/email/EmailWidget';
 
@@ -43,12 +46,27 @@ export default function App() {
           <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header />
           <main id="main-content">
-            <Summary />
+            <div id="summary">
+              <Summary />
+            </div>
             <EmailWidget />
-            <Skills />
-            <Experience />
+            <div id="skills">
+              <Skills />
+            </div>
             <div id="tools">
               <Tools />
+            </div>
+            <div id="projects">
+              <Projects />
+            </div>
+            <div id="experience">
+              <Experience />
+            </div>
+            <div id="education">
+              <Education />
+            </div>
+            <div id="clients">
+              <Clients />
             </div>
           </main>
           <Footer />

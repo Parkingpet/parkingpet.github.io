@@ -12,27 +12,29 @@ export default function Summary() {
         ))}
       </div>
 
-      <h2 style={styles.title}>Core Competencies</h2>
-      
-      <div style={styles.competenciesGrid}>
-        {resumeData.competencies.map((competency, index) => (
-          <div 
-            key={index} 
-            style={styles.competencyTag}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 8px 25px rgba(56, 189, 248, 0.2)';
-              e.target.style.borderColor = '#38bdf8';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = 'none';
-              e.target.style.borderColor = 'rgba(56, 189, 248, 0.3)';
-            }}
-          >
-            {competency}
-          </div>
-        ))}
+      <div id="competencies">
+        <h2 style={styles.title}>Core Competencies</h2>
+        
+        <div style={styles.competenciesGrid}>
+          {resumeData.competencies.map((competency, index) => (
+            <div 
+              key={index} 
+              style={styles.competencyTag}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 8px 25px rgba(56, 189, 248, 0.2)';
+                e.target.style.borderColor = '#38bdf8';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = 'none';
+                e.target.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+              }}
+            >
+              {competency}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
