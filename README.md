@@ -40,7 +40,7 @@ Live Demo
 Interactive DevOps Resume
 </h3>
 
-[![Moose as a Service](public/moose-as-a-service.jpg)](https://parkingpet.github.io)
+<img src="public/moose-as-a-service.jpg" alt="Interactive DevOps Resume" width="400" style="border: 2px solid #23314d; border-radius: 12px; cursor: pointer;" onclick="window.open('https://parkingpet.github.io', '_blank')">
 
 *Click the image above to visit the live site*
 
