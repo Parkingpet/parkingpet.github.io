@@ -1,7 +1,7 @@
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import ParticleBackground from './components/background/ParticleBackground';
 
 export default function Prompts() {
-  const canvasRef = useRef(null)
   const [prompts, setPrompts] = useState(() => {
     const saved = localStorage.getItem('userPrompts')
     return saved ? JSON.parse(saved) : []
@@ -12,52 +12,6 @@ export default function Prompts() {
   useEffect(() => {
     localStorage.setItem('userPrompts', JSON.stringify(prompts))
   }, [prompts])
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    
-    const ctx = canvas.getContext('2d')
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-    
-    const particles = Array.from({length: 30}, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.2,
-      vy: (Math.random() - 0.5) * 0.2,
-      r: Math.random() * 1
-    }))
-    
-    const animate = () => {
-      ctx.fillStyle = 'rgba(11, 18, 32, 0.1)'
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
-      ctx.fillStyle = '#38bdf8'
-      ctx.globalAlpha = 0.3
-      
-      particles.forEach(p => {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fill()
-      })
-      
-      requestAnimationFrame(animate)
-    }
-    
-    animate()
-    
-    const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -85,9 +39,7 @@ export default function Prompts() {
 
   return (
     <>
-      <div style={styles.grid} />
-      <div style={styles.scanline} />
-      <canvas ref={canvasRef} style={styles.canvas} />
+      <ParticleBackground />
       <div style={styles.content}>
         <div style={styles.container}>
           <div style={styles.header}>
@@ -156,35 +108,6 @@ export default function Prompts() {
 }
 
 const styles = {
-  canvas: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    pointerEvents: 'none',
-    zIndex: 0,
-    opacity: 0.5
-  },
-  grid: {
-    position: 'fixed',
-    inset: 0,
-    background: `
-      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
-    `,
-    backgroundSize: '50px 50px',
-    pointerEvents: 'none',
-    animation: 'gridMove 40s linear infinite'
-  },
-  scanline: {
-    position: 'fixed',
-    inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
-    backgroundSize: '100% 4px',
-    pointerEvents: 'none',
-    animation: 'scanline 15s linear infinite'
-  },
   content: {
     position: 'relative',
     zIndex: 1,
