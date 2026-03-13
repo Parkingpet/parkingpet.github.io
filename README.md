@@ -301,11 +301,10 @@ Modify configuration files:
 ## 🤝 Contributing
 
 ### Development Workflow
-1. **Fork the repository** to your GitHub account
-2. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
-3. **Make your changes** with clear commit messages
-4. **Test thoroughly**: `npm run build && npm run preview`
-5. **Submit a pull request** with detailed description
+1. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
+2. **Make your changes** with clear commit messages
+3. **Test thoroughly**: `npm run build && npm run preview`
+4. **Submit a pull request** with detailed description
 
 ### Code Standards
 - Follow existing code style and patterns
@@ -362,20 +361,7 @@ For questions, issues, or support:
 - **Analytics Integration**: Usage tracking and insights
 - **API Integration**: Connect with external services
 
----
 
-<div align="center" style="margin-top: 60px; padding: 40px; background: rgba(15, 23, 42, 0.5); border-radius: 20px; border: 2px solid #23314d;">
-  <h3 style="color: #38bdf8; margin-bottom: 20px;">🚀 Ready to Build Your DevOps Resume?</h3>
-  <p style="color: #94a3b8; max-width: 800px; margin: 0 auto 30px;">
-    This template provides everything you need to create an impressive, interactive DevOps resume. 
-    Fork it, customize it, and deploy your own version in minutes!
-  </p>
-  <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" 
-     style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 40px; background: linear-gradient(135deg, #38bdf8 0%, #61DAFB 100%); color: #0b1220; font-weight: bold; text-decoration: none; border-radius: 12px; font-size: 18px; box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);">
-    <span style="font-size: 22px;">🍴</span>
-    <span>Fork This Repository</span>
-  </a>
-</div>
 
 ## 🏗️ Angular-Style Component Architecture
 
