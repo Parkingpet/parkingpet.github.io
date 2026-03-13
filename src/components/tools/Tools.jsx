@@ -587,14 +587,14 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '20px',
-    marginTop: '20px'
+    padding: '24px',
+    marginTop: '24px'
   },
   sectionTitle: {
-    margin: '0 0 20px 0',
+    margin: '0 0 24px 0',
     color: '#38bdf8',
-    fontSize: '24px',
-    fontWeight: '600',
+    fontSize: '32px',
+    fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
     paddingBottom: '12px'
@@ -602,17 +602,19 @@ const styles = {
   tabs: {
     display: 'flex',
     gap: '8px',
-    marginBottom: '16px',
+    marginBottom: '20px',
     flexWrap: 'wrap'
   },
   tab: {
-    padding: '8px 16px',
+    padding: '10px 16px',
     background: 'rgba(17, 28, 51, 0.6)',
     border: '1px solid #23314d',
     borderRadius: '8px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '13px'
+    fontSize: '13px',
+    fontWeight: 500,
+    transition: 'all 0.2s ease'
   },
   activeTab: {
     background: 'rgba(56, 189, 248, 0.2)',
@@ -634,17 +636,20 @@ const styles = {
   toolTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '16px',
-    fontWeight: '600'
+    fontSize: '18px',
+    fontWeight: 600,
+    letterSpacing: '-0.01em'
   },
   collapseButton: {
-    padding: '6px 12px',
+    padding: '8px 12px',
     background: 'rgba(56, 189, 248, 0.1)',
     border: '1px solid #38bdf8',
     borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '12px'
+    fontSize: '12px',
+    fontWeight: 500,
+    transition: 'all 0.2s ease'
   },
   textarea: {
     width: '100%',
@@ -656,7 +661,8 @@ const styles = {
     color: '#e2e8f0',
     fontFamily: 'monospace',
     fontSize: '13px',
-    resize: 'vertical'
+    resize: 'vertical',
+    fontWeight: 400
   },
   actions: {
     display: 'flex',
@@ -664,13 +670,15 @@ const styles = {
     flexWrap: 'wrap'
   },
   actionButton: {
-    padding: '8px 16px',
+    padding: '10px 16px',
     background: 'rgba(56, 189, 248, 0.2)',
     border: '1px solid #38bdf8',
     borderRadius: '8px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '13px'
+    fontSize: '13px',
+    fontWeight: 500,
+    transition: 'all 0.2s ease'
   },
   contactContainer: {
     display: 'flex',
@@ -684,41 +692,46 @@ const styles = {
     padding: '16px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '8px'
+    gap: '12px'
   },
   contactTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '14px',
-    fontWeight: '600'
+    fontSize: '16px',
+    fontWeight: 600,
+    letterSpacing: '-0.01em'
   },
   contactValue: {
     color: '#e2e8f0',
-    fontSize: '16px',
+    fontSize: '14px',
     fontFamily: 'monospace',
-    padding: '8px',
+    padding: '10px',
     background: 'rgba(17, 28, 51, 0.6)',
     borderRadius: '4px',
-    border: '1px solid #23314d'
+    border: '1px solid #23314d',
+    fontWeight: 400
   },
   copyButton: {
-    padding: '8px 16px',
+    padding: '10px 16px',
     background: 'rgba(56, 189, 248, 0.2)',
     border: '1px solid #38bdf8',
     borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
     fontSize: '13px',
-    alignSelf: 'flex-start'
+    fontWeight: 500,
+    alignSelf: 'flex-start',
+    transition: 'all 0.2s ease'
   },
   contactNote: {
     color: '#94a3b8',
-    fontSize: '12px',
+    fontSize: '13px',
     fontStyle: 'italic',
-    padding: '8px',
+    padding: '12px',
     background: 'rgba(17, 28, 51, 0.3)',
     borderRadius: '4px',
-    border: '1px solid #23314d'
+    border: '1px solid #23314d',
+    lineHeight: 1.6
   },
   linksSection: {
     marginTop: '32px',
@@ -739,8 +752,9 @@ const styles = {
   linksTitle: {
     margin: '0 0 16px 0',
     color: '#38bdf8',
-    fontSize: '18px',
-    fontWeight: '600'
+    fontSize: '20px',
+    fontWeight: 600,
+    letterSpacing: '-0.01em'
   },
   linksGrid: {
     display: 'grid',
@@ -772,10 +786,12 @@ const styles = {
   linkName: {
     color: '#38bdf8',
     fontSize: '14px',
-    fontWeight: '600'
+    fontWeight: 600,
+    letterSpacing: '-0.01em'
   },
   linkDesc: {
     color: '#94a3b8',
-    fontSize: '12px'
+    fontSize: '13px',
+    lineHeight: 1.4
   }
 };

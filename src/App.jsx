@@ -162,9 +162,10 @@ const styles = {
   container: {
     maxWidth: '1100px',
     margin: '0 auto',
-    padding: '36px 22px 60px',
+    padding: '40px 24px 60px',
     color: '#e2e8f0',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
-    lineHeight: 1.55
+    lineHeight: 1.6,
+    fontSize: '14px'
   }
 };

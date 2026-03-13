@@ -85,17 +85,18 @@ export function ResumeComponent() {
       marginBottom: '32px',
     },
     title: {
-      fontSize: '24px',
+      fontSize: '32px',
       color: '#38bdf8',
-      fontWeight: '600',
-      marginBottom: '16px',
+      fontWeight: 600,
+      marginBottom: '20px',
       fontFamily: 'Inter, Segoe UI, system-ui, sans-serif',
+      letterSpacing: '-0.01em'
     },
     description: {
       color: '#cbd5e1',
-      marginBottom: '20px',
+      marginBottom: '24px',
       fontSize: '14px',
-      lineHeight: '1.6',
+      lineHeight: 1.6,
     },
     tabs: {
       display: 'flex',
@@ -105,12 +106,13 @@ export function ResumeComponent() {
       paddingBottom: '12px',
     },
     tab: {
-      padding: '8px 16px',
+      padding: '10px 16px',
       background: 'transparent',
       border: 'none',
       color: '#94a3b8',
       cursor: 'pointer',
-      fontSize: '14px',
+      fontSize: '13px',
+      fontWeight: 500,
       fontFamily: 'Fira Code, Courier New, monospace',
       borderBottom: '2px solid transparent',
       transition: 'all 0.3s ease',
@@ -129,9 +131,9 @@ export function ResumeComponent() {
     },
     code: {
       fontFamily: 'Fira Code, Courier New, monospace',
-      fontSize: '12px',
+      fontSize: '13px',
       color: '#38bdf8',
-      lineHeight: '1.5',
+      lineHeight: 1.6,
       whiteSpace: 'pre-wrap',
       wordBreak: 'break-word',
     },
@@ -191,8 +193,8 @@ export function ResumeComponent() {
         </code>
       </div>
 
-      <div style={{ marginTop: '16px', fontSize: '12px', color: '#64748b' }}>
-        <p>
+      <div style={{ marginTop: '20px', fontSize: '13px', color: '#64748b', lineHeight: 1.6 }}>
+        <p style={{ margin: 0 }}>
           💡 <strong>Tip:</strong> Use Apollo Client to integrate this query into your React components. 
           See the README for full setup instructions.
         </p>

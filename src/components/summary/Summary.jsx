@@ -30,27 +30,28 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '20px',
-    marginTop: '20px'
+    padding: '24px',
+    marginTop: '24px'
   },
   title: {
     color: '#38bdf8',
-    margin: '0 0 16px 0',
-    fontSize: '20px',
-    fontWeight: 'bold',
+    margin: '0 0 20px 0',
+    fontSize: '32px',
+    fontWeight: 600,
+    letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
     paddingBottom: '12px'
   },
   summaryContent: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px',
-    marginBottom: '24px'
+    gap: '16px',
+    marginBottom: '28px'
   },
   paragraph: {
     color: '#e2e8f0',
     margin: '0',
-    lineHeight: '1.6',
+    lineHeight: 1.6,
     fontSize: '14px'
   },
   competenciesGrid: {
@@ -63,10 +64,11 @@ const styles = {
     background: 'rgba(56, 189, 248, 0.1)',
     border: '1px solid rgba(56, 189, 248, 0.3)',
     borderRadius: '6px',
-    padding: '10px 14px',
+    padding: '12px 16px',
     color: '#38bdf8',
     fontSize: '13px',
-    fontWeight: '500',
-    textAlign: 'center'
+    fontWeight: 500,
+    textAlign: 'center',
+    transition: 'all 0.2s ease'
   }
 };

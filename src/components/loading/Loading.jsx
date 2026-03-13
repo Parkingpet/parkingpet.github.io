@@ -66,25 +66,26 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.9)',
     border: '1px solid #38bdf8',
     borderRadius: '8px',
-    padding: '20px',
+    padding: '24px',
     fontFamily: 'monospace',
     color: '#38bdf8',
     minWidth: '400px'
   },
   terminalHeader: {
     color: '#38bdf8',
-    marginBottom: '10px',
-    fontSize: '14px'
+    marginBottom: '12px',
+    fontSize: '14px',
+    fontWeight: 500
   },
   terminalBody: {
-    fontSize: '12px',
-    lineHeight: '1.4'
+    fontSize: '13px',
+    lineHeight: 1.6
   },
   progress: {
     background: 'rgba(56, 189, 248, 0.1)',
     height: '4px',
     borderRadius: '2px',
-    margin: '10px 0',
+    margin: '12px 0',
     overflow: 'hidden'
   },
   progressBar: {

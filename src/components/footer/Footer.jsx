@@ -33,27 +33,28 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '20px',
-    marginTop: '20px',
+    padding: '24px',
+    marginTop: '24px',
     textAlign: 'center'
   },
   ascii: {
     fontFamily: 'monospace',
     fontSize: '11px',
-    lineHeight: '1.2',
+    lineHeight: 1.4,
     whiteSpace: 'pre',
     color: '#94a3b8',
-    margin: '0 0 16px 0',
+    margin: '0 0 20px 0',
     overflow: 'hidden',
     textAlign: 'center'
   },
   info: {
-    marginTop: '16px'
+    marginTop: '20px'
   },
   updated: {
     color: '#94a3b8',
-    fontSize: '12px',
-    margin: '0 0 8px 0'
+    fontSize: '13px',
+    margin: '0 0 12px 0',
+    fontWeight: 500
   },
   backToTop: {
     margin: '0'
@@ -61,6 +62,7 @@ const styles = {
   link: {
     color: '#38bdf8',
     textDecoration: 'none',
-    fontSize: '12px'
+    fontSize: '13px',
+    fontWeight: 500
   }
 };
