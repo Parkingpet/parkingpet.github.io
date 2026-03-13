@@ -1,0 +1,116 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pipelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Grid Pattern -->
+  <rect width="800" height="400" fill="url(#grid)"/>
+  
+  <!-- Title Section -->
+  <text x="400" y="50" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="36" font-weight="700" letter-spacing="-0.02em">Infrastructure Automation</text>
+  <text x="400" y="80" text-anchor="middle" fill="#10b981" font-family="Inter, sans-serif" font-size="20" font-weight="600">&amp; Cloud Technologies</text>
+  
+  <!-- CI/CD Pipeline Visualization -->
+  <text x="100" y="120" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">CI/CD Pipeline</text>
+  
+  <!-- Pipeline Steps -->
+  <rect x="100" y="130" width="80" height="40" fill="#38bdf8" rx="6"/>
+  <text x="140" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">Code</text>
+  
+  <!-- Arrow -->
+  <path d="M 185 150 L 210 150" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <rect x="215" y="130" width="80" height="40" fill="#10b981" rx="6"/>
+  <text x="255" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">Build</text>
+  
+  <!-- Arrow -->
+  <path d="M 300 150 L 325 150" stroke="#10b981" stroke-width="2"/>
+  
+  <rect x="330" y="130" width="80" height="40" fill="#f59e0b" rx="6"/>
+  <text x="370" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">Test</text>
+  
+  <!-- Arrow -->
+  <path d="M 415 150 L 440 150" stroke="#f59e0b" stroke-width="2"/>
+  
+  <rect x="445" y="130" width="80" height="40" fill="#8b5cf6" rx="6"/>
+  <text x="485" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">Deploy</text>
+  
+  <!-- Arrow -->
+  <path d="M 530 150 L 555 150" stroke="#8b5cf6" stroke-width="2"/>
+  
+  <rect x="560" y="130" width="80" height="40" fill="#ef4444" rx="6"/>
+  <text x="600" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">Monitor</text>
+  
+  <!-- Infrastructure Components -->
+  <text x="100" y="210" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">Infrastructure Components</text>
+  
+  <!-- Cloud Services Row -->
+  <rect x="100" y="230" width="120" height="60" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="1" rx="8"/>
+  <text x="160" y="250" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="14" font-weight="600">Compute</text>
+  <text x="110" y="270" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• EC2/VM</text>
+  <text x="110" y="285" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• Containers</text>
+  
+  <rect x="240" y="230" width="120" height="60" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1" rx="8"/>
+  <text x="300" y="250" text-anchor="middle" fill="#10b981" font-family="Inter, sans-serif" font-size="14" font-weight="600">Storage</text>
+  <text x="250" y="270" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• S3/Blob</text>
+  <text x="250" y="285" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• Databases</text>
+  
+  <rect x="380" y="230" width="120" height="60" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" stroke-width="1" rx="8"/>
+  <text x="440" y="250" text-anchor="middle" fill="#f59e0b" font-family="Inter, sans-serif" font-size="14" font-weight="600">Network</text>
+  <text x="390" y="270" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• VPC/VNet</text>
+  <text x="390" y="285" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• Load Balancers</text>
+  
+  <rect x="520" y="230" width="120" height="60" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="1" rx="8"/>
+  <text x="580" y="250" text-anchor="middle" fill="#8b5cf6" font-family="Inter, sans-serif" font-size="14" font-weight="600">Security</text>
+  <text x="530" y="270" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• IAM/RBAC</text>
+  <text x="530" y="285" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="10">• Encryption</text>
+  
+  <!-- Automation Tools -->
+  <text x="100" y="330" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">Automation Tools</text>
+  
+  <!-- Tool Icons -->
+  <rect x="100" y="340" width="60" height="30" fill="#623CE4" rx="4"/>
+  <text x="130" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">Terraform</text>
+  
+  <rect x="170" y="340" width="60" height="30" fill="#EE0000" rx="4"/>
+  <text x="200" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">Ansible</text>
+  
+  <rect x="240" y="340" width="60" height="30" fill="#F09820" rx="4"/>
+  <text x="270" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">Chef</text>
+  
+  <rect x="310" y="340" width="60" height="30" fill="#326CE5" rx="4"/>
+  <text x="340" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">K8s</text>
+  
+  <rect x="380" y="340" width="60" height="30" fill="#2496ED" rx="4"/>
+  <text x="410" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">Docker</text>
+  
+  <rect x="450" y="340" width="60" height="30" fill="#DC382D" rx="4"/>
+  <text x="480" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">Jenkins</text>
+  
+  <rect x="520" y="340" width="60" height="30" fill="#FC6D26" rx="4"/>
+  <text x="550" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">GitLab</text>
+  
+  <rect x="590" y="340" width="60" h="30" fill="#2088FF" rx="4"/>
+  <text x="620" y="360" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600">GitHub</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8"/>
+    </marker>
+  </defs>
+</svg>
