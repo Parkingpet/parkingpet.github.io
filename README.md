@@ -36,7 +36,7 @@ Live Demo
 Interactive DevOps Resume
 </h3>
 
-[![DevOps Resume Screenshot](https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/screenshot.png)](https://parkingpet.github.io)
+[![Moose as a Service](https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/moose-as-a-service.png)](https://parkingpet.github.io)
 
 *Click the image above to visit the live site*
 
