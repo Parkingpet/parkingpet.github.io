@@ -1,0 +1,268 @@
+Mustafa McLinn | Systems Engineer | DevOps | Infrastructure
+
+Mustafa McLinn
+
+Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations
+
+Oakland / San Francisco, CA
+
+510 296 0233
+
+mustafa.mclinn@outlook.com
+
+GitHub
+
+Summary
+
+Competencies
+
+Technical
+
+Projects
+
+Experience
+
+Education
+
+Clients
+
+Professional Summary
+
+Systems and infrastructure engineer with 25+ years of hands on experience spanning enterprise IT, cloud operations, DevOps automation,
+      endpoint management, and production support across Windows, Linux, and macOS environments. I build stable platforms, automate repeatable work,
+      and troubleshoot the ugly stuff under pressure, including cloud incidents, networking failures, and endpoint issues that block teams.
+
+Strengths include cloud hybrid operations (AWS, GCP, Azure), configuration management (Ansible, Chef), CI/CD, scripting (PowerShell, Bash, Python),
+      networking fundamentals, and customer facing technical support with clear documentation.
+
+Core Competencies
+
+System Administration and Desktop Support
+
+Cloud Hybrid Computing AWS GCP Azure
+
+Infrastructure Automation Ansible Chef Jenkins
+
+CI CD Pipelines and Deployment Strategies
+
+Network Administration and Security
+
+Scripting Bash PowerShell Python
+
+Troubleshooting and Technical Support
+
+Virtualization and Containerization Docker Kubernetes
+
+IT Consulting and Solution Architecture
+
+Endpoint Management and Software Deployment
+
+Technical Skills
+
+Operating Systems
+
+Windows 10 11, Windows Server, macOS, Linux CentOS Ubuntu CoreOS
+
+Scripting and Programming
+
+Bash, PowerShell, Python, Ruby, Node.js
+
+Cloud
+
+AWS EC2 S3 IAM, GCP, Azure
+
+DevOps and Automation
+
+Ansible, Jenkins, Terraform, Chef, GitLab CI
+
+Networking
+
+LAN WAN, VPN, Firewalls, VLANs, Cisco, HP
+
+Security
+
+IAM, 2FA, network security protocols, access controls
+
+Databases
+
+MySQL, PostgreSQL, MSSQL, NoSQL
+
+Tools
+
+Jira, GitHub, Artifactory, Splunk, SCCM, XenApp
+
+Projects
+
+ParkingPet
+
+Smart parking platform concept and public project site
+
+Repo
+
+Current GitHub Pages repo used for public facing presence and iteration:
+
+Parkingpet/parkingpet.github.io
+
+Foundation oriented build intended to evolve into a platform with strong emphasis on reliability, automation, and clean deploy patterns
+
+Repo currently contains a README and license only, leaving room to expand with roadmap, architecture notes, and implementation as development progresses
+
+Professional Experience
+
+Teckguy
+
+Independent Consultant | System Administration and IT Support
+
+1995 to Present
+
+Provided IT consulting and technical support across healthcare, insurance, legal, arts, nonprofit, and MSP environments
+
+Configured and managed HaloPSA and RMM workflows for small MSP operations, including Microsoft 365 administration via Admin Center, Teams, Graph, and automation
+
+Built and supported ticketing, streaming, NAS, and web solutions for remote and onsite use cases
+
+Managed mixed environment infrastructure for Windows, macOS, and Linux including printers, specialized devices, switches, routers, and hybrid backup strategies with failover
+
+RevisionFX
+
+Systems Administrator | Tier I II Support
+
+Feb 2021 to Feb 2024
+
+Delivered 24 7 support for global customers and production environments across multiple time zones, supporting 40+ plugins across 15+ apps on Windows, macOS, and Linux
+
+Maintained cloud infrastructure and rolled updates to AWS production environments
+
+Supported Microsoft 365 for internal staff and assisted with endpoint and account troubleshooting
+
+Diagnosed hardware issues including CUDA GPU and network card problems down to low level configuration and resource conflicts
+
+Built automation scripts and environment fixes using PowerShell, Bash, and shell tooling to resolve licensing, network, and OS specific issues
+
+Insight Engines
+
+DevOps | Knowledge Engineer
+
+Jan 2019 to Apr 2019
+
+Rebuilt CoreOS driven Docker containers using Ansible on GCP
+
+Used GitLab CI and Jira to manage workflows and deployments
+
+Audited GCP infrastructure and improved resource usage and reliability
+
+Splunk
+
+Systems Engineer
+
+Jan 2018 to May 2018
+
+Maintained Splunk Cloud services in a high intensity production environment
+
+Resolved complex issues, performed instance rebuilds, and optimized AWS EC2 stacks
+
+Developed and refined automation scripts in Bash, Ruby, and Node.js to improve operational workflows
+
+Workday
+
+Systems Engineer
+
+Apr 2016 to Sep 2017
+
+Managed Chef server nodes and supported CentOS upgrades with documented best practices
+
+Executed 4,500+ CentOS live upgrades across global production environments, completing ahead of schedule
+
+Developed and improved Bash, Ruby, and Python scripts supporting automation and operations
+
+Created instructional video documentation to enable self service upgrades and reduced support load
+
+John Muir Health
+
+LAN Engineer
+
+Feb 2015 to Mar 2016
+
+Supported hybrid enterprise infrastructure in a healthcare environment focused on safety, uptime, and operational efficiency
+
+Maintained LAN and NOC performance and security safeguards, coordinating across teams when needed
+
+Automated onboarding and provisioning using PowerShell and Azure tooling
+
+First Republic Bank
+
+Desktop Engineering | Tier III Support
+
+Mar 2011 to Apr 2011
+
+Provided Tier III troubleshooting and systems upgrades
+
+Configured SCCM and Active Directory to streamline deployments and workstation management
+
+Built batch scripts to automate repeatable troubleshooting and remediation tasks
+
+Concord Feed and Fuel
+
+MIS and Systems Administration
+
+Mar 2007 to Apr 2011
+
+Sole IT owner for multi location retail and administrative infrastructure
+
+Deployed and maintained Citrix XenApp, VPN, and RedHat based POS systems
+
+Automated operations using Bash, PowerShell, and batch scripting across endpoints and servers
+
+Additional Roles
+
+Infrastructure and Support
+
+2000 to 2006
+
+UCSF California Poison Control: maintained WAN LAN and implemented security enhancements and digital phone systems
+
+SnoCap DRM: supported infrastructure, Cisco systems, and SIP configurations for the company formerly known as Napster
+
+Ticket Planet: managed Windows 2000 Server, Exchange, and Cisco networks for a major online travel agency
+
+Dimension 7: built and maintained render farms and networked CG workstations for film production
+
+Education
+
+Golden Gate University: Management, 2012 to 2014
+
+Lincoln University: Computer Science, 2003 to 2005
+
+Diablo Valley College: Computer Science, 1999
+
+Academy of Art University: 3D Modeling, 1998
+
+Southern University: Electrical Engineering, 1993 to 1994
+
+Consulting Clients
+
+RevisionFX, 2004 to 2024: desktop hardware support, production and testing environments, developer adjacent troubleshooting
+
+Poor Magazine, 2019 to 2020: radio station build, remote studio, NAS, web, Mac PC, streaming services
+
+Dr Rathod Dental Office, 2019 to 2025: X ray systems, Dentrix, backups, printers, Server 2022 support
+
+Flo Solutions, 2024 to 2025: HaloPSA API configuration, Microsoft 365 admin via Graph and automation for a small MSP
+
+Eastside Arts Alliance: endpoint support, printer setups, Office instruction, email configuration
+
+LANgineers, 2014: Arc SoftSwitch SIP phones for 40+ clients supporting 400+ VoIP phones
+
+Dr Cox Dental Office, 1997 to 2019: Dentrix DB support and digital X ray systems
+
+David Quan Insurance, 2012 to 2014: infrastructure and Microsoft Office and email support
+
+LMI, 2012: broad small business tech support
+
+Charles Bonner, 2004 to 2005: litigation support and technical assistance
+
+Osha Neumann, 1995 to 2023: long term personal support and voice to text tooling configuration
+
+Last updated March 2026
+
+Back to top

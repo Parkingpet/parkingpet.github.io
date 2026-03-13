@@ -172,6 +172,7 @@ function Header() {
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.github}>GitHub</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href={resumeData.personal.linkedin}>LinkedIn</a></span>
         <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/Mustafa_McLinn_Resume.pdf" download>Resume PDF</a></span>
+        <span style={{display: 'inline-block', marginRight: '10px'}}><a href="/resume.txt" download>Resume TXT</a></span>
       </p>
     </div>
   )
@@ -356,6 +357,17 @@ function DevOpsTools() {
           const payload = JSON.parse(atob(parts[1]))
           setOutput(JSON.stringify(payload, null, 2))
         } catch { setOutput('Invalid JWT') }
+      }
+    },
+    uuid: {
+      name: 'UUID',
+      generate: () => setOutput(crypto.randomUUID())
+    },
+    url: {
+      name: 'URL',
+      encode: () => setOutput(encodeURIComponent(input)),
+      decode: () => {
+        try { setOutput(decodeURIComponent(input)) } catch { setOutput('Invalid URL encoding') }
       }
     }
   }
