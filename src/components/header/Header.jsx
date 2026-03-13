@@ -10,16 +10,36 @@ export default function Header() {
         </pre>
       </h1>
       <nav style={styles.nav}>
-        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink}>Home</a>
-        <a href="#summary" style={styles.navLink}>Summary</a>
-        <a href="#competencies" style={styles.navLink}>Competencies</a>
-        <a href="#skills" style={styles.navLink}>Technical</a>
-        <a href="#tools" style={styles.navLink}>DevOps Tools</a>
-        <a href="#projects" style={styles.navLink}>Projects</a>
-        <a href="#experience" style={styles.navLink}>Experience</a>
-        <a href="#education" style={styles.navLink}>Education</a>
-        <a href="#clients" style={styles.navLink}>Clients</a>
-        <a href="#mcp-servers" style={styles.navLink}>MCP Servers</a>
+        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink} 
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Home</a>
+        <a href="#summary" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Summary</a>
+        <a href="#competencies" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Competencies</a>
+        <a href="#skills" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Technical</a>
+        <a href="#tools" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>DevOps Tools</a>
+        <a href="#projects" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Projects</a>
+        <a href="#experience" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Experience</a>
+        <a href="#education" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Education</a>
+        <a href="#clients" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Clients</a>
+        <a href="#mcp-servers" style={styles.navLink}
+           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>MCP Servers</a>
       </nav>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       <div style={styles.badges}>
@@ -47,10 +67,10 @@ export default function Header() {
           </a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={resumeData.personal.github} style={styles.metaLink}>GitHub</a>
+          <a href={resumeData.personal.github} target="_blank" rel="noopener noreferrer" style={styles.metaLink}>GitHub</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href={resumeData.personal.linkedin} style={styles.metaLink}>LinkedIn</a>
+          <a href={resumeData.personal.linkedin} target="_blank" rel="noopener noreferrer" style={styles.metaLink}>LinkedIn</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
           <a href="/Mustafa_McLinn_Resume_2025.pdf" download style={styles.metaLink}>Resume PDF</a>
@@ -101,7 +121,9 @@ const styles = {
     color: '#38bdf8',
     textDecoration: 'none',
     position: 'relative',
-    top: '2px'
+    top: '2px',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer'
   },
   subtitle: {
     margin: '16px 0 0 0',

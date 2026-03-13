@@ -18,12 +18,7 @@ function Router() {
     return () => window.removeEventListener('popstate', handleNavigation)
   }, [])
 
-  const navigate = (path) => {
-    window.history.pushState(null, '', path)
-    setPage(path.includes('prompts') ? 'prompts' : 'home')
-  }
-
-  return page === 'prompts' ? <Prompts navigate={navigate} /> : <App navigate={navigate} />
+  return page === 'prompts' ? <Prompts /> : <App />
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

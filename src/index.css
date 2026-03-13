@@ -44,7 +44,10 @@
   --color-bg-surface: #0f172a;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 100px; /* Account for header height */
+}
 @keyframes gridMove {
   0% { transform: translate(0, 0); }
   100% { transform: translate(50px, 50px); }
