@@ -22,14 +22,26 @@ export const resumeData = {
   ],
 
   competencies: [
-    "System Administration and Desktop Support",
-    "Cloud Hybrid Computing AWS GCP Azure", 
-    "Infrastructure Automation Ansible Chef Jenkins",
-    "CI CD Pipelines and Deployment Strategies",
-    "Network Administration and Security",
-    "Scripting Bash PowerShell Python",
-    "Virtualization and Containerization Docker Kubernetes",
-    "IT Consulting and Solution Architecture"
+    "Cloud Infrastructure Architecture (AWS, GCP, Azure)",
+    "Infrastructure as Code (Terraform, Ansible, Chef)",
+    "Container Orchestration (Docker, Kubernetes, OpenShift)",
+    "CI/CD Pipeline Design & Implementation",
+    "System Administration (Windows Server, Linux, macOS)",
+    "Network Architecture & Security Implementation",
+    "DevOps Automation & Scripting (Python, Bash, PowerShell)",
+    "Virtualization Technologies (VMware, Hyper-V, Proxmox)",
+    "Database Administration (MySQL, PostgreSQL, MSSQL, NoSQL)",
+    "Monitoring & Observability (Splunk, Prometheus, Grafana)",
+    "Security & Compliance (IAM, 2FA, Network Security)",
+    "Enterprise IT Consulting & Solution Architecture",
+    "Hybrid Cloud Migration & Integration Strategies",
+    "Zero-Downtime Deployment & Blue-Green Strategies",
+    "Configuration Management & Automation",
+    "Incident Response & Performance Optimization",
+    "Multi-Environment Infrastructure Management",
+    "API Integration & Microservices Architecture",
+    "Backup & Disaster Recovery Planning",
+    "Cost Optimization & Resource Consolidation"
   ],
 
   skills: {

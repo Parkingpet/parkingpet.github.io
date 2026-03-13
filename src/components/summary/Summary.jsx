@@ -16,7 +16,20 @@ export default function Summary() {
       
       <div style={styles.competenciesGrid}>
         {resumeData.competencies.map((competency, index) => (
-          <div key={index} style={styles.competencyTag}>
+          <div 
+            key={index} 
+            style={styles.competencyTag}
+            onMouseEnter={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 8px 25px rgba(56, 189, 248, 0.2)';
+              e.target.style.borderColor = '#38bdf8';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = 'none';
+              e.target.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+            }}
+          >
             {competency}
           </div>
         ))}
@@ -56,19 +69,22 @@ const styles = {
   },
   competenciesGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '12px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '16px',
     marginBottom: '20px'
   },
   competencyTag: {
-    background: 'rgba(56, 189, 248, 0.1)',
+    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%)',
     border: '1px solid rgba(56, 189, 248, 0.3)',
-    borderRadius: '6px',
-    padding: '12px 16px',
+    borderRadius: '8px',
+    padding: '14px 18px',
     color: '#38bdf8',
-    fontSize: '16px',
+    fontSize: '14px',
     fontWeight: 500,
     textAlign: 'center',
-    transition: 'all 0.2s ease'
+    transition: 'all 0.3s ease',
+    cursor: 'default',
+    position: 'relative',
+    overflow: 'hidden'
   }
 };
