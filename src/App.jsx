@@ -46,6 +46,7 @@ export default function App() {
       <ParticleBackground />
       <div style={styles.content}>
         <div style={styles.container}>
+          <a href="#summary" className="skip-link">Skip to main content</a>
           <Header />
           <Summary />
           <Competencies />
