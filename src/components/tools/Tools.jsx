@@ -1,6 +1,80 @@
 import React, { useState } from 'react';
 import { resumeData } from '../../resumeData';
 
+const LinkSection = ({ title, isCollapsed, onToggle, links }) => (
+  <div style={styles.cloudLinksSection}>
+    <div style={styles.linksSectionHeader}>
+      <h3 style={styles.linksTitle}>{title}</h3>
+      <button
+        onClick={onToggle}
+        style={styles.collapseButton}
+      >
+        {isCollapsed ? '▼ Expand' : '▲ Collapse'}
+      </button>
+    </div>
+    {!isCollapsed && (
+      <div style={styles.linksGrid}>
+        {links.map((link, idx) => (
+          <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>{link.icon}</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>{link.name}</div>
+              <div style={styles.linkDesc}>{link.desc}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+);
+
+const LINK_SECTIONS = [
+  {
+    id: 'quickLinks',
+    title: 'Quick Links',
+    links: [
+      { name: 'View Live Site', url: 'https://parkingpet.github.io', icon: '🌐', desc: 'Interactive DevOps resume with built-in tools' },
+      { name: 'GitHub Repository', url: 'https://github.com/Parkingpet/parkingpet.github.io', icon: '📦', desc: 'Source code and documentation' },
+      { name: 'Fork This Project', url: 'https://github.com/Parkingpet/parkingpet.github.io/fork', icon: '🍴', desc: 'Create your own version - Fork at your own risk' }
+    ]
+  },
+  {
+    id: 'azure',
+    title: 'Azure Products',
+    links: [
+      { name: 'Microsoft Intune', url: 'https://intune.microsoft.com', icon: '📱', desc: 'Device and app management' },
+      { name: 'Microsoft Entra', url: 'https://entra.microsoft.com', icon: '🔐', desc: 'Identity and access management' },
+      { name: 'Microsoft 365 Admin', url: 'https://admin.microsoft.com', icon: '⚙️', desc: 'Organization administration' },
+      { name: 'Azure Portal', url: 'https://portal.azure.com', icon: '☁️', desc: 'Cloud infrastructure and services' },
+      { name: 'Azure Documentation', url: 'https://learn.microsoft.com/en-us/azure/', icon: '📚', desc: 'Learning resources and guides' }
+    ]
+  },
+  {
+    id: 'aws',
+    title: 'AWS Products',
+    links: [
+      { name: 'AWS Management Console', url: 'https://console.aws.amazon.com', icon: '☁️', desc: 'Cloud infrastructure and services' },
+      { name: 'EC2 Instances', url: 'https://console.aws.amazon.com/ec2', icon: '🖥️', desc: 'Virtual compute resources' },
+      { name: 'S3 Storage', url: 'https://console.aws.amazon.com/s3', icon: '📦', desc: 'Object storage service' },
+      { name: 'RDS Databases', url: 'https://console.aws.amazon.com/rds', icon: '🗄️', desc: 'Managed database service' },
+      { name: 'Lambda Functions', url: 'https://console.aws.amazon.com/lambda', icon: '⚡', desc: 'Serverless compute' },
+      { name: 'AWS Documentation', url: 'https://docs.aws.amazon.com', icon: '📚', desc: 'Learning resources and guides' }
+    ]
+  },
+  {
+    id: 'gcp',
+    title: 'Google Cloud Products',
+    links: [
+      { name: 'GCP Console', url: 'https://console.cloud.google.com', icon: '☁️', desc: 'Cloud infrastructure and services' },
+      { name: 'Compute Engine', url: 'https://console.cloud.google.com/compute', icon: '🖥️', desc: 'Virtual machine instances' },
+      { name: 'Cloud Storage', url: 'https://console.cloud.google.com/storage', icon: '📦', desc: 'Object storage service' },
+      { name: 'Cloud SQL', url: 'https://console.cloud.google.com/sql', icon: '🗄️', desc: 'Managed database service' },
+      { name: 'Cloud Functions', url: 'https://console.cloud.google.com/functions', icon: '⚡', desc: 'Serverless compute' },
+      { name: 'GCP Documentation', url: 'https://cloud.google.com/docs', icon: '📚', desc: 'Learning resources and guides' }
+    ]
+  }
+];
+
 export default function Tools() {
   const [activeTab, setActiveTab] = useState('base64');
   const [input, setInput] = useState('');
@@ -358,226 +432,16 @@ export default function Tools() {
       </div>
       
       {renderToolContent()}
-      
-      <div style={styles.linksSection}>
-        <div style={styles.linksSectionHeader}>
-          <h3 style={styles.linksTitle}>Quick Links</h3>
-          <button
-            onClick={() => setCollapsedLinks(prev => ({ ...prev, quickLinks: !prev.quickLinks }))}
-            style={styles.collapseButton}
-          >
-            {collapsedLinks.quickLinks ? '▼ Expand' : '▲ Collapse'}
-          </button>
-        </div>
-        {!collapsedLinks.quickLinks && (
-          <div style={styles.linksGrid}>
-            <a href="https://parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>🌐</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>View Live Site</div>
-                <div style={styles.linkDesc}>Interactive DevOps resume with built-in tools</div>
-              </div>
-            </a>
-            
-            <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>📦</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>GitHub Repository</div>
-                <div style={styles.linkDesc}>Source code and documentation</div>
-              </div>
-            </a>
-            
-            <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>🍴</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>Fork This Project</div>
-                <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
-              </div>
-            </a>
-          </div>
-        )}
-      </div>
 
-      <div style={styles.cloudLinksSection}>
-        <div style={styles.linksSectionHeader}>
-          <h3 style={styles.linksTitle}>Azure Products</h3>
-          <button
-            onClick={() => setCollapsedLinks(prev => ({ ...prev, azure: !prev.azure }))}
-            style={styles.collapseButton}
-          >
-            {collapsedLinks.azure ? '▼ Expand' : '▲ Collapse'}
-          </button>
-        </div>
-        {!collapsedLinks.azure && (
-          <div style={styles.linksGrid}>
-          <a href="https://intune.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📱</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Microsoft Intune</div>
-              <div style={styles.linkDesc}>Device and app management</div>
-            </div>
-          </a>
-          
-          <a href="https://entra.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🔐</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Microsoft Entra</div>
-              <div style={styles.linkDesc}>Identity and access management</div>
-            </div>
-          </a>
-          
-          <a href="https://admin.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>⚙️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Microsoft 365 Admin</div>
-              <div style={styles.linkDesc}>Organization administration</div>
-            </div>
-          </a>
-
-          <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>☁️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Azure Portal</div>
-              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
-            </div>
-          </a>
-
-          <a href="https://learn.microsoft.com/en-us/azure/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📚</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Azure Documentation</div>
-              <div style={styles.linkDesc}>Learning resources and guides</div>
-            </div>
-          </a>
-          </div>
-        )}
-      </div>
-
-      <div style={styles.cloudLinksSection}>
-        <div style={styles.linksSectionHeader}>
-          <h3 style={styles.linksTitle}>AWS Products</h3>
-          <button
-            onClick={() => setCollapsedLinks(prev => ({ ...prev, aws: !prev.aws }))}
-            style={styles.collapseButton}
-          >
-            {collapsedLinks.aws ? '▼ Expand' : '▲ Collapse'}
-          </button>
-        </div>
-        {!collapsedLinks.aws && (
-          <div style={styles.linksGrid}>
-          <a href="https://console.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>☁️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>AWS Management Console</div>
-              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
-            </div>
-          </a>
-
-          <a href="https://console.aws.amazon.com/ec2" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🖥️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>EC2 Instances</div>
-              <div style={styles.linkDesc}>Virtual compute resources</div>
-            </div>
-          </a>
-
-          <a href="https://console.aws.amazon.com/s3" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📦</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>S3 Storage</div>
-              <div style={styles.linkDesc}>Object storage service</div>
-            </div>
-          </a>
-
-          <a href="https://console.aws.amazon.com/rds" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🗄️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>RDS Databases</div>
-              <div style={styles.linkDesc}>Managed database service</div>
-            </div>
-          </a>
-
-          <a href="https://console.aws.amazon.com/lambda" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>⚡</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Lambda Functions</div>
-              <div style={styles.linkDesc}>Serverless compute</div>
-            </div>
-          </a>
-
-          <a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📚</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>AWS Documentation</div>
-              <div style={styles.linkDesc}>Learning resources and guides</div>
-            </div>
-          </a>
-          </div>
-        )}
-      </div>
-
-      <div style={styles.cloudLinksSection}>
-        <div style={styles.linksSectionHeader}>
-          <h3 style={styles.linksTitle}>Google Cloud Products</h3>
-          <button
-            onClick={() => setCollapsedLinks(prev => ({ ...prev, gcp: !prev.gcp }))}
-            style={styles.collapseButton}
-          >
-            {collapsedLinks.gcp ? '▼ Expand' : '▲ Collapse'}
-          </button>
-        </div>
-        {!collapsedLinks.gcp && (
-          <div style={styles.linksGrid}>
-          <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>☁️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>GCP Console</div>
-              <div style={styles.linkDesc}>Cloud infrastructure and services</div>
-            </div>
-          </a>
-
-          <a href="https://console.cloud.google.com/compute" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🖥️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Compute Engine</div>
-              <div style={styles.linkDesc}>Virtual machine instances</div>
-            </div>
-          </a>
-
-          <a href="https://console.cloud.google.com/storage" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📦</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Cloud Storage</div>
-              <div style={styles.linkDesc}>Object storage service</div>
-            </div>
-          </a>
-
-          <a href="https://console.cloud.google.com/sql" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🗄️</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Cloud SQL</div>
-              <div style={styles.linkDesc}>Managed database service</div>
-            </div>
-          </a>
-
-          <a href="https://console.cloud.google.com/functions" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>⚡</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Cloud Functions</div>
-              <div style={styles.linkDesc}>Serverless compute</div>
-            </div>
-          </a>
-
-          <a href="https://cloud.google.com/docs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📚</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>GCP Documentation</div>
-              <div style={styles.linkDesc}>Learning resources and guides</div>
-            </div>
-          </a>
-          </div>
-        )}
-      </div>
+      {LINK_SECTIONS.map((section) => (
+        <LinkSection
+          key={section.id}
+          title={section.title}
+          links={section.links}
+          isCollapsed={collapsedLinks[section.id]}
+          onToggle={() => setCollapsedLinks(prev => ({ ...prev, [section.id]: !prev[section.id] }))}
+        />
+      ))}
     </div>
   );
 }

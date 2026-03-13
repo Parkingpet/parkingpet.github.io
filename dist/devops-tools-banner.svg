@@ -1,98 +1,100 @@
-<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bannerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
   </defs>
   
   <!-- Background -->
-  <rect width="1200" height="300" fill="url(#bannerGradient)"/>
+  <rect width="800" height="300" fill="url(#bgGradient)" rx="12"/>
+
+  <!-- Grid Pattern -->
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.02em">DevOps Tools</text>
+  <text x="400" y="65" text-anchor="middle" fill="#10b981" font-family="Inter, sans-serif" font-size="18" font-weight="600">Infrastructure Automation &amp; Cloud Technologies</text>
+
+  <!-- Tool Categories -->
+  <!-- Infrastructure as Code -->
+  <rect x="50" y="90" width="220" height="180" fill="url(#cardGradient)" stroke="#38bdf8" stroke-width="1" rx="8"/>
+  <text x="160" y="115" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">Infrastructure as Code</text>
+
+  <!-- Terraform Icon -->
+  <rect x="130" y="125" width="60" height="40" fill="#623CE4" rx="6"/>
+  <text x="160" y="150" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="600">TF</text>
+
+  <!-- Tool List -->
+  <text x="70" y="185" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Terraform</text>
+  <text x="70" y="205" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Ansible</text>
+  <text x="70" y="225" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Chef</text>
+  <text x="70" y="245" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Pulumi</text>
+
+  <text x="150" y="185" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• CloudFormation</text>
+  <text x="150" y="205" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• ARM Templates</text>
+  <text x="150" y="225" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Helm Charts</text>
+  <text x="150" y="245" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Kustomize</text>
+
+  <!-- Container Orchestration -->
+  <rect x="290" y="90" width="220" height="180" fill="url(#cardGradient)" stroke="#38bdf8" stroke-width="1" rx="8"/>
+  <text x="400" y="115" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">Container Orchestration</text>
+
+  <!-- Docker/Kubernetes Icons -->
+  <rect x="340" y="125" width="30" height="25" fill="#2496ED" rx="4"/>
+  <text x="355" y="142" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="8" font-weight="600">🐳</text>
   
-  <!-- Grid pattern -->
-  <g stroke="rgba(56, 189, 248, 0.1)" stroke-width="1">
-    <line x1="0" y1="0" x2="1200" y2="0"/>
-    <line x1="0" y1="30" x2="1200" y2="30"/>
-    <line x1="0" y1="60" x2="1200" y2="60"/>
-    <line x1="0" y1="90" x2="1200" y2="90"/>
-    <line x1="0" y1="120" x2="1200" y2="120"/>
-    <line x1="0" y1="150" x2="1200" y2="150"/>
-    <line x1="0" y1="180" x2="1200" y2="180"/>
-    <line x1="0" y1="210" x2="1200" y2="210"/>
-    <line x1="0" y1="240" x2="1200" y2="240"/>
-    <line x1="0" y1="270" x2="1200" y2="270"/>
-    <line x1="0" y1="300" x2="1200" y2="300"/>
-    
-    <line x1="0" y1="0" x2="0" y2="300"/>
-    <line x1="120" y1="0" x2="120" y2="300"/>
-    <line x1="240" y1="0" x2="240" y2="300"/>
-    <line x1="360" y1="0" x2="360" y2="300"/>
-    <line x1="480" y1="0" x2="480" y2="300"/>
-    <line x1="600" y1="0" x2="600" y2="300"/>
-    <line x1="720" y1="0" x2="720" y2="300"/>
-    <line x1="840" y1="0" x2="840" y2="300"/>
-    <line x1="960" y1="0" x2="960" y2="300"/>
-    <line x1="1080" y1="0" x2="1080" y2="300"/>
-    <line x1="1200" y1="0" x2="1200" y2="300"/>
-  </g>
+  <rect x="380" y="125" width="40" height="25" fill="#326CE5" rx="4"/>
+  <text x="400" y="142" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="8" font-weight="600">☸️</text>
   
-  <!-- Title -->
-  <text x="600" y="50" font-family="Inter, Segoe UI, sans-serif" font-size="36" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="-0.02em">
-    DevOps Tools & Technologies
-  </text>
+  <!-- Tool List -->
+  <text x="310" y="170" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Docker</text>
+  <text x="310" y="190" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Kubernetes</text>
+  <text x="310" y="210" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• OpenShift</text>
+  <text x="310" y="230" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Rancher</text>
   
-  <!-- Tool icons row 1 -->
-  <!-- Docker -->
-  <g transform="translate(100, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">D</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Docker</text>
-  </g>
+  <text x="390" y="170" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Docker Swarm</text>
+  <text x="390" y="190" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Nomad</text>
+  <text x="390" y="210" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• ECS/Fargate</text>
+  <text x="390" y="230" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• GKE/AKS</text>
   
-  <!-- Kubernetes -->
-  <g transform="translate(250, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">K</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Kubernetes</text>
-  </g>
+  <!-- Cloud Platforms -->
+  <rect x="530" y="90" width="220" height="180" fill="url(#cardGradient)" stroke="#38bdf8" stroke-width="1" rx="8"/>
+  <text x="640" y="115" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="16" font-weight="600">Cloud Platforms</text>
   
-  <!-- Terraform -->
-  <g transform="translate(400, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">T</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Terraform</text>
-  </g>
+  <!-- Cloud Provider Icons -->
+  <rect x="570" y="125" width="40" height="25" fill="#FF9900" rx="4"/>
+  <text x="590" y="142" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="10" font-weight="600">AWS</text>
   
-  <!-- Ansible -->
-  <g transform="translate(550, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">A</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Ansible</text>
-  </g>
+  <rect x="620" y="125" width="40" height="25" fill="#4285F4" rx="4"/>
+  <text x="640" y="142" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="10" font-weight="600">GCP</text>
   
-  <!-- Jenkins -->
-  <g transform="translate(700, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">J</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Jenkins</text>
-  </g>
+  <rect x="670" y="125" width="40" height="25" fill="#0078D4" rx="4"/>
+  <text x="690" y="142" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="9" font-weight="600">Azure</text>
   
-  <!-- AWS -->
-  <g transform="translate(850, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">W</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">AWS</text>
-  </g>
+  <!-- Tool List -->
+  <text x="550" y="170" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• EC2/Compute</text>
+  <text x="550" y="190" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• S3/Storage</text>
+  <text x="550" y="210" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• VPC/Networks</text>
+  <text x="550" y="230" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• IAM/Security</text>
   
-  <!-- GitHub -->
-  <g transform="translate(1000, 120)">
-    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-    <text x="0" y="8" font-family="monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">G</text>
-    <text x="0" y="25" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">GitHub</text>
-  </g>
+  <text x="650" y="170" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Load Balancers</text>
+  <text x="650" y="190" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Auto Scaling</text>
+  <text x="650" y="210" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• Monitoring</text>
+  <text x="650" y="230" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12">• CI/CD Pipelines</text>
   
-  <!-- Subtitle -->
-  <text x="600" y="280" font-family="Inter, Segoe UI, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle" letter-spacing="0.02em">
-    Infrastructure Automation • Container Orchestration • CI/CD Pipelines • Cloud Services
-  </text>
+  <!-- Bottom Banner -->
+  <rect x="50" y="250" width="700" height="30" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="1" rx="15"/>
+  <text x="400" y="270" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="14" font-weight="500">Automated • Scalable • Reliable • Cloud-Native Infrastructure Solutions</text>
 </svg>
