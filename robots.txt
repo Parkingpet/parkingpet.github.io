@@ -1,0 +1,269 @@
+# ============================================================================
+# ROBOTS.TXT - Mustafa McLinn's Portfolio & Resume Site
+# ============================================================================
+# 
+# 🤖 Welcome, web crawlers! This file contains rules for accessing my portfolio
+# and interesting facts about my 30+ year career in technology.
+#
+# 📊 ABOUT MUSTAFA MCLINN:
+# • Systems Engineer | DevOps | Infrastructure Automation | Cloud Hybrid Operations
+# • 30+ years in IT infrastructure, cloud computing, and systems administration
+# • Based in Oakland/San Francisco, CA
+# • Contact: mustafa.mclinn@outlook.com | 510 296 0233
+#
+# 🏆 CAREER HIGHLIGHTS:
+# • 20-year partnership with RevisionFX (2004-2024) supporting 40+ plugins across 15+ applications
+# • Executed 4,500+ CentOS live upgrades with zero downtime at Workday
+# • Maintained Splunk Cloud services with 24/7 support across multiple time zones
+# • Rebuilt CoreOS-driven Docker containers using Ansible on Google Cloud Platform
+# • Provided IT consulting across healthcare, insurance, legal, arts, nonprofit, and MSP environments
+#
+# 🛠️ TECHNICAL EXPERTISE:
+# • Cloud: AWS EC2/S3/IAM, GCP, Azure
+# • DevOps: Ansible, Jenkins, Terraform, Chef, GitLab CI
+# • Scripting: Bash, PowerShell, Python, Ruby, Node.js
+# • Containerization: Docker, Kubernetes
+# • OS: Windows 10/11, Windows Server, macOS, Linux (CentOS, Ubuntu, CoreOS)
+#
+# 🎯 CURRENT PROJECTS:
+# • ParkingPet: Smart parking platform concept (https://github.com/Parkingpet)
+# • RevisionFX.tech: Technical support and development resources
+# • Teckguy: Technical consulting and IT support
+# • Pleynice: Personal GitHub profile and project portfolio
+#
+# ============================================================================
+# CRAWLER RULES
+# ============================================================================
+
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# ============================================================================
+# BLOCKED DIRECTORIES (Security & Development Files)
+# ============================================================================
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /.Jules/
+Disallow: /dist/
+Disallow: /src/
+Disallow: /public/Mustafa_McLinn_Resume.pdf
+Disallow: /public/Mustafa_McLinn_Resume_2025.pdf
+Disallow: /public/Mustafa_Resume2024_4QA_OLD.pdf
+Disallow: /public/resume.txt
+
+# ============================================================================
+# BLOCKED PATHS (API, Admin, Configuration)
+# ============================================================================
+Disallow: /api/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/
+Disallow: /cgi-bin/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /backups/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /secret/
+Disallow: /hidden/
+Disallow: /test/
+Disallow: /tests/
+Disallow: /debug/
+Disallow: /phpmyadmin/
+Disallow: /mysql-admin/
+Disallow: /server-status/
+Disallow: /server-info/
+
+# ============================================================================
+# BLOCKED FILE EXTENSIONS
+# ============================================================================
+Disallow: /*.php$
+Disallow: /*.py$
+Disallow: /*.rb$
+Disallow: /*.pl$
+Disallow: /*.cgi$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.scss$
+Disallow: /*.less$
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.ini$
+Disallow: /*.cfg$
+Disallow: /*.conf$
+Disallow: /*.config$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.env$
+Disallow: /*.key$
+Disallow: /*.pem$
+Disallow: /*.crt$
+Disallow: /*.csr$
+
+# ============================================================================
+# BLOCKED QUERY PARAMETERS
+# ============================================================================
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*#*
+Disallow: /*;*
+Disallow: /*%*
+
+# ============================================================================
+# AI & CONTENT SCRAPER BLOCKING
+# ============================================================================
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: FacebookBot
+Allow: /
+User-agent: Applebot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: PetalBot
+Disallow: /
+User-agent: Amazonbot
+Disallow: /
+User-agent: YandexBot
+Disallow: /
+User-agent: Baiduspider
+Disallow: /
+User-agent: Sogou
+Disallow: /
+User-agent: YoudaoBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+User-agent: MegaIndex
+Disallow: /
+User-agent: ZoominfoBot
+Disallow: /
+User-agent: SeekportBot
+Disallow: /
+
+# ============================================================================
+# ALLOWED SEARCH ENGINES
+# ============================================================================
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-News
+Allow: /
+User-agent: Googlebot-Video
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Baidu
+Allow: /
+User-agent: Yandex
+Allow: /
+
+# ============================================================================
+# SOCIAL MEDIA CRAWLERS
+# ============================================================================
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: Pinterest
+Allow: /
+User-agent: Slackbot
+Allow: /
+User-agent: Discordbot
+Allow: /
+User-agent: TelegramBot
+Allow: /
+
+# ============================================================================
+# ARCHIVE & RESEARCH CRAWLERS
+# ============================================================================
+User-agent: archive.org_bot
+Allow: /
+User-agent: ia_archiver
+Allow: /
+
+# ============================================================================
+# MONITORING & ANALYTICS
+# ============================================================================
+User-agent: UptimeRobot
+Allow: /
+User-agent: Pingdom
+Allow: /
+User-agent: NewRelicPinger
+Allow: /
+User-agent: StatusCake
+Allow: /
+
+# ============================================================================
+# SITEMAP LOCATION
+# ============================================================================
+# Sitemap: https://mustafamclinn.com/sitemap.xml
+# Sitemap: https://parkingpet.github.io/sitemap.xml
+
+# ============================================================================
+# ADDITIONAL NOTES
+# ============================================================================
+#
+# 🎓 EDUCATION:
+# • Golden Gate University: Management (2012-2014)
+# • Lincoln University: Computer Science (2003-2005)
+# • Diablo Valley College: Computer Science (1999)
+# • Academy of Art University: 3D Modeling (1998)
+# • Southern University: Electrical Engineering (1993-1994)
+#
+# 🤝 LONG-TERM CLIENTS:
+# • Dr. Cox Dental Office: 22-year partnership (1997-2019)
+# • Osha Neumann: 28-year support (1995-2023)
+# • Dr. Rathod Dental Office: 6+ years ongoing support
+# • Poor Magazine: Radio station build and streaming services
+#
+# 🚀 NOTABLE ACHIEVEMENTS:
+# • Zero-downtime deployments across AWS, GCP, and Azure
+# • Infrastructure consolidation for post-acquisition technical integration
+# • Multi-cloud orchestration and hybrid environment management
+# • Automated provisioning using Microsoft Graph API
+# • Container orchestration with Docker and Kubernetes
+#
+# 📈 STATS:
+# • 4,500+ CentOS upgrades with zero downtime
+# • 40+ plugins supported across 15+ applications
+# • 20+ years at RevisionFX
+# • 30+ years in technology
+# • 10+ cloud platforms and tools mastered
+#
+# ============================================================================
+# END OF ROBOTS.TXT
+# ============================================================================

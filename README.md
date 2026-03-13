@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![GraphQL](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white)](https://graphql.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ## Live Demo
@@ -79,6 +80,7 @@ Time to Interactive: <1.2s
 - [Features](#features)
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
+- [GraphQL Integration Guide](#graphql-integration-guide)
 - [Performance](#performance)
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
@@ -97,13 +99,61 @@ Time to Interactive: <1.2s
 - **Loading animations** with progress bars and status indicators
 
 ### Integrated DevOps Toolkit
-- **Base64 encoder/decoder** - Data transformation utilities
-- **JSON formatter & minifier** - API development and debugging
-- **Timestamp converter** - Unix to ISO format conversion for log analysis
-- **SHA-256 hash generator** - Security and data integrity tasks
-- **Regex pattern tester** - Text processing and validation
-- **UUID generator** - Unique identifier creation
-- **URL encoder/decoder** - Web encoding utilities
+
+<details>
+<summary><strong>Click to expand/collapse DevOps tools list</strong></summary>
+
+#### Data Transformation Tools
+- **Base64 encoder/decoder** - Encode and decode base64 strings for data transmission
+- **JSON formatter & minifier** - Format JSON for readability or minify for API requests
+- **URL encoder/decoder** - Encode URLs for web requests or decode encoded URLs
+- **CSV to JSON converter** - Convert CSV data to JSON format
+- **JSON to YAML converter** - Transform JSON configuration to YAML format
+- **XML formatter** - Format and validate XML documents
+
+#### Development & Debugging Tools
+- **Timestamp converter** - Convert between Unix timestamps and human-readable dates
+- **Regex pattern tester** - Test regular expressions with live feedback
+- **UUID generator** - Generate unique identifiers for database records
+- **Lorem Ipsum generator** - Generate placeholder text for development
+- **Color code converter** - Convert between HEX, RGB, HSL color formats
+- **Markdown preview** - Live preview of markdown formatting
+
+#### Security Tools
+- **SHA-256 hash generator** - Create secure hashes for data integrity verification
+- **Password strength checker** - Evaluate password security strength
+- **JWT token decoder** - Decode and inspect JSON Web Tokens
+- **SSL certificate checker** - Validate SSL certificate information
+- **CORS policy tester** - Test Cross-Origin Resource Sharing policies
+
+#### API & GraphQL Tools
+- **GraphQL Query Builder** - Interactive GraphQL query testing interface
+- **GraphQL Schema Explorer** - Browse and understand GraphQL API schemas
+- **GraphQL Playground** - Interactive GraphQL IDE with auto-completion
+- **GraphQL Query Optimizer** - Analyze and optimize GraphQL queries
+- **GraphQL Schema Validator** - Validate GraphQL schemas and queries
+- **GraphQL Mock Server** - Mock GraphQL API for testing and development
+
+#### Network & Infrastructure Tools
+- **IP address lookup** - Get information about IP addresses
+- **DNS record checker** - Query DNS records for domains
+- **HTTP status code lookup** - Reference for HTTP status codes
+- **Port scanner** - Check open ports on network hosts
+- **SSL/TLS cipher checker** - Test SSL/TLS cipher suites
+
+#### Database Tools
+- **SQL query formatter** - Format and beautify SQL queries
+- **NoSQL query builder** - Build MongoDB and other NoSQL queries
+- **Database connection tester** - Test database connection strings
+- **SQL injection tester** - Test for SQL injection vulnerabilities
+
+#### Monitoring & Logging Tools
+- **Log level converter** - Convert between different log level formats
+- **Timestamp to human date** - Convert various timestamp formats
+- **Error code lookup** - Reference for common error codes
+- **Performance metric calculator** - Calculate performance metrics
+
+</details>
 
 ### High-Tech Visual Design
 - **Animated matrix-style grid** overlay with particle effects
@@ -113,6 +163,14 @@ Time to Interactive: <1.2s
 - **Mobile-responsive design** with adaptive layouts
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
+
+### GraphQL API Integration
+- **Query Optimization** - Automatic query optimization and caching
+- **Real-time Subscriptions** - Live data updates with GraphQL subscriptions
+- **Type Safety** - Full TypeScript support for GraphQL operations
+- **API Documentation** - Auto-generated GraphQL API documentation
+- **Federation Support** - Microservices architecture with Apollo Federation
+- **Performance Monitoring** - Track query performance and optimize
 
 ---
 
@@ -149,6 +207,109 @@ The application follows a modular component architecture:
 - **Responsive Design**: Mobile-first approach with breakpoints
 - **Animation System**: Keyframe animations and transitions
 
+### GraphQL Data Integration Example
+The resume site can be extended to fetch data from GraphQL APIs. Here's an example GraphQL query for fetching resume data:
+
+```graphql
+query GetResumeData {
+  resume {
+    personalInfo {
+      name
+      title
+      email
+      phone
+      location
+      github
+      linkedin
+    }
+    experience {
+      id
+      company
+      position
+      duration
+      description
+      technologies
+      achievements
+    }
+    skills {
+      category
+      items
+      proficiency
+    }
+    education {
+      institution
+      degree
+      year
+      gpa
+    }
+    projects {
+      name
+      description
+      technologies
+      githubUrl
+      liveUrl
+    }
+  }
+}
+```
+
+And the corresponding GraphQL schema:
+
+```graphql
+type PersonalInfo {
+  name: String!
+  title: String!
+  email: String!
+  phone: String
+  location: String!
+  github: String
+  linkedin: String
+}
+
+type Experience {
+  id: ID!
+  company: String!
+  position: String!
+  duration: String!
+  description: String!
+  technologies: [String!]!
+  achievements: [String!]!
+}
+
+type Skill {
+  category: String!
+  items: [String!]!
+  proficiency: Int!
+}
+
+type Education {
+  institution: String!
+  degree: String!
+  year: String!
+  gpa: Float
+}
+
+type Project {
+  name: String!
+  description: String!
+  technologies: [String!]!
+  githubUrl: String
+  liveUrl: String
+}
+
+type Resume {
+  personalInfo: PersonalInfo!
+  experience: [Experience!]!
+  skills: [Skill!]!
+  education: [Education!]!
+  projects: [Project!]!
+}
+
+type Query {
+  resume: Resume!
+}
+```
+
 ---
 
 ## Tech Stack
@@ -157,6 +318,11 @@ The application follows a modular component architecture:
 - **React 18.2** - Modern component architecture with hooks
 - **Vite 7.3** - Lightning-fast build tool with HMR
 - **JavaScript ES6+** - Modern syntax and features
+
+### API & Data Layer
+- **GraphQL** - Modern API query language for efficient data fetching
+- **REST API Support** - Traditional API integration capabilities
+- **JSON Schema** - Data validation and structure definition
 
 ### Styling & Design
 - **CSS-in-JS** - Component-scoped styling approach
@@ -173,6 +339,61 @@ The application follows a modular component architecture:
 - **ESLint** - Code quality and consistency
 - **Prettier** - Code formatting
 - **Git** - Version control
+- **GraphQL Playground** - Interactive API exploration and testing
+
+---
+
+## GraphQL Integration Guide
+
+### Why GraphQL for DevOps Resumes?
+GraphQL provides several advantages for resume sites:
+- **Efficient Data Fetching**: Request only the data you need
+- **Type Safety**: Strongly typed schema prevents runtime errors
+- **Real-time Updates**: Subscriptions for live data updates
+- **API Evolution**: Add new fields without breaking existing queries
+- **Tooling Ecosystem**: Rich set of development tools and libraries
+
+### Setting Up GraphQL Client
+```bash
+# Install Apollo Client
+npm install @apollo/client graphql
+
+# Or install Relay
+npm install react-relay relay-runtime
+```
+
+### Example GraphQL Configuration
+```javascript
+// apollo-client.js
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+
+const client = new ApolloClient({
+  link: new HttpLink({
+    uri: 'https://api.your-resume-service.com/graphql',
+  }),
+  cache: new InMemoryCache(),
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-and-network',
+    },
+  },
+});
+
+export default client;
+```
+
+### GraphQL Best Practices for Resume Sites
+1. **Schema Design**: Create a clear, intuitive schema for resume data
+2. **Query Optimization**: Use fragments and avoid over-fetching
+3. **Caching Strategy**: Implement efficient caching with Apollo or Relay
+4. **Error Handling**: Handle GraphQL errors gracefully
+5. **Performance Monitoring**: Track query performance and optimize
+
+### GraphQL Tools Included
+- **Query Builder**: Interactive interface for building GraphQL queries
+- **Schema Explorer**: Visual exploration of GraphQL schemas
+- **Performance Analyzer**: Identify and fix performance bottlenecks
+- **Mock Server**: Test frontend without backend dependencies
 
 ---
 
@@ -299,8 +520,45 @@ Update styles in component files to:
 Extend the application by:
 - Adding new DevOps tools to the tools component
 - Creating additional content sections
-- Integrating with external APIs
+- Integrating with external APIs (GraphQL, REST)
 - Adding interactive elements
+- Implementing GraphQL data fetching with Apollo Client or Relay
+
+### 4. GraphQL Integration Example
+To integrate GraphQL into the resume site:
+
+```javascript
+// Example using Apollo Client
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://your-graphql-api.com/graphql',
+  cache: new InMemoryCache(),
+});
+
+// Fetch resume data using GraphQL
+const GET_RESUME_DATA = gql`
+  query GetResumeData {
+    resume {
+      personalInfo {
+        name
+        title
+        email
+      }
+      experience {
+        company
+        position
+        duration
+      }
+    }
+  }
+`;
+
+// Use in React component
+const { loading, error, data } = useQuery(GET_RESUME_DATA);
+```
+
+### 5. Update Configuration
 
 ### 4. Update Configuration
 Modify configuration files:
@@ -367,11 +625,13 @@ For questions, issues, or support:
 - **Open Source**: Transparent code available for technical review
 
 ### Future Enhancements
+- **GraphQL Subscriptions**: Real-time data updates with GraphQL subscriptions
+- **GraphQL Federation**: Microservices architecture with Apollo Federation
 - **Additional Tools**: Expand DevOps utility collection
 - **Theming System**: Multiple color scheme options
 - **Internationalization**: Multi-language support
 - **Analytics Integration**: Usage tracking and insights
-- **API Integration**: Connect with external services
+- **API Integration**: Connect with external GraphQL and REST APIs
 
 
 
