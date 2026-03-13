@@ -81,6 +81,10 @@ Quick Links
 Key Features
 </h3>
 
+<div align="center">
+<img src="public/features-overview.svg" alt="DevOps Resume Features Overview" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
+</div>
+
 <table>
 <tr>
 <td width="33%" align="center">
@@ -112,6 +116,10 @@ Expand/collapse Azure, AWS, GCP products
 <h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Performance Metrics
 </h3>
+
+<div align="center">
+<img src="public/performance-metrics.svg" alt="Performance Metrics Visualization" width="600" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
+</div>
 
 ```
 Build Time: ~1 second
@@ -154,6 +162,11 @@ Terminal-Style Loading Experience
 <h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 Integrated DevOps Toolkit
 </h3>
+
+<div align="center">
+<img src="public/devops-tools-screenshot.svg" alt="DevOps Tools Interface Screenshot" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
+<p style="font-style: italic; color: #94a3b8; margin-top: 8px;">Interactive DevOps tools with real-time processing and copy-to-clipboard functionality</p>
+</div>
 
 #### Data Transformation Tools
 - **Base64 encoder/decoder** - Encode and decode base64 strings for data transmission
