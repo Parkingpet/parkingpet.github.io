@@ -6,6 +6,12 @@ export default function Tools() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [collapsedTools, setCollapsedTools] = useState({});
+  const [collapsedLinks, setCollapsedLinks] = useState({
+    quickLinks: true,
+    azure: true,
+    aws: true,
+    gcp: true
+  });
 
   const tools = {
     base64: {
@@ -267,37 +273,56 @@ export default function Tools() {
       {renderToolContent()}
       
       <div style={styles.linksSection}>
-        <h3 style={styles.linksTitle}>Quick Links</h3>
-        <div style={styles.linksGrid}>
-          <a href="https://parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🌐</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>View Live Site</div>
-              <div style={styles.linkDesc}>Interactive DevOps resume with built-in tools</div>
-            </div>
-          </a>
-          
-          <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>📦</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>GitHub Repository</div>
-              <div style={styles.linkDesc}>Source code and documentation</div>
-            </div>
-          </a>
-          
-          <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-            <div style={styles.linkIcon}>🍴</div>
-            <div style={styles.linkContent}>
-              <div style={styles.linkName}>Fork This Project</div>
-              <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
-            </div>
-          </a>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Quick Links</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, quickLinks: !prev.quickLinks }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.quickLinks ? '▼ Expand' : '▲ Collapse'}
+          </button>
         </div>
+        {!collapsedLinks.quickLinks && (
+          <div style={styles.linksGrid}>
+            <a href="https://parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🌐</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>View Live Site</div>
+                <div style={styles.linkDesc}>Interactive DevOps resume with built-in tools</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📦</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>GitHub Repository</div>
+                <div style={styles.linkDesc}>Source code and documentation</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🍴</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Fork This Project</div>
+                <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
+              </div>
+            </a>
+          </div>
+        )}
       </div>
 
       <div style={styles.cloudLinksSection}>
-        <h3 style={styles.linksTitle}>Azure Products</h3>
-        <div style={styles.linksGrid}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Azure Products</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, azure: !prev.azure }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.azure ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.azure && (
+          <div style={styles.linksGrid}>
           <a href="https://intune.microsoft.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
             <div style={styles.linkIcon}>📱</div>
             <div style={styles.linkContent}>
@@ -337,12 +362,22 @@ export default function Tools() {
               <div style={styles.linkDesc}>Learning resources and guides</div>
             </div>
           </a>
-        </div>
+          </div>
+        )}
       </div>
 
       <div style={styles.cloudLinksSection}>
-        <h3 style={styles.linksTitle}>AWS Products</h3>
-        <div style={styles.linksGrid}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>AWS Products</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, aws: !prev.aws }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.aws ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.aws && (
+          <div style={styles.linksGrid}>
           <a href="https://console.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
             <div style={styles.linkIcon}>☁️</div>
             <div style={styles.linkContent}>
@@ -390,12 +425,22 @@ export default function Tools() {
               <div style={styles.linkDesc}>Learning resources and guides</div>
             </div>
           </a>
-        </div>
+          </div>
+        )}
       </div>
 
       <div style={styles.cloudLinksSection}>
-        <h3 style={styles.linksTitle}>Google Cloud Products</h3>
-        <div style={styles.linksGrid}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Google Cloud Products</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, gcp: !prev.gcp }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.gcp ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.gcp && (
+          <div style={styles.linksGrid}>
           <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
             <div style={styles.linkIcon}>☁️</div>
             <div style={styles.linkContent}>
@@ -443,7 +488,8 @@ export default function Tools() {
               <div style={styles.linkDesc}>Learning resources and guides</div>
             </div>
           </a>
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -591,6 +637,12 @@ const styles = {
     marginTop: '32px',
     paddingTop: '24px',
     borderTop: '2px solid rgba(56, 189, 248, 0.3)'
+  },
+  linksSectionHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '16px'
   },
   cloudLinksSection: {
     marginTop: '32px',

@@ -99,9 +99,9 @@ Base64, JSON, Timestamp, SHA-256, Regex
 </td>
 <td width="33%" align="center">
 
-#### Modern Design
-**Responsive layout**  
-Neon blue theme with particle effects
+#### Collapsible Quick Links
+**Organized link sections**  
+Expand/collapse Azure, AWS, GCP products
 
 </td>
 </tr>
@@ -220,6 +220,15 @@ High-Tech Visual Design
 - **Mobile-responsive design** with adaptive layouts
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
+
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+Collapsible Quick Links
+</h3>
+- **Organized Link Sections** - Quick Links, Azure Products, AWS Products, and Google Cloud Products
+- **Collapse/Expand Buttons** - Toggle visibility of each link section independently
+- **Collapsed by Default** - All link sections start collapsed for a cleaner interface
+- **Easy Navigation** - Expand only the sections you need
+- **Cloud Platform Links** - Direct access to Azure, AWS, and GCP consoles and services
 
 <h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 GraphQL API Integration
