@@ -40,7 +40,7 @@ Live Demo
 Interactive DevOps Resume
 </h3>
 
-[![Moose as a Service](./public/moose-as-a-service.jpg)](https://parkingpet.github.io)
+[![Moose as a Service](public/moose-as-a-service.jpg)](https://parkingpet.github.io)
 
 *Click the image above to visit the live site*
 
@@ -52,11 +52,11 @@ DevOps Resume Images
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
   <div style="text-align: center;">
-    <img src="./public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="500" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
+    <img src="public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="500" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
     <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 12px; color: #94a3b8;">Infrastructure automation and cloud technologies</span></p>
   </div>
   <div style="text-align: center;">
-    <img src="./public/devops-logo.svg" alt="DevOps Terminal Logo" width="300" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
+    <img src="public/devops-logo.svg" alt="DevOps Terminal Logo" width="300" style="border: 1px solid #23314d; border-radius: 8px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%);">
     <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin-top: 12px;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 12px; color: #94a3b8;">Professional terminal-themed branding</span></p>
   </div>
 </div>
