@@ -1,10 +1,10 @@
-<div align="center" style="margin-bottom: 30px;">
+<div align="center" style="margin-bottom: 30px; background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(20, 30, 50, 0.8) 100%); padding: 40px 20px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
 
 <h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">
 Mustafa McLinn - DevOps Professional
 </h1>
 
-<p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #64748b; margin-top: 5px; letter-spacing: 1px;">
+<p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #94a3b8; margin-top: 5px; letter-spacing: 1px;">
 Interactive DevOps Resume • Modern Portfolio • Technical Documentation
 </p>
 
@@ -12,16 +12,16 @@ Interactive DevOps Resume • Modern Portfolio • Technical Documentation
   <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 20px;">
   <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 20px;">
   <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 20px;">
-  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 20px;">
+  <img src="https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 20px;">
   <img src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white" alt="GraphQL" style="height: 20px;">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 20px;">
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px; margin: 15px 0; flex-wrap: wrap;">
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3);">React 18.2</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.3);">Vite 7.3</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.3);">DevOps Tools</span>
-  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.3);">GitHub Pages</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);">React 18.2</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.4);">Vite 7.3</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.4);">DevOps Tools</span>
+  <span style="font-family: 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.4);">GitHub Pages</span>
 </div>
 
 </div>
