@@ -52,7 +52,7 @@ const styles = {
   },
   updated: {
     color: '#94a3b8',
-    fontSize: '13px',
+    fontSize: '16px',
     margin: '0 0 12px 0',
     fontWeight: 500
   },
@@ -62,7 +62,7 @@ const styles = {
   link: {
     color: '#38bdf8',
     textDecoration: 'none',
-    fontSize: '13px',
+    fontSize: '16px',
     fontWeight: 500
   }
 };
