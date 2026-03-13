@@ -85,27 +85,30 @@ Key Features
 <img src="public/features-overview.svg" alt="DevOps Resume Features Overview" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
 </div>
 
-<table>
+<table style="width: 100%; border-collapse: collapse;">
 <tr>
-<td width="33%" align="center">
+<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
 
 #### Terminal Experience
 **Authentic CLI loading**  
-Cyberpunk aesthetic with animated grid
+Cyberpunk aesthetic with animated grid  
+Real-time progress indicators
 
 </td>
-<td width="33%" align="center">
+<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
 
 #### DevOps Tools
 **Built-in utilities**  
-Base64, JSON, Timestamp, SHA-256, Regex
+Base64, JSON, Timestamp, SHA-256, Regex  
+Copy-to-clipboard functionality
 
 </td>
-<td width="33%" align="center">
+<td width="33.33%" align="center" style="padding: 20px; vertical-align: top;">
 
 #### Collapsible Quick Links
 **Organized link sections**  
-Expand/collapse Azure, AWS, GCP products
+Expand/collapse Azure, AWS, GCP products  
+Direct console access links
 
 </td>
 </tr>
@@ -146,6 +149,7 @@ Time to Interactive: <1.2s
 - [Customization](#customization)
 - [Contributing](#contributing)
 - [License](#license)
+- [AI Agent Instructions](#ai-agent-instructions)
 
 ---
 
@@ -641,6 +645,57 @@ src/components/
 - Builds optimized for production
 - GitHub Pages deployment
 - Automated CI/CD pipeline
+
+---
+
+## AI Agent Instructions {#ai-agent-instructions}
+
+This section provides instructions for AI agents working with this DevOps resume project.
+
+### Project Context
+This is an interactive DevOps resume built with React 18.2 and Vite 7.3, featuring:
+- Terminal-style loading experience with cyberpunk aesthetic
+- Integrated DevOps toolkit with 15+ utilities (Base64, JSON, SHA-256, UUID, etc.)
+- Collapsible quick links for cloud platforms (Azure, AWS, GCP)
+- Professional resume content with modern typography system
+- Performance-optimized with <180KB bundle size and <1s load time
+
+### Code Architecture
+- **Component Structure**: Modular React components in `src/components/`
+- **Styling**: CSS-in-JS with consistent design tokens and typography scale
+- **Data**: Centralized resume data in `src/resumeData.js`
+- **Build**: Vite for fast development and optimized production builds
+- **Deployment**: Automated GitHub Actions to GitHub Pages
+
+### Development Guidelines
+1. **Typography**: Use the established CSS custom properties (--fs-xs to --fs-6xl)
+2. **Colors**: Stick to the cyan (#38bdf8) and dark theme palette
+3. **Components**: Follow the existing component structure and naming
+4. **Performance**: Maintain the <180KB bundle size target
+5. **Accessibility**: Include proper ARIA labels and semantic HTML
+
+### Common Tasks
+- **Adding Tools**: Extend the `tools` object in `src/components/tools/Tools.jsx`
+- **Updating Resume**: Modify `src/resumeData.js` for content changes
+- **Styling Updates**: Use the CSS custom properties in `src/index.css`
+- **New Components**: Follow the existing folder structure in `src/components/`
+
+### File Structure Priority
+```
+src/
+├── components/          # React components (highest priority)
+├── resumeData.js       # Resume content (modify for updates)
+├── App.jsx            # Main app component
+├── index.css          # Global styles and design tokens
+└── main.jsx           # Entry point
+```
+
+### Testing & Quality
+- Use `npm run build` to verify production builds
+- Check bundle size with build output
+- Test responsive design on mobile/desktop
+- Verify all DevOps tools function correctly
+- Ensure accessibility with screen readers
 
 ---
 
