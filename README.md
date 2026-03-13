@@ -160,9 +160,6 @@ Terminal-Style Loading Experience
 Integrated DevOps Toolkit
 </h3>
 
-<details>
-<summary><strong>Click to expand/collapse DevOps tools list</strong></summary>
-
 #### Data Transformation Tools
 - **Base64 encoder/decoder** - Encode and decode base64 strings for data transmission
 - **JSON formatter & minifier** - Format JSON for readability or minify for API requests
@@ -212,8 +209,6 @@ Integrated DevOps Toolkit
 - **Timestamp to human date** - Convert various timestamp formats
 - **Error code lookup** - Reference for common error codes
 - **Performance metric calculator** - Calculate performance metrics
-
-</details>
 
 <h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
 High-Tech Visual Design
