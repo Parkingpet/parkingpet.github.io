@@ -6,85 +6,97 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## 🚀 Live Demo
+## Live Demo
 
 <div align="center">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 24px; margin: 40px 0;">
-    
-    <!-- Hero Image -->
-    <div style="position: relative; width: 100%; max-width: 1200px;">
-      <img src="https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/screenshot.png" 
-           alt="DevOps Resume Site Screenshot" 
-           style="width: 100%; border-radius: 20px; box-shadow: 0 25px 50px rgba(56, 189, 248, 0.3); border: 3px solid rgba(56, 189, 248, 0.2);" />
-      <div style="position: absolute; top: 20px; right: 20px; background: rgba(11, 18, 32, 0.9); padding: 12px 24px; border-radius: 12px; border: 2px solid #38bdf8;">
-        <span style="color: #38bdf8; font-weight: bold; font-size: 18px;">🚀 Interactive DevOps Resume</span>
-      </div>
-    </div>
-    
-    <!-- Action Buttons -->
-    <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; margin-top: 32px;">
-      <a href="https://parkingpet.github.io" target="_blank" 
-         style="display: inline-flex; align-items: center; gap: 12px; padding: 20px 48px; background: linear-gradient(135deg, #38bdf8 0%, #61DAFB 100%); color: #0b1220; font-weight: bold; text-decoration: none; border-radius: 16px; font-size: 20px; box-shadow: 0 12px 32px rgba(56, 189, 248, 0.4); transition: transform 0.3s, box-shadow 0.3s;">
-        <span style="font-size: 24px;">🚀</span>
-        <span>View Interactive Resume</span>
-      </a>
-      
-      <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" 
-         style="display: inline-flex; align-items: center; gap: 12px; padding: 20px 48px; background: #0b1220; color: #38bdf8; font-weight: bold; text-decoration: none; border: 3px solid #38bdf8; border-radius: 16px; font-size: 20px; box-shadow: 0 12px 32px rgba(56, 189, 248, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
-        <span style="font-size: 24px;">📦</span>
-        <span>GitHub Repository</span>
-      </a>
-    </div>
-    
-    <!-- Feature Highlights -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; width: 100%; max-width: 1200px;">
-      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
-        <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
-        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">Fast Performance</h3>
-        <p style="color: #94a3b8; margin: 0;">Sub-second load times with optimized builds</p>
-      </div>
-      
-      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
-        <div style="font-size: 32px; margin-bottom: 12px;">🛠️</div>
-        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">DevOps Tools</h3>
-        <p style="color: #94a3b8; margin: 0;">Built-in utilities for daily DevOps tasks</p>
-      </div>
-      
-      <div style="background: rgba(15, 23, 42, 0.7); border: 2px solid #23314d; border-radius: 16px; padding: 24px; text-align: center;">
-        <div style="font-size: 32px; margin-bottom: 12px;">🎨</div>
-        <h3 style="color: #38bdf8; margin: 0 0 12px 0;">Modern Design</h3>
-        <p style="color: #94a3b8; margin: 0;">Cyberpunk aesthetic with responsive layout</p>
-      </div>
-    </div>
-  </div>
+
+### Interactive DevOps Resume
+
+[![DevOps Resume Screenshot](https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/screenshot.png)](https://parkingpet.github.io)
+
+*Click the image above to visit the live site*
+
+---
+
+### Quick Links
+
+| Action | Link | Description |
+|--------|------|-------------|
+| **View Live Site** | [https://parkingpet.github.io](https://parkingpet.github.io) | Interactive DevOps resume with built-in tools |
+| **GitHub Repository** | [https://github.com/Parkingpet/parkingpet.github.io](https://github.com/Parkingpet/parkingpet.github.io) | Source code and documentation |
+| **Fork This Project** | [https://github.com/Parkingpet/parkingpet.github.io/fork](https://github.com/Parkingpet/parkingpet.github.io/fork) | Create your own version |
+
+---
+
+### Key Features
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+#### Terminal Experience
+**Authentic CLI loading**  
+Cyberpunk aesthetic with animated grid
+
+</td>
+<td width="33%" align="center">
+
+#### DevOps Tools
+**Built-in utilities**  
+Base64, JSON, Timestamp, SHA-256, Regex
+
+</td>
+<td width="33%" align="center">
+
+#### Modern Design
+**Responsive layout**  
+Neon blue theme with particle effects
+
+</td>
+</tr>
+</table>
+
+---
+
+### Performance Metrics
+
+```
+Build Time: ~1 second
+Bundle Size: <180KB gzipped  
+Lighthouse Score: 95+ across all metrics
+Load Time: <1 second on 3G
+First Contentful Paint: <0.8s
+Time to Interactive: <1.2s
+```
+
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [🚀 Live Demo](#-live-demo)
-- [✨ Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📊 Performance](#-performance)
-- [📁 Project Structure](#-project-structure)
-- [⚡ Quick Start](#-quick-start)
-- [🎨 Customization](#-customization)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Performance](#performance)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## ✨ Features
+## Features
 
-### 🖥️ Terminal-Style Loading Experience
+### Terminal-Style Loading Experience
 - **Authentic CLI boot sequence** with real-time progress simulation
 - **Cyberpunk aesthetic** with animated grid background
 - **Professional DevOps terminal** simulation with ASCII art
 - **Loading animations** with progress bars and status indicators
 
-### 🛠️ Integrated DevOps Toolkit
+### Integrated DevOps Toolkit
 - **Base64 encoder/decoder** - Data transformation utilities
 - **JSON formatter & minifier** - API development and debugging
 - **Timestamp converter** - Unix to ISO format conversion for log analysis
@@ -93,7 +105,7 @@
 - **UUID generator** - Unique identifier creation
 - **URL encoder/decoder** - Web encoding utilities
 
-### 🎨 High-Tech Visual Design
+### High-Tech Visual Design
 - **Animated matrix-style grid** overlay with particle effects
 - **CRT scanline effects** for retro-tech feel
 - **Neon blue accent colors** with gradient transitions
@@ -104,7 +116,7 @@
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Component-Based Structure
 The application follows a modular component architecture:
@@ -139,7 +151,7 @@ The application follows a modular component architecture:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend Framework
 - **React 18.2** - Modern component architecture with hooks
@@ -164,7 +176,7 @@ The application follows a modular component architecture:
 
 ---
 
-## 📊 Performance
+## Performance
 
 ### Build Performance
 - **Build Time**: ~1 second with Vite's optimized build system
@@ -184,7 +196,7 @@ The application follows a modular component architecture:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -220,7 +232,7 @@ public/
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js 18+** - JavaScript runtime
@@ -266,7 +278,7 @@ git push origin main
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### 1. Update Resume Content
 Edit `src/resumeData.js` to modify:
@@ -298,7 +310,7 @@ Modify configuration files:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 ### Development Workflow
 1. **Create a feature branch**: `git checkout -b feature/amazing-enhancement`
@@ -321,7 +333,7 @@ Modify configuration files:
 
 ---
 
-## 📄 License
+## License
 
 ### MIT License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -340,7 +352,7 @@ For questions, issues, or support:
 
 ---
 
-## 🏆 Why This Approach?
+## Why This Approach?
 
 ### Technical Demonstration
 - **Modern Architecture**: Demonstrates current React best practices
@@ -363,7 +375,7 @@ For questions, issues, or support:
 
 
 
-## 🏗️ Angular-Style Component Architecture
+## Angular-Style Component Architecture
 
 This project follows Angular-inspired component architecture principles:
 
