@@ -1,5 +1,3 @@
-# DevOps Resume Site Template
-
 [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -10,9 +8,7 @@
 <div align="center" style="margin-bottom: 30px;">
 
 <h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px;">
-<span style="color: #38bdf8; font-weight: 600;">README</span> 
-<span style="color: #94a3b8; font-weight: 300;">for</span> 
-<span style="color: #38bdf8; font-weight: 600;">Resume Page</span>
+Mustafa McLinn - DevOps Professional
 </h1>
 
 <p style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #64748b; margin-top: 5px; letter-spacing: 1px;">
