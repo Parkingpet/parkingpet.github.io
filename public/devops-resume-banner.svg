@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(56, 189, 248, 0.1)" stroke-width="1"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Main title -->
+  <text x="400" y="80" text-anchor="middle" font-family="'Courier New', monospace" font-size="48" font-weight="bold" fill="#38bdf8">
+    DevOps Resume
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="24" fill="#94a3b8">
+    Infrastructure • Automation • Cloud • Security
+  </text>
+  
+  <!-- DevOps tools icons -->
+  <!-- Terminal icon -->
+  <rect x="100" y="140" width="40" height="30" rx="4" fill="#1e40af" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="100" y="140" width="40" height="10" fill="#38bdf8" rx="4 4 0 0"/>
+  <text x="120" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">CLI</text>
+  
+  <!-- Cloud icon -->
+  <path d="M 180 150 Q 200 140 220 150 Q 240 160 220 170 Q 200 180 180 170 Q 160 160 180 150" 
+        fill="none" stroke="#10b981" stroke-width="3"/>
+  <text x="200" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Cloud</text>
+  
+  <!-- Container icon -->
+  <rect x="260" y="145" width="30" height="20" rx="2" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <rect x="275" y="145" width="15" height="20" rx="2" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <text x="275" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Cont</text>
+  
+  <!-- Code icon -->
+  <path d="M 340 150 L 350 160 L 340 170 M 360 150 L 350 160 L 360 170" 
+        stroke="#ef4444" stroke-width="3" fill="none"/>
+  <text x="350" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Code</text>
+  
+  <!-- Database icon -->
+  <ellipse cx="420" cy="150" rx="20" ry="10" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+  <ellipse cx="420" cy="160" rx="20" ry="10" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+  <rect x="400" y="150" width="40" height="10" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="420" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">DB</text>
+  
+  <!-- Network icon -->
+  <circle cx="500" cy="160" r="15" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="480" cy="150" r="8" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="520" cy="150" r="8" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="500" cy="140" r="8" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <text x="500" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Net</text>
+  
+  <!-- Security icon -->
+  <path d="M 580 140 L 580 170 L 600 170 L 600 140 L 590 145 L 590 165 L 590 145" 
+        fill="none" stroke="#10b981" stroke-width="3"/>
+  <text x="590" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Sec</text>
+  
+  <!-- Automation icon -->
+  <path d="M 660 150 L 670 160 L 660 170 M 680 150 L 670 160 L 680 170 M 670 140 L 670 180" 
+        stroke="#f59e0b" stroke-width="3" fill="none"/>
+  <text x="670" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#e2e8f0">Auto</text>
+  
+  <!-- Bottom accent line -->
+  <line x1="100" y1="180" x2="700" y2="180" stroke="url(#accentGradient)" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Tagline -->
+  <text x="400" y="195" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#64748b">
+    Interactive • Modern • Professional
+  </text>
+</svg>
