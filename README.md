@@ -1,10 +1,3 @@
-[![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
-[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![GraphQL](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white)](https://graphql.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-
 <div align="center" style="margin-bottom: 30px;">
 
 <h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px;">
