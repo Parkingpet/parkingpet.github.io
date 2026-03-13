@@ -32,7 +32,7 @@ Live Demo
 
 <div align="center">
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; color: #10b981; font-weight: 500; margin: 20px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 15px 0;">
 Interactive DevOps Resume
 </h3>
 
@@ -42,7 +42,7 @@ Interactive DevOps Resume
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
 DevOps Resume Images
 </h3>
 
@@ -61,7 +61,7 @@ DevOps Resume Images
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
 Quick Links
 </h3>
 
@@ -73,7 +73,7 @@ Quick Links
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
 Key Features
 </h3>
 
@@ -105,7 +105,7 @@ Neon blue theme with particle effects
 
 ---
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 25px 0 15px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 25px 0 15px 0;">
 Performance Metrics
 </h3>
 
@@ -144,7 +144,7 @@ Table of Contents
 Features
 </h2>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
 Terminal-Style Loading Experience
 </h3>
 - **Authentic CLI boot sequence** with real-time progress simulation
@@ -152,7 +152,7 @@ Terminal-Style Loading Experience
 - **Professional DevOps terminal** simulation with ASCII art
 - **Loading animations** with progress bars and status indicators
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
 Integrated DevOps Toolkit
 </h3>
 
@@ -211,7 +211,7 @@ Integrated DevOps Toolkit
 
 </details>
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
 High-Tech Visual Design
 </h3>
 - **Animated matrix-style grid** overlay with particle effects
@@ -222,7 +222,7 @@ High-Tech Visual Design
 - **ASCII art animations** with glitch effects
 - **Particle background** with interactive connections
 
-<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #10b981; font-weight: 500; margin: 20px 0 10px 0;">
+<h3 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #38bdf8; font-weight: 500; margin: 20px 0 10px 0;">
 GraphQL API Integration
 </h3>
 - **Query Optimization** - Automatic query optimization and caching
