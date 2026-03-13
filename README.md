@@ -36,7 +36,7 @@ Live Demo
 Interactive DevOps Resume
 </h3>
 
-[![Moose as a Service](https://raw.githubusercontent.com/Parkingpet/parkingpet.github.io/main/public/moose-as-a-service.png)](https://parkingpet.github.io)
+[![Moose as a Service](./public/moose-as-a-service.png)](https://parkingpet.github.io)
 
 *Click the image above to visit the live site*
 
@@ -69,7 +69,7 @@ Quick Links
 |--------|------|-------------|
 | **View Live Site** | [https://parkingpet.github.io](https://parkingpet.github.io) | Interactive DevOps resume with built-in tools |
 | **GitHub Repository** | [https://github.com/Parkingpet/parkingpet.github.io](https://github.com/Parkingpet/parkingpet.github.io) | Source code and documentation |
-| **Fork This Project** | [https://github.com/Parkingpet/parkingpet.github.io/fork](https://github.com/Parkingpet/parkingpet.github.io/fork) | Create your own version |
+| **Fork This Project** | [https://github.com/Parkingpet/parkingpet.github.io/fork](https://github.com/Parkingpet/parkingpet.github.io/fork) | Create your own version - Fork at your own risk |
 
 ---
 
