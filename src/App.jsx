@@ -33,6 +33,39 @@ export default function App() {
     };
   }, []);
 
+  // Add smooth scroll behavior for hash navigation
+  useEffect(() => {
+    if (!loading) {
+      const handleHashChange = () => {
+        const hash = window.location.hash;
+        if (hash) {
+          const element = document.querySelector(hash);
+          if (element) {
+            // Calculate offset for fixed header
+            const headerHeight = document.querySelector('header')?.offsetHeight || 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      };
+
+      // Handle initial hash
+      handleHashChange();
+
+      // Handle hash changes
+      window.addEventListener('hashchange', handleHashChange);
+
+      return () => {
+        window.removeEventListener('hashchange', handleHashChange);
+      };
+    }
+  }, [loading]);
+
   if (loading) {
     return <Loading progress={progress} />;
   }
