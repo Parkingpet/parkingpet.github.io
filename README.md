@@ -1,6 +1,6 @@
 <div align="center" style="margin-bottom: 30px;">
 
-<h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px;">
+<h1 style="font-family: 'Courier New', monospace; font-size: 28px; color: #38bdf8; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">
 Mustafa McLinn - DevOps Professional
 </h1>
 
