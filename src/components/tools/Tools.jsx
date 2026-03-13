@@ -191,6 +191,9 @@ export default function Tools() {
       );
     }
 
+    // Tools that don't need input (reference/lookup tools)
+    const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin'];
+    const needsInput = !noInputTools.includes(activeTab);
     const isCollapsed = collapsedTools[activeTab];
     
     return (
@@ -207,12 +210,14 @@ export default function Tools() {
         
         {!isCollapsed && (
           <>
-            <textarea
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Input..."
-              style={styles.textarea}
-            />
+            {needsInput && (
+              <textarea
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Input..."
+                style={styles.textarea}
+              />
+            )}
             
             <div style={styles.actions}>
               {Object.entries(tools[activeTab])
@@ -223,7 +228,7 @@ export default function Tools() {
                     onClick={() => handleAction(action)}
                     style={styles.actionButton}
                   >
-                    {action}
+                    {action.charAt(0).toUpperCase() + action.slice(1)}
                   </button>
                 ))}
             </div>
@@ -231,7 +236,7 @@ export default function Tools() {
             <textarea
               value={output}
               readOnly
-              placeholder="Output..."
+              placeholder="Output will appear here..."
               style={styles.textarea}
             />
           </>
