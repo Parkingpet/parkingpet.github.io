@@ -4,6 +4,7 @@ import Loading from './components/loading/Loading';
 import Tools from './components/tools/Tools';
 import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
+import GraphQLExample from './components/graphql/GraphQLExample';
 import Footer from './components/footer/Footer';
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
           <Header />
           <Skills />
           <Experience />
+          <GraphQLExample />
           <div id="tools">
             <Tools />
           </div>
