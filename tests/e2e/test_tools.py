@@ -46,6 +46,27 @@ def test_tools():
 
         print("Subnet Calculator verified successfully!")
 
+        # Click the Base64 tab
+        page.locator("button:has-text('Base64')").click()
+
+        # Test valid encode
+        page.locator("textarea[placeholder='Input...']").fill("Hello World")
+        page.get_by_role("button", name="Encode", exact=True).click()
+        assert page.locator("textarea[placeholder='Output will appear here...']").input_value() == "SGVsbG8gV29ybGQ="
+        print("Base64 encode verified successfully!")
+
+        # Test valid decode
+        page.locator("textarea[placeholder='Input...']").fill("SGVsbG8gV29ybGQ=")
+        page.get_by_role("button", name="Decode", exact=True).click()
+        assert page.locator("textarea[placeholder='Output will appear here...']").input_value() == "Hello World"
+        print("Base64 decode verified successfully!")
+
+        # Test invalid decode (The issue being addressed)
+        page.locator("textarea[placeholder='Input...']").fill("invalid base64 string!")
+        page.get_by_role("button", name="Decode", exact=True).click()
+        assert page.locator("textarea[placeholder='Output will appear here...']").input_value() == "Invalid base64"
+        print("Base64 decode error handling verified successfully!")
+
         browser.close()
 
 if __name__ == "__main__":
