@@ -106,6 +106,59 @@ export default function Tools() {
         } catch { setOutput('Error converting YAML') }
       }
     },
+    mac: {
+      name: 'MAC Formatter',
+      colon: () => {
+        const clean = input.replace(/[^a-fA-F0-9]/g, '');
+        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        setOutput(clean.match(/.{1,2}/g).join(':').toUpperCase());
+      },
+      hyphen: () => {
+        const clean = input.replace(/[^a-fA-F0-9]/g, '');
+        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        setOutput(clean.match(/.{1,2}/g).join('-').toUpperCase());
+      },
+      dot: () => {
+        const clean = input.replace(/[^a-fA-F0-9]/g, '');
+        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        setOutput(clean.match(/.{1,4}/g).join('.').toLowerCase());
+      },
+      continuous: () => {
+        const clean = input.replace(/[^a-fA-F0-9]/g, '');
+        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        setOutput(clean.toUpperCase());
+      }
+    },
+    ip: {
+      name: 'IP Converter',
+      binary: () => {
+        try {
+          const octets = input.split('.');
+          if (octets.length !== 4) throw new Error();
+          const bin = octets.map(n => parseInt(n).toString(2).padStart(8, '0')).join('.');
+          setOutput(bin);
+        } catch { setOutput('Invalid IPv4 address') }
+      },
+      hex: () => {
+        try {
+          const octets = input.split('.');
+          if (octets.length !== 4) throw new Error();
+          const hex = octets.map(n => parseInt(n).toString(16).padStart(2, '0')).join('.');
+          setOutput(hex.toUpperCase());
+        } catch { setOutput('Invalid IPv4 address') }
+      },
+      decimal: () => {
+        try {
+          const octets = input.split('.');
+          if (octets.length !== 4) throw new Error();
+          let dec = 0;
+          for (let i = 0; i < 4; i++) {
+            dec += parseInt(octets[i]) * Math.pow(256, 3 - i);
+          }
+          setOutput(dec.toString());
+        } catch { setOutput('Invalid IPv4 address') }
+      }
+    },
     cli: {
       name: 'CLI Commands',
       docker: () => setOutput('docker ps\ndocker build -t image:tag .\ndocker run -d image:tag'),
