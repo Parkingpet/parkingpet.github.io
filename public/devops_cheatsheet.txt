@@ -1,0 +1,92 @@
+========================================
+       DEVOPS QUICK CHEAT SHEET
+========================================
+
+--- KUBERNETES (kubectl) ---
+Get all resources in a namespace:
+  kubectl get all -n <namespace>
+
+Check pod logs (follow):
+  kubectl logs -f <pod-name> -n <namespace>
+
+Exec into a running pod:
+  kubectl exec -it <pod-name> -- /bin/sh
+
+Restart a deployment (zero downtime):
+  kubectl rollout restart deployment <deployment-name>
+
+Decode a Kubernetes secret:
+  kubectl get secret <secret-name> -o jsonpath="{.data.<key>}" | base64 --decode
+
+View resource usage (CPU/Memory):
+  kubectl top pods
+  kubectl top nodes
+
+
+--- DOCKER ---
+Build an image:
+  docker build -t <image-name>:<tag> .
+
+Run a container in the background with port mapping:
+  docker run -d -p <host-port>:<container-port> --name <container-name> <image-name>
+
+Stop all running containers:
+  docker stop $(docker ps -q)
+
+Remove all stopped containers, unused networks, dangling images:
+  docker system prune -a -f
+
+Inspect a container's IP address:
+  docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-name>
+
+
+--- LINUX / BASH ---
+Find a string in files recursively:
+  grep -rnw '/path/to/search/' -e 'pattern'
+
+Find large files (e.g., over 500MB):
+  find / -type f -size +500M -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
+
+Check listening ports:
+  lsof -i -P -n | grep LISTEN
+  # OR
+  netstat -tulpn
+
+View free disk space and memory:
+  df -h
+  free -m
+
+Kill a process occupying a specific port (e.g., port 8080):
+  kill -9 $(lsof -t -i:8080)
+
+
+--- GIT ---
+Undo last commit but keep changes:
+  git reset HEAD~1
+
+Discard all local changes:
+  git reset --hard HEAD
+  git clean -fd
+
+Amend the last commit message:
+  git commit --amend -m "New commit message"
+
+Push a new local branch to a remote repository:
+  git push -u origin <branch-name>
+
+
+--- NETWORKING & TLS ---
+Check SSL certificate expiration date:
+  echo | openssl s_client -servername <domain> -connect <domain>:443 2>/dev/null | openssl x509 -noout -dates
+
+Test DNS resolution:
+  dig +short <domain>
+  nslookup <domain>
+
+Test network connectivity with cURL:
+  curl -v -I https://<domain>
+
+
+========================================
+         Happy Automating!
+========================================
