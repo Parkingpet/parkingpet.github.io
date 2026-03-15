@@ -498,6 +498,198 @@ export default function Tools() {
                 <div style={styles.linkDesc}>Distributed version control system</div>
               </div>
             </a>
+
+            <a href="https://www.gitlab.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🦊</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>GitLab</div>
+                <div style={styles.linkDesc}>DevOps platform with CI/CD</div>
+              </div>
+            </a>
+
+            <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎯</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Jira</div>
+                <div style={styles.linkDesc}>Issue tracking and project management</div>
+              </div>
+            </a>
+
+            <a href="https://www.atlassian.com/software/bitbucket" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🪣</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Bitbucket</div>
+                <div style={styles.linkDesc}>Git repository management</div>
+              </div>
+            </a>
+
+            <a href="https://www.hashicorp.com/products/consul" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🗺️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Consul</div>
+                <div style={styles.linkDesc}>Service mesh and service discovery</div>
+              </div>
+            </a>
+
+            <a href="https://www.hashicorp.com/products/vault" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔒</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Vault</div>
+                <div style={styles.linkDesc}>Secrets management and encryption</div>
+              </div>
+            </a>
+
+            <a href="https://www.splunk.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔎</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Splunk</div>
+                <div style={styles.linkDesc}>Log analysis and monitoring</div>
+              </div>
+            </a>
+
+            <a href="https://www.datadoghq.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐕</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Datadog</div>
+                <div style={styles.linkDesc}>Cloud monitoring and analytics</div>
+              </div>
+            </a>
+
+            <a href="https://www.newrelic.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🆕</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>New Relic</div>
+                <div style={styles.linkDesc}>Application performance monitoring</div>
+              </div>
+            </a>
+
+            <a href="https://www.chef.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>👨‍🍳</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Chef</div>
+                <div style={styles.linkDesc}>Infrastructure automation platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.puppet.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎭</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Puppet</div>
+                <div style={styles.linkDesc}>Infrastructure as Code automation</div>
+              </div>
+            </a>
+
+            <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🏕️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Vagrant</div>
+                <div style={styles.linkDesc}>Development environment automation</div>
+              </div>
+            </a>
+
+            <a href="https://www.packer.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📦</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Packer</div>
+                <div style={styles.linkDesc}>Machine image builder</div>
+              </div>
+            </a>
+
+            <a href="https://www.openstack.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔥</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>OpenStack</div>
+                <div style={styles.linkDesc}>Open source cloud computing</div>
+              </div>
+            </a>
+
+            <a href="https://www.vmware.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>💻</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>VMware</div>
+                <div style={styles.linkDesc}>Virtualization and cloud platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.redhat.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎩</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Red Hat</div>
+                <div style={styles.linkDesc}>Enterprise Linux and solutions</div>
+              </div>
+            </a>
+
+            <a href="https://www.ubuntu.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🧡</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Ubuntu</div>
+                <div style={styles.linkDesc}>Debian-based Linux distribution</div>
+              </div>
+            </a>
+
+            <a href="https://www.centos.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚙️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>CentOS</div>
+                <div style={styles.linkDesc}>Community-driven Linux distribution</div>
+              </div>
+            </a>
+
+            <a href="https://www.apache.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🪶</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Apache</div>
+                <div style={styles.linkDesc}>Web server and software foundation</div>
+              </div>
+            </a>
+
+            <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐬</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>MySQL</div>
+                <div style={styles.linkDesc}>Relational database management</div>
+              </div>
+            </a>
+
+            <a href="https://redis.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔴</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Redis</div>
+                <div style={styles.linkDesc}>In-memory data structure store</div>
+              </div>
+            </a>
+
+            <a href="https://www.rabbitmq.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐰</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>RabbitMQ</div>
+                <div style={styles.linkDesc}>Message broker and queue system</div>
+              </div>
+            </a>
+
+            <a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎵</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Apache Kafka</div>
+                <div style={styles.linkDesc}>Distributed event streaming platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.nginx.com/products/nginx/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚡</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>NGINX Plus</div>
+                <div style={styles.linkDesc}>Advanced load balancing and proxy</div>
+              </div>
+            </a>
+
+            <a href="https://www.haproxy.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔀</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>HAProxy</div>
+                <div style={styles.linkDesc}>Load balancer and proxy server</div>
+              </div>
+            </a>
           </div>
         )}
       </div>
