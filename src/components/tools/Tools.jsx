@@ -302,6 +302,19 @@ export default function Tools() {
               Download TXT
             </a>
           </div>
+          <div style={styles.contactCard}>
+            <h3 style={styles.contactTitle}>DevOps Cheat Sheet</h3>
+            <div style={styles.contactNote}>
+              <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
+            </div>
+            <a
+              href="/devops_cheatsheet.txt"
+              download
+              style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
+            >
+              Download Cheat Sheet
+            </a>
+          </div>
         </div>
       );
     }
@@ -853,6 +866,38 @@ export default function Tools() {
               <div style={styles.linkContent}>
                 <div style={styles.linkName}>Docker Swarm</div>
                 <div style={styles.linkDesc}>Native Docker orchestration</div>
+              </div>
+            </a>
+
+            <a href="https://cilium.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐝</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Cilium (eBPF)</div>
+                <div style={styles.linkDesc}>eBPF-based Networking & Security</div>
+              </div>
+            </a>
+
+            <a href="https://wasmedge.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🕸️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>WasmEdge</div>
+                <div style={styles.linkDesc}>Lightweight WebAssembly runtime</div>
+              </div>
+            </a>
+
+            <a href="https://backstage.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎭</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Backstage</div>
+                <div style={styles.linkDesc}>Open platform for building developer portals</div>
+              </div>
+            </a>
+
+            <a href="https://python.langchain.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🦜</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>LangChain</div>
+                <div style={styles.linkDesc}>Building applications with LLMs</div>
               </div>
             </a>
           </div>
