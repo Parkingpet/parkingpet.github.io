@@ -690,6 +690,118 @@ export default function Tools() {
                 <div style={styles.linkDesc}>Load balancer and proxy server</div>
               </div>
             </a>
+
+            <a href="https://www.docker.com/products/docker-hub" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐳</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Docker Hub</div>
+                <div style={styles.linkDesc}>Container image registry</div>
+              </div>
+            </a>
+
+            <a href="https://helm.sh/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⛵</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Helm</div>
+                <div style={styles.linkDesc}>Kubernetes package manager</div>
+              </div>
+            </a>
+
+            <a href="https://www.argocd.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🏹</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>ArgoCD</div>
+                <div style={styles.linkDesc}>GitOps continuous deployment</div>
+              </div>
+            </a>
+
+            <a href="https://www.fluxcd.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚡</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Flux</div>
+                <div style={styles.linkDesc}>GitOps toolkit for Kubernetes</div>
+              </div>
+            </a>
+
+            <a href="https://www.istio.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🕸️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Istio</div>
+                <div style={styles.linkDesc}>Service mesh for Kubernetes</div>
+              </div>
+            </a>
+
+            <a href="https://linkerd.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔗</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Linkerd</div>
+                <div style={styles.linkDesc}>Lightweight service mesh</div>
+              </div>
+            </a>
+
+            <a href="https://www.envoyproxy.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📮</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Envoy</div>
+                <div style={styles.linkDesc}>Edge and service proxy</div>
+              </div>
+            </a>
+
+            <a href="https://www.terraform.io/cloud" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>☁️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Terraform Cloud</div>
+                <div style={styles.linkDesc}>Managed Terraform service</div>
+              </div>
+            </a>
+
+            <a href="https://www.pulumi.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>💜</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Pulumi</div>
+                <div style={styles.linkDesc}>Infrastructure as Code SDK</div>
+              </div>
+            </a>
+
+            <a href="https://www.cloudformation.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🏗️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>CloudFormation</div>
+                <div style={styles.linkDesc}>AWS infrastructure templates</div>
+              </div>
+            </a>
+
+            <a href="https://www.sonarqube.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔬</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>SonarQube</div>
+                <div style={styles.linkDesc}>Code quality and security analysis</div>
+              </div>
+            </a>
+
+            <a href="https://www.snyk.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🛡️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Snyk</div>
+                <div style={styles.linkDesc}>Developer security platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.hashicorp.com/products/nomad" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🚀</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Nomad</div>
+                <div style={styles.linkDesc}>Workload orchestration platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.docker.com/products/docker-swarm" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐝</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Docker Swarm</div>
+                <div style={styles.linkDesc}>Native Docker orchestration</div>
+              </div>
+            </a>
           </div>
         )}
       </div>
