@@ -8,6 +8,7 @@ export default function Tools() {
   const [collapsedTools, setCollapsedTools] = useState({});
   const [collapsedLinks, setCollapsedLinks] = useState({
     quickLinks: true,
+    consoles: true,
     azure: true,
     aws: true,
     gcp: true
@@ -900,6 +901,85 @@ export default function Tools() {
               <div style={styles.linkContent}>
                 <div style={styles.linkName}>LangChain</div>
                 <div style={styles.linkDesc}>Building applications with LLMs</div>
+              </div>
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Cloud Consoles</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, consoles: !prev.consoles }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.consoles ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.consoles && (
+          <div style={styles.linksGrid}>
+            <a href="https://console.aws.amazon.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🟠</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>AWS Console</div>
+                <div style={styles.linkDesc}>EC2, S3, Lambda, RDS</div>
+              </div>
+            </a>
+
+            <a href="https://console.aws.amazon.com/iam" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔐</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>AWS IAM</div>
+                <div style={styles.linkDesc}>Identity & Access Management</div>
+              </div>
+            </a>
+
+            <a href="https://console.aws.amazon.com/cloudwatch" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>👁️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>AWS CloudWatch</div>
+                <div style={styles.linkDesc}>Monitoring & Logs</div>
+              </div>
+            </a>
+
+            <a href="https://console.aws.amazon.com/codesuite/codepipeline" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔄</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>AWS CodePipeline</div>
+                <div style={styles.linkDesc}>CI/CD Pipeline</div>
+              </div>
+            </a>
+
+            <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔵</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>GCP Console</div>
+                <div style={styles.linkDesc}>Compute, Storage, BigQuery</div>
+              </div>
+            </a>
+
+            <a href="https://console.cloud.google.com/run" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🏃</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>GCP Cloud Run</div>
+                <div style={styles.linkDesc}>Serverless containers</div>
+              </div>
+            </a>
+
+            <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔷</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Azure Portal</div>
+                <div style={styles.linkDesc}>VMs, App Service, SQL</div>
+              </div>
+            </a>
+
+            <a href="https://dev.azure.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🎯</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Azure DevOps</div>
+                <div style={styles.linkDesc}>Pipelines & Repos</div>
               </div>
             </a>
           </div>
