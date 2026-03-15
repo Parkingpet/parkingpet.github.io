@@ -1100,6 +1100,62 @@ export default function Tools() {
               <div style={styles.linkDesc}>Learning resources and guides</div>
             </div>
           </a>
+
+          <a href="https://console.aws.amazon.com/iam" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>IAM Management</div>
+              <div style={styles.linkDesc}>Identity and access control</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/cloudwatch" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📊</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>CloudWatch Monitoring</div>
+              <div style={styles.linkDesc}>Monitoring and logging</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/codesuite/codepipeline" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔄</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>CodePipeline CI/CD</div>
+              <div style={styles.linkDesc}>Continuous integration and deployment</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/elasticbeanstalk" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌱</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Elastic Beanstalk</div>
+              <div style={styles.linkDesc}>Application deployment service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/vpc" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>VPC Networking</div>
+              <div style={styles.linkDesc}>Virtual private cloud</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/dynamodb" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚙️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>DynamoDB NoSQL</div>
+              <div style={styles.linkDesc}>Managed NoSQL database</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/elasticache" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>💾</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>ElastiCache</div>
+              <div style={styles.linkDesc}>In-memory caching service</div>
+            </div>
+          </a>
           </div>
         )}
       </div>
@@ -1161,6 +1217,62 @@ export default function Tools() {
             <div style={styles.linkContent}>
               <div style={styles.linkName}>GCP Documentation</div>
               <div style={styles.linkDesc}>Learning resources and guides</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/iam" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>IAM & Admin</div>
+              <div style={styles.linkDesc}>Identity and access management</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/monitoring" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📊</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Monitoring</div>
+              <div style={styles.linkDesc}>Monitoring and observability</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/cloud-build" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔨</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Build CI/CD</div>
+              <div style={styles.linkDesc}>Continuous integration and deployment</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/run" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🏃</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Run Serverless</div>
+              <div style={styles.linkDesc}>Serverless container platform</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/kubernetes" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☸️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>GKE Kubernetes</div>
+              <div style={styles.linkDesc}>Managed Kubernetes service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/firestore" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔥</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Firestore Database</div>
+              <div style={styles.linkDesc}>NoSQL document database</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/memorystore" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>💾</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Memorystore Cache</div>
+              <div style={styles.linkDesc}>Managed Redis and Memcached</div>
             </div>
           </a>
           </div>
