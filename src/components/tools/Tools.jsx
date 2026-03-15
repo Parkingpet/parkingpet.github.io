@@ -1037,6 +1037,78 @@ export default function Tools() {
               <div style={styles.linkDesc}>Learning resources and guides</div>
             </div>
           </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📦</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Resource Groups</div>
+              <div style={styles.linkDesc}>Manage resource collections</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Compute%2FvirtualMachines" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🖥️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Virtual Machines</div>
+              <div style={styles.linkDesc}>Compute resources</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Storage%2FstorageAccounts" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>💾</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Storage Accounts</div>
+              <div style={styles.linkDesc}>Blob, file, and queue storage</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.DBforPostgreSQL%2Fservers" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🗄️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Azure Database</div>
+              <div style={styles.linkDesc}>Managed database services</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Web%2Fsites" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>App Service</div>
+              <div style={styles.linkDesc}>Web and mobile apps</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerRegistry%2Fregistries" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🐳</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Container Registry</div>
+              <div style={styles.linkDesc}>Docker image registry</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FmanagedClusters" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☸️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>AKS Kubernetes</div>
+              <div style={styles.linkDesc}>Managed Kubernetes service</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.KeyVault%2Fvaults" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔑</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Key Vault</div>
+              <div style={styles.linkDesc}>Secrets and encryption keys</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Insights%2Fcomponents" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📊</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Application Insights</div>
+              <div style={styles.linkDesc}>Application monitoring</div>
+            </div>
+          </a>
           </div>
         )}
       </div>
@@ -1156,6 +1228,78 @@ export default function Tools() {
               <div style={styles.linkDesc}>In-memory caching service</div>
             </div>
           </a>
+
+          <a href="https://console.aws.amazon.com/sqs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📨</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>SQS Message Queue</div>
+              <div style={styles.linkDesc}>Message queuing service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/sns" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📢</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>SNS Notifications</div>
+              <div style={styles.linkDesc}>Pub/sub messaging service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/route53" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Route 53 DNS</div>
+              <div style={styles.linkDesc}>Domain name system service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/cloudfront" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>CloudFront CDN</div>
+              <div style={styles.linkDesc}>Content delivery network</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/elasticloadbalancing" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚖️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Load Balancing</div>
+              <div style={styles.linkDesc}>Distribute traffic across instances</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/ecr" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🐳</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>ECR Container Registry</div>
+              <div style={styles.linkDesc}>Docker image registry</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/ecs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>☸️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>ECS Container Service</div>
+              <div style={styles.linkDesc}>Container orchestration</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/secretsmanager" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔑</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Secrets Manager</div>
+              <div style={styles.linkDesc}>Manage secrets and credentials</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/kms" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>KMS Encryption</div>
+              <div style={styles.linkDesc}>Key management service</div>
+            </div>
+          </a>
           </div>
         )}
       </div>
@@ -1273,6 +1417,78 @@ export default function Tools() {
             <div style={styles.linkContent}>
               <div style={styles.linkName}>Memorystore Cache</div>
               <div style={styles.linkDesc}>Managed Redis and Memcached</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/pubsub" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📨</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Pub/Sub Messaging</div>
+              <div style={styles.linkDesc}>Message queuing service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/dns" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud DNS</div>
+              <div style={styles.linkDesc}>Domain name system service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/net-services/cdn" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud CDN</div>
+              <div style={styles.linkDesc}>Content delivery network</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/net-services/loadbalancing" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚖️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Load Balancing</div>
+              <div style={styles.linkDesc}>Distribute traffic across instances</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/artifacts" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🐳</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Artifact Registry</div>
+              <div style={styles.linkDesc}>Container and package registry</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/security/secret-manager" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔑</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Secret Manager</div>
+              <div style={styles.linkDesc}>Manage secrets and credentials</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/security/kms" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud KMS</div>
+              <div style={styles.linkDesc}>Key management service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/bigquery" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📊</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>BigQuery Analytics</div>
+              <div style={styles.linkDesc}>Data warehouse and analytics</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/dataflow" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔄</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Dataflow Processing</div>
+              <div style={styles.linkDesc}>Stream and batch processing</div>
             </div>
           </a>
           </div>
