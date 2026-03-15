@@ -394,6 +394,110 @@ export default function Tools() {
                 <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
               </div>
             </a>
+
+            <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐳</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Docker</div>
+                <div style={styles.linkDesc}>Container platform and registry</div>
+              </div>
+            </a>
+
+            <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>☸️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Kubernetes</div>
+                <div style={styles.linkDesc}>Container orchestration platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.terraform.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🏗️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Terraform</div>
+                <div style={styles.linkDesc}>Infrastructure as Code tool</div>
+              </div>
+            </a>
+
+            <a href="https://www.ansible.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🤖</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Ansible</div>
+                <div style={styles.linkDesc}>Configuration management automation</div>
+              </div>
+            </a>
+
+            <a href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔄</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Jenkins</div>
+                <div style={styles.linkDesc}>CI/CD automation server</div>
+              </div>
+            </a>
+
+            <a href="https://prometheus.io/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📊</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Prometheus</div>
+                <div style={styles.linkDesc}>Monitoring and alerting system</div>
+              </div>
+            </a>
+
+            <a href="https://grafana.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📈</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Grafana</div>
+                <div style={styles.linkDesc}>Visualization and analytics platform</div>
+              </div>
+            </a>
+
+            <a href="https://www.elastic.co/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔍</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Elastic Stack</div>
+                <div style={styles.linkDesc}>Search and analytics engine</div>
+              </div>
+            </a>
+
+            <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🗄️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>PostgreSQL</div>
+                <div style={styles.linkDesc}>Advanced open source database</div>
+              </div>
+            </a>
+
+            <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🍃</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>MongoDB</div>
+                <div style={styles.linkDesc}>NoSQL document database</div>
+              </div>
+            </a>
+
+            <a href="https://www.nginx.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚡</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>NGINX</div>
+                <div style={styles.linkDesc}>Web server and reverse proxy</div>
+              </div>
+            </a>
+
+            <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐧</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Linux</div>
+                <div style={styles.linkDesc}>Open source operating system</div>
+              </div>
+            </a>
+
+            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📝</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Git</div>
+                <div style={styles.linkDesc}>Distributed version control system</div>
+              </div>
+            </a>
           </div>
         )}
       </div>
