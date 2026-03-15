@@ -375,6 +375,7 @@ export default function Tools() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Input..."
                 style={styles.textarea}
+                aria-label="Tool input"
               />
             )}
             
@@ -397,6 +398,7 @@ export default function Tools() {
               readOnly
               placeholder="Output will appear here..."
               style={styles.textarea}
+              aria-label="Tool output"
             />
           </>
         )}

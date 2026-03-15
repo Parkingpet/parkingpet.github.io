@@ -105,12 +105,14 @@ export default function Prompts() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 style={styles.input}
+                aria-label="Prompt Title"
               />
               <textarea
                 placeholder="Prompt Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 style={styles.textarea}
+                aria-label="Prompt Description"
               />
               <button type="submit" style={styles.submitBtn}>Submit Prompt</button>
             </form>
