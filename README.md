@@ -30,42 +30,38 @@ React 18.2 + Vite 7.3 | GraphQL-Ready | DevOps Toolkit | <180KB Gzipped | 99.97%
 
 </div>
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 20px; margin-bottom: 12px; line-height: 1.3;">
 Live Demo
 </h2>
 
 <div align="center">
 
-<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 20px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 8px 0 6px 0; line-height: 1.3;">
 Interactive DevOps Resume
 </h3>
 
-<img src="public/moose-as-a-service.jpg" alt="Interactive DevOps Resume" width="400" style="border: 2px solid #23314d; border-radius: 12px; cursor: pointer;" onclick="window.open('https://parkingpet.github.io', '_blank')">
+<img src="public/moose-as-a-service.jpg" alt="Interactive DevOps Resume" width="400" style="border: 2px solid #23314d; border-radius: 12px; cursor: pointer; margin: 8px 0;" onclick="window.open('https://parkingpet.github.io', '_blank')">
 
 *Click the image above to visit the live site*
 
----
-
-<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 20px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 12px 0 6px 0; line-height: 1.3;">
 DevOps Resume Images
 </h3>
 
-<div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin: 30px 0;">
-  <div style="text-align: center; flex: 1; min-width: 400px; max-width: 500px;">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 12px 0;">
+  <div style="text-align: center; flex: 1; min-width: 350px; max-width: 450px;">
     <img src="public/devops-tools-banner.svg" alt="DevOps Tools Banner" width="100%" style="border: 2px solid #23314d; border-radius: 12px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
-    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 16px; font-weight: 600;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 14px; color: #94a3b8; font-weight: 400;">Infrastructure automation and cloud technologies</span></p>
+    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin: 8px 0 0 0; font-weight: 600;"><strong>DevOps Tools Banner</strong><br><span style="font-size: 12px; color: #94a3b8; font-weight: 400;">Infrastructure automation and cloud technologies</span></p>
   </div>
   <div style="text-align: center; flex: 1; min-width: 300px; max-width: 400px;">
     <img src="public/devops-logo.svg" alt="DevOps Terminal Logo" width="100%" style="border: 2px solid #23314d; border-radius: 12px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
-    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin-top: 16px; font-weight: 600;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 14px; color: #94a3b8; font-weight: 400;">Professional terminal-themed branding</span></p>
+    <p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 14px; color: #cbd5e1; margin: 8px 0 0 0; font-weight: 600;"><strong>DevOps Terminal Logo</strong><br><span style="font-size: 12px; color: #94a3b8; font-weight: 400;">Professional terminal-themed branding</span></p>
   </div>
 </div>
 
 *Use these images for documentation, presentations, or social media*
 
----
-
-<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 12px 0 8px 0; line-height: 1.4;">
 Quick Links & Resources
 </h3>
 
@@ -220,17 +216,17 @@ Quick Links & Resources
 
 ---
 
-<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 20px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 12px 0 8px 0; line-height: 1.3;">
 Key Features
 </h3>
 
 <div align="center">
-<img src="public/features-overview.svg" alt="DevOps Resume Features Overview" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
+<img src="public/features-overview.svg" alt="DevOps Resume Features Overview" width="800" style="border: 1px solid #23314d; border-radius: 8px; margin: 8px 0;">
 </div>
 
-<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; margin: 8px 0;">
 <tr>
-<td width="33.33%" align="center" style="padding: 24px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
+<td width="33.33%" align="center" style="padding: 16px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
 
 #### Terminal Experience
 **Authentic CLI loading**  
@@ -239,7 +235,7 @@ Real-time progress indicators
 Professional DevOps terminal simulation
 
 </td>
-<td width="33.33%" align="center" style="padding: 24px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
+<td width="33.33%" align="center" style="padding: 16px; vertical-align: top; border-right: 1px solid rgba(56, 189, 248, 0.2);">
 
 #### DevOps Tools
 **Built-in utilities**  
@@ -248,7 +244,7 @@ Copy-to-clipboard functionality
 Interactive processing interface
 
 </td>
-<td width="33.33%" align="center" style="padding: 24px; vertical-align: top;">
+<td width="33.33%" align="center" style="padding: 16px; vertical-align: top;">
 
 #### Collapsible Quick Links
 **Organized link sections**  
@@ -260,23 +256,17 @@ Clean, organized navigation
 </tr>
 </table>
 
----
-
-<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 16px 0; line-height: 1.4;">
+<h3 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 20px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; margin: 12px 0 8px 0; line-height: 1.3;">
 Performance Metrics
 </h3>
 
 <div align="center">
-<img src="public/performance-metrics.svg" alt="Performance Metrics Visualization" width="600" style="border: 1px solid #23314d; border-radius: 8px; margin: 20px 0;">
+<img src="public/performance-metrics.svg" alt="Performance Metrics Visualization" width="600" style="border: 1px solid #23314d; border-radius: 8px; margin: 8px 0;">
 </div>
 
 ```
-Build Time: ~1 second
-Bundle Size: <180KB gzipped  
-Lighthouse Score: 95+ across all metrics
-Load Time: <1 second on 3G
-First Contentful Paint: <0.8s
-Time to Interactive: <1.2s
+Build Time: ~1 second | Bundle Size: <180KB gzipped | Lighthouse Score: 95+
+Load Time: <1 second on 3G | First Contentful Paint: <0.8s | Time to Interactive: <1.2s
 ```
 
 </div>
@@ -285,20 +275,10 @@ Time to Interactive: <1.2s
 
 ## Table of Contents
 
-- [Quick Links & Resources](#quick-links--resources)
-- [Technical Specifications](#technical-specifications)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Performance Metrics](#performance-metrics)
-- [GraphQL Performance](#graphql-performance-metrics)
-- [API Endpoints](#api-endpoints)
-- [Installation & Setup](#installation--setup)
-- [Development Workflow](#development-workflow)
-- [Deployment Pipeline](#deployment-pipeline)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+- [Quick Links & Resources](#quick-links--resources) | [Technical Specifications](#technical-specifications) | [Architecture](#architecture) | [Tech Stack](#tech-stack)
+- [Performance Metrics](#performance-metrics) | [GraphQL Performance](#graphql-performance-metrics) | [API Endpoints](#api-endpoints) | [Installation & Setup](#installation--setup)
+- [Development Workflow](#development-workflow) | [Deployment Pipeline](#deployment-pipeline) | [Configuration](#configuration) | [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing) | [License](#license)
 
 ---
 
@@ -306,33 +286,20 @@ Time to Interactive: <1.2s
 
 ### Build & Runtime
 ```
-Framework:           React 18.2.0
-Build Tool:          Vite 7.3.1
-Runtime:             Node.js 18+
-Package Manager:     npm 10+
-Target:              ES2020
-Module System:       ESM
+Framework: React 18.2.0 | Build Tool: Vite 7.3.1 | Runtime: Node.js 18+ | Package Manager: npm 10+
+Target: ES2020 | Module System: ESM
 ```
 
 ### Performance Targets
 ```
-Bundle Size:         <180KB gzipped
-Build Time:          ~1 second
-Load Time (3G):      <1 second
-First Paint:         <0.8s
-Interactive:         <1.2s
-Lighthouse Score:    95+
-API Response:        <25ms p95
-Uptime:              99.95%
+Bundle Size: <180KB gzipped | Build Time: ~1 second | Load Time (3G): <1 second
+First Paint: <0.8s | Interactive: <1.2s | Lighthouse Score: 95+ | API Response: <25ms p95 | Uptime: 99.95%
 ```
 
 ### Browser Support
 ```
-Chrome:              Latest 2 versions
-Firefox:             Latest 2 versions
-Safari:              Latest 2 versions
-Edge:                Latest 2 versions
-Mobile:              iOS 12+, Android 8+
+Chrome: Latest 2 versions | Firefox: Latest 2 versions | Safari: Latest 2 versions | Edge: Latest 2 versions
+Mobile: iOS 12+, Android 8+
 ```
 
 ---
@@ -342,48 +309,34 @@ Mobile:              iOS 12+, Android 8+
 ### Core Technical Features
 
 #### 1. Component Architecture
-- **React 18.2 Hooks**: Functional components with state management
-- **Code Splitting**: Lazy-loaded components for optimal bundle size
-- **Memoization**: React.memo for performance optimization
-- **Error Boundaries**: Graceful error handling and recovery
+- **React 18.2 Hooks**: Functional components with state management | **Code Splitting**: Lazy-loaded components for optimal bundle size
+- **Memoization**: React.memo for performance optimization | **Error Boundaries**: Graceful error handling and recovery
 - **Suspense**: Async component loading with fallbacks
 
 #### 2. Performance Optimization
-- **Tree Shaking**: Unused code elimination in production builds
-- **Minification**: CSS and JavaScript compression
-- **Asset Optimization**: Image lazy loading and responsive sizing
-- **Caching Strategy**: Browser cache headers and service workers
+- **Tree Shaking**: Unused code elimination in production builds | **Minification**: CSS and JavaScript compression
+- **Asset Optimization**: Image lazy loading and responsive sizing | **Caching Strategy**: Browser cache headers and service workers
 - **CDN Ready**: Static asset distribution optimization
 
 #### 3. DevOps Toolkit Integration
-- **Base64 Encoding/Decoding**: Data transformation utilities
-- **JSON Processing**: Formatting, minification, validation
-- **Cryptographic Hashing**: SHA-256, MD5 implementations
-- **UUID Generation**: Unique identifier creation
-- **Regex Testing**: Pattern matching and validation
-- **Timestamp Conversion**: Unix/ISO 8601 conversions
+- **Base64 Encoding/Decoding**: Data transformation utilities | **JSON Processing**: Formatting, minification, validation
+- **Cryptographic Hashing**: SHA-256, MD5 implementations | **UUID Generation**: Unique identifier creation
+- **Regex Testing**: Pattern matching and validation | **Timestamp Conversion**: Unix/ISO 8601 conversions
 - **URL Encoding**: RFC 3986 compliant encoding
 
 #### 4. GraphQL Integration
-- **Query Optimization**: Automatic field selection
-- **Caching Layer**: Response caching with TTL
-- **Error Handling**: Comprehensive error messages
-- **Type Safety**: Full schema validation
-- **Batch Operations**: Multiple query execution
-- **Subscriptions Ready**: Real-time data support
+- **Query Optimization**: Automatic field selection | **Caching Layer**: Response caching with TTL
+- **Error Handling**: Comprehensive error messages | **Type Safety**: Full schema validation
+- **Batch Operations**: Multiple query execution | **Subscriptions Ready**: Real-time data support
 
 #### 5. Styling System
-- **CSS-in-JS**: Component-scoped styling
-- **Design Tokens**: Centralized color/typography system
-- **Responsive Design**: Mobile-first breakpoints
-- **Animation Framework**: Keyframe-based animations
+- **CSS-in-JS**: Component-scoped styling | **Design Tokens**: Centralized color/typography system
+- **Responsive Design**: Mobile-first breakpoints | **Animation Framework**: Keyframe-based animations
 - **Theme Support**: Dark/light mode ready
 
 #### 6. Accessibility
-- **WCAG 2.1 AA**: Accessibility compliance
-- **Semantic HTML**: Proper markup structure
-- **ARIA Labels**: Screen reader support
-- **Keyboard Navigation**: Full keyboard accessibility
+- **WCAG 2.1 AA**: Accessibility compliance | **Semantic HTML**: Proper markup structure
+- **ARIA Labels**: Screen reader support | **Keyboard Navigation**: Full keyboard accessibility
 - **Color Contrast**: WCAG AA contrast ratios
 
 ---
@@ -435,59 +388,19 @@ Mobile:              iOS 12+, Android 8+
 
 ### Component Hierarchy
 ```
-App (Root)
-├── Header
-│   ├── Navigation
-│   └── Badges
-├── Loading (Conditional)
-├── Main Content
-│   ├── Summary
-│   │   └── Competencies
-│   ├── Skills
-│   ├── Tools
-│   ├── Projects
-│   ├── Experience
-│   ├── Education
-│   ├── Clients
-│   └── MCPServers
-├── EmailWidget
-└── Footer
+App (Root) → Header, Loading, Main Content, EmailWidget, Footer
+Main Content → Summary, Skills, Tools, Projects, Experience, Education, Clients, MCPServers
 ```
 
 ### Data Flow Pattern
 ```
-User Interaction
-    ↓
-Event Handler
-    ↓
-State Update (useState)
-    ↓
-Component Re-render
-    ↓
-DOM Update
-    ↓
-Browser Paint
+User Interaction → Event Handler → State Update (useState) → Component Re-render → DOM Update → Browser Paint
 ```
 
 ### Module Dependencies
 ```
-src/
-├── App.jsx (Root)
-│   ├── components/header/Header.jsx
-│   ├── components/loading/Loading.jsx
-│   ├── components/summary/Summary.jsx
-│   ├── components/skills/Skills.jsx
-│   ├── components/tools/Tools.jsx
-│   ├── components/projects/Projects.jsx
-│   ├── components/experience/Experience.jsx
-│   ├── components/education/Education.jsx
-│   ├── components/clients/Clients.jsx
-│   ├── components/mcp/MCPServers.jsx
-│   ├── components/email/EmailWidget.jsx
-│   └── components/footer/Footer.jsx
-├── resumeData.js (Data Source)
-├── index.css (Global Styles)
-└── main.jsx (Entry Point)
+src/ → App.jsx (Root) → components/ (Header, Loading, Summary, Skills, Tools, Projects, Experience, Education, Clients, MCPServers, EmailWidget, Footer)
+     → resumeData.js (Data Source) → index.css (Global Styles) → main.jsx (Entry Point)
 ```
 
 ---
@@ -502,20 +415,13 @@ src/
 | **JavaScript** | ES2020 | Language standard |
 | **CSS3** | Latest | Styling & animations |
 
-### State Management
+### State Management & Styling
 | Technology | Usage |
 |:-----------|:------|
 | **React Hooks** | useState, useEffect, useContext |
-| **Local Storage** | Client-side persistence |
-| **Context API** | Global state (if needed) |
-
-### Styling & Design
-| Technology | Purpose |
-|:-----------|:--------|
 | **CSS-in-JS** | Component-scoped styles |
 | **CSS Variables** | Design tokens |
 | **CSS Grid/Flexbox** | Layout system |
-| **CSS Animations** | Keyframe animations |
 
 ### API & Data
 | Technology | Purpose |
@@ -564,10 +470,8 @@ src/
 - **Lighthouse Score**: 95+ across all metrics (Performance, Accessibility, Best Practices, SEO)
 
 ### Network Optimization
-- **HTTP/2 Support**: Modern protocol for faster loading
-- **Asset Compression**: Gzip and Brotli compression
-- **Image Optimization**: Responsive images with modern formats
-- **Code Splitting**: Dynamic imports for faster initial load
+- **HTTP/2 Support**: Modern protocol for faster loading | **Asset Compression**: Gzip and Brotli compression
+- **Image Optimization**: Responsive images with modern formats | **Code Splitting**: Dynamic imports for faster initial load
 
 ---
 
@@ -1080,24 +984,15 @@ GET  /api/health          - Health check
 ### GraphQL Schema
 ```graphql
 type Query {
-  resume: Resume!
-  tools: ToolsAPI!
-  performance: PerformanceMetrics!
+  resume: Resume! | tools: ToolsAPI! | performance: PerformanceMetrics!
 }
 
 type Resume {
-  personal: PersonalInfo!
-  experience: [Experience!]!
-  skills: [Skill!]!
-  projects: [Project!]!
-  education: [Education!]!
+  personal: PersonalInfo! | experience: [Experience!]! | skills: [Skill!]! | projects: [Project!]! | education: [Education!]!
 }
 
 type ToolsAPI {
-  base64(input: String!): String!
-  json(input: String!): String!
-  hash(input: String!): String!
-  uuid: String!
+  base64(input: String!): String! | json(input: String!): String! | hash(input: String!): String! | uuid: String!
 }
 ```
 
@@ -1107,7 +1002,6 @@ type ToolsAPI {
 
 ### Prerequisites
 ```bash
-# Check versions
 node --version    # v18.0.0 or higher
 npm --version     # v10.0.0 or higher
 git --version     # v2.30.0 or higher
@@ -1115,20 +1009,14 @@ git --version     # v2.30.0 or higher
 
 ### Clone & Install
 ```bash
-# Clone repository
 git clone https://github.com/Parkingpet/parkingpet.github.io.git
 cd parkingpet.github.io
-
-# Install dependencies
 npm install
-
-# Verify installation
 npm list react vite
 ```
 
 ### Environment Setup
 ```bash
-# Create .env file (optional)
 cat > .env << EOF
 VITE_API_URL=http://localhost:5173
 VITE_GRAPHQL_ENDPOINT=http://localhost:4000/graphql
@@ -1141,48 +1029,28 @@ EOF
 
 ### Local Development
 ```bash
-# Start dev server with HMR
-npm run dev
-
-# Server runs at http://localhost:5173
-# HMR enabled for instant updates
-# Source maps for debugging
+npm run dev                    # Start dev server with HMR at http://localhost:5173
 ```
 
 ### Code Quality
 ```bash
-# Run linter
-npm run lint
-
-# Format code
-npm run format
-
-# Type checking (if TypeScript)
-npm run type-check
+npm run lint                   # Run linter
+npm run format                 # Format code
+npm run type-check             # Type checking (if TypeScript)
 ```
 
 ### Testing
 ```bash
-# Run unit tests
-npm run test
-
-# Run E2E tests
-npm run test:e2e
-
-# Coverage report
-npm run test:coverage
+npm run test                   # Run unit tests
+npm run test:e2e               # Run E2E tests
+npm run test:coverage          # Coverage report
 ```
 
 ### Building
 ```bash
-# Production build
-npm run build
-
-# Analyze bundle
-npm run build -- --analyze
-
-# Preview production build
-npm run preview
+npm run build                  # Production build
+npm run build -- --analyze     # Analyze bundle
+npm run preview                # Preview production build
 ```
 
 ---
@@ -1192,11 +1060,9 @@ npm run preview
 ### GitHub Actions Workflow
 ```yaml
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -1215,22 +1081,11 @@ jobs:
 
 ### Deployment Steps
 ```bash
-# 1. Commit changes
 git add .
 git commit -m "feat: update resume"
-
-# 2. Push to main
 git push origin main
-
-# 3. GitHub Actions automatically:
-#    - Installs dependencies
-#    - Runs linter
-#    - Builds production bundle
-#    - Deploys to GitHub Pages
-#    - Updates live site
-
-# 4. Verify deployment
-# Check https://parkingpet.github.io
+# GitHub Actions automatically: Installs dependencies → Runs linter → Builds bundle → Deploys to GitHub Pages
+# Verify deployment at https://parkingpet.github.io
 ```
 
 ---
@@ -1292,37 +1147,27 @@ export default {
 
 #### Port Already in Use
 ```bash
-# Kill process on port 5173
-lsof -ti:5173 | xargs kill -9
-
-# Or use different port
-npm run dev -- --port 3000
+lsof -ti:5173 | xargs kill -9    # Kill process on port 5173
+npm run dev -- --port 3000        # Or use different port
 ```
 
 #### Build Fails
 ```bash
-# Clear cache and reinstall
-rm -rf node_modules package-lock.json
+rm -rf node_modules package-lock.json    # Clear cache and reinstall
 npm install
 npm run build
 ```
 
 #### HMR Not Working
 ```bash
-# Check Vite config
-# Ensure hmr: true in vite.config.js
-# Clear browser cache
-# Restart dev server
+# Check Vite config (ensure hmr: true in vite.config.js)
+# Clear browser cache and restart dev server
 ```
 
 #### GraphQL Errors
 ```bash
-# Validate schema
-npm run graphql:validate
-
-# Check endpoint URL
-# Verify CORS headers
-# Test with GraphQL Playground
+npm run graphql:validate           # Validate schema
+# Check endpoint URL, verify CORS headers, test with GraphQL Playground
 ```
 
 ---
@@ -1330,33 +1175,16 @@ npm run graphql:validate
 ## Customization {#customization}
 
 ### 1. Update Resume Content
-Edit `src/resumeData.js` to modify:
-- Personal information and contact details
-- Professional experience and achievements
-- Technical skills and competencies
-- Education and certifications
-- Project portfolio and case studies
+Edit `src/resumeData.js` to modify: Personal information, Professional experience, Technical skills, Education, Project portfolio
 
 ### 2. Modify Styling
-Update styles in component files to:
-- Change color schemes and themes
-- Adjust typography and spacing
-- Modify animations and transitions
-- Update responsive breakpoints
+Update styles in component files to: Change color schemes, Adjust typography and spacing, Modify animations, Update responsive breakpoints
 
 ### 3. Add New Features
-Extend the application by:
-- Adding new DevOps tools to the tools component
-- Creating additional content sections
-- Integrating with external APIs (GraphQL, REST)
-- Adding interactive elements
-- Implementing GraphQL data fetching with Apollo Client or Relay
+Extend the application by: Adding new DevOps tools, Creating additional content sections, Integrating with external APIs, Adding interactive elements, Implementing GraphQL data fetching
 
 ### 4. GraphQL Integration Example
-To integrate GraphQL into the resume site:
-
 ```javascript
-// Example using Apollo Client
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const client = new ApolloClient({
@@ -1364,33 +1192,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// Fetch resume data using GraphQL
 const GET_RESUME_DATA = gql`
   query GetResumeData {
     resume {
-      personalInfo {
-        name
-        title
-        email
-      }
-      experience {
-        company
-        position
-        duration
-      }
+      personalInfo { name, title, email }
+      experience { company, position, duration }
     }
   }
 `;
 
-// Use in React component
 const { loading, error, data } = useQuery(GET_RESUME_DATA);
 ```
 
 ### 5. Update Configuration
-Modify configuration files:
-- `vite.config.js` - Build configuration
-- `package.json` - Dependencies and scripts
-- `.github/workflows/deploy.yml` - CI/CD pipeline
+Modify: `vite.config.js` (Build configuration), `package.json` (Dependencies and scripts), `.github/workflows/deploy.yml` (CI/CD pipeline)
 
 ---
 
@@ -1403,17 +1218,12 @@ Modify configuration files:
 4. **Submit a pull request** with detailed description
 
 ### Code Standards
-- Follow existing code style and patterns
-- Write meaningful commit messages
-- Include appropriate documentation
-- Test changes across different browsers
-- Ensure responsive design compatibility
+- Follow existing code style and patterns | Write meaningful commit messages | Include appropriate documentation
+- Test changes across different browsers | Ensure responsive design compatibility
 
 ### Issue Reporting
-- Use GitHub Issues to report bugs
-- Provide detailed reproduction steps
-- Include browser and environment information
-- Suggest possible solutions if available
+- Use GitHub Issues to report bugs | Provide detailed reproduction steps
+- Include browser and environment information | Suggest possible solutions if available
 
 ---
 
@@ -1423,20 +1233,15 @@ Modify configuration files:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Usage Rights
-- **Free to use**: Personal and commercial projects
-- **Modification allowed**: Customize for your needs
-- **Distribution permitted**: Share and distribute
-- **Attribution appreciated**: Credit the original author
+- **Free to use**: Personal and commercial projects | **Modification allowed**: Customize for your needs
+- **Distribution permitted**: Share and distribute | **Attribution appreciated**: Credit the original author
 
 ### Support
-For questions, issues, or support:
-- Open a GitHub Issue
-- Check existing documentation
-- Review closed issues for solutions
+For questions, issues, or support: Open a GitHub Issue | Check existing documentation | Review closed issues for solutions
 
 ---
 
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 28px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 20px; margin-bottom: 12px; line-height: 1.3;">
 Why This Approach?
 </h2>
 
@@ -1453,17 +1258,14 @@ Why This Approach?
 - **Open Source**: Transparent code available for technical review
 
 ### Future Enhancements
-- **GraphQL Subscriptions**: Real-time data updates with GraphQL subscriptions
-- **GraphQL Federation**: Microservices architecture with Apollo Federation
-- **Additional Tools**: Expand DevOps utility collection
-- **Theming System**: Multiple color scheme options
-- **Internationalization**: Multi-language support
-- **Analytics Integration**: Usage tracking and insights
+- **GraphQL Subscriptions**: Real-time data updates | **GraphQL Federation**: Microservices architecture
+- **Additional Tools**: Expand DevOps utility collection | **Theming System**: Multiple color scheme options
+- **Internationalization**: Multi-language support | **Analytics Integration**: Usage tracking and insights
 - **API Integration**: Connect with external GraphQL and REST APIs
 
+---
 
-
-<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 12px; margin-top: 40px; line-height: 1.3;">
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 28px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 20px; margin-bottom: 12px; line-height: 1.3;">
 Angular-Style Component Architecture
 </h2>
 
@@ -1482,86 +1284,33 @@ src/components/
 ```
 
 ### Key Architectural Decisions
-
-1. **Component-Based Architecture**
-   - Each component is self-contained
-   - Clear separation of concerns
-   - Reusable, testable components
-
-2. **Data Flow**
-   - Centralized data store (`resumeData.js`)
-   - Unidirectional data flow
-   - Props-based component communication
-
-3. **Styling Approach**
-   - CSS-in-JS for component-scoped styles
-   - Consistent design tokens
-   - Responsive design patterns
-
-4. **Performance Optimizations**
-   - Code splitting by component
-   - Lazy loading where appropriate
-   - Memoization for expensive computations
+1. **Component-Based Architecture**: Each component is self-contained | Clear separation of concerns | Reusable, testable components
+2. **Data Flow**: Centralized data store (`resumeData.js`) | Unidirectional data flow | Props-based component communication
+3. **Styling Approach**: CSS-in-JS for component-scoped styles | Consistent design tokens | Responsive design patterns
+4. **Performance Optimizations**: Code splitting by component | Lazy loading where appropriate | Memoization for expensive computations
 
 ### Development Workflow
-
-1. **Add New Components**
-   ```bash
-   # Create new component directory
-   mkdir -p src/components/new-component
-   # Add component files
-   # Update imports in App.jsx
-   ```
-
-2. **Update Data**
-   - Edit `src/resumeData.js` for content changes
-   - Components automatically reflect updates
-
-3. **Add New Features**
-   - Create new component in appropriate directory
-   - Import and use in App.jsx
-   - Update data structure if needed
+1. **Add New Components**: Create new component directory → Add component files → Update imports in App.jsx
+2. **Update Data**: Edit `src/resumeData.js` for content changes → Components automatically reflect updates
+3. **Add New Features**: Create new component → Import and use in App.jsx → Update data structure if needed
 
 ### Best Practices
-
-1. **Component Design**
-   - Single responsibility principle
-   - Reusable, composable components
-   - Clear prop interfaces
-
-2. **State Management**
-   - Local state for UI state
-   - Props for data flow
-   - Context for shared state (if needed)
-
-3. **Performance**
-   - Memoize expensive calculations
-   - Lazy load heavy components
-   - Optimize re-renders with React.memo
-
-### Testing
-- Unit tests for business logic
-- Component snapshot tests
-- Integration tests for user flows
-
-### Deployment
-- Builds optimized for production
-- GitHub Pages deployment
-- Automated CI/CD pipeline
+1. **Component Design**: Single responsibility principle | Reusable, composable components | Clear prop interfaces
+2. **State Management**: Local state for UI state | Props for data flow | Context for shared state (if needed)
+3. **Performance**: Memoize expensive calculations | Lazy load heavy components | Optimize re-renders with React.memo
+4. **Testing**: Unit tests for business logic | Component snapshot tests | Integration tests for user flows
+5. **Deployment**: Builds optimized for production | GitHub Pages deployment | Automated CI/CD pipeline
 
 ---
 
-## AI Agent Instructions {#ai-agent-instructions}
+<h2 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 28px; color: #38bdf8; font-weight: 600; letter-spacing: -0.01em; border-bottom: 2px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px; margin-top: 20px; margin-bottom: 12px; line-height: 1.3;">
+AI Agent Instructions {#ai-agent-instructions}
+</h2>
 
 This section provides instructions for AI agents working with this DevOps resume project.
 
 ### Project Context
-This is an interactive DevOps resume built with React 18.2 and Vite 7.3, featuring:
-- Terminal-style loading experience with cyberpunk aesthetic
-- Integrated DevOps toolkit with 15+ utilities (Base64, JSON, SHA-256, UUID, etc.)
-- Collapsible quick links for cloud platforms (Azure, AWS, GCP)
-- Professional resume content with modern typography system
-- Performance-optimized with <180KB bundle size and <1s load time
+This is an interactive DevOps resume built with React 18.2 and Vite 7.3, featuring: Terminal-style loading experience with cyberpunk aesthetic | Integrated DevOps toolkit with 15+ utilities | Collapsible quick links for cloud platforms | Professional resume content with modern typography system | Performance-optimized with <180KB bundle size and <1s load time
 
 ### Code Architecture
 - **Component Structure**: Modular React components in `src/components/`
