@@ -67,9 +67,11 @@
 - **MAC Formatter**: Address formatting | **IP Converter**: Binary/hex/decimal | **Sed/Awk**: Text processing
 
 #### Sed/Awk Tool
-- **Find & Replace**: Pattern-based substitution with regex | **Delete Lines**: Remove matching patterns
-- **Extract Fields**: Get fields from delimited text | **Count Lines**: Statistics on lines/chars/words
-- **Print Lines**: Extract specific ranges | **Transform**: Case conversion, reverse, trim
+- **Find & Replace**: Pattern-based regex substitution | **Delete Lines**: Remove matching patterns
+- **Extract Fields**: Get fields from delimited text | **Count Lines**: Line/character/word statistics
+- **Print Lines**: Extract specific line ranges | **Transform**: Case conversion, reverse, trim
+- **Usage**: Enter pattern on line 1, replacement on line 2, then text to process
+- **Examples**: `s/old/new/g` for find-replace | `^#` to delete comments | `,` delimiter for CSV fields
 
 #### GraphQL Integration
 - **Query Optimization**: Automatic field selection | **Caching Layer**: Response caching with TTL
@@ -160,7 +162,41 @@ query GetResumePerformanceMetrics {
 
 ---
 
-## Getting Started
+## Sed/Awk Tool Guide
+
+The integrated Sed/Awk tool converts natural language commands into text processing operations. Use it for log analysis, data transformation, and text manipulation.
+
+### Operations
+
+| Operation | Input Format | Example |
+|-----------|--------------|---------|
+| **Find & Replace** | Line 1: regex pattern \| Line 2: replacement \| Line 3+: text | `s/error/warning/g` → replaces all errors with warnings |
+| **Delete Lines** | Line 1: pattern to match \| Line 2+: text | `^#` → removes all comment lines |
+| **Extract Fields** | Line 1: delimiter \| Line 2: field number \| Line 3+: text | `,` + `2` → extracts 2nd CSV field |
+| **Count Lines** | Just paste text | Counts total lines, characters, and words |
+| **Print Lines** | Line 1: start line \| Line 2: end line \| Line 3+: text | `5` + `10` → shows lines 5-10 |
+| **Transform** | Line 1: operation (upper/lower/reverse/trim) \| Line 2+: text | `upper` → converts to uppercase |
+
+### Common Patterns
+
+```
+Find & Replace:
+  s/pattern/replacement/g     # Replace all occurrences
+  s/^/prefix/                 # Add prefix to each line
+  s/$/suffix/                 # Add suffix to each line
+
+Delete Lines:
+  ^#                          # Remove comments
+  ^$                          # Remove empty lines
+  error|warning               # Remove lines with error or warning
+
+Extract Fields (CSV):
+  Delimiter: ,
+  Field: 1                    # First column
+  Field: 2                    # Second column
+```
+
+---
 
 ### Installation
 ```bash
