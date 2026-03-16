@@ -240,6 +240,79 @@ export default function Tools() {
       exchange: () => setOutput('Get-Mailbox\nNew-Mailbox -Name "User"\nSet-Mailbox -Identity user -ForwardingAddress admin@domain.com'),
       sharepoint: () => setOutput('Connect-PnPOnline -Url https://tenant.sharepoint.com\nGet-PnPList\nNew-PnPList -Title "List"')
     },
+    sedawk: {
+      name: 'Sed/Awk',
+      findReplace: () => {
+        try {
+          const lines = input.split('\n');
+          const [pattern, replacement] = lines.slice(0, 2);
+          if (!pattern || !replacement) {
+            setOutput('Format: Line 1: pattern to find\nLine 2: replacement text\nLine 3+: text to process');
+            return;
+          }
+          const text = lines.slice(2).join('\n');
+          const regex = new RegExp(pattern, 'g');
+          setOutput(text.replace(regex, replacement));
+        } catch { setOutput('Error: Invalid pattern or replacement') }
+      },
+      deleteLines: () => {
+        try {
+          const lines = input.split('\n');
+          const pattern = lines[0];
+          if (!pattern) {
+            setOutput('Format: Line 1: pattern to match\nLine 2+: text to process');
+            return;
+          }
+          const text = lines.slice(1).join('\n');
+          const regex = new RegExp(pattern);
+          const result = text.split('\n').filter(line => !regex.test(line)).join('\n');
+          setOutput(result);
+        } catch { setOutput('Error: Invalid pattern') }
+      },
+      extractFields: () => {
+        try {
+          const lines = input.split('\n');
+          const delimiter = lines[0] || ' ';
+          const fieldNum = parseInt(lines[1]) || 1;
+          const text = lines.slice(2).join('\n');
+          const result = text.split('\n').map(line => {
+            const fields = line.split(new RegExp(delimiter));
+            return fields[fieldNum - 1] || '';
+          }).join('\n');
+          setOutput(result);
+        } catch { setOutput('Error: Invalid field number or delimiter') }
+      },
+      countLines: () => {
+        try {
+          const lines = input.split('\n').filter(l => l.trim());
+          setOutput(`Total lines: ${lines.length}\nCharacters: ${input.length}\nWords: ${input.split(/\s+/).filter(w => w).length}`);
+        } catch { setOutput('Error counting lines') }
+      },
+      printLines: () => {
+        try {
+          const lines = input.split('\n');
+          const startLine = parseInt(lines[0]) || 1;
+          const endLine = parseInt(lines[1]) || startLine;
+          const text = lines.slice(2).join('\n');
+          const textLines = text.split('\n');
+          const result = textLines.slice(startLine - 1, endLine).join('\n');
+          setOutput(result);
+        } catch { setOutput('Error: Invalid line numbers') }
+      },
+      transform: () => {
+        try {
+          const lines = input.split('\n');
+          const operation = lines[0]?.toLowerCase() || 'upper';
+          const text = lines.slice(1).join('\n');
+          let result = text;
+          if (operation === 'upper') result = text.toUpperCase();
+          else if (operation === 'lower') result = text.toLowerCase();
+          else if (operation === 'reverse') result = text.split('\n').map(l => l.split('').reverse().join('')).join('\n');
+          else if (operation === 'trim') result = text.split('\n').map(l => l.trim()).join('\n');
+          setOutput(result);
+        } catch { setOutput('Error: Invalid operation') }
+      }
+    },
     downloads: {
       name: 'Downloads',
     },
@@ -353,7 +426,7 @@ export default function Tools() {
 
     // Tools that don't need input (reference/lookup tools)
     const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin', 'downloads'];
-    const needsInput = !noInputTools.includes(activeTab);
+    const needsInput = !noInputTools.includes(activeTab) && activeTab !== 'sedawk';
     const isCollapsed = collapsedTools[activeTab];
     
     return (
@@ -1173,6 +1246,9 @@ export default function Tools() {
               <div style={styles.linkDesc}>Parallel job processing</div>
             </div>
           </a>
+        </div>
+        )}
+      </div>
 
       <div style={styles.cloudLinksSection}>
         <div style={styles.linksSectionHeader}>
@@ -1433,6 +1509,9 @@ export default function Tools() {
               <div style={styles.linkDesc}>Web application firewall</div>
             </div>
           </a>
+        </div>
+        )}
+      </div>
 
       <div style={styles.cloudLinksSection}>
         <div style={styles.linksSectionHeader}>
@@ -1693,6 +1772,12 @@ export default function Tools() {
               <div style={styles.linkDesc}>API management service</div>
             </div>
           </a>
+        </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 const styles = {
   container: {

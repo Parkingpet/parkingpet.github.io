@@ -239,7 +239,7 @@ Professional DevOps terminal simulation
 
 #### DevOps Tools
 **Built-in utilities**  
-Base64, JSON, Timestamp, SHA-256, Regex  
+Base64, JSON, Timestamp, SHA-256, Regex, Sed/Awk  
 Copy-to-clipboard functionality  
 Interactive processing interface
 
@@ -322,7 +322,15 @@ Mobile: iOS 12+, Android 8+
 - **Base64 Encoding/Decoding**: Data transformation utilities | **JSON Processing**: Formatting, minification, validation
 - **Cryptographic Hashing**: SHA-256, MD5 implementations | **UUID Generation**: Unique identifier creation
 - **Regex Testing**: Pattern matching and validation | **Timestamp Conversion**: Unix/ISO 8601 conversions
-- **URL Encoding**: RFC 3986 compliant encoding
+- **URL Encoding**: RFC 3986 compliant encoding | **Sed/Awk Tool**: Text processing and transformation
+
+#### Sed/Awk Tool Features
+- **Find & Replace**: Pattern-based text substitution with regex support
+- **Delete Lines**: Remove lines matching specific patterns
+- **Extract Fields**: Extract specific fields from delimited text (CSV, TSV, etc.)
+- **Count Lines**: Get statistics on lines, characters, and words
+- **Print Lines**: Extract specific line ranges from text
+- **Transform**: Convert text case (upper, lower), reverse, or trim whitespace
 
 #### 4. GraphQL Integration
 - **Query Optimization**: Automatic field selection | **Caching Layer**: Response caching with TTL
