@@ -219,10 +219,10 @@ const styles = {
   container: {
     maxWidth: '1100px',
     margin: '0 auto',
-    padding: '24px 20px 40px',
+    padding: '16px 16px 32px',
     color: '#e2e8f0',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
-    lineHeight: 1.2,
-    fontSize: '18px'
+    lineHeight: 1.1,
+    fontSize: '16px'
   }
 };

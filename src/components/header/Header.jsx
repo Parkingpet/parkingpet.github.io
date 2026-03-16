@@ -87,36 +87,36 @@ const styles = {
   header: {
     background: 'linear-gradient(180deg, rgba(56,189,248,.10), rgba(56,189,248,0))',
     border: '1px solid #23314d',
-    borderRadius: '12px',
-    padding: '20px 20px 16px',
+    borderRadius: '8px',
+    padding: '14px 16px 12px',
     boxShadow: '0 10px 30px rgba(0,0,0,.35)'
   },
   headerName: {
-    margin: '0 0 12px 0',
-    fontSize: '44px',
+    margin: '0 0 8px 0',
+    fontSize: '40px',
     fontWeight: 700,
     color: '#38bdf8',
     textAlign: 'center',
     letterSpacing: '-0.02em',
     textShadow: '0 0 15px rgba(56,189,248,0.7)',
-    lineHeight: 1.0
+    lineHeight: 0.95
   },
   nav: {
-    marginTop: '10px',
+    marginTop: '8px',
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '3px',
+    gap: '2px',
     borderBottom: '2px solid #38bdf8',
     justifyContent: 'center'
   },
   navLink: {
     display: 'inline-block',
-    padding: '8px 12px',
+    padding: '6px 10px',
     border: '1px solid #23314d',
     borderBottom: 'none',
     background: 'rgba(17,28,51,.6)',
-    borderRadius: '4px 4px 0 0',
-    fontSize: '14px',
+    borderRadius: '3px 3px 0 0',
+    fontSize: '12px',
     fontWeight: 500,
     color: '#38bdf8',
     textDecoration: 'none',
@@ -126,8 +126,8 @@ const styles = {
     cursor: 'pointer'
   },
   subtitle: {
-    margin: '10px 0 0 0',
-    fontSize: '20px',
+    margin: '8px 0 0 0',
+    fontSize: '18px',
     fontWeight: 600,
     color: '#10b981',
     textAlign: 'center',
@@ -135,18 +135,18 @@ const styles = {
   },
   badges: {
     display: 'flex',
-    gap: '8px',
+    gap: '6px',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    margin: '12px 0',
+    margin: '8px 0',
     alignItems: 'center'
   },
   meta: {
-    fontSize: '14px',
+    fontSize: '12px',
     color: '#94a3b8',
     textAlign: 'center',
-    marginTop: '10px',
-    lineHeight: 1.2
+    marginTop: '8px',
+    lineHeight: 1.1
   },
   metaLink: {
     color: '#38bdf8',

@@ -1783,35 +1783,35 @@ const styles = {
   container: {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
-    borderRadius: '12px',
-    padding: '16px',
-    marginTop: '12px'
+    borderRadius: '6px',
+    padding: '12px',
+    marginTop: '8px'
   },
   sectionTitle: {
-    margin: '0 0 12px 0',
+    margin: '0 0 8px 0',
     color: '#38bdf8',
-    fontSize: '28px',
+    fontSize: '24px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '8px'
+    paddingBottom: '6px'
   },
   tabs: {
     display: 'flex',
-    gap: '4px',
-    marginBottom: '12px',
+    gap: '2px',
+    marginBottom: '8px',
     flexWrap: 'wrap',
     borderBottom: '2px solid rgba(56, 189, 248, 0.2)',
-    paddingBottom: '8px'
+    paddingBottom: '6px'
   },
   tab: {
-    padding: '6px 12px',
+    padding: '4px 10px',
     background: 'rgba(17, 28, 51, 0.6)',
     border: '1px solid #23314d',
-    borderRadius: '6px',
+    borderRadius: '4px',
     color: '#94a3b8',
     cursor: 'pointer',
-    fontSize: '13px',
+    fontSize: '11px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
@@ -1824,28 +1824,28 @@ const styles = {
   toolBody: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '8px'
+    gap: '6px'
   },
   collapseHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '8px',
-    paddingBottom: '6px',
+    marginBottom: '6px',
+    paddingBottom: '4px',
     borderBottom: '1px solid #23314d'
   },
   toolTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   collapseButton: {
-    padding: '6px 10px',
+    padding: '4px 8px',
     background: 'rgba(56, 189, 248, 0.1)',
     border: '1px solid #38bdf8',
-    borderRadius: '4px',
+    borderRadius: '3px',
     color: '#38bdf8',
     cursor: 'pointer',
     fontSize: '11px',

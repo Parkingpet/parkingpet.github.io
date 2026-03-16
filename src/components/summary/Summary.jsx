@@ -44,44 +44,44 @@ const styles = {
   container: {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
-    padding: '16px',
-    marginTop: '12px'
+    borderRadius: '6px',
+    padding: '12px',
+    marginTop: '8px'
   },
   title: {
     color: '#38bdf8',
-    margin: '0 0 12px 0',
-    fontSize: '28px',
+    margin: '0 0 8px 0',
+    fontSize: '24px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '8px'
+    paddingBottom: '6px'
   },
   summaryContent: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '10px',
-    marginBottom: '16px'
+    gap: '6px',
+    marginBottom: '10px'
   },
   paragraph: {
     color: '#e2e8f0',
     margin: '0',
-    lineHeight: 1.2,
-    fontSize: '16px'
+    lineHeight: 1.1,
+    fontSize: '14px'
   },
   competenciesGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-    gap: '12px',
-    marginBottom: '12px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: '8px',
+    marginBottom: '8px'
   },
   competencyTag: {
     background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%)',
     border: '1px solid rgba(56, 189, 248, 0.3)',
-    borderRadius: '6px',
-    padding: '10px 14px',
+    borderRadius: '4px',
+    padding: '8px 12px',
     color: '#38bdf8',
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: 500,
     textAlign: 'center',
     transition: 'all 0.3s ease',

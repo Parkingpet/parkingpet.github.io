@@ -34,46 +34,46 @@ const styles = {
   container: {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
-    borderRadius: '12px',
-    padding: '24px',
-    marginTop: '24px'
+    borderRadius: '6px',
+    padding: '12px',
+    marginTop: '8px'
   },
   title: {
     color: '#38bdf8',
-    margin: '0 0 24px 0',
-    fontSize: '32px',
+    margin: '0 0 8px 0',
+    fontSize: '24px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '12px'
+    paddingBottom: '6px'
   },
   grid: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    gap: '24px'
+    gap: '12px'
   },
   column: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '16px'
+    gap: '10px'
   },
   skillCategory: {
     background: 'rgba(11, 18, 32, 0.5)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
-    padding: '16px'
+    borderRadius: '4px',
+    padding: '10px'
   },
   categoryTitle: {
     color: '#38bdf8',
-    margin: '0 0 12px 0',
-    fontSize: '22px',
+    margin: '0 0 6px 0',
+    fontSize: '18px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   skillsList: {
     color: '#e2e8f0',
     margin: '0',
-    lineHeight: 1.6,
-    fontSize: '16px'
+    lineHeight: 1.1,
+    fontSize: '13px'
   }
 };
