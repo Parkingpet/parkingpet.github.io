@@ -11,7 +11,10 @@ export default function Tools() {
     consoles: true,
     azure: true,
     aws: true,
-    gcp: true
+    gcp: true,
+    docs: true,
+    testing: true,
+    registries: true
   });
 
   const tools = {
@@ -1510,6 +1513,227 @@ export default function Tools() {
             </div>
           </a>
         </div>
+        )}
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Documentation & Learning</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, docs: !prev.docs }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.docs ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.docs && (
+          <div style={styles.linksGrid}>
+            <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📚</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>MDN Web Docs</div>
+                <div style={styles.linkDesc}>Web technology reference and guides</div>
+              </div>
+            </a>
+
+            <a href="https://react.dev" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚛️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>React Documentation</div>
+                <div style={styles.linkDesc}>Official React library docs</div>
+              </div>
+            </a>
+
+            <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⚡</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Vite Documentation</div>
+                <div style={styles.linkDesc}>Next generation build tool</div>
+              </div>
+            </a>
+
+            <a href="https://graphql.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📊</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>GraphQL Official</div>
+                <div style={styles.linkDesc}>Query language for APIs</div>
+              </div>
+            </a>
+
+            <a href="https://nodejs.org/docs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🟢</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Node.js Documentation</div>
+                <div style={styles.linkDesc}>JavaScript runtime docs</div>
+              </div>
+            </a>
+
+            <a href="https://typescriptlang.org/docs" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📘</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>TypeScript Documentation</div>
+                <div style={styles.linkDesc}>Typed JavaScript language</div>
+              </div>
+            </a>
+
+            <a href="https://owasp.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🛡️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>OWASP Security</div>
+                <div style={styles.linkDesc}>Web application security</div>
+              </div>
+            </a>
+
+            <a href="https://nist.gov/cybersecurity" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔐</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>NIST Cybersecurity</div>
+                <div style={styles.linkDesc}>National cybersecurity standards</div>
+              </div>
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Testing & Quality Tools</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, testing: !prev.testing }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.testing ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.testing && (
+          <div style={styles.linksGrid}>
+            <a href="https://postman.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📮</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Postman</div>
+                <div style={styles.linkDesc}>API testing and development</div>
+              </div>
+            </a>
+
+            <a href="https://insomnia.rest" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>😴</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Insomnia</div>
+                <div style={styles.linkDesc}>REST client and API testing</div>
+              </div>
+            </a>
+
+            <a href="https://developers.google.com/web/tools/lighthouse" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔦</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Lighthouse</div>
+                <div style={styles.linkDesc}>Web performance auditing</div>
+              </div>
+            </a>
+
+            <a href="https://webpagetest.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>⏱️</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>WebPageTest</div>
+                <div style={styles.linkDesc}>Website performance testing</div>
+              </div>
+            </a>
+
+            <a href="https://jestjs.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🃏</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Jest Testing</div>
+                <div style={styles.linkDesc}>JavaScript testing framework</div>
+              </div>
+            </a>
+
+            <a href="https://cypress.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🌳</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Cypress E2E</div>
+                <div style={styles.linkDesc}>End-to-end testing framework</div>
+              </div>
+            </a>
+
+            <a href="https://snyk.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐍</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Snyk Security</div>
+                <div style={styles.linkDesc}>Vulnerability scanning</div>
+              </div>
+            </a>
+
+            <a href="https://sonarqube.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🔍</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>SonarQube</div>
+                <div style={styles.linkDesc}>Code quality analysis</div>
+              </div>
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>Package Registries</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, registries: !prev.registries }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.registries ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.registries && (
+          <div style={styles.linksGrid}>
+            <a href="https://npmjs.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>📦</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>npm Registry</div>
+                <div style={styles.linkDesc}>JavaScript package registry</div>
+              </div>
+            </a>
+
+            <a href="https://pypi.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐍</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>PyPI</div>
+                <div style={styles.linkDesc}>Python package index</div>
+              </div>
+            </a>
+
+            <a href="https://mvnrepository.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>☕</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Maven Repository</div>
+                <div style={styles.linkDesc}>Java package repository</div>
+              </div>
+            </a>
+
+            <a href="https://rubygems.org" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>💎</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>RubyGems</div>
+                <div style={styles.linkDesc}>Ruby package registry</div>
+              </div>
+            </a>
+
+            <a href="https://crates.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🦀</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Cargo Crates</div>
+                <div style={styles.linkDesc}>Rust package registry</div>
+              </div>
+            </a>
+
+            <a href="https://hub.docker.com" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+              <div style={styles.linkIcon}>🐳</div>
+              <div style={styles.linkContent}>
+                <div style={styles.linkName}>Docker Hub</div>
+                <div style={styles.linkDesc}>Container image registry</div>
+              </div>
+            </a>
+          </div>
         )}
       </div>
 
