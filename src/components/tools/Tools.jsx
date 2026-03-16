@@ -1109,9 +1109,70 @@ export default function Tools() {
               <div style={styles.linkDesc}>Application monitoring</div>
             </div>
           </a>
-          </div>
-        )}
-      </div>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FvirtualNetworks" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🌐</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Virtual Networks</div>
+              <div style={styles.linkDesc}>Network infrastructure</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FloadBalancers" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚖️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Load Balancers</div>
+              <div style={styles.linkDesc}>Distribute traffic</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FapplicationGateways" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🚪</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Application Gateway</div>
+              <div style={styles.linkDesc}>Web traffic management</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Cdn%2Fprofiles" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>CDN Profiles</div>
+              <div style={styles.linkDesc}>Content delivery network</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ServiceBus%2Fnamespaces" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📨</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Service Bus</div>
+              <div style={styles.linkDesc}>Messaging service</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.EventHub%2Fnamespaces" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Event Hubs</div>
+              <div style={styles.linkDesc}>Event streaming platform</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Compute%2FcontainerGroups" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🐳</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Container Instances</div>
+              <div style={styles.linkDesc}>Serverless containers</div>
+            </div>
+          </a>
+
+          <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Batch%2FbatchAccounts" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚙️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Batch Service</div>
+              <div style={styles.linkDesc}>Parallel job processing</div>
+            </div>
+          </a>
 
       <div style={styles.cloudLinksSection}>
         <div style={styles.linksSectionHeader}>
@@ -1300,9 +1361,78 @@ export default function Tools() {
               <div style={styles.linkDesc}>Key management service</div>
             </div>
           </a>
-          </div>
-        )}
-      </div>
+
+          <a href="https://console.aws.amazon.com/apigateway" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🚪</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>API Gateway</div>
+              <div style={styles.linkDesc}>Create and manage APIs</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/states" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔄</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Step Functions</div>
+              <div style={styles.linkDesc}>Workflow orchestration</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/batch" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⚙️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Batch Service</div>
+              <div style={styles.linkDesc}>Batch job processing</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/elasticmapreduce" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📊</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>EMR Big Data</div>
+              <div style={styles.linkDesc}>Hadoop and Spark clusters</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/kinesis" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Kinesis Streaming</div>
+              <div style={styles.linkDesc}>Real-time data streaming</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/athena" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔍</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Athena Analytics</div>
+              <div style={styles.linkDesc}>Query S3 data with SQL</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/redshift" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📈</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Redshift Data Warehouse</div>
+              <div style={styles.linkDesc}>Data warehouse service</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/sagemaker" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🤖</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>SageMaker ML</div>
+              <div style={styles.linkDesc}>Machine learning platform</div>
+            </div>
+          </a>
+
+          <a href="https://console.aws.amazon.com/waf" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🛡️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>WAF Security</div>
+              <div style={styles.linkDesc}>Web application firewall</div>
+            </div>
+          </a>
 
       <div style={styles.cloudLinksSection}>
         <div style={styles.linksSectionHeader}>
@@ -1491,46 +1621,112 @@ export default function Tools() {
               <div style={styles.linkDesc}>Stream and batch processing</div>
             </div>
           </a>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+
+          <a href="https://console.cloud.google.com/vertex-ai" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🤖</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Vertex AI ML</div>
+              <div style={styles.linkDesc}>Machine learning platform</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/appengine" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🚀</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>App Engine</div>
+              <div style={styles.linkDesc}>Managed application platform</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/cloudtasks" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>✅</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Tasks</div>
+              <div style={styles.linkDesc}>Task queue service</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/scheduler" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>⏰</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Scheduler</div>
+              <div style={styles.linkDesc}>Cron job scheduling</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/security/command-center" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🛡️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Security Command Center</div>
+              <div style={styles.linkDesc}>Security and compliance</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/security/dlp" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🔒</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Data Loss Prevention</div>
+              <div style={styles.linkDesc}>Protect sensitive data</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/security/cloud-armor" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🛡️</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Armor</div>
+              <div style={styles.linkDesc}>DDoS and WAF protection</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/apigee" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>🚪</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Apigee API Management</div>
+              <div style={styles.linkDesc}>API platform and gateway</div>
+            </div>
+          </a>
+
+          <a href="https://console.cloud.google.com/endpoints" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
+            <div style={styles.linkIcon}>📡</div>
+            <div style={styles.linkContent}>
+              <div style={styles.linkName}>Cloud Endpoints</div>
+              <div style={styles.linkDesc}>API management service</div>
+            </div>
+          </a>
 
 const styles = {
   container: {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '24px',
-    marginTop: '24px'
+    padding: '16px',
+    marginTop: '12px'
   },
   sectionTitle: {
-    margin: '0 0 24px 0',
+    margin: '0 0 12px 0',
     color: '#38bdf8',
-    fontSize: '32px',
+    fontSize: '28px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '12px'
+    paddingBottom: '8px'
   },
   tabs: {
     display: 'flex',
-    gap: '8px',
-    marginBottom: '20px',
+    gap: '4px',
+    marginBottom: '12px',
     flexWrap: 'wrap',
     borderBottom: '2px solid rgba(56, 189, 248, 0.2)',
-    paddingBottom: '12px'
+    paddingBottom: '8px'
   },
   tab: {
-    padding: '10px 16px',
+    padding: '6px 12px',
     background: 'rgba(17, 28, 51, 0.6)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
+    borderRadius: '6px',
     color: '#94a3b8',
     cursor: 'pointer',
-    fontSize: '16px',
+    fontSize: '13px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
@@ -1543,175 +1739,175 @@ const styles = {
   toolBody: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px'
+    gap: '8px'
   },
   collapseHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '12px',
-    paddingBottom: '8px',
+    marginBottom: '8px',
+    paddingBottom: '6px',
     borderBottom: '1px solid #23314d'
   },
   toolTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '22px',
+    fontSize: '18px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   collapseButton: {
-    padding: '8px 12px',
+    padding: '6px 10px',
     background: 'rgba(56, 189, 248, 0.1)',
     border: '1px solid #38bdf8',
-    borderRadius: '6px',
+    borderRadius: '4px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '12px',
+    fontSize: '11px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
   textarea: {
     width: '100%',
-    minHeight: '100px',
-    padding: '12px',
+    minHeight: '80px',
+    padding: '8px',
     background: 'rgba(11, 18, 32, 0.8)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
+    borderRadius: '6px',
     color: '#e2e8f0',
     fontFamily: 'monospace',
-    fontSize: '16px',
+    fontSize: '14px',
     resize: 'vertical',
     fontWeight: 400
   },
   actions: {
     display: 'flex',
-    gap: '8px',
+    gap: '6px',
     flexWrap: 'wrap'
   },
   actionButton: {
-    padding: '10px 16px',
+    padding: '8px 12px',
     background: 'rgba(56, 189, 248, 0.2)',
     border: '1px solid #38bdf8',
-    borderRadius: '8px',
+    borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '16px',
+    fontSize: '13px',
     fontWeight: 500,
     transition: 'all 0.2s ease'
   },
   contactContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '16px'
+    gap: '12px'
   },
   contactCard: {
     background: 'rgba(11, 18, 32, 0.8)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
-    padding: '16px',
+    borderRadius: '6px',
+    padding: '12px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px'
+    gap: '8px'
   },
   contactTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '20px',
+    fontSize: '16px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   contactValue: {
     color: '#e2e8f0',
-    fontSize: '16px',
+    fontSize: '14px',
     fontFamily: 'monospace',
-    padding: '10px',
+    padding: '8px',
     background: 'rgba(17, 28, 51, 0.6)',
     borderRadius: '4px',
     border: '1px solid #23314d',
     fontWeight: 400
   },
   copyButton: {
-    padding: '10px 16px',
+    padding: '8px 12px',
     background: 'rgba(56, 189, 248, 0.2)',
     border: '1px solid #38bdf8',
-    borderRadius: '6px',
+    borderRadius: '4px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: 500,
     alignSelf: 'flex-start',
     transition: 'all 0.2s ease'
   },
   contactNote: {
     color: '#94a3b8',
-    fontSize: '13px',
+    fontSize: '12px',
     fontStyle: 'italic',
-    padding: '12px',
+    padding: '8px',
     background: 'rgba(17, 28, 51, 0.3)',
     borderRadius: '4px',
     border: '1px solid #23314d',
-    lineHeight: 1.6
+    lineHeight: 1.4
   },
   linksSection: {
-    marginTop: '32px',
-    paddingTop: '24px',
+    marginTop: '16px',
+    paddingTop: '12px',
     borderTop: '2px solid rgba(56, 189, 248, 0.3)'
   },
   linksSectionHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '16px'
+    marginBottom: '8px'
   },
   cloudLinksSection: {
-    marginTop: '32px',
-    paddingTop: '24px',
+    marginTop: '16px',
+    paddingTop: '12px',
     borderTop: '2px solid rgba(56, 189, 248, 0.3)'
   },
   linksTitle: {
-    margin: '0 0 16px 0',
+    margin: '0 0 8px 0',
     color: '#38bdf8',
-    fontSize: '20px',
+    fontSize: '16px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   linksGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '16px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+    gap: '10px'
   },
   linkCard: {
     display: 'flex',
-    gap: '12px',
-    padding: '16px',
+    gap: '10px',
+    padding: '12px',
     background: 'rgba(11, 18, 32, 0.8)',
     border: '1px solid #23314d',
-    borderRadius: '8px',
+    borderRadius: '6px',
     textDecoration: 'none',
     color: 'inherit',
     transition: 'all 0.2s ease',
     cursor: 'pointer'
   },
   linkIcon: {
-    fontSize: '24px',
-    minWidth: '32px',
+    fontSize: '20px',
+    minWidth: '28px',
     textAlign: 'center'
   },
   linkContent: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '4px'
+    gap: '2px'
   },
   linkName: {
     color: '#38bdf8',
-    fontSize: '16px',
+    fontSize: '14px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   linkDesc: {
     color: '#94a3b8',
-    fontSize: '15px',
-    lineHeight: 1.4
+    fontSize: '12px',
+    lineHeight: 1.3
   }
 };
