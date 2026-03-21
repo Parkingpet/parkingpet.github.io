@@ -1,77 +1,71 @@
-# Mustafa "Moose" McLinn - Interactive DevOps Resume Platform
+# 🚀 Mustafa "Moose" McLinn
 
-> A modern, interactive resume platform built with React 18.2 and Vite 7.3, featuring integrated DevOps tools, real-time utilities, and a comprehensive professional portfolio.
+> Interactive DevOps Resume Platform | React 18.2 + Vite 7.3 | DevOps Toolkit | <180KB Gzipped
 
 [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
-[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white&style=flat-square)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev)
+[![Node.js](https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white&style=flat-square)](https://nodejs.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-**[🌐 Visit Live Site](https://parkingpet.github.io)** | **[📦 GitHub Repo](https://github.com/Parkingpet/parkingpet.github.io)** | **[🍴 Fork](https://github.com/Parkingpet/parkingpet.github.io/fork)**
+**[🌐 Live Site](https://parkingpet.github.io)** • **[📦 Repository](https://github.com/Parkingpet/parkingpet.github.io)** • **[🍴 Fork](https://github.com/Parkingpet/parkingpet.github.io/fork)**
 
 ---
 
-## 📋 Overview
+## ⚡ Quick Stats
 
-An interactive, feature-rich resume platform showcasing professional experience, technical skills, and integrated DevOps utilities. Built with modern web technologies and optimized for performance.
-
-### Key Highlights
-
-- **20+ DevOps Tools** - Base64, JSON, Timestamp, UUID, URL, SHA-256, Regex, JWT, YAML, MAC, IP, Subnet Calculator, CLI Commands, and more
-- **25+ Quick Links** - Organized access to popular DevOps and development platforms
-- **Interactive UI** - Smooth animations, responsive design, and intuitive navigation
-- **High Performance** - <180KB gzipped, 95+ Lighthouse score, <1.2s time to interactive
-- **Modern Stack** - React 18.2, Vite 7.3, CSS-in-JS, GitHub Pages deployment
+| Metric | Value |
+|--------|-------|
+| **Build Time** | ~1 second |
+| **Bundle Size** | <180KB gzipped |
+| **Lighthouse** | 95+ |
+| **First Paint** | <0.8s |
+| **Interactive** | <1.2s |
+| **Uptime** | 99.97% |
 
 ---
 
 ## 🎯 Features
 
-### Interactive DevOps Tools
+### 🛠️ 20+ DevOps Tools
 
-| Tool | Features |
-|------|----------|
-| **Base64** | Encode/Decode text |
-| **JSON** | Format, minify, validate |
-| **Timestamp** | Unix ↔ ISO conversion |
-| **UUID** | Generate v4 identifiers |
-| **URL** | Encode/Decode URLs |
-| **SHA-256** | Cryptographic hashing |
-| **Regex** | Pattern matching & testing |
-| **JWT Decoder** | Token parsing |
-| **YAML to JSON** | Format conversion |
-| **MAC Formatter** | Address formatting (colon, hyphen, dot, continuous) |
-| **IP Converter** | Binary, hex, decimal conversion |
-| **Subnet Calculator** | CIDR notation analysis |
-| **CLI Commands** | Docker, Kubectl, Git, Terraform, AWS references |
-| **Infrastructure** | Port, CIDR, DNS, SSL references |
-| **DevOps Tools** | CI/CD, Monitoring, Container, Orchestration lists |
-| **MS Admin** | Active Directory, PowerShell, Exchange, SharePoint commands |
-| **Sed/Awk** | Find & Replace, Delete, Extract, Count, Print, Transform |
+**Encoding & Hashing**
+- Base64 (Encode/Decode)
+- SHA-256 (Cryptographic hashing)
+- URL Encoding (RFC 3986)
 
-### Quick Reference Links
+**Data Processing**
+- JSON (Format, minify, validate)
+- YAML to JSON (Conversion)
+- Regex (Pattern matching & testing)
 
-**25+ organized links** to popular platforms:
-- Cloud: AWS, GCP, Azure
-- Containers: Docker, Kubernetes, Podman
-- Infrastructure: Terraform, Ansible, Chef, Puppet
-- CI/CD: Jenkins, GitLab, GitHub Actions, Bitbucket
-- Monitoring: Prometheus, Grafana, Datadog, New Relic, Splunk
-- Databases: PostgreSQL, MongoDB, Redis, MySQL
-- And many more...
+**Utilities**
+- Timestamp (Unix ↔ ISO)
+- UUID (v4 generation)
+- JWT Decoder (Token parsing)
+- MAC Formatter (Colon, hyphen, dot, continuous)
+- IP Converter (Binary, hex, decimal)
+- Subnet Calculator (CIDR analysis)
 
-### Professional Portfolio
+**References**
+- CLI Commands (Docker, Kubectl, Git, Terraform, AWS)
+- Infrastructure (Ports, CIDR, DNS, SSL)
+- DevOps Tools (CI/CD, Monitoring, Containers, Orchestration)
+- MS Admin (AD, PowerShell, Exchange, SharePoint)
+- Sed/Awk (Find & Replace, Delete, Extract, Count, Print, Transform)
 
-- **Summary** - Professional overview and core competencies
-- **Technical Skills** - Organized by category
-- **Projects** - Portfolio with descriptions and links
+### 📋 Professional Portfolio
+
+- **Summary** - Professional overview & core competencies
+- **Skills** - Technical expertise by category
+- **Projects** - Portfolio with descriptions & links
 - **Experience** - Work history with achievements
 - **Education** - Educational background
-- **Clients** - Notable partnerships and long-term relationships
+- **Clients** - Notable partnerships
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Installation
 
@@ -84,97 +78,67 @@ npm install
 ### Development
 
 ```bash
-npm run dev          # Start dev server (localhost:5173)
-npm run build        # Production build
-npm run preview      # Preview production build
-npm run lint         # Check code quality
+npm run dev       # Start dev server (localhost:5173)
+npm run build     # Production build
+npm run preview   # Preview build
+npm run lint      # Code quality check
 ```
-
-### Deployment
-
-Automatic deployment via GitHub Actions on push to main branch.
-Hosted on GitHub Pages at https://parkingpet.github.io
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Tech Stack
 
-### Technology Stack
-
-| Category | Technology |
-|----------|-----------|
+| Layer | Technology |
+|-------|-----------|
 | **Frontend** | React 18.2, Vite 7.3, JavaScript ES2020 |
-| **Styling** | CSS-in-JS, CSS Variables, CSS Grid/Flexbox |
+| **Styling** | CSS-in-JS, CSS Variables, Grid/Flexbox |
 | **State** | React Hooks (useState, useEffect, useContext) |
-| **API** | GraphQL, REST API, JSON, Fetch API |
-| **DevOps** | GitHub Actions, GitHub Pages, Git, npm |
-| **Tools** | ESLint, Prettier, VS Code, Chrome DevTools |
+| **API** | GraphQL, REST, JSON, Fetch |
+| **Build** | Vite, ESLint, Prettier |
 
-### Project Structure
+---
+
+## 📁 Project Structure
 
 ```
 src/
-├── App.jsx                    # Root component
-├── main.jsx                   # Entry point
-├── index.css                  # Global styles & animations
-├── resumeData.js              # Data source
+├── App.jsx                 # Root component
+├── main.jsx                # Entry point
+├── index.css               # Global styles
+├── resumeData.js           # Data source
 └── components/
-    ├── header/                # Navigation & header
-    ├── loading/               # Terminal animation
-    ├── summary/               # Professional summary
-    ├── skills/                # Technical skills
-    ├── tools/                 # DevOps tools interface
-    ├── projects/              # Portfolio
-    ├── experience/            # Work history
-    ├── education/             # Education section
-    ├── clients/               # Client partnerships
-    ├── mcp/                   # MCP servers
-    ├── email/                 # Email widget
-    ├── graphql/               # GraphQL examples
-    └── footer/                # Footer
+    ├── header/             # Navigation
+    ├── summary/            # Professional summary
+    ├── skills/             # Technical skills
+    ├── tools/              # DevOps tools
+    ├── projects/           # Portfolio
+    ├── experience/         # Work history
+    ├── education/          # Education
+    ├── clients/            # Partnerships
+    ├── loading/            # Loading animation
+    ├── footer/             # Footer
+    └── mcp/                # MCP servers
 ```
 
 ---
 
-## 📊 Performance Metrics
+## 🔄 CI/CD Pipeline
 
-| Metric | Target | Actual |
-|--------|--------|--------|
-| Build Time | ~1s | ✓ 939ms |
-| Bundle Size | <180KB | ✓ 69.05KB gzipped |
-| First Paint | <0.8s | ✓ <0.8s |
-| Time to Interactive | <1.2s | ✓ <1.2s |
-| Lighthouse Score | 95+ | ✓ 95+ |
-| Uptime | 99.95% | ✓ 99.97% |
-| API Response | <25ms p95 | ✓ <18ms |
+### GitHub Actions Workflow
 
----
+**Automated Deployment**
+- Triggers on push to `main` branch
+- Runs linting & build checks
+- Deploys to GitHub Pages
+- Zero-downtime deployment
 
-## 🎨 Design System
+**Build Process**
+1. Install dependencies
+2. Run ESLint checks
+3. Build with Vite
+4. Deploy to GitHub Pages
 
-### Color Palette
-
-- **Primary**: Cyan (#38bdf8) - Main accent
-- **Secondary**: Emerald (#10b981) - Complementary accent
-- **Text Primary**: Slate (#e2e8f0) - Main text
-- **Text Secondary**: Slate (#cbd5e1) - Secondary text
-- **Text Muted**: Slate (#94a3b8) - Muted text
-- **Border**: Slate (#23314d) - Subtle borders
-
-### Typography
-
-- **Font Family**: System fonts with fallbacks
-- **Heading Sizes**: 24px (h2), 18px (h3), 16px (h4)
-- **Font Weights**: 400 (normal), 600 (semibold), 700 (bold)
-- **Letter Spacing**: -0.01em to -0.02em for headings
-
-### Visual Effects
-
-- Animated grid background
-- CRT scanline effect
-- Particle animation
-- Smooth transitions
-- Hover effects on interactive elements
+**Status**: [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
 
 ---
 
@@ -183,9 +147,9 @@ src/
 - ✓ Semantic HTML
 - ✓ ARIA labels
 - ✓ Keyboard navigation
-- ✓ Color contrast compliance (WCAG AA)
+- ✓ WCAG AA contrast
 - ✓ Focus indicators
-- ✓ Skip to main content link
+- ✓ Skip links
 
 ---
 
@@ -193,10 +157,10 @@ src/
 
 | Browser | Support |
 |---------|---------|
-| Chrome | Latest 2 versions |
-| Firefox | Latest 2 versions |
-| Safari | Latest 2 versions |
-| Edge | Latest 2 versions |
+| Chrome | Latest 2 |
+| Firefox | Latest 2 |
+| Safari | Latest 2 |
+| Edge | Latest 2 |
 | Mobile | iOS 12+, Android 8+ |
 
 ---
@@ -204,45 +168,139 @@ src/
 ## 📚 Resources
 
 - **Live Site**: https://parkingpet.github.io
-- **GitHub Repository**: https://github.com/Parkingpet/parkingpet.github.io
-- **Report Issues**: https://github.com/Parkingpet/parkingpet.github.io/issues
-- **View PRs**: https://github.com/Parkingpet/parkingpet.github.io/pulls
+- **GitHub**: https://github.com/Parkingpet/parkingpet.github.io
+- **Issues**: https://github.com/Parkingpet/parkingpet.github.io/issues
+- **Pull Requests**: https://github.com/Parkingpet/parkingpet.github.io/pulls
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how to get started:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE) for details
 
 ---
 
-## 📈 Status
+## 📊 Status
 
-| Metric | Value |
-|--------|-------|
-| Last Updated | March 2026 |
-| Status | Active Development |
-| Uptime | 99.97% |
-| Version | 1.0.0 |
+| Item | Value |
+|------|-------|
+| **Last Updated** | March 2026 |
+| **Status** | Active Development |
+| **Uptime** | 99.97% |
+| **Version** | 1.0.0 |
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by Mustafa "Moose" McLinn**
+**Built with ❤️ by Parkingpet**
 
 [GitHub](https://github.com/Parkingpet) • [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9) • [Email](mailto:mustafa.mclinn@outlook.com)
 
 </div>
+
+---
+
+## 🔗 DevOps & Development Tools
+
+### Cloud Platforms
+- [AWS Console](https://console.aws.amazon.com) - Amazon Web Services
+- [GCP Console](https://console.cloud.google.com) - Google Cloud Platform
+- [Azure Portal](https://portal.azure.com) - Microsoft Azure
+
+### Containers & Orchestration
+- [Docker](https://docker.com) - Container platform
+- [Kubernetes](https://kubernetes.io) - Container orchestration
+- [Podman](https://podman.io) - Container engine
+
+### Infrastructure as Code
+- [Terraform](https://terraform.io) - Infrastructure automation
+- [Ansible](https://ansible.com) - Configuration management
+- [Chef](https://chef.io) - Infrastructure automation
+- [Puppet](https://puppet.com) - Infrastructure as Code
+
+### CI/CD Platforms
+- [GitHub Actions](https://github.com/features/actions) - CI/CD automation
+- [GitLab CI](https://gitlab.com) - DevOps platform
+- [Jenkins](https://jenkins.io) - Automation server
+- [CircleCI](https://circleci.com) - CI/CD platform
+- [Bitbucket](https://bitbucket.org) - Git repository
+
+### Monitoring & Observability
+- [Prometheus](https://prometheus.io) - Metrics monitoring
+- [Grafana](https://grafana.com) - Visualization platform
+- [Datadog](https://datadoghq.com) - Cloud monitoring
+- [New Relic](https://newrelic.com) - Application monitoring
+- [Splunk](https://splunk.com) - Log analysis
+- [Elastic Stack](https://elastic.co) - Search & analytics
+
+### Databases
+- [PostgreSQL](https://postgresql.org) - Relational database
+- [MongoDB](https://mongodb.com) - NoSQL database
+- [Redis](https://redis.io) - In-memory cache
+- [MySQL](https://mysql.com) - Relational database
+- [Elasticsearch](https://elastic.co/elasticsearch) - Search engine
+
+### Web Servers & Proxies
+- [NGINX](https://nginx.com) - Web server & proxy
+- [Apache](https://apache.org) - Web server
+- [HAProxy](https://www.haproxy.org) - Load balancer
+
+### Version Control
+- [Git](https://git-scm.com) - Version control
+- [GitHub](https://github.com) - Repository hosting
+- [GitLab](https://gitlab.com) - DevOps platform
+- [Bitbucket](https://bitbucket.org) - Git hosting
+
+### Project Management
+- [Jira](https://atlassian.com/software/jira) - Issue tracking
+- [Confluence](https://atlassian.com/software/confluence) - Documentation
+- [Trello](https://trello.com) - Task management
+
+### Service Mesh & Discovery
+- [Consul](https://hashicorp.com/products/consul) - Service mesh
+- [Vault](https://vaultproject.io) - Secrets management
+- [Istio](https://istio.io) - Service mesh
+- [Linkerd](https://linkerd.io) - Service mesh
+
+### Development Tools
+- [VS Code](https://code.visualstudio.com) - Code editor
+- [Postman](https://postman.com) - API testing
+- [Insomnia](https://insomnia.rest) - API client
+- [Docker Hub](https://hub.docker.com) - Container registry
+
+### Documentation & Learning
+- [MDN Web Docs](https://developer.mozilla.org) - Web documentation
+- [React Docs](https://react.dev) - React documentation
+- [Vite Docs](https://vitejs.dev) - Vite documentation
+- [Node.js Docs](https://nodejs.org/docs) - Node.js documentation
+- [GraphQL](https://graphql.org) - GraphQL documentation
+
+### Testing & Quality
+- [Jest](https://jestjs.io) - JavaScript testing
+- [Cypress](https://cypress.io) - E2E testing
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Performance audit
+- [SonarQube](https://sonarqube.org) - Code quality
+
+### Security
+- [OWASP](https://owasp.org) - Security standards
+- [Snyk](https://snyk.io) - Vulnerability scanning
+- [Let's Encrypt](https://letsencrypt.org) - SSL certificates
+- [NIST](https://nist.gov/cybersecurity) - Cybersecurity guidelines
+
+### Package Registries
+- [npm](https://npmjs.com) - JavaScript packages
+- [PyPI](https://pypi.org) - Python packages
+- [Maven](https://mvnrepository.com) - Java packages
+- [RubyGems](https://rubygems.org) - Ruby packages
+- [Cargo](https://crates.io) - Rust packages
