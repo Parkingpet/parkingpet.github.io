@@ -60,7 +60,7 @@ const mcpServers = [
 ];
 
 export default function MCPServers() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div style={styles.container}>
