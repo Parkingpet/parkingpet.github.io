@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const mcpServers = [
   {
@@ -60,62 +60,83 @@ const mcpServers = [
 ];
 
 export default function MCPServers() {
+  const [isExpanded, setIsExpanded] = useState(true);
+
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>MCP Servers</h2>
-      <p style={styles.description}>
-        Model Context Protocol servers for enhanced DevOps automation and infrastructure management
-      </p>
-      
-      <div style={styles.serversGrid}>
-        {mcpServers.map((server, index) => (
-          <div 
-            key={index} 
-            style={styles.serverCard}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 12px 30px rgba(56, 189, 248, 0.2)';
-              e.currentTarget.style.borderColor = '#38bdf8';
+      <div style={styles.headerContainer}>
+        <div style={styles.titleSection}>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            style={{
+              ...styles.toggleButton,
+              transform: isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)'
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
-              e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.3)';
-            }}
+            aria-label={isExpanded ? 'Collapse MCP Servers' : 'Expand MCP Servers'}
           >
-            <div style={styles.serverHeader}>
-              <div style={styles.serverName}>{server.name}</div>
-              <div style={styles.serverStatus}>
-                <span style={styles.statusDot}></span>
-                {server.status}
-              </div>
-            </div>
-            
-            <div style={styles.serverCategory}>{server.category}</div>
-            <div style={styles.serverDescription}>{server.description}</div>
-            
-            <div style={styles.commandSection}>
-              <div style={styles.commandLabel}>Installation Command:</div>
-              <div style={styles.commandText}>{server.command}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      <div style={styles.footer}>
-        <div style={styles.footerText}>
-          <strong>Note:</strong> MCP servers require <code style={styles.code}>uv</code> and <code style={styles.code}>uvx</code> to be installed. 
-          Install with: <code style={styles.code}>pip install uv</code> or visit{' '}
-          <a 
-            href="https://docs.astral.sh/uv/getting-started/installation/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={styles.link}
-          >
-            uv installation guide
-          </a>
+            ▼
+          </button>
+          <h2 style={styles.title}>MCP Servers</h2>
         </div>
       </div>
+
+      {isExpanded && (
+        <>
+          <p style={styles.description}>
+            Model Context Protocol servers for enhanced DevOps automation and infrastructure management
+          </p>
+          
+          <div style={styles.serversGrid}>
+            {mcpServers.map((server, index) => (
+              <div 
+                key={index} 
+                style={styles.serverCard}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.boxShadow = '0 12px 30px rgba(56, 189, 248, 0.2)';
+                  e.currentTarget.style.borderColor = '#38bdf8';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+                }}
+              >
+                <div style={styles.serverHeader}>
+                  <div style={styles.serverName}>{server.name}</div>
+                  <div style={styles.serverStatus}>
+                    <span style={styles.statusDot}></span>
+                    {server.status}
+                  </div>
+                </div>
+                
+                <div style={styles.serverCategory}>{server.category}</div>
+                <div style={styles.serverDescription}>{server.description}</div>
+                
+                <div style={styles.commandSection}>
+                  <div style={styles.commandLabel}>Installation Command:</div>
+                  <div style={styles.commandText}>{server.command}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div style={styles.footer}>
+            <div style={styles.footerText}>
+              <strong>Note:</strong> MCP servers require <code style={styles.code}>uv</code> and <code style={styles.code}>uvx</code> to be installed. 
+              Install with: <code style={styles.code}>pip install uv</code> or visit{' '}
+              <a 
+                href="https://docs.astral.sh/uv/getting-started/installation/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={styles.link}
+              >
+                uv installation guide
+              </a>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -128,9 +149,33 @@ const styles = {
     padding: '24px',
     marginTop: '24px'
   },
+  headerContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: '12px'
+  },
+  titleSection: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px'
+  },
+  toggleButton: {
+    background: 'none',
+    border: 'none',
+    color: '#38bdf8',
+    fontSize: '18px',
+    cursor: 'pointer',
+    padding: '4px 8px',
+    transition: 'transform 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    lineHeight: 1
+  },
   title: {
     color: '#38bdf8',
-    margin: '0 0 12px 0',
+    margin: '0',
     fontSize: '32px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
