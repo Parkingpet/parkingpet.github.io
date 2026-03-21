@@ -8,7 +8,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white&style=flat-square)](https://nodejs.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-**[🌐 Live Site](https://parkingpet.github.io)** • **[📦 Repository](https://github.com/Parkingpet/parkingpet.github.io)** • **[🍴 Fork](https://github.com/Parkingpet/parkingpet.github.io/fork)**
+**[🌐 Live Site](https://parkingpet.github.io)** • **[📦 Repository](https://github.com/Parkingpet/parkingpet.github.io)**
 
 ---
 
@@ -47,27 +47,6 @@
 | 💼 **Experience** | Work history with key achievements |
 | 🎓 **Education** | Educational background |
 | 🤝 **Clients** | Notable partnerships & long-term relationships |
-
----
-
-## 🚀 Quick Start
-
-### 📦 Installation
-
-```bash
-git clone https://github.com/Parkingpet/parkingpet.github.io.git
-cd parkingpet.github.io
-npm install
-```
-
-### 🔧 Development Commands
-
-| **Command** | **Purpose** |
-|:---|:---|
-| `npm run dev` | Start dev server (localhost:5173) |
-| `npm run build` | Production build |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Code quality check |
 
 ---
 
@@ -184,14 +163,13 @@ src/
 
 ### **Contribution Steps**
 
-| **Step** | **Command** |
+| **Step** | **Action** |
 |:---|:---|
 | 1️⃣ **Fork** | Click fork button on GitHub |
-| 2️⃣ **Clone** | `git clone <your-fork>` |
-| 3️⃣ **Branch** | `git checkout -b feature/amazing-feature` |
-| 4️⃣ **Commit** | `git commit -m 'Add amazing feature'` |
-| 5️⃣ **Push** | `git push origin feature/amazing-feature` |
-| 6️⃣ **PR** | Open Pull Request on GitHub |
+| 2️⃣ **Branch** | `git checkout -b feature/amazing-feature` |
+| 3️⃣ **Commit** | `git commit -m 'Add amazing feature'` |
+| 4️⃣ **Push** | `git push origin feature/amazing-feature` |
+| 5️⃣ **PR** | Open Pull Request on GitHub |
 
 ---
 
