@@ -117,8 +117,8 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.95)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '20px',
-    maxWidth: '380px',
+    padding: '24px',
+    width: '320px',
     zIndex: 1000,
     boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
     backdropFilter: 'blur(10px)',
@@ -129,7 +129,7 @@ const styles = {
     background: 'transparent',
     border: 'none',
     boxShadow: 'none',
-    maxWidth: 'auto'
+    width: 'auto'
   },
   floatingButton: {
     width: '56px',
@@ -145,19 +145,18 @@ const styles = {
     justifyContent: 'center',
     transition: 'all 0.3s ease',
     boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
-    padding: 0,
-    border: '2px solid #3b82f6'
+    padding: 0
   },
   header: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '16px'
+    marginBottom: '20px'
   },
   title: {
     color: '#e2e8f0',
     margin: 0,
-    fontSize: '18px',
+    fontSize: '20px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
@@ -165,9 +164,9 @@ const styles = {
     background: '#e2e8f0',
     border: 'none',
     borderRadius: '6px',
-    width: '28px',
-    height: '28px',
-    fontSize: '16px',
+    width: '32px',
+    height: '32px',
+    fontSize: '18px',
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -180,50 +179,50 @@ const styles = {
   optionsContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px',
-    marginBottom: '16px'
+    gap: '14px',
+    marginBottom: '20px'
   },
   optionCard: {
-    background: 'rgba(30, 41, 59, 0.5)',
-    border: '1px solid rgba(148, 163, 184, 0.2)',
-    borderRadius: '8px',
-    padding: '12px',
+    background: 'rgba(30, 41, 59, 0.6)',
+    border: '1px solid rgba(148, 163, 184, 0.25)',
+    borderRadius: '10px',
+    padding: '14px',
     transition: 'all 0.3s ease'
   },
   optionHeader: {
     display: 'flex',
     alignItems: 'center',
-    gap: '8px',
-    marginBottom: '6px'
+    gap: '10px',
+    marginBottom: '8px'
   },
   icon: {
-    fontSize: '18px',
+    fontSize: '20px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: '20px'
+    minWidth: '24px'
   },
   optionTitle: {
     color: '#e2e8f0',
     margin: 0,
-    fontSize: '14px',
+    fontSize: '15px',
     fontWeight: 600,
     letterSpacing: '-0.01em'
   },
   optionDescription: {
     color: '#94a3b8',
-    margin: '0 0 8px 0',
-    fontSize: '12px',
-    lineHeight: 1.4
+    margin: '0 0 10px 0',
+    fontSize: '13px',
+    lineHeight: 1.5
   },
   callButton: {
     display: 'block',
     width: '100%',
-    padding: '8px 12px',
-    borderRadius: '6px',
+    padding: '10px 14px',
+    borderRadius: '8px',
     border: 'none',
     color: '#ffffff',
-    fontSize: '12px',
+    fontSize: '13px',
     fontWeight: 600,
     cursor: 'pointer',
     textDecoration: 'none',
@@ -234,34 +233,34 @@ const styles = {
   footer: {
     color: '#64748b',
     textAlign: 'center',
-    fontSize: '12px',
-    margin: '12px 0',
-    lineHeight: 1.4
+    fontSize: '13px',
+    margin: '16px 0',
+    lineHeight: 1.5
   },
   bottomSection: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '12px',
-    paddingTop: '12px',
+    gap: '14px',
+    paddingTop: '16px',
     borderTop: '1px solid rgba(148, 163, 184, 0.2)'
   },
   phoneIcon: {
-    width: '40px',
-    height: '40px',
+    width: '48px',
+    height: '48px',
     borderRadius: '50%',
     border: '2px solid #3b82f6',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '18px',
+    fontSize: '20px',
     color: '#3b82f6',
     flexShrink: 0
   },
   bottomText: {
     color: '#64748b',
     margin: 0,
-    fontSize: '12px',
+    fontSize: '13px',
     fontWeight: 500,
     letterSpacing: '-0.01em'
   }
