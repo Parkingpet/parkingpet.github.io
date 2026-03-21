@@ -8,22 +8,20 @@ export default function Clients() {
       <div style={styles.clientsList}>
         {resumeData.clients.map((client, index) => (
           <div key={index} style={styles.clientItem}>
-            <div style={styles.clientHeader}>
-              {client.link ? (
-                <a 
-                  href={client.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style={styles.clientLink}
-                >
-                  {client.name}
-                </a>
-              ) : (
-                <span style={styles.clientName}>{client.name}</span>
-              )}
-              <span style={styles.clientYears}>{client.years}</span>
-            </div>
-            <div style={styles.clientDescription}>{client.description}</div>
+            {client.link ? (
+              <a 
+                href={client.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={styles.clientLink}
+              >
+                {client.name}
+              </a>
+            ) : (
+              <span style={styles.clientName}>{client.name}</span>
+            )}
+            <span style={styles.clientYears}>{client.years}</span>
+            <span style={styles.clientDescription}>— {client.description}</span>
           </div>
         ))}
       </div>
@@ -54,41 +52,49 @@ const styles = {
     gap: '16px'
   },
   clientItem: {
-    padding: '16px',
+    padding: '12px 16px',
     background: 'rgba(16, 185, 129, 0.05)',
     border: '1px solid rgba(16, 185, 129, 0.2)',
     borderRadius: '8px',
-    transition: 'all 0.3s ease'
+    transition: 'all 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+    flexWrap: 'wrap'
   },
   clientHeader: {
     display: 'flex',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '8px',
-    gap: '12px'
+    gap: '8px',
+    flexWrap: 'wrap'
   },
   clientLink: {
     color: '#38bdf8',
-    fontSize: '16px',
+    fontSize: '14px',
     fontWeight: 600,
     textDecoration: 'none',
     transition: 'all 0.2s ease',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
   },
   clientName: {
     color: '#e2e8f0',
-    fontSize: '16px',
-    fontWeight: 600
+    fontSize: '14px',
+    fontWeight: 600,
+    whiteSpace: 'nowrap'
   },
   clientYears: {
     color: '#94a3b8',
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: 500,
     whiteSpace: 'nowrap'
   },
   clientDescription: {
     color: '#cbd5e1',
-    fontSize: '14px',
-    lineHeight: 1.6
+    fontSize: '13px',
+    lineHeight: 1.4,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   }
 };
