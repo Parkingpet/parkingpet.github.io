@@ -179,14 +179,14 @@ const styles = {
   optionsContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '14px',
+    gap: '12px',
     marginBottom: '20px'
   },
   optionCard: {
     background: 'rgba(30, 41, 59, 0.6)',
     border: '1px solid rgba(148, 163, 184, 0.25)',
     borderRadius: '10px',
-    padding: '14px',
+    padding: '12px',
     transition: 'all 0.3s ease'
   },
   optionHeader: {
@@ -218,11 +218,11 @@ const styles = {
   callButton: {
     display: 'block',
     width: '100%',
-    padding: '10px 14px',
-    borderRadius: '8px',
+    padding: '8px 10px',
+    borderRadius: '6px',
     border: 'none',
     color: '#ffffff',
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: 600,
     cursor: 'pointer',
     textDecoration: 'none',
