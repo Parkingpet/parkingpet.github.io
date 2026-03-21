@@ -71,18 +71,23 @@ export default function Tools() {
       name: 'Regex',
       test: () => {
         try {
+          // ReDoS mitigation: limit pattern and input length
+          if (input.length > 1024) throw new Error('Input too long');
           const [pattern, flags] = input.split('\n');
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const regex = new RegExp(pattern, flags || '');
           setOutput(regex.test(input) ? 'Match found' : 'No match');
-        } catch { setOutput('Invalid regex') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       match: () => {
         try {
+          if (input.length > 1024) throw new Error('Input too long');
           const [pattern, flags] = input.split('\n');
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const regex = new RegExp(pattern, flags || 'g');
           const matches = input.match(regex);
           setOutput(matches ? matches.join('\n') : 'No matches');
-        } catch { setOutput('Invalid regex') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     jwt: {
@@ -91,7 +96,11 @@ export default function Tools() {
         try {
           const parts = input.split('.');
           if (parts.length !== 3) throw new Error('Invalid JWT');
-          const payload = JSON.parse(atob(parts[1]));
+          // Handle Base64URL encoding (replace -/_ and add padding)
+          const base64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+          const pad = base64.length % 4;
+          const padded = pad ? base64 + '='.repeat(4 - pad) : base64;
+          const payload = JSON.parse(atob(padded));
           setOutput(JSON.stringify(payload, null, 2));
         } catch { setOutput('Invalid JWT token') }
       }
