@@ -526,30 +526,6 @@ export default function Tools() {
         </div>
         {!collapsedLinks.quickLinks && (
           <div style={styles.linksGrid}>
-            <a href="https://parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>🌐</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>View Live Site</div>
-                <div style={styles.linkDesc}>Interactive DevOps resume with built-in tools</div>
-              </div>
-            </a>
-            
-            <a href="https://github.com/Parkingpet/parkingpet.github.io" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>📦</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>GitHub Repository</div>
-                <div style={styles.linkDesc}>Source code and documentation</div>
-              </div>
-            </a>
-            
-            <a href="https://github.com/Parkingpet/parkingpet.github.io/fork" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
-              <div style={styles.linkIcon}>🍴</div>
-              <div style={styles.linkContent}>
-                <div style={styles.linkName}>Fork This Project</div>
-                <div style={styles.linkDesc}>Create your own version - Fork at your own risk</div>
-              </div>
-            </a>
-
             <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" style={styles.linkCard}>
               <div style={styles.linkIcon}>🐳</div>
               <div style={styles.linkContent}>
