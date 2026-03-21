@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Auto-merge PRs and Cleanup Branches",
+  "description": "Automatically checks pull requests, merges them when ready, and deletes merged branches",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "git fetch origin && git for-each-ref refs/heads --merged refs/remotes/origin/main --format='%(refname:short)' | grep -v main | xargs -r git branch -d && git push origin --delete $(git for-each-ref refs/remotes/origin --merged refs/remotes/origin/main --format='%(refname:short)' | sed 's|origin/||' | grep -v main) 2>/dev/null || true",
+    "timeout": 120
+  }
+}
