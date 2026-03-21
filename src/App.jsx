@@ -9,6 +9,7 @@ import Projects from './components/projects/Projects';
 import Education from './components/education/Education';
 import Clients from './components/clients/Clients';
 import MCPServers from './components/mcp/MCPServers';
+import ContactSupport from './components/contact/ContactSupport';
 import Footer from './components/footer/Footer';
 
 
@@ -103,6 +104,9 @@ export default function App() {
             </div>
             <div id="mcp-servers">
               <MCPServers />
+            </div>
+            <div id="contact-support">
+              <ContactSupport />
             </div>
           </main>
           <Footer />
