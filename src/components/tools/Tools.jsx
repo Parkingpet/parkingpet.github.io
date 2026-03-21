@@ -14,7 +14,8 @@ export default function Tools() {
     gcp: true,
     docs: true,
     testing: true,
-    registries: true
+    registries: true,
+    cliCurls: true
   });
 
   const tools = {
@@ -988,6 +989,192 @@ export default function Tools() {
                 <div style={styles.linkDesc}>Building applications with LLMs</div>
               </div>
             </a>
+          </div>
+        )}
+      </div>
+
+      <div style={styles.cloudLinksSection}>
+        <div style={styles.linksSectionHeader}>
+          <h3 style={styles.linksTitle}>CLI Installation Curls</h3>
+          <button
+            onClick={() => setCollapsedLinks(prev => ({ ...prev, cliCurls: !prev.cliCurls }))}
+            style={styles.collapseButton}
+          >
+            {collapsedLinks.cliCurls ? '▼ Expand' : '▲ Collapse'}
+          </button>
+        </div>
+        {!collapsedLinks.cliCurls && (
+          <div style={styles.linksGrid}>
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🤖</div>
+                <div style={styles.cliName}>OpenAI CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl https://openai.com/install | bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl https://openai.com/install | bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🦙</div>
+                <div style={styles.cliName}>Ollama</div>
+              </div>
+              <code style={styles.curlCode}>curl -fsSL https://ollama.ai/install.sh | sh</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -fsSL https://ollama.ai/install.sh | sh')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>⚡</div>
+                <div style={styles.cliName}>Vercel CLI</div>
+              </div>
+              <code style={styles.curlCode}>npm i -g vercel</code>
+              <button onClick={() => navigator.clipboard.writeText('npm i -g vercel')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🚀</div>
+                <div style={styles.cliName}>Netlify CLI</div>
+              </div>
+              <code style={styles.curlCode}>npm install -g netlify-cli</code>
+              <button onClick={() => navigator.clipboard.writeText('npm install -g netlify-cli')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🐳</div>
+                <div style={styles.cliName}>Docker</div>
+              </div>
+              <code style={styles.curlCode}>curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>☸️</div>
+                <div style={styles.cliName}>kubectl</div>
+              </div>
+              <code style={styles.curlCode}>curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🏗️</div>
+                <div style={styles.cliName}>Terraform</div>
+              </div>
+              <code style={styles.curlCode}>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - && sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - && sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🤖</div>
+                <div style={styles.cliName}>AWS CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"</code>
+              <button onClick={() => navigator.clipboard.writeText('curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🔵</div>
+                <div style={styles.cliName}>Google Cloud CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl https://sdk.cloud.google.com | bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl https://sdk.cloud.google.com | bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🔷</div>
+                <div style={styles.cliName}>Azure CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🦀</div>
+                <div style={styles.cliName}>Rust</div>
+              </div>
+              <code style={styles.curlCode}>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code>
+              <button onClick={() => navigator.clipboard.writeText('curl --proto \'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🐍</div>
+                <div style={styles.cliName}>Python (pyenv)</div>
+              </div>
+              <code style={styles.curlCode}>curl https://pyenv.run | bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl https://pyenv.run | bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>📦</div>
+                <div style={styles.cliName}>Node.js (nvm)</div>
+              </div>
+              <code style={styles.curlCode}>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🎯</div>
+                <div style={styles.cliName}>GitHub CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🔄</div>
+                <div style={styles.cliName}>Ansible</div>
+              </div>
+              <code style={styles.curlCode}>curl https://bootstrap.pypa.io/get-pip.py | python3 && pip install ansible</code>
+              <button onClick={() => navigator.clipboard.writeText('curl https://bootstrap.pypa.io/get-pip.py | python3 && pip install ansible')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>⛵</div>
+                <div style={styles.cliName}>Helm</div>
+              </div>
+              <code style={styles.curlCode}>curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash</code>
+              <button onClick={() => navigator.clipboard.writeText('curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🦊</div>
+                <div style={styles.cliName}>GitLab CLI</div>
+              </div>
+              <code style={styles.curlCode}>curl -L https://gitlab.com/gitlab-org/cli/-/releases/latest/downloads/glab_linux_amd64.tar.gz | tar xz</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -L https://gitlab.com/gitlab-org/cli/-/releases/latest/downloads/glab_linux_amd64.tar.gz | tar xz')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🛡️</div>
+                <div style={styles.cliName}>Snyk CLI</div>
+              </div>
+              <code style={styles.curlCode}>npm install -g snyk</code>
+              <button onClick={() => navigator.clipboard.writeText('npm install -g snyk')} style={styles.copyBtn}>Copy</button>
+            </div>
+
+            <div style={styles.cliCard}>
+              <div style={styles.cliHeader}>
+                <div style={styles.cliIcon}>🔍</div>
+                <div style={styles.cliName}>jq (JSON)</div>
+              </div>
+              <code style={styles.curlCode}>curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -o jq && chmod +x jq</code>
+              <button onClick={() => navigator.clipboard.writeText('curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -o jq && chmod +x jq')} style={styles.copyBtn}>Copy</button>
+            </div>
           </div>
         )}
       </div>
@@ -2014,105 +2201,107 @@ export default function Tools() {
 
 const styles = {
   container: {
-    background: 'rgba(15, 23, 42, 0.7)',
-    border: '1px solid #23314d',
-    borderRadius: '6px',
-    padding: '12px',
-    marginTop: '8px'
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.05) 0%, rgba(16,185,129,0.03) 100%)',
+    border: '1px solid rgba(56,189,248,0.15)',
+    borderRadius: '12px',
+    padding: '20px',
+    marginTop: '12px',
+    backdropFilter: 'blur(10px)'
   },
   sectionTitle: {
-    margin: '0 0 8px 0',
+    margin: '0 0 12px 0',
     color: '#38bdf8',
-    fontSize: '24px',
-    fontWeight: 600,
+    fontSize: '28px',
+    fontWeight: 700,
     letterSpacing: '-0.01em',
-    borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '6px'
+    borderBottom: '2px solid rgba(56,189,248,0.2)',
+    paddingBottom: '8px'
   },
   tabs: {
     display: 'flex',
-    gap: '2px',
-    marginBottom: '8px',
+    gap: '6px',
+    marginBottom: '12px',
     flexWrap: 'wrap',
-    borderBottom: '2px solid rgba(56, 189, 248, 0.2)',
-    paddingBottom: '6px'
+    borderBottom: '2px solid rgba(56,189,248,0.15)',
+    paddingBottom: '8px'
   },
   tab: {
-    padding: '4px 10px',
-    background: 'rgba(17, 28, 51, 0.6)',
-    border: '1px solid #23314d',
-    borderRadius: '4px',
+    padding: '6px 12px',
+    background: 'rgba(56,189,248,0.05)',
+    border: '1px solid rgba(56,189,248,0.2)',
+    borderRadius: '6px',
     color: '#94a3b8',
     cursor: 'pointer',
-    fontSize: '11px',
-    fontWeight: 500,
-    transition: 'all 0.2s ease'
+    fontSize: '12px',
+    fontWeight: 600,
+    transition: 'all 0.3s ease'
   },
   activeTab: {
-    background: 'rgba(56, 189, 248, 0.2)',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.15) 0%, rgba(16,185,129,0.1) 100%)',
     borderColor: '#38bdf8',
     color: '#38bdf8',
-    boxShadow: '0 0 10px rgba(56, 189, 248, 0.2)'
+    boxShadow: '0 0 15px rgba(56,189,248,0.2)'
   },
   toolBody: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '6px'
+    gap: '10px'
   },
   collapseHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '6px',
-    paddingBottom: '4px',
-    borderBottom: '1px solid #23314d'
+    marginBottom: '8px',
+    paddingBottom: '6px',
+    borderBottom: '1px solid rgba(56,189,248,0.1)'
   },
   toolTitle: {
     margin: 0,
     color: '#38bdf8',
-    fontSize: '16px',
-    fontWeight: 600,
+    fontSize: '18px',
+    fontWeight: 700,
     letterSpacing: '-0.01em'
   },
   collapseButton: {
-    padding: '4px 8px',
-    background: 'rgba(56, 189, 248, 0.1)',
-    border: '1px solid #38bdf8',
-    borderRadius: '3px',
+    padding: '6px 10px',
+    background: 'rgba(56,189,248,0.1)',
+    border: '1px solid rgba(56,189,248,0.3)',
+    borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '11px',
-    fontWeight: 500,
-    transition: 'all 0.2s ease'
+    fontSize: '12px',
+    fontWeight: 600,
+    transition: 'all 0.3s ease'
   },
   textarea: {
     width: '100%',
-    minHeight: '80px',
-    padding: '8px',
-    background: 'rgba(11, 18, 32, 0.8)',
-    border: '1px solid #23314d',
-    borderRadius: '6px',
-    color: '#e2e8f0',
+    minHeight: '100px',
+    padding: '10px 12px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.03) 0%, rgba(16,185,129,0.02) 100%)',
+    border: '1px solid rgba(56,189,248,0.2)',
+    borderRadius: '8px',
+    color: '#cbd5e1',
     fontFamily: 'monospace',
-    fontSize: '14px',
+    fontSize: '13px',
     resize: 'vertical',
-    fontWeight: 400
+    fontWeight: 400,
+    transition: 'all 0.3s ease'
   },
   actions: {
     display: 'flex',
-    gap: '6px',
+    gap: '8px',
     flexWrap: 'wrap'
   },
   actionButton: {
-    padding: '8px 12px',
-    background: 'rgba(56, 189, 248, 0.2)',
-    border: '1px solid #38bdf8',
+    padding: '8px 14px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(16,185,129,0.05) 100%)',
+    border: '1px solid rgba(56,189,248,0.3)',
     borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
     fontSize: '13px',
-    fontWeight: 500,
-    transition: 'all 0.2s ease'
+    fontWeight: 600,
+    transition: 'all 0.3s ease'
   },
   contactContainer: {
     display: 'flex',
@@ -2120,10 +2309,10 @@ const styles = {
     gap: '12px'
   },
   contactCard: {
-    background: 'rgba(11, 18, 32, 0.8)',
-    border: '1px solid #23314d',
-    borderRadius: '6px',
-    padding: '12px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.05) 0%, rgba(16,185,129,0.02) 100%)',
+    border: '1px solid rgba(56,189,248,0.2)',
+    borderRadius: '8px',
+    padding: '14px',
     display: 'flex',
     flexDirection: 'column',
     gap: '8px'
@@ -2132,62 +2321,62 @@ const styles = {
     margin: 0,
     color: '#38bdf8',
     fontSize: '16px',
-    fontWeight: 600,
+    fontWeight: 700,
     letterSpacing: '-0.01em'
   },
   contactValue: {
-    color: '#e2e8f0',
+    color: '#cbd5e1',
     fontSize: '14px',
     fontFamily: 'monospace',
-    padding: '8px',
-    background: 'rgba(17, 28, 51, 0.6)',
-    borderRadius: '4px',
-    border: '1px solid #23314d',
-    fontWeight: 400
+    padding: '8px 10px',
+    background: 'rgba(56,189,248,0.05)',
+    borderRadius: '6px',
+    border: '1px solid rgba(56,189,248,0.15)',
+    fontWeight: 500
   },
   copyButton: {
-    padding: '8px 12px',
-    background: 'rgba(56, 189, 248, 0.2)',
-    border: '1px solid #38bdf8',
-    borderRadius: '4px',
+    padding: '8px 14px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(16,185,129,0.05) 100%)',
+    border: '1px solid rgba(56,189,248,0.3)',
+    borderRadius: '6px',
     color: '#38bdf8',
     cursor: 'pointer',
-    fontSize: '12px',
-    fontWeight: 500,
+    fontSize: '13px',
+    fontWeight: 600,
     alignSelf: 'flex-start',
-    transition: 'all 0.2s ease'
+    transition: 'all 0.3s ease'
   },
   contactNote: {
     color: '#94a3b8',
-    fontSize: '12px',
+    fontSize: '13px',
     fontStyle: 'italic',
-    padding: '8px',
-    background: 'rgba(17, 28, 51, 0.3)',
-    borderRadius: '4px',
-    border: '1px solid #23314d',
+    padding: '10px 12px',
+    background: 'rgba(56,189,248,0.05)',
+    borderRadius: '6px',
+    border: '1px solid rgba(56,189,248,0.15)',
     lineHeight: 1.4
   },
   linksSection: {
     marginTop: '16px',
     paddingTop: '12px',
-    borderTop: '2px solid rgba(56, 189, 248, 0.3)'
+    borderTop: '2px solid rgba(56,189,248,0.15)'
   },
   linksSectionHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '8px'
+    marginBottom: '10px'
   },
   cloudLinksSection: {
     marginTop: '16px',
     paddingTop: '12px',
-    borderTop: '2px solid rgba(56, 189, 248, 0.3)'
+    borderTop: '2px solid rgba(56,189,248,0.15)'
   },
   linksTitle: {
-    margin: '0 0 8px 0',
+    margin: '0',
     color: '#38bdf8',
     fontSize: '16px',
-    fontWeight: 600,
+    fontWeight: 700,
     letterSpacing: '-0.01em'
   },
   linksGrid: {
@@ -2198,18 +2387,18 @@ const styles = {
   linkCard: {
     display: 'flex',
     gap: '10px',
-    padding: '12px',
-    background: 'rgba(11, 18, 32, 0.8)',
-    border: '1px solid #23314d',
-    borderRadius: '6px',
+    padding: '12px 14px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.05) 0%, rgba(16,185,129,0.02) 100%)',
+    border: '1px solid rgba(56,189,248,0.2)',
+    borderRadius: '8px',
     textDecoration: 'none',
     color: 'inherit',
-    transition: 'all 0.2s ease',
+    transition: 'all 0.3s ease',
     cursor: 'pointer'
   },
   linkIcon: {
-    fontSize: '20px',
-    minWidth: '28px',
+    fontSize: '18px',
+    minWidth: '24px',
     textAlign: 'center'
   },
   linkContent: {
@@ -2220,12 +2409,64 @@ const styles = {
   linkName: {
     color: '#38bdf8',
     fontSize: '14px',
-    fontWeight: 600,
+    fontWeight: 700,
     letterSpacing: '-0.01em'
   },
   linkDesc: {
     color: '#94a3b8',
     fontSize: '12px',
-    lineHeight: 1.3
+    lineHeight: 1.3,
+    fontWeight: 400
+  },
+  cliCard: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+    padding: '12px 14px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.05) 0%, rgba(16,185,129,0.02) 100%)',
+    border: '1px solid rgba(56,189,248,0.2)',
+    borderRadius: '8px',
+    transition: 'all 0.3s ease'
+  },
+  cliHeader: {
+    display: 'flex',
+    gap: '8px',
+    alignItems: 'center',
+    marginBottom: '4px'
+  },
+  cliIcon: {
+    fontSize: '18px',
+    minWidth: '24px'
+  },
+  cliName: {
+    color: '#38bdf8',
+    fontSize: '14px',
+    fontWeight: 700,
+    letterSpacing: '-0.01em'
+  },
+  curlCode: {
+    background: 'rgba(56,189,248,0.05)',
+    border: '1px solid rgba(56,189,248,0.15)',
+    borderRadius: '6px',
+    padding: '8px 10px',
+    color: '#cbd5e1',
+    fontSize: '11px',
+    fontFamily: 'monospace',
+    overflow: 'auto',
+    wordBreak: 'break-all',
+    fontWeight: 500,
+    lineHeight: 1.4
+  },
+  copyBtn: {
+    padding: '6px 12px',
+    background: 'linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(16,185,129,0.05) 100%)',
+    border: '1px solid rgba(56,189,248,0.3)',
+    borderRadius: '6px',
+    color: '#38bdf8',
+    cursor: 'pointer',
+    fontSize: '12px',
+    fontWeight: 600,
+    alignSelf: 'flex-start',
+    transition: 'all 0.3s ease'
   }
 };

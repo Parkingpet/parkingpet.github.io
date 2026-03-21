@@ -16,7 +16,7 @@ const styles = {
     background: 'rgba(15, 23, 42, 0.7)',
     border: '1px solid #23314d',
     borderRadius: '12px',
-    padding: '32px 24px',
+    padding: '24px',
     marginTop: '24px',
     textAlign: 'center'
   },

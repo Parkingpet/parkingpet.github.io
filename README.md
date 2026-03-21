@@ -1,286 +1,459 @@
-<div align="center" style="margin-bottom: 40px; background: linear-gradient(135deg, #000000 0%, #0f172a 100%); padding: 60px 40px; border-radius: 16px; border: 2px solid rgba(56, 189, 248, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
+Mustafa "Moose" McLinn - Interactive DevOps Resume Platform
+===========================================================
 
-<h1 style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 72px; color: #38bdf8; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 12px 0; line-height: 1.0; text-shadow: 0 0 30px rgba(56, 189, 248, 0.5);">parkingpet.github.io</h1>
+A modern, beautifully designed interactive resume platform built with React 18.2 and Vite 7.3, featuring integrated DevOps tools, real-time utilities, and a comprehensive professional portfolio with glassmorphism design patterns.
 
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 24px; color: #10b981; font-weight: 700; margin: 0 0 8px 0; letter-spacing: -0.02em; text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">Technical DevOps Resume Platform</p>
-
-<p style="font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #cbd5e1; margin: 8px auto 0; letter-spacing: 0em; line-height: 1.2; max-width: 900px; font-weight: 500;">React 18.2 + Vite 7.3 | GraphQL-Ready | DevOps Toolkit | <180KB Gzipped | 99.97% Uptime | <18ms Query Response</p>
-
-<div style="display: flex; justify-content: center; gap: 8px; margin: 16px 0; flex-wrap: wrap;">
-  <img src="https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy" style="height: 20px;">
-  <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" style="height: 20px;">
-  <img src="https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white" alt="Vite" style="height: 20px;">
-  <img src="https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white" alt="Node.js" style="height: 20px;">
-  <img src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white" alt="GraphQL" style="height: 20px;">
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" style="height: 20px;">
-</div>
-
-<div style="display: flex; justify-content: center; gap: 10px; margin: 16px 0; flex-wrap: wrap;">
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4); font-weight: 600;">React 18.2</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 600;">Vite 7.3</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.4); font-weight: 600;">DevOps Tools</span>
-  <span style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; color: #8b5cf6; background: rgba(139, 92, 246, 0.15); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(139, 92, 246, 0.4); font-weight: 600;">GitHub Pages</span>
-</div>
-
-</div>
-
-## 🚀 [Visit Live Site](https://parkingpet.github.io)
-
-<div align="center" style="margin: 20px 0;">
-  <img src="public/moose-as-a-service.jpg" alt="Interactive DevOps Resume" width="350" style="border: 2px solid #23314d; border-radius: 12px; cursor: pointer;">
-</div>
+https://parkingpet.github.io
 
 ---
 
-## Quick Links
+DESIGN SYSTEM
+=============
 
-| Category | Links |
-|----------|-------|
-| **Site** | [Live Site](https://parkingpet.github.io) \| [GitHub Repo](https://github.com/Parkingpet/parkingpet.github.io) \| [Fork](https://github.com/Parkingpet/parkingpet.github.io/fork) \| [Issues](https://github.com/Parkingpet/parkingpet.github.io/issues) |
-| **Dev** | `npm run dev` (localhost:5173) \| `npm run build` \| `npm run preview` \| `npm run lint` |
-| **AWS** | [Console](https://console.aws.amazon.com) \| [IAM](https://console.aws.amazon.com/iam) \| [CloudWatch](https://console.aws.amazon.com/cloudwatch) \| [CodePipeline](https://console.aws.amazon.com/codesuite/codepipeline) \| [EC2](https://console.aws.amazon.com/ec2) \| [S3](https://console.aws.amazon.com/s3) \| [RDS](https://console.aws.amazon.com/rds) \| [Lambda](https://console.aws.amazon.com/lambda) |
-| **GCP** | [Console](https://console.cloud.google.com) \| [Compute](https://console.cloud.google.com/compute) \| [Storage](https://console.cloud.google.com/storage) \| [SQL](https://console.cloud.google.com/sql) \| [Functions](https://console.cloud.google.com/functions) \| [Cloud Run](https://console.cloud.google.com/run) \| [GKE](https://console.cloud.google.com/kubernetes) |
-| **Azure** | [Portal](https://portal.azure.com) \| [DevOps](https://dev.azure.com) \| [Intune](https://intune.microsoft.com) \| [Entra](https://entra.microsoft.com) \| [Admin](https://admin.microsoft.com) |
-| **DevOps** | [Docker](https://docker.com) \| [Kubernetes](https://kubernetes.io) \| [Terraform](https://terraform.io) \| [Ansible](https://ansible.com) \| [Jenkins](https://jenkins.io) \| [GitLab](https://gitlab.com) \| [GitHub Actions](https://github.com/features/actions) |
-| **Monitoring** | [Prometheus](https://prometheus.io) \| [Grafana](https://grafana.com) \| [Datadog](https://datadoghq.com) \| [New Relic](https://newrelic.com) \| [Splunk](https://splunk.com) \| [ELK Stack](https://elastic.co) |
-| **Databases** | [PostgreSQL](https://postgresql.org) \| [MongoDB](https://mongodb.com) \| [Redis](https://redis.io) \| [MySQL](https://mysql.com) \| [Elasticsearch](https://elastic.co/elasticsearch) \| [DynamoDB](https://aws.amazon.com/dynamodb) |
-| **Infrastructure** | [Helm](https://helm.sh) \| [ArgoCD](https://argocd.io) \| [Istio](https://istio.io) \| [Linkerd](https://linkerd.io) \| [Consul](https://hashicorp.com/products/consul) \| [Vault](https://vaultproject.io) \| [Nomad](https://nomadproject.io) |
-| **Security** | [OWASP](https://owasp.org) \| [Snyk](https://snyk.io) \| [SonarQube](https://sonarqube.org) \| [Let's Encrypt](https://letsencrypt.org) \| [NIST](https://nist.gov/cybersecurity) |
-| **Registries** | [npm](https://npmjs.com) \| [PyPI](https://pypi.org) \| [Maven](https://mvnrepository.com) \| [RubyGems](https://rubygems.org) \| [Cargo](https://crates.io) \| [Docker Hub](https://hub.docker.com) |
-| **Docs** | [MDN](https://developer.mozilla.org) \| [React](https://react.dev) \| [Vite](https://vitejs.dev) \| [GraphQL](https://graphql.org) \| [Node.js](https://nodejs.org/docs) \| [TypeScript](https://typescriptlang.org/docs) |
-| **Tools** | [Postman](https://postman.com) \| [Insomnia](https://insomnia.rest) \| [Lighthouse](https://developers.google.com/web/tools/lighthouse) \| [WebPageTest](https://webpagetest.org) \| [Jest](https://jestjs.io) \| [Cypress](https://cypress.io) |
+Modern Glassmorphism UI
+  Frosted glass effect with backdrop blur
+  Gradient overlays for depth
+  Smooth transitions and animations
+  Consistent color palette
 
----
+Color Palette
+  Primary: Cyan (#38bdf8) - Main accent color
+  Secondary: Emerald (#10b981) - Complementary accent
+  Text Primary: Slate (#e2e8f0) - Main text
+  Text Secondary: Slate (#cbd5e1) - Secondary text
+  Text Muted: Slate (#94a3b8) - Muted text
+  Border: Slate (#23314d) - Subtle borders
 
-## Features
+Typography System
+  Font Family: System fonts with fallbacks
+  Heading Sizes: 28px (h2), 22px (h3), 18px (h4)
+  Font Weights: 400 (normal), 600 (semibold), 700 (bold)
+  Letter Spacing: -0.01em to -0.03em for headings
 
-#### Core Technical
-- **React 18.2 Hooks**: Functional components with state management | **Code Splitting**: Lazy-loaded components
-- **Memoization**: React.memo for optimization | **Error Boundaries**: Graceful error handling | **Suspense**: Async loading
-- **Tree Shaking**: Unused code elimination | **Minification**: CSS/JS compression | **Asset Optimization**: Image lazy loading
-- **Caching Strategy**: Browser cache headers | **CDN Ready**: Static asset distribution
-
-#### DevOps Toolkit
-- **Base64**: Encoding/Decoding | **JSON**: Format/minify/validate | **SHA-256**: Cryptographic hashing
-- **UUID**: Unique identifier generation | **Regex**: Pattern matching | **Timestamp**: Unix/ISO 8601 conversion
-- **URL Encoding**: RFC 3986 compliant | **JWT Decoder**: Token parsing | **YAML to JSON**: Format conversion
-- **MAC Formatter**: Address formatting | **IP Converter**: Binary/hex/decimal | **Sed/Awk**: Text processing
-
-#### Sed/Awk Tool
-- **Find & Replace**: Pattern-based regex substitution | **Delete Lines**: Remove matching patterns
-- **Extract Fields**: Get fields from delimited text | **Count Lines**: Line/character/word statistics
-- **Print Lines**: Extract specific line ranges | **Transform**: Case conversion, reverse, trim
-- **Usage**: Enter pattern on line 1, replacement on line 2, then text to process
-- **Examples**: `s/old/new/g` for find-replace | `^#` to delete comments | `,` delimiter for CSV fields
-
-#### GraphQL Integration
-- **Query Optimization**: Automatic field selection | **Caching Layer**: Response caching with TTL
-- **Error Handling**: Comprehensive error messages | **Type Safety**: Full schema validation
-- **Batch Operations**: Multiple query execution | **Subscriptions Ready**: Real-time data support
-
-#### Styling & Performance
-- **CSS-in-JS**: Component-scoped styling | **Design Tokens**: Centralized color/typography
-- **Responsive Design**: Mobile-first breakpoints | **Animation Framework**: Keyframe-based animations
-- **Build Time**: ~1 second with Vite | **Bundle Size**: <180KB gzipped | **Lighthouse Score**: 95+
-- **First Paint**: <0.8s | **Time to Interactive**: <1.2s | **API Response**: <25ms p95
-
-#### Accessibility
-- **WCAG 2.1 AA**: Accessibility compliance | **Semantic HTML**: Proper markup structure
-- **ARIA Labels**: Screen reader support | **Keyboard Navigation**: Full keyboard accessibility
-- **Color Contrast**: WCAG AA contrast ratios
+Visual Effects
+  Gradient backgrounds on containers
+  Smooth hover transitions
+  Subtle glow effects on interactive elements
+  Reduced opacity grid and scanline effects
+  Particle animation background
 
 ---
 
-## Architecture
+LANDING PAGE LAYOUT
+===================
 
-```
-Browser/Client
-├── React Application (18.2)
-│   ├── Component Tree (Functional)
-│   │   ├── Header | Tools | Footer
-│   │   └── Summary | Skills | Experience | Projects
-│   ├── State Management (Hooks)
-│   │   └── useState, useEffect, useContext, useReducer
-│   └── Styling Layer (CSS-in-JS)
-│       └── Design Tokens → Component Styles → Animations
-├── Network Layer
-│   ├── REST API Endpoints
-│   ├── GraphQL Queries
-│   └── Static Assets
-└── Data Layer
-    ├── resumeData (JSON)
-    ├── Cache Layer (Browser)
-    └── Local Storage
-```
+The platform is organized into the following sections:
 
----
+HEADER SECTION
+  ASCII Art Name Display with gradient text
+  Navigation Menu (Home, Summary, Competencies, Technical, DevOps Tools, Projects, Experience, Education, Clients, MCP Servers)
+  Professional Title with gradient effect
+  Experience Badges (25+ Years, AWS, Docker, Kubernetes, Python, Linux)
+  Contact Information (Location, Phone, Email, GitHub, LinkedIn, Resume Downloads)
 
-## Tech Stack
+SUMMARY SECTION
+  Professional Summary (2 paragraphs)
+  Core Competencies Grid (20 competency tags with hover effects)
 
-| Category | Technologies |
-|----------|---------------|
-| **Frontend** | React 18.2 \| Vite 7.3 \| JavaScript ES2020 \| CSS3 |
-| **State** | React Hooks \| CSS-in-JS \| CSS Variables \| CSS Grid/Flexbox |
-| **API** | GraphQL \| REST API \| JSON \| Fetch API |
-| **DevOps** | GitHub Actions \| GitHub Pages \| Git \| npm |
-| **Tools** | ESLint \| Prettier \| VS Code \| Chrome DevTools |
-| **Performance** | Lighthouse \| WebPageTest \| Bundle Analyzer \| Chrome Profiler |
+TECHNICAL SKILLS SECTION
+  Two-column layout for balanced presentation
+  Skill categories with gradient backgrounds
+  Color-coded sections (Cyan for titles, Emerald for categories)
 
----
+PROJECTS SECTION
+  Project cards with gradient backgrounds
+  Company names in Emerald, project titles in Cyan
+  Achievement lists with proper spacing
+  Direct links to project repositories
 
-## Performance Metrics
+EXPERIENCE SECTION
+  Timeline-style job listings
+  Company names in Emerald, positions in Cyan
+  Date ranges in muted text
+  Achievement lists with improved readability
 
-| Metric | Target | Actual |
-|--------|--------|--------|
-| Build Time | ~1s | ✓ 939ms |
-| Bundle Size | <180KB | ✓ 69.05KB gzipped |
-| First Paint | <0.8s | ✓ <0.8s |
-| Interactive | <1.2s | ✓ <1.2s |
-| Lighthouse | 95+ | ✓ 95+ |
-| Uptime | 99.95% | ✓ 99.97% |
-| API Response | <25ms p95 | ✓ <18ms |
+EDUCATION SECTION
+  Education items with gradient backgrounds
+  Consistent styling with other sections
+  Proper spacing and typography
 
----
+CLIENTS SECTION
+  Client partnerships with Emerald accent
+  Gradient backgrounds for visual hierarchy
+  Improved readability with better spacing
 
-## GraphQL Performance
+DEVOPS TOOLS & QUICK LINKS SECTION
+  Interactive tool tabs with modern styling
+  Collapsible tool sections
+  Quick reference links organized by category
+  Gradient backgrounds on all interactive elements
 
-```graphql
-query GetResumePerformanceMetrics {
-  performanceMetrics {
-    queryExecutionTime {
-      p50: 12.5ms | p95: 25.3ms | p99: 42.8ms | max: 67.2ms
-    }
-    dataFetchingEfficiency {
-      cacheHitRate: 89% | dbQueries: 2.1 | responseSize: 4.2KB | compression: 72%
-    }
-    graphqlMetrics {
-      queryComplexity: 15 | depth: 4 | fieldCount: 28 | batchEfficiency: 94%
-    }
-  }
-}
-```
+MCP SERVERS SECTION
+  Model Context Protocol integrations
+
+FOOTER SECTION
+  Company information with gradient styling
+  Consistent with overall design system
 
 ---
 
-## Sed/Awk Tool Guide
+DEVOPS TOOLS
+============
 
-The integrated Sed/Awk tool converts natural language commands into text processing operations. Use it for log analysis, data transformation, and text manipulation.
+The platform includes 20+ integrated DevOps tools accessible via tabbed interface:
 
-### Operations
+BASE64 TOOL
+  Encode text to Base64
+  Decode Base64 to text
 
-| Operation | Input Format | Example |
-|-----------|--------------|---------|
-| **Find & Replace** | Line 1: regex pattern \| Line 2: replacement \| Line 3+: text | `s/error/warning/g` → replaces all errors with warnings |
-| **Delete Lines** | Line 1: pattern to match \| Line 2+: text | `^#` → removes all comment lines |
-| **Extract Fields** | Line 1: delimiter \| Line 2: field number \| Line 3+: text | `,` + `2` → extracts 2nd CSV field |
-| **Count Lines** | Just paste text | Counts total lines, characters, and words |
-| **Print Lines** | Line 1: start line \| Line 2: end line \| Line 3+: text | `5` + `10` → shows lines 5-10 |
-| **Transform** | Line 1: operation (upper/lower/reverse/trim) \| Line 2+: text | `upper` → converts to uppercase |
+JSON TOOL
+  Format JSON with indentation
+  Minify JSON to single line
+  Validate JSON syntax
 
-### Common Patterns
+TIMESTAMP TOOL
+  Convert Unix timestamp to ISO date
+  Convert ISO date to Unix timestamp
+  Get current Unix timestamp
 
-```
-Find & Replace:
-  s/pattern/replacement/g     # Replace all occurrences
-  s/^/prefix/                 # Add prefix to each line
-  s/$/suffix/                 # Add suffix to each line
+UUID TOOL
+  Generate random UUID v4
 
-Delete Lines:
-  ^#                          # Remove comments
-  ^$                          # Remove empty lines
-  error|warning               # Remove lines with error or warning
+URL TOOL
+  Encode text to URL-safe format
+  Decode URL-encoded text
 
-Extract Fields (CSV):
-  Delimiter: ,
-  Field: 1                    # First column
-  Field: 2                    # Second column
-```
+SHA-256 TOOL
+  Generate SHA-256 cryptographic hash
+
+REGEX TOOL
+  Test pattern matching
+  Find all matches in text
+
+JWT DECODER TOOL
+  Decode JWT tokens
+  Parse payload information
+
+YAML TO JSON TOOL
+  Convert YAML format to JSON
+  Parse key-value pairs
+
+MAC FORMATTER TOOL
+  Format MAC address with colons (AA:BB:CC:DD:EE:FF)
+  Format MAC address with hyphens (AA-BB-CC-DD-EE-FF)
+  Format MAC address with dots (AABB.CCDD.EEFF)
+  Format MAC address continuous (AABBCCDDEEFF)
+
+IP CONVERTER TOOL
+  Convert IPv4 to binary notation
+  Convert IPv4 to hexadecimal notation
+  Convert IPv4 to decimal notation
+
+SUBNET CALCULATOR TOOL
+  Calculate subnet information from CIDR notation
+  Display network address, broadcast address, host range
+  Calculate total usable hosts
+
+CLI COMMANDS TOOL
+  Docker commands reference
+  Kubectl commands reference
+  Git commands reference
+  Terraform commands reference
+  AWS CLI commands reference
+
+INFRASTRUCTURE TOOL
+  Common port reference
+  CIDR notation reference
+  DNS servers reference
+  SSL certificate generation
+
+DEVOPS TOOLS REFERENCE
+  CI/CD platforms list
+  Monitoring tools list
+  Container platforms list
+  Orchestration platforms list
+
+MS ADMIN TOOL
+  Active Directory commands
+  PowerShell commands
+  Exchange commands
+  SharePoint commands
+
+SED/AWK TOOL
+  Find and Replace (regex substitution)
+  Delete Lines (pattern matching)
+  Extract Fields (delimiter-based extraction)
+  Count Lines (statistics)
+  Print Lines (line range extraction)
+  Transform (case conversion, reverse, trim)
+
+DOWNLOADS SECTION
+  Resume PDF download
+  Resume TXT download
+  DevOps Cheat Sheet download
+
+CONTACT SECTION
+  Email address with copy button
+  Phone number with copy button
 
 ---
 
-### Installation
-```bash
-git clone https://github.com/Parkingpet/parkingpet.github.io.git
-cd parkingpet.github.io
-npm install
-```
+QUICK LINKS GRID
+================
 
-### Development
-```bash
-npm run dev          # Start dev server (localhost:5173)
-npm run build        # Production build
-npm run preview      # Preview production build
-npm run lint         # Check code quality
-```
+The platform includes 25+ quick links to popular DevOps and development tools:
 
-### Deployment
-- Automatic deployment via GitHub Actions on push to main
-- Hosted on GitHub Pages at https://parkingpet.github.io
-- Build artifacts in `/dist` directory
+PROJECT LINKS
+  View Live Site
+  GitHub Repository
+  Fork This Project
+
+CONTAINER & ORCHESTRATION
+  Docker
+  Kubernetes
+  Podman
+
+INFRASTRUCTURE & IaC
+  Terraform
+  Ansible
+  Chef
+  Puppet
+
+CI/CD PLATFORMS
+  Jenkins
+  GitLab
+  GitHub Actions
+  Bitbucket
+
+MONITORING & OBSERVABILITY
+  Prometheus
+  Grafana
+  Datadog
+  New Relic
+  Splunk
+  Elastic Stack
+
+DATABASES
+  PostgreSQL
+  MongoDB
+  Redis
+  MySQL
+
+WEB SERVERS & PROXIES
+  NGINX
+  Apache
+
+VERSION CONTROL
+  Git
+  GitLab
+  Bitbucket
+
+PROJECT MANAGEMENT
+  Jira
+  Confluence
+
+SERVICE MESH & DISCOVERY
+  Consul
+  Vault
+  Istio
+  Linkerd
+
+OPERATING SYSTEMS
+  Linux
+  Windows Server
+  macOS
 
 ---
 
-## Project Structure
+TECHNOLOGY STACK
+================
 
-```
+Frontend Framework
+  React 18.2 with Hooks
+  Functional components
+  State management with useState, useEffect, useContext
+
+Build Tool
+  Vite 7.3
+  Fast development server
+  Optimized production builds
+
+Styling
+  CSS-in-JS with inline styles
+  CSS Variables for theming
+  CSS Grid and Flexbox
+  Responsive design
+  Glassmorphism effects
+
+Performance
+  Code splitting
+  Lazy loading
+  Tree shaking
+  Asset optimization
+  Image lazy loading
+
+Deployment
+  GitHub Pages
+  GitHub Actions CI/CD
+  Automatic deployment on push
+
+---
+
+FEATURES
+========
+
+INTERACTIVE TOOLS
+  20+ integrated DevOps utilities
+  Real-time processing
+  Copy-to-clipboard functionality
+  Input/output text areas
+  Collapsible tool sections
+
+QUICK REFERENCE
+  25+ external tool links
+  Organized by category
+  Collapsible link sections
+  Direct access to documentation
+
+MODERN DESIGN
+  Glassmorphism UI patterns
+  Gradient backgrounds
+  Smooth transitions
+  Color-coded sections
+  Improved typography hierarchy
+
+RESPONSIVE DESIGN
+  Mobile-first approach
+  Flexible grid layouts
+  Touch-friendly interface
+  Works on all modern browsers
+
+PERFORMANCE
+  Build time: ~1 second
+  Bundle size: <180KB gzipped
+  Lighthouse score: 95+
+  First paint: <0.8s
+  Time to interactive: <1.2s
+  API response: <18ms p95
+
+ACCESSIBILITY
+  Semantic HTML
+  ARIA labels
+  Keyboard navigation
+  Color contrast compliance
+  Focus indicators
+
+VISUAL EFFECTS
+  Animated grid background
+  CRT scanline effect
+  Particle animation
+  Smooth transitions
+  Hover effects on interactive elements
+
+---
+
+DEVELOPMENT COMMANDS
+====================
+
+Installation
+  git clone https://github.com/Parkingpet/parkingpet.github.io.git
+  cd parkingpet.github.io
+  npm install
+
+Development
+  npm run dev          Start dev server (localhost:5173)
+  npm run build        Production build
+  npm run preview      Preview production build
+  npm run lint         Check code quality
+
+Deployment
+  Automatic deployment via GitHub Actions on push to main
+  Hosted on GitHub Pages at https://parkingpet.github.io
+  Build artifacts in /dist directory
+
+---
+
+PROJECT STRUCTURE
+=================
+
 src/
-├── App.jsx                    # Root component
-├── main.jsx                   # Entry point
-├── index.css                  # Global styles
-├── resumeData.js              # Data source
-└── components/
-    ├── header/                # Navigation
-    ├── loading/               # Terminal animation
-    ├── summary/               # Profile section
-    ├── skills/                # Technical skills
-    ├── tools/                 # DevOps utilities
-    ├── projects/              # Portfolio
-    ├── experience/            # Work history
-    ├── education/             # Education
-    ├── clients/               # Client list
-    ├── mcp/                   # MCP servers
-    ├── email/                 # Email widget
-    ├── graphql/               # GraphQL examples
-    └── footer/                # Footer
-```
+  App.jsx                    Root component with layout
+  main.jsx                   Entry point
+  index.css                  Global styles and animations
+  resumeData.js              Data source
+  components/
+    header/                  Navigation and header with gradient styling
+    loading/                 Terminal loading animation
+    summary/                 Professional summary with competencies
+    skills/                  Technical skills display
+    tools/                   DevOps tools interface
+    projects/                Project portfolio
+    experience/              Work history
+    education/               Education section
+    clients/                 Client partnerships
+    mcp/                     MCP servers
+    email/                   Email widget
+    graphql/                 GraphQL examples
+    footer/                  Footer
 
 ---
 
-## Contributing
+BROWSER SUPPORT
+===============
+
+Chrome
+  Latest 2 versions
+
+Firefox
+  Latest 2 versions
+
+Safari
+  Latest 2 versions
+
+Edge
+  Latest 2 versions
+
+Mobile
+  iOS 12 and later
+  Android 8 and later
+
+---
+
+RESOURCES
+=========
+
+Live Site
+  https://parkingpet.github.io
+
+GitHub Repository
+  https://github.com/Parkingpet/parkingpet.github.io
+
+Report Issues
+  https://github.com/Parkingpet/parkingpet.github.io/issues
+
+View Pull Requests
+  https://github.com/Parkingpet/parkingpet.github.io/pulls
+
+---
+
+CONTRIBUTING
+============
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (git checkout -b feature/amazing-feature)
+3. Commit changes (git commit -m 'Add amazing feature')
+4. Push to branch (git push origin feature/amazing-feature)
 5. Open a Pull Request
 
 ---
 
-## Browser Support
-
-| Browser | Support |
-|---------|---------|
-| Chrome | Latest 2 versions |
-| Firefox | Latest 2 versions |
-| Safari | Latest 2 versions |
-| Edge | Latest 2 versions |
-| Mobile | iOS 12+, Android 8+ |
-
----
-
-## License
+LICENSE
+=======
 
 MIT License - See LICENSE file for details
 
 ---
 
-## Resources
-
-- [Live Site](https://parkingpet.github.io)
-- [GitHub Repository](https://github.com/Parkingpet/parkingpet.github.io)
-- [Report Issues](https://github.com/Parkingpet/parkingpet.github.io/issues)
-- [View PRs](https://github.com/Parkingpet/parkingpet.github.io/pulls)
-
----
-
-**Last Updated**: March 2026 | **Status**: Active Development | **Uptime**: 99.97%
+Last Updated: March 2026
+Status: Active Development
+Uptime: 99.97%

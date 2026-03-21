@@ -10,7 +10,7 @@ import Education from './components/education/Education';
 import Clients from './components/clients/Clients';
 import MCPServers from './components/mcp/MCPServers';
 import Footer from './components/footer/Footer';
-import EmailWidget from './components/email/EmailWidget';
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -83,12 +83,8 @@ export default function App() {
             <div id="summary">
               <Summary />
             </div>
-            <EmailWidget />
             <div id="skills">
               <Skills />
-            </div>
-            <div id="tools">
-              <Tools />
             </div>
             <div id="projects">
               <Projects />
@@ -101,6 +97,9 @@ export default function App() {
             </div>
             <div id="clients">
               <Clients />
+            </div>
+            <div id="tools">
+              <Tools />
             </div>
             <div id="mcp-servers">
               <MCPServers />
@@ -190,14 +189,14 @@ const styles = {
     height: '100%',
     pointerEvents: 'none',
     zIndex: 0,
-    opacity: 0.5
+    opacity: 0.3
   },
   grid: {
     position: 'fixed',
     inset: 0,
     background: `
-      linear-gradient(90deg, rgba(56,189,248,0.01) 1px, transparent 1px),
-      linear-gradient(rgba(56,189,248,0.01) 1px, transparent 1px)
+      linear-gradient(90deg, rgba(56,189,248,0.008) 1px, transparent 1px),
+      linear-gradient(rgba(56,189,248,0.008) 1px, transparent 1px)
     `,
     backgroundSize: '50px 50px',
     pointerEvents: 'none',
@@ -206,7 +205,7 @@ const styles = {
   scanline: {
     position: 'fixed',
     inset: 0,
-    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.01) 50%)',
+    background: 'linear-gradient(transparent 50%, rgba(56,189,248,0.005) 50%)',
     backgroundSize: '100% 4px',
     pointerEvents: 'none',
     animation: 'scanline 15s linear infinite'
@@ -217,9 +216,9 @@ const styles = {
     animation: 'fadeIn 0.8s ease-out'
   },
   container: {
-    maxWidth: '1100px',
+    maxWidth: '1200px',
     margin: '0 auto',
-    padding: '16px 16px 32px',
+    padding: '24px 20px 40px',
     color: '#e2e8f0',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
     lineHeight: 1.1,
