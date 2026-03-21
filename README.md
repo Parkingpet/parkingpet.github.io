@@ -1,4 +1,11 @@
-# Mustafa "Moose" McLinn
+```
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    MUSTAFA "MOOSE" McLINN                                 ║
+║              Senior Infrastructure Engineer | DevOps | SRE                ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+```
 
 > **Interactive DevOps Resume Platform** | React 18.2 + Vite 7.3 | DevOps Toolkit | <180KB Gzipped
 
@@ -8,330 +15,604 @@
 [![Node.js](https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white&style=flat-square)](https://nodejs.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-**[Live Site](https://parkingpet.github.io)** • **[Repository](https://github.com/Parkingpet/parkingpet.github.io)**
-
 ---
 
-## Performance Highlights
+## ┌─ PERFORMANCE METRICS ─────────────────────────────────────────────────┐
 
-| **Metric** | **Target** | **Actual** |
+| Metric | Target | Actual |
 |:---|:---:|:---:|
-| Build Time | ~1s | **939ms** |
-| Bundle Size | <180KB | **69.05KB** gzipped |
-| Lighthouse Score | 95+ | **95+** |
-| First Paint | <0.8s | **<0.8s** |
-| Time to Interactive | <1.2s | **<1.2s** |
-| API Response | <25ms p95 | **<18ms** |
-| Uptime | 99.95% | **99.97%** |
+| **Build Time** | ~1s | **939ms** |
+| **Bundle Size** | <180KB | **69.05KB** gzipped |
+| **Lighthouse Score** | 95+ | **95+** |
+| **First Paint** | <0.8s | **<0.8s** |
+| **Time to Interactive** | <1.2s | **<1.2s** |
+| **API Response** | <25ms p95 | **<18ms** |
+| **Uptime** | 99.95% | **99.97%** |
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## Key Features
+## ┌─ CORE FEATURES ───────────────────────────────────────────────────────┐
 
 ### DevOps Tools Suite (20+ Utilities)
 
-| **Category** | **Tools** |
-|:---|:---|
-| Encoding & Hashing | Base64 • SHA-256 • URL Encoding |
-| Data Processing | JSON • YAML to JSON • Regex |
-| Utilities | Timestamp • UUID • JWT Decoder • MAC Formatter • IP Converter • Subnet Calculator |
-| References | CLI Commands • Infrastructure • DevOps Tools • MS Admin • Sed/Awk |
+```
+┌─────────────────────────────────────────────────────────────┐
+│ ENCODING & HASHING                                          │
+├─────────────────────────────────────────────────────────────┤
+│ • Base64 Encoder/Decoder                                    │
+│ • SHA-256 Hash Generator                                    │
+│ • URL Encoding/Decoding                                     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ DATA PROCESSING                                             │
+├─────────────────────────────────────────────────────────────┤
+│ • JSON Formatter & Minifier                                 │
+│ • YAML to JSON Converter                                    │
+│ • Regex Pattern Matcher                                     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ UTILITIES                                                   │
+├─────────────────────────────────────────────────────────────┤
+│ • Timestamp Converter                                       │
+│ • UUID Generator                                            │
+│ • JWT Decoder                                               │
+│ • MAC Address Formatter                                     │
+│ • IP Address Converter                                      │
+│ • Subnet Calculator                                         │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ REFERENCES                                                  │
+├─────────────────────────────────────────────────────────────┤
+│ • CLI Commands Reference                                    │
+│ • Infrastructure Patterns                                   │
+│ • DevOps Tools Guide                                        │
+│ • MS Admin Commands                                         │
+│ • Sed/Awk Operations                                        │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ### Professional Portfolio
 
-| **Section** | **Description** |
-|:---|:---|
-| Summary | Professional overview & core competencies |
-| Skills | Technical expertise organized by category |
-| Projects | Portfolio with descriptions & links |
-| Experience | Work history with key achievements |
-| Education | Educational background |
-| Clients | Notable partnerships & long-term relationships |
+```
+┌─────────────────────────────────────────────────────────────┐
+│ PORTFOLIO SECTIONS                                          │
+├─────────────────────────────────────────────────────────────┤
+│ Summary          │ Professional overview & competencies    │
+│ Skills           │ Technical expertise by category         │
+│ Projects         │ Portfolio with descriptions & links     │
+│ Experience       │ Work history with achievements          │
+│ Education        │ Educational background                  │
+│ Clients          │ Notable partnerships & relationships    │
+│ MCP Servers      │ Model Context Protocol integrations     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## Technology Stack
+## ┌─ TECHNOLOGY STACK ────────────────────────────────────────────────────┐
 
-### Frontend & Build
+### Frontend & Build Architecture
 
-| **Layer** | **Technology** |
-|:---|:---|
-| Frontend | React 18.2 • Vite 7.3 • JavaScript ES2020 |
-| Styling | CSS-in-JS • CSS Variables • Grid/Flexbox |
-| State | React Hooks (useState, useEffect, useContext) |
-| API | GraphQL • REST • JSON • Fetch |
-| Build Tools | Vite • ESLint • Prettier |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ FRONTEND LAYER                                               │
+├──────────────────────────────────────────────────────────────┤
+│ React 18.2          │ Modern UI framework                    │
+│ Vite 7.3            │ Lightning-fast build tool              │
+│ JavaScript ES2020   │ Latest language features               │
+└──────────────────────────────────────────────────────────────┘
 
-### Deployment & CI/CD
+┌──────────────────────────────────────────────────────────────┐
+│ STYLING & LAYOUT                                             │
+├──────────────────────────────────────────────────────────────┤
+│ CSS-in-JS           │ Component-scoped styling               │
+│ CSS Variables       │ Dynamic theming support                │
+│ Grid/Flexbox        │ Responsive layouts                     │
+└──────────────────────────────────────────────────────────────┘
 
-| **Component** | **Details** |
-|:---|:---|
-| Hosting | GitHub Pages |
-| CI/CD | GitHub Actions |
-| Version Control | Git • GitHub |
-| Authentication | SSH |
+┌──────────────────────────────────────────────────────────────┐
+│ STATE MANAGEMENT                                             │
+├──────────────────────────────────────────────────────────────┤
+│ useState            │ Component state management             │
+│ useEffect           │ Side effects & lifecycle               │
+│ useContext          │ Global state sharing                   │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ API & DATA                                                   │
+├──────────────────────────────────────────────────────────────┤
+│ GraphQL             │ Query language for APIs                │
+│ REST               │ RESTful API integration                │
+│ JSON               │ Data serialization                     │
+│ Fetch API          │ HTTP client                            │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ BUILD & TOOLING                                              │
+├──────────────────────────────────────────────────────────────┤
+│ Vite               │ Build orchestration                    │
+│ ESLint             │ Code quality analysis                  │
+│ Prettier           │ Code formatting                        │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Deployment & CI/CD Pipeline
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ HOSTING INFRASTRUCTURE                                       │
+├──────────────────────────────────────────────────────────────┤
+│ GitHub Pages        │ Static site hosting                    │
+│ CDN Distribution    │ Global content delivery                │
+│ SSL/TLS             │ Secure connections                     │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ CI/CD AUTOMATION                                             │
+├──────────────────────────────────────────────────────────────┤
+│ GitHub Actions      │ Workflow automation                    │
+│ Build Pipeline      │ Automated compilation                 │
+│ Test Suite          │ Quality assurance                      │
+│ Deployment          │ Zero-downtime releases                │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ VERSION CONTROL                                              │
+├──────────────────────────────────────────────────────────────┤
+│ Git                 │ Distributed version control            │
+│ GitHub              │ Repository hosting                     │
+│ SSH Authentication  │ Secure key-based access               │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## Project Structure
+## ┌─ PROJECT STRUCTURE ───────────────────────────────────────────────────┐
 
 ```
 src/
-├── App.jsx                 # Root component
-├── main.jsx                # Entry point
-├── index.css               # Global styles
-├── resumeData.js           # Data source
+├── App.jsx                          # Root component & orchestration
+├── main.jsx                         # Application entry point
+├── index.css                        # Global styles & animations
+├── resumeData.js                    # Centralized data source
+│
 └── components/
-    ├── header/             # Navigation
-    ├── summary/            # Professional summary
-    ├── skills/             # Technical skills
-    ├── tools/              # DevOps tools
-    ├── projects/           # Portfolio
-    ├── experience/         # Work history
-    ├── education/          # Education
-    ├── clients/            # Partnerships
-    ├── loading/            # Loading animation
-    ├── footer/             # Footer
-    └── mcp/                # MCP servers
+    ├── header/
+    │   └── Header.jsx               # Navigation & branding
+    ├── summary/
+    │   └── Summary.jsx              # Professional overview
+    ├── skills/
+    │   └── Skills.jsx               # Technical expertise
+    ├── tools/
+    │   └── Tools.jsx                # DevOps utilities suite
+    ├── projects/
+    │   └── Projects.jsx             # Portfolio showcase
+    ├── experience/
+    │   └── Experience.jsx           # Work history
+    ├── education/
+    │   └── Education.jsx            # Educational background
+    ├── clients/
+    │   └── Clients.jsx              # Client partnerships
+    ├── contact/
+    │   └── ContactWidget.jsx        # Support widget
+    ├── loading/
+    │   └── Loading.jsx              # Loading animation
+    ├── footer/
+    │   └── Footer.jsx               # Footer section
+    └── mcp/
+        └── MCPServers.jsx           # MCP integrations
 ```
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## CI/CD Pipeline
+## ┌─ CI/CD PIPELINE WORKFLOW ─────────────────────────────────────────────┐
 
-### GitHub Actions Workflow
-
-| **Stage** | **Action** |
-|:---|:---|
-| Trigger | Push to `main` branch |
-| Checks | ESLint • Build verification |
-| Deploy | GitHub Pages deployment |
-| Result | Zero-downtime deployment |
+```
+┌─────────────────────────────────────────────────────────────┐
+│ TRIGGER: Push to main branch                                │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STAGE 1: VALIDATION                                         │
+├─────────────────────────────────────────────────────────────┤
+│ ✓ ESLint code quality checks                                │
+│ ✓ Build verification                                        │
+│ ✓ Dependency analysis                                       │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STAGE 2: BUILD                                              │
+├─────────────────────────────────────────────────────────────┤
+│ ✓ Compile React components                                  │
+│ ✓ Bundle with Vite                                          │
+│ ✓ Optimize assets                                           │
+│ ✓ Generate source maps                                      │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STAGE 3: DEPLOYMENT                                         │
+├─────────────────────────────────────────────────────────────┤
+│ ✓ Deploy to GitHub Pages                                    │
+│ ✓ Invalidate CDN cache                                      │
+│ ✓ Update DNS records                                        │
+│ ✓ Zero-downtime release                                     │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ RESULT: Live on parkingpet.github.io                        │
+└─────────────────────────────────────────────────────────────┘
+```
 
 **Status**: [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
 
+## └────────────────────────────────────────────────────────────────────────┘
+
 ---
 
-## Accessibility & Browser Support
+## ┌─ ACCESSIBILITY & BROWSER SUPPORT ─────────────────────────────────────┐
 
 ### Accessibility Features
 
-| **Feature** | **Status** |
-|:---|:---:|
-| Semantic HTML | ✓ |
-| ARIA Labels | ✓ |
-| Keyboard Navigation | ✓ |
-| WCAG AA Contrast | ✓ |
-| Focus Indicators | ✓ |
-| Skip Links | ✓ |
+```
+┌─────────────────────────────────────────────────────────────┐
+│ WCAG 2.1 LEVEL AA COMPLIANCE                                │
+├─────────────────────────────────────────────────────────────┤
+│ ✓ Semantic HTML structure                                   │
+│ ✓ ARIA labels & roles                                       │
+│ ✓ Keyboard navigation support                               │
+│ ✓ WCAG AA color contrast ratios                             │
+│ ✓ Focus indicators on interactive elements                  │
+│ ✓ Skip navigation links                                     │
+│ ✓ Alt text for images                                       │
+│ ✓ Form labels & error messages                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
-### Browser Compatibility
+### Browser Compatibility Matrix
 
-| **Browser** | **Support** |
-|:---|:---:|
-| Chrome | Latest 2 versions |
-| Firefox | Latest 2 versions |
-| Safari | Latest 2 versions |
-| Edge | Latest 2 versions |
-| Mobile | iOS 12+, Android 8+ |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ BROWSER SUPPORT                                              │
+├──────────────────────────────────────────────────────────────┤
+│ Chrome              │ Latest 2 versions                      │
+│ Firefox             │ Latest 2 versions                      │
+│ Safari              │ Latest 2 versions                      │
+│ Edge                │ Latest 2 versions                      │
+│ Mobile (iOS)        │ iOS 12+                                │
+│ Mobile (Android)    │ Android 8+                             │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## Resources & Links
+## ┌─ RESOURCES & DOCUMENTATION ───────────────────────────────────────────┐
+
+### Official Documentation
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ FRAMEWORK & LIBRARY DOCS                                     │
+├──────────────────────────────────────────────────────────────┤
+│ React Docs          │ https://react.dev                      │
+│ Vite Docs           │ https://vitejs.dev                     │
+│ Node.js Docs        │ https://nodejs.org/docs                │
+│ GraphQL Docs        │ https://graphql.org                    │
+│ MDN Web Docs        │ https://developer.mozilla.org          │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Project Resources
 
-| **Resource** | **Link** |
-|:---|:---|
-| Live Site | https://parkingpet.github.io |
-| GitHub Repo | https://github.com/Parkingpet/parkingpet.github.io |
-| Issues | https://github.com/Parkingpet/parkingpet.github.io/issues |
-| Pull Requests | https://github.com/Parkingpet/parkingpet.github.io/pulls |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ PROJECT LINKS                                                │
+├──────────────────────────────────────────────────────────────┤
+│ Live Site           │ https://parkingpet.github.io           │
+│ GitHub Repository   │ https://github.com/Parkingpet/...      │
+│ Issue Tracker       │ https://github.com/Parkingpet/.../issues
+│ Pull Requests       │ https://github.com/Parkingpet/.../pulls │
+└──────────────────────────────────────────────────────────────┘
+```
 
-### Documentation
-
-| **Resource** | **Link** |
-|:---|:---|
-| React Docs | https://react.dev |
-| Vite Docs | https://vitejs.dev |
-| Node.js Docs | https://nodejs.org/docs |
-| GraphQL | https://graphql.org |
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## Contributing
+## ┌─ CONTRIBUTING ────────────────────────────────────────────────────────┐
 
-### Contribution Steps
+### Contribution Workflow
 
-| **Step** | **Action** |
-|:---|:---|
-| 1 | Fork the repository |
-| 2 | Create a feature branch |
-| 3 | Commit your changes |
-| 4 | Push to your branch |
-| 5 | Open a Pull Request |
+```
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 1: FORK                                                │
+├─────────────────────────────────────────────────────────────┤
+│ Click fork button on GitHub repository                      │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 2: CREATE FEATURE BRANCH                               │
+├─────────────────────────────────────────────────────────────┤
+│ git checkout -b feature/amazing-feature                     │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 3: COMMIT CHANGES                                      │
+├─────────────────────────────────────────────────────────────┤
+│ git commit -m 'Add amazing feature'                         │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 4: PUSH TO BRANCH                                      │
+├─────────────────────────────────────────────────────────────┤
+│ git push origin feature/amazing-feature                     │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 5: OPEN PULL REQUEST                                   │
+├─────────────────────────────────────────────────────────────┤
+│ Submit PR on GitHub for review                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
-## License & Status
+## ┌─ PROJECT INFORMATION ─────────────────────────────────────────────────┐
 
-### Project Information
+```
+┌──────────────────────────────────────────────────────────────┐
+│ PROJECT METADATA                                             │
+├──────────────────────────────────────────────────────────────┤
+│ License             │ MIT - See LICENSE file                 │
+│ Last Updated        │ March 2026                             │
+│ Status              │ Active Development                     │
+│ Uptime              │ 99.97%                                 │
+│ Version             │ 1.0.0                                  │
+│ Maintainer          │ Parkingpet                             │
+│ Repository Type     │ Public                                 │
+│ Build Status        │ Passing                                │
+└──────────────────────────────────────────────────────────────┘
+```
 
-| **Item** | **Value** |
-|:---|:---|
-| License | MIT - See [LICENSE](LICENSE) |
-| Last Updated | March 2026 |
-| Status | Active Development |
-| Uptime | 99.97% |
-| Version | 1.0.0 |
+## └────────────────────────────────────────────────────────────────────────┘
 
 ---
 
 <div align="center">
 
-### Built with dedication by Parkingpet
-
-[GitHub](https://github.com/Parkingpet) • [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9) • [Email](mailto:mustafa.mclinn@outlook.com)
+```
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    BUILT WITH DEDICATION BY PARKINGPET                    ║
+║                                                                            ║
+║              GitHub • LinkedIn • Email                                     ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
 ---
 
-## DevOps & Development Tools
+## ┌─ DEVOPS & DEVELOPMENT TOOLS ──────────────────────────────────────────┐
 
 ### Cloud Platforms
 
-| **Platform** | **Services** |
-|:---|:---|
-| AWS | EC2 • S3 • IAM • CloudFront • Route 53 |
-| GCP | Compute • Storage • SQL • Functions • Cloud Run |
-| Azure | Portal • DevOps • Intune • Entra • Admin |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ AWS                                                          │
+├──────────────────────────────────────────────────────────────┤
+│ EC2 • S3 • IAM • CloudFront • Route 53 • Lambda • RDS       │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ GOOGLE CLOUD PLATFORM                                        │
+├──────────────────────────────────────────────────────────────┤
+│ Compute • Storage • SQL • Functions • Cloud Run • BigQuery   │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ MICROSOFT AZURE                                              │
+├──────────────────────────────────────────────────────────────┤
+│ Portal • DevOps • Intune • Entra • Admin • App Service      │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Containers & Orchestration
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Docker | Container platform & registry |
-| Kubernetes | Container orchestration |
-| Podman | Container engine |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ CONTAINERIZATION                                             │
+├──────────────────────────────────────────────────────────────┤
+│ Docker              │ Container platform & registry          │
+│ Kubernetes          │ Container orchestration                │
+│ Podman              │ Container engine                       │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Infrastructure as Code
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Terraform | Infrastructure automation |
-| Ansible | Configuration management |
-| Chef | Infrastructure automation |
-| Puppet | Infrastructure as Code |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ IaC TOOLS                                                    │
+├──────────────────────────────────────────────────────────────┤
+│ Terraform           │ Infrastructure automation              │
+│ Ansible             │ Configuration management               │
+│ Chef                │ Infrastructure automation              │
+│ Puppet              │ Infrastructure as Code                 │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### CI/CD Platforms
 
-| **Platform** | **Features** |
-|:---|:---|
-| GitHub Actions | CI/CD automation |
-| GitLab CI | DevOps platform |
-| Jenkins | Automation server |
-| CircleCI | CI/CD platform |
-| Bitbucket | Git repository |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ CONTINUOUS INTEGRATION & DEPLOYMENT                          │
+├──────────────────────────────────────────────────────────────┤
+│ GitHub Actions      │ CI/CD automation                       │
+│ GitLab CI           │ DevOps platform                        │
+│ Jenkins             │ Automation server                      │
+│ CircleCI            │ CI/CD platform                         │
+│ Bitbucket           │ Git repository                         │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Monitoring & Observability
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Prometheus | Metrics monitoring |
-| Grafana | Visualization platform |
-| Datadog | Cloud monitoring |
-| New Relic | Application monitoring |
-| Splunk | Log analysis |
-| Elastic Stack | Search & analytics |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ MONITORING STACK                                             │
+├──────────────────────────────────────────────────────────────┤
+│ Prometheus          │ Metrics monitoring                     │
+│ Grafana             │ Visualization platform                 │
+│ Datadog             │ Cloud monitoring                       │
+│ New Relic           │ Application monitoring                 │
+│ Splunk              │ Log analysis                           │
+│ Elastic Stack       │ Search & analytics                     │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Databases
 
-| **Database** | **Type** |
-|:---|:---|
-| PostgreSQL | Relational |
-| MongoDB | NoSQL |
-| Redis | In-memory cache |
-| MySQL | Relational |
-| Elasticsearch | Search engine |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ DATABASE SYSTEMS                                             │
+├──────────────────────────────────────────────────────────────┤
+│ PostgreSQL          │ Advanced relational database           │
+│ MongoDB             │ NoSQL document database                │
+│ Redis               │ In-memory cache store                  │
+│ MySQL               │ Relational database                    │
+│ Elasticsearch       │ Search engine                          │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Web Servers & Proxies
 
-| **Server** | **Purpose** |
-|:---|:---|
-| NGINX | Web server & proxy |
-| Apache | Web server |
-| HAProxy | Load balancer |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ WEB INFRASTRUCTURE                                           │
+├──────────────────────────────────────────────────────────────┤
+│ NGINX               │ Web server & reverse proxy             │
+│ Apache              │ Web server                             │
+│ HAProxy             │ Load balancer                          │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Version Control
 
-| **Platform** | **Features** |
-|:---|:---|
-| Git | Version control |
-| GitHub | Repository hosting |
-| GitLab | DevOps platform |
-| Bitbucket | Git hosting |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ SOURCE CODE MANAGEMENT                                       │
+├──────────────────────────────────────────────────────────────┤
+│ Git                 │ Distributed version control            │
+│ GitHub              │ Repository hosting                     │
+│ GitLab              │ DevOps platform                        │
+│ Bitbucket           │ Git hosting                            │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Project Management
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Jira | Issue tracking |
-| Confluence | Documentation |
-| Trello | Task management |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ COLLABORATION TOOLS                                          │
+├──────────────────────────────────────────────────────────────┤
+│ Jira                │ Issue tracking                         │
+│ Confluence          │ Documentation                          │
+│ Trello              │ Task management                        │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Service Mesh & Discovery
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Consul | Service mesh |
-| Vault | Secrets management |
-| Istio | Service mesh |
-| Linkerd | Service mesh |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ SERVICE MESH                                                 │
+├──────────────────────────────────────────────────────────────┤
+│ Consul              │ Service mesh & discovery               │
+│ Vault               │ Secrets management                     │
+│ Istio               │ Service mesh                           │
+│ Linkerd             │ Service mesh                           │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Development Tools
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| VS Code | Code editor |
-| Postman | API testing |
-| Insomnia | API client |
-| Docker Hub | Container registry |
-
-### Documentation & Learning
-
-| **Resource** | **Content** |
-|:---|:---|
-| MDN Web Docs | Web documentation |
-| React Docs | React documentation |
-| Vite Docs | Vite documentation |
-| Node.js Docs | Node.js documentation |
-| GraphQL | GraphQL documentation |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ DEVELOPER TOOLS                                              │
+├──────────────────────────────────────────────────────────────┤
+│ VS Code             │ Code editor                            │
+│ Postman             │ API testing                            │
+│ Insomnia            │ API client                             │
+│ Docker Hub          │ Container registry                     │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Testing & Quality
 
-| **Tool** | **Purpose** |
-|:---|:---|
-| Jest | JavaScript testing |
-| Cypress | E2E testing |
-| Lighthouse | Performance audit |
-| SonarQube | Code quality |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ QUALITY ASSURANCE                                            │
+├──────────────────────────────────────────────────────────────┤
+│ Jest                │ JavaScript testing                     │
+│ Cypress             │ E2E testing                            │
+│ Lighthouse          │ Performance audit                      │
+│ SonarQube           │ Code quality                           │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Security
 
-| **Resource** | **Purpose** |
-|:---|:---|
-| OWASP | Security standards |
-| Snyk | Vulnerability scanning |
-| Let's Encrypt | SSL certificates |
-| NIST | Cybersecurity guidelines |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ SECURITY & COMPLIANCE                                        │
+├──────────────────────────────────────────────────────────────┤
+│ OWASP               │ Security standards                     │
+│ Snyk                │ Vulnerability scanning                 │
+│ Let's Encrypt       │ SSL certificates                       │
+│ NIST                │ Cybersecurity guidelines               │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### Package Registries
 
-| **Registry** | **Language** |
-|:---|:---|
-| npm | JavaScript |
-| PyPI | Python |
-| Maven | Java |
-| RubyGems | Ruby |
-| Cargo | Rust |
+```
+┌──────────────────────────────────────────────────────────────┐
+│ PACKAGE MANAGEMENT                                           │
+├──────────────────────────────────────────────────────────────┤
+│ npm                 │ JavaScript packages                    │
+│ PyPI                │ Python packages                        │
+│ Maven               │ Java packages                          │
+│ RubyGems            │ Ruby packages                          │
+│ Cargo               │ Rust packages                          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## └────────────────────────────────────────────────────────────────────────┘
+
+---
+
+```
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    SYSTEM STATUS: OPERATIONAL                             ║
+║                    UPTIME: 99.97% | BUILD: PASSING                        ║
+║                    LAST DEPLOYMENT: MARCH 2026                            ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+```
