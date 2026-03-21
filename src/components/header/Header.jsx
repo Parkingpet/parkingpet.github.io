@@ -11,35 +11,35 @@ export default function Header() {
       </h1>
       <nav style={styles.nav}>
         <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink} 
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Home</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Home</a>
         <a href="#summary" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Summary</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Summary</a>
         <a href="#competencies" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Competencies</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Competencies</a>
         <a href="#skills" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Technical</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Technical</a>
         <a href="#tools" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>DevOps Tools</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>DevOps Tools</a>
         <a href="#projects" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Projects</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Projects</a>
         <a href="#experience" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Experience</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Experience</a>
         <a href="#education" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Education</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Education</a>
         <a href="#clients" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Clients</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>Clients</a>
         <a href="#mcp-servers" style={styles.navLink}
-           onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
-           onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>MCP Servers</a>
+           onMouseEnter={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.8))'; e.target.style.color = '#38bdf8'; e.target.style.borderColor = '#38bdf8';}}
+           onMouseLeave={(e) => {e.target.style.background = 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))'; e.target.style.color = '#94a3b8'; e.target.style.borderColor = '#23314d';}}>MCP Servers</a>
       </nav>
       <p style={styles.subtitle}>{resumeData.personal.title}</p>
       <div style={styles.badges}>
@@ -102,28 +102,31 @@ const styles = {
     lineHeight: 0.95
   },
   nav: {
-    marginTop: '8px',
+    marginTop: '12px',
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '2px',
+    gap: '0px',
     borderBottom: '2px solid #38bdf8',
-    justifyContent: 'center'
+    justifyContent: 'flex-start',
+    paddingLeft: '8px'
   },
   navLink: {
     display: 'inline-block',
-    padding: '6px 10px',
+    padding: '8px 14px',
     border: '1px solid #23314d',
     borderBottom: 'none',
-    background: 'rgba(17,28,51,.6)',
-    borderRadius: '3px 3px 0 0',
-    fontSize: '12px',
+    background: 'linear-gradient(180deg, rgba(30, 41, 59, 0.8), rgba(17, 28, 51, 0.6))',
+    borderRadius: '6px 6px 0 0',
+    fontSize: '13px',
     fontWeight: 500,
-    color: '#38bdf8',
+    color: '#94a3b8',
     textDecoration: 'none',
     position: 'relative',
     top: '2px',
     transition: 'all 0.3s ease',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    marginRight: '2px',
+    boxShadow: 'inset 0 1px 0 rgba(56, 189, 248, 0.1)'
   },
   subtitle: {
     margin: '8px 0 0 0',
