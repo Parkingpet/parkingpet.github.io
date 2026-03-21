@@ -8,7 +8,22 @@ export default function Clients() {
       <div style={styles.clientsList}>
         {resumeData.clients.map((client, index) => (
           <div key={index} style={styles.clientItem}>
-            <div style={styles.clientText}>{client}</div>
+            <div style={styles.clientHeader}>
+              {client.link ? (
+                <a 
+                  href={client.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={styles.clientLink}
+                >
+                  {client.name}
+                </a>
+              ) : (
+                <span style={styles.clientName}>{client.name}</span>
+              )}
+              <span style={styles.clientYears}>{client.years}</span>
+            </div>
+            <div style={styles.clientDescription}>{client.description}</div>
           </div>
         ))}
       </div>
@@ -45,10 +60,35 @@ const styles = {
     borderRadius: '8px',
     transition: 'all 0.3s ease'
   },
-  clientText: {
+  clientHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '8px',
+    gap: '12px'
+  },
+  clientLink: {
+    color: '#38bdf8',
+    fontSize: '16px',
+    fontWeight: 600,
+    textDecoration: 'none',
+    transition: 'all 0.2s ease',
+    cursor: 'pointer'
+  },
+  clientName: {
     color: '#e2e8f0',
     fontSize: '16px',
+    fontWeight: 600
+  },
+  clientYears: {
+    color: '#94a3b8',
+    fontSize: '14px',
     fontWeight: 500,
+    whiteSpace: 'nowrap'
+  },
+  clientDescription: {
+    color: '#cbd5e1',
+    fontSize: '14px',
     lineHeight: 1.6
   }
 };
