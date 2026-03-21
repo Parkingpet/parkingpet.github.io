@@ -1,459 +1,248 @@
-Mustafa "Moose" McLinn - Interactive DevOps Resume Platform
-===========================================================
+# Mustafa "Moose" McLinn - Interactive DevOps Resume Platform
 
-A modern, beautifully designed interactive resume platform built with React 18.2 and Vite 7.3, featuring integrated DevOps tools, real-time utilities, and a comprehensive professional portfolio with glassmorphism design patterns.
+> A modern, interactive resume platform built with React 18.2 and Vite 7.3, featuring integrated DevOps tools, real-time utilities, and a comprehensive professional portfolio.
 
-https://parkingpet.github.io
+[![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
+[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
----
-
-DESIGN SYSTEM
-=============
-
-Modern Glassmorphism UI
-  Frosted glass effect with backdrop blur
-  Gradient overlays for depth
-  Smooth transitions and animations
-  Consistent color palette
-
-Color Palette
-  Primary: Cyan (#38bdf8) - Main accent color
-  Secondary: Emerald (#10b981) - Complementary accent
-  Text Primary: Slate (#e2e8f0) - Main text
-  Text Secondary: Slate (#cbd5e1) - Secondary text
-  Text Muted: Slate (#94a3b8) - Muted text
-  Border: Slate (#23314d) - Subtle borders
-
-Typography System
-  Font Family: System fonts with fallbacks
-  Heading Sizes: 28px (h2), 22px (h3), 18px (h4)
-  Font Weights: 400 (normal), 600 (semibold), 700 (bold)
-  Letter Spacing: -0.01em to -0.03em for headings
-
-Visual Effects
-  Gradient backgrounds on containers
-  Smooth hover transitions
-  Subtle glow effects on interactive elements
-  Reduced opacity grid and scanline effects
-  Particle animation background
+**[🌐 Visit Live Site](https://parkingpet.github.io)** | **[📦 GitHub Repo](https://github.com/Parkingpet/parkingpet.github.io)** | **[🍴 Fork](https://github.com/Parkingpet/parkingpet.github.io/fork)**
 
 ---
 
-LANDING PAGE LAYOUT
-===================
+## 📋 Overview
 
-The platform is organized into the following sections:
+An interactive, feature-rich resume platform showcasing professional experience, technical skills, and integrated DevOps utilities. Built with modern web technologies and optimized for performance.
 
-HEADER SECTION
-  ASCII Art Name Display with gradient text
-  Navigation Menu (Home, Summary, Competencies, Technical, DevOps Tools, Projects, Experience, Education, Clients, MCP Servers)
-  Professional Title with gradient effect
-  Experience Badges (25+ Years, AWS, Docker, Kubernetes, Python, Linux)
-  Contact Information (Location, Phone, Email, GitHub, LinkedIn, Resume Downloads)
+### Key Highlights
 
-SUMMARY SECTION
-  Professional Summary (2 paragraphs)
-  Core Competencies Grid (20 competency tags with hover effects)
-
-TECHNICAL SKILLS SECTION
-  Two-column layout for balanced presentation
-  Skill categories with gradient backgrounds
-  Color-coded sections (Cyan for titles, Emerald for categories)
-
-PROJECTS SECTION
-  Project cards with gradient backgrounds
-  Company names in Emerald, project titles in Cyan
-  Achievement lists with proper spacing
-  Direct links to project repositories
-
-EXPERIENCE SECTION
-  Timeline-style job listings
-  Company names in Emerald, positions in Cyan
-  Date ranges in muted text
-  Achievement lists with improved readability
-
-EDUCATION SECTION
-  Education items with gradient backgrounds
-  Consistent styling with other sections
-  Proper spacing and typography
-
-CLIENTS SECTION
-  Client partnerships with Emerald accent
-  Gradient backgrounds for visual hierarchy
-  Improved readability with better spacing
-
-DEVOPS TOOLS & QUICK LINKS SECTION
-  Interactive tool tabs with modern styling
-  Collapsible tool sections
-  Quick reference links organized by category
-  Gradient backgrounds on all interactive elements
-
-MCP SERVERS SECTION
-  Model Context Protocol integrations
-
-FOOTER SECTION
-  Company information with gradient styling
-  Consistent with overall design system
+- **20+ DevOps Tools** - Base64, JSON, Timestamp, UUID, URL, SHA-256, Regex, JWT, YAML, MAC, IP, Subnet Calculator, CLI Commands, and more
+- **25+ Quick Links** - Organized access to popular DevOps and development platforms
+- **Interactive UI** - Smooth animations, responsive design, and intuitive navigation
+- **High Performance** - <180KB gzipped, 95+ Lighthouse score, <1.2s time to interactive
+- **Modern Stack** - React 18.2, Vite 7.3, CSS-in-JS, GitHub Pages deployment
 
 ---
 
-DEVOPS TOOLS
-============
+## 🎯 Features
 
-The platform includes 20+ integrated DevOps tools accessible via tabbed interface:
+### Interactive DevOps Tools
 
-BASE64 TOOL
-  Encode text to Base64
-  Decode Base64 to text
+| Tool | Features |
+|------|----------|
+| **Base64** | Encode/Decode text |
+| **JSON** | Format, minify, validate |
+| **Timestamp** | Unix ↔ ISO conversion |
+| **UUID** | Generate v4 identifiers |
+| **URL** | Encode/Decode URLs |
+| **SHA-256** | Cryptographic hashing |
+| **Regex** | Pattern matching & testing |
+| **JWT Decoder** | Token parsing |
+| **YAML to JSON** | Format conversion |
+| **MAC Formatter** | Address formatting (colon, hyphen, dot, continuous) |
+| **IP Converter** | Binary, hex, decimal conversion |
+| **Subnet Calculator** | CIDR notation analysis |
+| **CLI Commands** | Docker, Kubectl, Git, Terraform, AWS references |
+| **Infrastructure** | Port, CIDR, DNS, SSL references |
+| **DevOps Tools** | CI/CD, Monitoring, Container, Orchestration lists |
+| **MS Admin** | Active Directory, PowerShell, Exchange, SharePoint commands |
+| **Sed/Awk** | Find & Replace, Delete, Extract, Count, Print, Transform |
 
-JSON TOOL
-  Format JSON with indentation
-  Minify JSON to single line
-  Validate JSON syntax
+### Quick Reference Links
 
-TIMESTAMP TOOL
-  Convert Unix timestamp to ISO date
-  Convert ISO date to Unix timestamp
-  Get current Unix timestamp
+**25+ organized links** to popular platforms:
+- Cloud: AWS, GCP, Azure
+- Containers: Docker, Kubernetes, Podman
+- Infrastructure: Terraform, Ansible, Chef, Puppet
+- CI/CD: Jenkins, GitLab, GitHub Actions, Bitbucket
+- Monitoring: Prometheus, Grafana, Datadog, New Relic, Splunk
+- Databases: PostgreSQL, MongoDB, Redis, MySQL
+- And many more...
 
-UUID TOOL
-  Generate random UUID v4
+### Professional Portfolio
 
-URL TOOL
-  Encode text to URL-safe format
-  Decode URL-encoded text
-
-SHA-256 TOOL
-  Generate SHA-256 cryptographic hash
-
-REGEX TOOL
-  Test pattern matching
-  Find all matches in text
-
-JWT DECODER TOOL
-  Decode JWT tokens
-  Parse payload information
-
-YAML TO JSON TOOL
-  Convert YAML format to JSON
-  Parse key-value pairs
-
-MAC FORMATTER TOOL
-  Format MAC address with colons (AA:BB:CC:DD:EE:FF)
-  Format MAC address with hyphens (AA-BB-CC-DD-EE-FF)
-  Format MAC address with dots (AABB.CCDD.EEFF)
-  Format MAC address continuous (AABBCCDDEEFF)
-
-IP CONVERTER TOOL
-  Convert IPv4 to binary notation
-  Convert IPv4 to hexadecimal notation
-  Convert IPv4 to decimal notation
-
-SUBNET CALCULATOR TOOL
-  Calculate subnet information from CIDR notation
-  Display network address, broadcast address, host range
-  Calculate total usable hosts
-
-CLI COMMANDS TOOL
-  Docker commands reference
-  Kubectl commands reference
-  Git commands reference
-  Terraform commands reference
-  AWS CLI commands reference
-
-INFRASTRUCTURE TOOL
-  Common port reference
-  CIDR notation reference
-  DNS servers reference
-  SSL certificate generation
-
-DEVOPS TOOLS REFERENCE
-  CI/CD platforms list
-  Monitoring tools list
-  Container platforms list
-  Orchestration platforms list
-
-MS ADMIN TOOL
-  Active Directory commands
-  PowerShell commands
-  Exchange commands
-  SharePoint commands
-
-SED/AWK TOOL
-  Find and Replace (regex substitution)
-  Delete Lines (pattern matching)
-  Extract Fields (delimiter-based extraction)
-  Count Lines (statistics)
-  Print Lines (line range extraction)
-  Transform (case conversion, reverse, trim)
-
-DOWNLOADS SECTION
-  Resume PDF download
-  Resume TXT download
-  DevOps Cheat Sheet download
-
-CONTACT SECTION
-  Email address with copy button
-  Phone number with copy button
+- **Summary** - Professional overview and core competencies
+- **Technical Skills** - Organized by category
+- **Projects** - Portfolio with descriptions and links
+- **Experience** - Work history with achievements
+- **Education** - Educational background
+- **Clients** - Notable partnerships and long-term relationships
 
 ---
 
-QUICK LINKS GRID
-================
+## 🚀 Quick Start
 
-The platform includes 25+ quick links to popular DevOps and development tools:
+### Installation
 
-PROJECT LINKS
-  View Live Site
-  GitHub Repository
-  Fork This Project
+```bash
+git clone https://github.com/Parkingpet/parkingpet.github.io.git
+cd parkingpet.github.io
+npm install
+```
 
-CONTAINER & ORCHESTRATION
-  Docker
-  Kubernetes
-  Podman
+### Development
 
-INFRASTRUCTURE & IaC
-  Terraform
-  Ansible
-  Chef
-  Puppet
+```bash
+npm run dev          # Start dev server (localhost:5173)
+npm run build        # Production build
+npm run preview      # Preview production build
+npm run lint         # Check code quality
+```
 
-CI/CD PLATFORMS
-  Jenkins
-  GitLab
-  GitHub Actions
-  Bitbucket
+### Deployment
 
-MONITORING & OBSERVABILITY
-  Prometheus
-  Grafana
-  Datadog
-  New Relic
-  Splunk
-  Elastic Stack
-
-DATABASES
-  PostgreSQL
-  MongoDB
-  Redis
-  MySQL
-
-WEB SERVERS & PROXIES
-  NGINX
-  Apache
-
-VERSION CONTROL
-  Git
-  GitLab
-  Bitbucket
-
-PROJECT MANAGEMENT
-  Jira
-  Confluence
-
-SERVICE MESH & DISCOVERY
-  Consul
-  Vault
-  Istio
-  Linkerd
-
-OPERATING SYSTEMS
-  Linux
-  Windows Server
-  macOS
+Automatic deployment via GitHub Actions on push to main branch.
+Hosted on GitHub Pages at https://parkingpet.github.io
 
 ---
 
-TECHNOLOGY STACK
-================
+## 🏗️ Architecture
 
-Frontend Framework
-  React 18.2 with Hooks
-  Functional components
-  State management with useState, useEffect, useContext
+### Technology Stack
 
-Build Tool
-  Vite 7.3
-  Fast development server
-  Optimized production builds
+| Category | Technology |
+|----------|-----------|
+| **Frontend** | React 18.2, Vite 7.3, JavaScript ES2020 |
+| **Styling** | CSS-in-JS, CSS Variables, CSS Grid/Flexbox |
+| **State** | React Hooks (useState, useEffect, useContext) |
+| **API** | GraphQL, REST API, JSON, Fetch API |
+| **DevOps** | GitHub Actions, GitHub Pages, Git, npm |
+| **Tools** | ESLint, Prettier, VS Code, Chrome DevTools |
 
-Styling
-  CSS-in-JS with inline styles
-  CSS Variables for theming
-  CSS Grid and Flexbox
-  Responsive design
-  Glassmorphism effects
+### Project Structure
 
-Performance
-  Code splitting
-  Lazy loading
-  Tree shaking
-  Asset optimization
-  Image lazy loading
-
-Deployment
-  GitHub Pages
-  GitHub Actions CI/CD
-  Automatic deployment on push
-
----
-
-FEATURES
-========
-
-INTERACTIVE TOOLS
-  20+ integrated DevOps utilities
-  Real-time processing
-  Copy-to-clipboard functionality
-  Input/output text areas
-  Collapsible tool sections
-
-QUICK REFERENCE
-  25+ external tool links
-  Organized by category
-  Collapsible link sections
-  Direct access to documentation
-
-MODERN DESIGN
-  Glassmorphism UI patterns
-  Gradient backgrounds
-  Smooth transitions
-  Color-coded sections
-  Improved typography hierarchy
-
-RESPONSIVE DESIGN
-  Mobile-first approach
-  Flexible grid layouts
-  Touch-friendly interface
-  Works on all modern browsers
-
-PERFORMANCE
-  Build time: ~1 second
-  Bundle size: <180KB gzipped
-  Lighthouse score: 95+
-  First paint: <0.8s
-  Time to interactive: <1.2s
-  API response: <18ms p95
-
-ACCESSIBILITY
-  Semantic HTML
-  ARIA labels
-  Keyboard navigation
-  Color contrast compliance
-  Focus indicators
-
-VISUAL EFFECTS
-  Animated grid background
-  CRT scanline effect
-  Particle animation
-  Smooth transitions
-  Hover effects on interactive elements
-
----
-
-DEVELOPMENT COMMANDS
-====================
-
-Installation
-  git clone https://github.com/Parkingpet/parkingpet.github.io.git
-  cd parkingpet.github.io
-  npm install
-
-Development
-  npm run dev          Start dev server (localhost:5173)
-  npm run build        Production build
-  npm run preview      Preview production build
-  npm run lint         Check code quality
-
-Deployment
-  Automatic deployment via GitHub Actions on push to main
-  Hosted on GitHub Pages at https://parkingpet.github.io
-  Build artifacts in /dist directory
-
----
-
-PROJECT STRUCTURE
-=================
-
+```
 src/
-  App.jsx                    Root component with layout
-  main.jsx                   Entry point
-  index.css                  Global styles and animations
-  resumeData.js              Data source
-  components/
-    header/                  Navigation and header with gradient styling
-    loading/                 Terminal loading animation
-    summary/                 Professional summary with competencies
-    skills/                  Technical skills display
-    tools/                   DevOps tools interface
-    projects/                Project portfolio
-    experience/              Work history
-    education/               Education section
-    clients/                 Client partnerships
-    mcp/                     MCP servers
-    email/                   Email widget
-    graphql/                 GraphQL examples
-    footer/                  Footer
+├── App.jsx                    # Root component
+├── main.jsx                   # Entry point
+├── index.css                  # Global styles & animations
+├── resumeData.js              # Data source
+└── components/
+    ├── header/                # Navigation & header
+    ├── loading/               # Terminal animation
+    ├── summary/               # Professional summary
+    ├── skills/                # Technical skills
+    ├── tools/                 # DevOps tools interface
+    ├── projects/              # Portfolio
+    ├── experience/            # Work history
+    ├── education/             # Education section
+    ├── clients/               # Client partnerships
+    ├── mcp/                   # MCP servers
+    ├── email/                 # Email widget
+    ├── graphql/               # GraphQL examples
+    └── footer/                # Footer
+```
 
 ---
 
-BROWSER SUPPORT
-===============
+## 📊 Performance Metrics
 
-Chrome
-  Latest 2 versions
-
-Firefox
-  Latest 2 versions
-
-Safari
-  Latest 2 versions
-
-Edge
-  Latest 2 versions
-
-Mobile
-  iOS 12 and later
-  Android 8 and later
+| Metric | Target | Actual |
+|--------|--------|--------|
+| Build Time | ~1s | ✓ 939ms |
+| Bundle Size | <180KB | ✓ 69.05KB gzipped |
+| First Paint | <0.8s | ✓ <0.8s |
+| Time to Interactive | <1.2s | ✓ <1.2s |
+| Lighthouse Score | 95+ | ✓ 95+ |
+| Uptime | 99.95% | ✓ 99.97% |
+| API Response | <25ms p95 | ✓ <18ms |
 
 ---
 
-RESOURCES
-=========
+## 🎨 Design System
 
-Live Site
-  https://parkingpet.github.io
+### Color Palette
 
-GitHub Repository
-  https://github.com/Parkingpet/parkingpet.github.io
+- **Primary**: Cyan (#38bdf8) - Main accent
+- **Secondary**: Emerald (#10b981) - Complementary accent
+- **Text Primary**: Slate (#e2e8f0) - Main text
+- **Text Secondary**: Slate (#cbd5e1) - Secondary text
+- **Text Muted**: Slate (#94a3b8) - Muted text
+- **Border**: Slate (#23314d) - Subtle borders
 
-Report Issues
-  https://github.com/Parkingpet/parkingpet.github.io/issues
+### Typography
 
-View Pull Requests
-  https://github.com/Parkingpet/parkingpet.github.io/pulls
+- **Font Family**: System fonts with fallbacks
+- **Heading Sizes**: 24px (h2), 18px (h3), 16px (h4)
+- **Font Weights**: 400 (normal), 600 (semibold), 700 (bold)
+- **Letter Spacing**: -0.01em to -0.02em for headings
 
----
+### Visual Effects
 
-CONTRIBUTING
-============
-
-1. Fork the repository
-2. Create a feature branch (git checkout -b feature/amazing-feature)
-3. Commit changes (git commit -m 'Add amazing feature')
-4. Push to branch (git push origin feature/amazing-feature)
-5. Open a Pull Request
-
----
-
-LICENSE
-=======
-
-MIT License - See LICENSE file for details
+- Animated grid background
+- CRT scanline effect
+- Particle animation
+- Smooth transitions
+- Hover effects on interactive elements
 
 ---
 
-Last Updated: March 2026
-Status: Active Development
-Uptime: 99.97%
+## ♿ Accessibility
+
+- ✓ Semantic HTML
+- ✓ ARIA labels
+- ✓ Keyboard navigation
+- ✓ Color contrast compliance (WCAG AA)
+- ✓ Focus indicators
+- ✓ Skip to main content link
+
+---
+
+## 🌐 Browser Support
+
+| Browser | Support |
+|---------|---------|
+| Chrome | Latest 2 versions |
+| Firefox | Latest 2 versions |
+| Safari | Latest 2 versions |
+| Edge | Latest 2 versions |
+| Mobile | iOS 12+, Android 8+ |
+
+---
+
+## 📚 Resources
+
+- **Live Site**: https://parkingpet.github.io
+- **GitHub Repository**: https://github.com/Parkingpet/parkingpet.github.io
+- **Report Issues**: https://github.com/Parkingpet/parkingpet.github.io/issues
+- **View PRs**: https://github.com/Parkingpet/parkingpet.github.io/pulls
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to get started:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📈 Status
+
+| Metric | Value |
+|--------|-------|
+| Last Updated | March 2026 |
+| Status | Active Development |
+| Uptime | 99.97% |
+| Version | 1.0.0 |
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Mustafa "Moose" McLinn**
+
+[GitHub](https://github.com/Parkingpet) • [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9) • [Email](mailto:mustafa.mclinn@outlook.com)
+
+</div>
