@@ -250,12 +250,13 @@ export const resumeData = {
     "Poor Magazine (2019-2020): Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services",
     "Dr. Rathod Dental Office (2019-2025): X-ray systems, Dentrix support, backups, printers, Server 2022 administration",
     "Flo Solutions (May 2024 to May 2025): HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations",
-    "Eastside Arts Alliance: Endpoint support, printer setups, Office instruction, email configuration",
+    "Eastside Arts Alliance (2019): Endpoint support, printer setups, Office instruction, email configuration",
     "LANgineers (2014): Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones",
-    "Dr. Cox Dental Office (1997-2019): 22-year partnership providing Dentrix database support and digital X-ray systems",
+    "Dr. Cox Dental Office (1999-2019): 22-year partnership providing Dentrix database support and digital X-ray systems",
     "David Quan Insurance (2012-2014): Infrastructure and Microsoft Office and email support",
     "LMI (2012): Broad small business tech support",
     "Charles Bonner Law (2004-2005): Litigation support and technical assistance during litigation and arbitrations",
-    "Osha Neumann (1995-2023): Long-term personal support and voice-to-text tooling configuration for two decades"
+    "Osha Neumann (1999-2023): Long-term personal support and voice-to-text tooling configuration for two decades",
+    "Lumibuild (2025): Wired 6 building IDF/MDF, installed racks/keystone jacks and Cat6a for Meter network appliances"
   ]
 }
