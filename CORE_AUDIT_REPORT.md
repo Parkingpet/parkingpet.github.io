@@ -37,12 +37,22 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
 [FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
 
+### IP Converter: Octet Range Validation
+[ISSUE]: The IP Converter failed to validate if octets were within the valid range (0-255).
+[TEST CASE]: Inputting `192.168.1.256` and clicking 'Binary' produced `11000000.10101000.00000001.100000000`.
+[FIX]: Implemented range validation (0-255) for each octet in `src/components/tools/Tools.jsx`.
+
+### MAC Formatter: Length Validation
+[ISSUE]: The MAC Formatter only checked for 12 hex characters but did not account for additional non-hex valid characters.
+[TEST CASE]: Inputting `aabbccddeeffgg` and clicking 'Colon' produced `AA:BB:CC:DD:EE:FF` despite the extra character.
+[FIX]: Implemented strict length validation in `src/components/tools/Tools.jsx` to ensure total alphanumeric characters do not exceed 12.
+
 ---
 
 ## 4. Hardware & Dependency Audit
 
 [ISSUE]: No physical hardware dependencies (Google Coral) found. Dependencies in `package.json` are current and secure.
-[TEST CASE]: Manual review of `package.json` and `pnpm-lock.yaml`.
+[TEST CASE]: Manual review of `package.json` and `pnpm audit`.
 [FIX]: No action required. CI/CD portability confirmed.
 
 ---
@@ -59,8 +69,8 @@ This report documents the findings of the core system audit performed on the Dev
 
 - **Build**: Successful (`pnpm run build`)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
+- **Adversarial Tests**: Verified fixes for Regex, JWT, IP, and MAC.
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
 
 **Auditor:** Jules (AI Assistant)
-**Date:** 2026-03-21
+**Date:** 2026-03-22
