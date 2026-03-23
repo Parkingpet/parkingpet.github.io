@@ -149,6 +149,8 @@ export default function Tools() {
         try {
           const octets = input.split('.');
           if (octets.length !== 4) throw new Error();
+          const isValid = (n) => /^\d+$/.test(n) && parseInt(n) >= 0 && parseInt(n) <= 255;
+          if (octets.some(n => !isValid(n))) throw new Error('Invalid octet');
           const bin = octets.map(n => parseInt(n).toString(2).padStart(8, '0')).join('.');
           setOutput(bin);
         } catch { setOutput('Invalid IPv4 address') }
@@ -157,6 +159,8 @@ export default function Tools() {
         try {
           const octets = input.split('.');
           if (octets.length !== 4) throw new Error();
+          const isValid = (n) => /^\d+$/.test(n) && parseInt(n) >= 0 && parseInt(n) <= 255;
+          if (octets.some(n => !isValid(n))) throw new Error('Invalid octet');
           const hex = octets.map(n => parseInt(n).toString(16).padStart(2, '0')).join('.');
           setOutput(hex.toUpperCase());
         } catch { setOutput('Invalid IPv4 address') }
@@ -165,6 +169,8 @@ export default function Tools() {
         try {
           const octets = input.split('.');
           if (octets.length !== 4) throw new Error();
+          const isValid = (n) => /^\d+$/.test(n) && parseInt(n) >= 0 && parseInt(n) <= 255;
+          if (octets.some(n => !isValid(n))) throw new Error('Invalid octet');
           let dec = 0;
           for (let i = 0; i < 4; i++) {
             dec += parseInt(octets[i]) * Math.pow(256, 3 - i);
@@ -257,43 +263,49 @@ export default function Tools() {
       name: 'Sed/Awk',
       findReplace: () => {
         try {
+          if (input.length > 1024) throw new Error('Input too long');
           const lines = input.split('\n');
           const [pattern, replacement] = lines.slice(0, 2);
-          if (!pattern || !replacement) {
+          if (pattern === undefined || replacement === undefined) {
             setOutput('Format: Line 1: pattern to find\nLine 2: replacement text\nLine 3+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(2).join('\n');
           const regex = new RegExp(pattern, 'g');
           setOutput(text.replace(regex, replacement));
-        } catch { setOutput('Error: Invalid pattern or replacement') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       deleteLines: () => {
         try {
+          if (input.length > 1024) throw new Error('Input too long');
           const lines = input.split('\n');
           const pattern = lines[0];
-          if (!pattern) {
+          if (pattern === undefined) {
             setOutput('Format: Line 1: pattern to match\nLine 2+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(1).join('\n');
           const regex = new RegExp(pattern);
           const result = text.split('\n').filter(line => !regex.test(line)).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid pattern') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       extractFields: () => {
         try {
+          if (input.length > 1024) throw new Error('Input too long');
           const lines = input.split('\n');
           const delimiter = lines[0] || ' ';
           const fieldNum = parseInt(lines[1]) || 1;
+          if (delimiter.length > 128) throw new Error('Delimiter too long');
           const text = lines.slice(2).join('\n');
           const result = text.split('\n').map(line => {
             const fields = line.split(new RegExp(delimiter));
             return fields[fieldNum - 1] || '';
           }).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid field number or delimiter') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       countLines: () => {
         try {
@@ -439,7 +451,7 @@ export default function Tools() {
 
     // Tools that don't need input (reference/lookup tools)
     const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin', 'downloads'];
-    const needsInput = !noInputTools.includes(activeTab) && activeTab !== 'sedawk';
+    const needsInput = !noInputTools.includes(activeTab);
     const isCollapsed = collapsedTools[activeTab];
     
     return (

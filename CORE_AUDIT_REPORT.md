@@ -37,6 +37,16 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
 [FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
 
+### IP Converter: Missing Octet Validation
+[ISSUE]: The IP Converter allowed out-of-range octets (e.g., 256) and non-numeric inputs, leading to malformed results.
+[TEST CASE]: Inputting `256.0.0.1` into the IP Converter.
+[FIX]: Implemented strict 0-255 octet validation and numeric checks in `src/components/tools/Tools.jsx`.
+
+### Sed/Awk Tool: ReDoS Vulnerability and UI Bug
+[ISSUE]: The Sed/Awk tool lacked input and pattern length limits, making it vulnerable to ReDoS. Additionally, the input textarea was not rendered for this tool.
+[TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
+[FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
+
 ---
 
 ## 4. Hardware & Dependency Audit
