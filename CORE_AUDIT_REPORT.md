@@ -37,6 +37,11 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
 [FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
 
+### Sed/Awk Tool: Rendering Bug & ReDoS Vulnerability
+[ISSUE]: The Sed/Awk tool failed to render the input textarea due to a logic error in `needsInput`. It was also vulnerable to ReDoS and memory exhaustion due to unconstrained input/pattern sizes.
+[TEST CASE]: Select "Sed/Awk" tab and observe missing input field. Run `python3 tests/audit_sedawk_redos.py` to reproduce the ReDoS hang with pattern `(a+)+$`.
+[FIX]: Updated `needsInput` conditional in `src/components/tools/Tools.jsx` to correctly show the textarea. Implemented pattern length limits (128 chars) and input length limits (2048 chars for regex-heavy operations, 10000 for simple transforms) for Sed/Awk operations.
+
 ---
 
 ## 4. Hardware & Dependency Audit
@@ -59,8 +64,8 @@ This report documents the findings of the core system audit performed on the Dev
 
 - **Build**: Successful (`pnpm run build`)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
+- **Adversarial Tests**: Verified fixes for Regex, JWT, and Sed/Awk (`python3 tests/adversarial_tests.py` and `python3 tests/audit_sedawk_redos.py`)
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
 
 **Auditor:** Jules (AI Assistant)
-**Date:** 2026-03-21
+**Date:** 2026-03-24
