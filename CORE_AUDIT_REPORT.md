@@ -10,6 +10,10 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
 [FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These may also be false positives due to service-side bot detection).
 
+[ISSUE]: The application uses absolute paths (e.g., `/assets/`, `/resume.txt`) for static assets and internal navigation, which will fail when the site is deployed to a GitHub Pages subpath.
+[TEST CASE]: Run `grep -rnE "=\"/[^/]" index.html src/`.
+[FIX]: Update `vite.config.js` to use `base: './'` and ensure navigation logic in `src/main.jsx` and `src/components/header/Header.jsx` handles subpaths correctly.
+
 ---
 
 ## 2. Environment Sanitization & Path Leaks
@@ -36,6 +40,16 @@ This report documents the findings of the core system audit performed on the Dev
 [ISSUE]: Verified the calculator's handling of /31 and /32 networks (point-to-point and host routes).
 [TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
 [FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
+
+### IP Converter: Missing Octet Range Validation
+[ISSUE]: The IP Converter does not validate that each octet is within the valid 0-255 range, allowing invalid IP addresses (e.g., 256.256.256.256) to be processed incorrectly.
+[TEST CASE]: Input `256.256.256.256` into the IP Converter binary function.
+[FIX]: Implement a range check (`if (isNaN(n) || n < 0 || n > 255) throw new Error()`) for each octet in the IP conversion logic.
+
+### Sed/Awk Tool: ReDoS Vulnerability
+[ISSUE]: The Sed/Awk tool is vulnerable to ReDoS as it lacks the input and pattern length constraints implemented in the dedicated Regex tool.
+[TEST CASE]: Use a complex nested quantifier pattern like `(a+)+$` on a long input string in the Sed/Awk Find/Replace function.
+[FIX]: Apply centralized input (2048 chars) and pattern (128 chars) length limits to all Sed/Awk sub-tools in `src/components/tools/Tools.jsx`.
 
 ---
 

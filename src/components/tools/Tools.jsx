@@ -149,7 +149,11 @@ export default function Tools() {
         try {
           const octets = input.split('.');
           if (octets.length !== 4) throw new Error();
-          const bin = octets.map(n => parseInt(n).toString(2).padStart(8, '0')).join('.');
+          const bin = octets.map(n => {
+            const num = parseInt(n);
+            if (isNaN(num) || num < 0 || num > 255) throw new Error();
+            return num.toString(2).padStart(8, '0');
+          }).join('.');
           setOutput(bin);
         } catch { setOutput('Invalid IPv4 address') }
       },
@@ -157,7 +161,11 @@ export default function Tools() {
         try {
           const octets = input.split('.');
           if (octets.length !== 4) throw new Error();
-          const hex = octets.map(n => parseInt(n).toString(16).padStart(2, '0')).join('.');
+          const hex = octets.map(n => {
+            const num = parseInt(n);
+            if (isNaN(num) || num < 0 || num > 255) throw new Error();
+            return num.toString(16).padStart(2, '0');
+          }).join('.');
           setOutput(hex.toUpperCase());
         } catch { setOutput('Invalid IPv4 address') }
       },
@@ -167,7 +175,9 @@ export default function Tools() {
           if (octets.length !== 4) throw new Error();
           let dec = 0;
           for (let i = 0; i < 4; i++) {
-            dec += parseInt(octets[i]) * Math.pow(256, 3 - i);
+            const num = parseInt(octets[i]);
+            if (isNaN(num) || num < 0 || num > 255) throw new Error();
+            dec += num * Math.pow(256, 3 - i);
           }
           setOutput(dec.toString());
         } catch { setOutput('Invalid IPv4 address') }
@@ -257,43 +267,49 @@ export default function Tools() {
       name: 'Sed/Awk',
       findReplace: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const [pattern, replacement] = lines.slice(0, 2);
           if (!pattern || !replacement) {
             setOutput('Format: Line 1: pattern to find\nLine 2: replacement text\nLine 3+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(2).join('\n');
           const regex = new RegExp(pattern, 'g');
           setOutput(text.replace(regex, replacement));
-        } catch { setOutput('Error: Invalid pattern or replacement') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       deleteLines: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const pattern = lines[0];
           if (!pattern) {
             setOutput('Format: Line 1: pattern to match\nLine 2+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(1).join('\n');
           const regex = new RegExp(pattern);
           const result = text.split('\n').filter(line => !regex.test(line)).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid pattern') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       extractFields: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const delimiter = lines[0] || ' ';
           const fieldNum = parseInt(lines[1]) || 1;
+          if (delimiter.length > 128) throw new Error('Delimiter too long');
           const text = lines.slice(2).join('\n');
           const result = text.split('\n').map(line => {
             const fields = line.split(new RegExp(delimiter));
             return fields[fieldNum - 1] || '';
           }).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid field number or delimiter') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       countLines: () => {
         try {
@@ -369,7 +385,7 @@ export default function Tools() {
               <p>Download the official PDF format of the resume.</p>
             </div>
             <a
-              href="/Mustafa_McLinn_Resume_2025.pdf"
+              href="./Mustafa_McLinn_Resume_2025.pdf"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -382,7 +398,7 @@ export default function Tools() {
               <p>Download the plain text format of the resume for ATS parsing.</p>
             </div>
             <a
-              href="/resume.txt"
+              href="./resume.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -395,7 +411,7 @@ export default function Tools() {
               <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
             </div>
             <a
-              href="/devops_cheatsheet.txt"
+              href="./devops_cheatsheet.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -439,7 +455,7 @@ export default function Tools() {
 
     // Tools that don't need input (reference/lookup tools)
     const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin', 'downloads'];
-    const needsInput = !noInputTools.includes(activeTab) && activeTab !== 'sedawk';
+    const needsInput = !noInputTools.includes(activeTab);
     const isCollapsed = collapsedTools[activeTab];
     
     return (
