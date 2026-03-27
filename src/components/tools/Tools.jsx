@@ -110,6 +110,7 @@ export default function Tools() {
       name: 'YAML to JSON',
       convert: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const obj = {};
           lines.forEach(line => {
@@ -117,7 +118,7 @@ export default function Tools() {
             if (key) obj[key] = value;
           });
           setOutput(JSON.stringify(obj, null, 2));
-        } catch { setOutput('Error converting YAML') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     mac: {
@@ -257,52 +258,60 @@ export default function Tools() {
       name: 'Sed/Awk',
       findReplace: () => {
         try {
+          if (input.length > 5000) throw new Error('Input too long');
           const lines = input.split('\n');
           const [pattern, replacement] = lines.slice(0, 2);
           if (!pattern || !replacement) {
             setOutput('Format: Line 1: pattern to find\nLine 2: replacement text\nLine 3+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(2).join('\n');
           const regex = new RegExp(pattern, 'g');
           setOutput(text.replace(regex, replacement));
-        } catch { setOutput('Error: Invalid pattern or replacement') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       deleteLines: () => {
         try {
+          if (input.length > 5000) throw new Error('Input too long');
           const lines = input.split('\n');
           const pattern = lines[0];
           if (!pattern) {
             setOutput('Format: Line 1: pattern to match\nLine 2+: text to process');
             return;
           }
+          if (pattern.length > 128) throw new Error('Pattern too long');
           const text = lines.slice(1).join('\n');
           const regex = new RegExp(pattern);
           const result = text.split('\n').filter(line => !regex.test(line)).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid pattern') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       extractFields: () => {
         try {
+          if (input.length > 5000) throw new Error('Input too long');
           const lines = input.split('\n');
           const delimiter = lines[0] || ' ';
           const fieldNum = parseInt(lines[1]) || 1;
+          if (delimiter.length > 32) throw new Error('Delimiter too long');
           const text = lines.slice(2).join('\n');
           const result = text.split('\n').map(line => {
             const fields = line.split(new RegExp(delimiter));
             return fields[fieldNum - 1] || '';
           }).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid field number or delimiter') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       countLines: () => {
         try {
+          if (input.length > 10000) throw new Error('Input too long');
           const lines = input.split('\n').filter(l => l.trim());
           setOutput(`Total lines: ${lines.length}\nCharacters: ${input.length}\nWords: ${input.split(/\s+/).filter(w => w).length}`);
-        } catch { setOutput('Error counting lines') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       printLines: () => {
         try {
+          if (input.length > 10000) throw new Error('Input too long');
           const lines = input.split('\n');
           const startLine = parseInt(lines[0]) || 1;
           const endLine = parseInt(lines[1]) || startLine;
@@ -310,10 +319,11 @@ export default function Tools() {
           const textLines = text.split('\n');
           const result = textLines.slice(startLine - 1, endLine).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid line numbers') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       },
       transform: () => {
         try {
+          if (input.length > 10000) throw new Error('Input too long');
           const lines = input.split('\n');
           const operation = lines[0]?.toLowerCase() || 'upper';
           const text = lines.slice(1).join('\n');
@@ -323,7 +333,7 @@ export default function Tools() {
           else if (operation === 'reverse') result = text.split('\n').map(l => l.split('').reverse().join('')).join('\n');
           else if (operation === 'trim') result = text.split('\n').map(l => l.trim()).join('\n');
           setOutput(result);
-        } catch { setOutput('Error: Invalid operation') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     downloads: {
@@ -439,7 +449,7 @@ export default function Tools() {
 
     // Tools that don't need input (reference/lookup tools)
     const noInputTools = ['cli', 'infrastructure', 'devops', 'msadmin', 'downloads'];
-    const needsInput = !noInputTools.includes(activeTab) && activeTab !== 'sedawk';
+    const needsInput = !noInputTools.includes(activeTab);
     const isCollapsed = collapsedTools[activeTab];
     
     return (

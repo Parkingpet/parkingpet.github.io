@@ -62,6 +62,13 @@ def run_adversarial_tests():
         # --- JSON Tool Tests ---
         test_tool("JSON", "{invalid:json}", "Format", "Invalid JSON", "Invalid JSON Syntax")
 
+        # --- YAML Tool Tests ---
+        test_tool("YAML to JSON", "a" * 2100, "Convert", "Input too long", "Mitigation: YAML input too long")
+
+        # --- Sed/Awk Tool Tests ---
+        test_tool("Sed/Awk", "pattern\nreplacement\n" + "a" * 5100, "FindReplace", "Input too long", "Mitigation: Sed/Awk input too long")
+        test_tool("Sed/Awk", ("c" * 150) + "\nreplacement\ntext", "FindReplace", "Pattern too long", "Mitigation: Sed/Awk pattern too long")
+
         print("\n--- Summary ---")
         failed = False
         for res in results:
