@@ -176,7 +176,7 @@ const styles = {
   title: {
     color: '#38bdf8',
     margin: '0',
-    fontSize: '32px',
+    fontSize: '24px',
     fontWeight: 600,
     letterSpacing: '-0.01em',
     borderBottom: '2px solid rgba(56, 189, 248, 0.3)',

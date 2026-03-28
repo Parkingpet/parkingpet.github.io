@@ -9,7 +9,6 @@ import Projects from './components/projects/Projects';
 import Education from './components/education/Education';
 import Clients from './components/clients/Clients';
 import MCPServers from './components/mcp/MCPServers';
-import ContactWidget from './components/contact/ContactWidget';
 import Footer from './components/footer/Footer';
 
 
@@ -109,7 +108,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-      <ContactWidget />
     </>
   );
 }
