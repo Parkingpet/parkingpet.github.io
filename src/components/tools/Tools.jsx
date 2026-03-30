@@ -21,26 +21,42 @@ export default function Tools() {
   const tools = {
     base64: {
       name: 'Base64',
-      encode: () => setOutput(btoa(input)),
+      encode: () => {
+        if (input.length > 5000) { setOutput('Input too long (max 5000 chars)'); return; }
+        setOutput(btoa(input));
+      },
       decode: () => {
-        try { setOutput(atob(input)) } catch { setOutput('Invalid base64') }
+        try {
+          if (input.length > 7000) { setOutput('Input too long (max 7000 chars)'); return; }
+          setOutput(atob(input));
+        } catch { setOutput('Invalid base64') }
       }
     },
     json: {
       name: 'JSON',
       format: () => {
-        try { setOutput(JSON.stringify(JSON.parse(input), null, 2)) } 
-        catch { setOutput('Invalid JSON') }
+        try {
+          if (input.length > 10000) { setOutput('Input too long (max 10000 chars)'); return; }
+          setOutput(JSON.stringify(JSON.parse(input), null, 2));
+        } catch { setOutput('Invalid JSON') }
       },
       minify: () => {
-        try { setOutput(JSON.stringify(JSON.parse(input))) } 
-        catch { setOutput('Invalid JSON') }
+        try {
+          if (input.length > 10000) { setOutput('Input too long (max 10000 chars)'); return; }
+          setOutput(JSON.stringify(JSON.parse(input)));
+        } catch { setOutput('Invalid JSON') }
       }
     },
     timestamp: {
       name: 'Timestamp',
-      toDate: () => setOutput(new Date(parseInt(input) * 1000).toISOString()),
-      toUnix: () => setOutput(Math.floor(new Date(input).getTime() / 1000).toString()),
+      toDate: () => {
+        if (input.length > 20) { setOutput('Input too long'); return; }
+        setOutput(new Date(parseInt(input) * 1000).toISOString());
+      },
+      toUnix: () => {
+        if (input.length > 50) { setOutput('Input too long'); return; }
+        setOutput(Math.floor(new Date(input).getTime() / 1000).toString());
+      },
       now: () => setOutput(Math.floor(Date.now() / 1000).toString())
     },
     uuid: {
@@ -49,16 +65,22 @@ export default function Tools() {
     },
     url: {
       name: 'URL',
-      encode: () => setOutput(encodeURIComponent(input)),
+      encode: () => {
+        if (input.length > 5000) { setOutput('Input too long'); return; }
+        setOutput(encodeURIComponent(input));
+      },
       decode: () => {
-        try { setOutput(decodeURIComponent(input)) } 
-        catch { setOutput('Invalid URL encoding') }
+        try {
+          if (input.length > 5000) { setOutput('Input too long'); return; }
+          setOutput(decodeURIComponent(input));
+        } catch { setOutput('Invalid URL encoding') }
       }
     },
     sha256: {
       name: 'SHA-256',
       hash: async () => {
         try {
+          if (input.length > 10000) { setOutput('Input too long'); return; }
           const encoder = new TextEncoder();
           const data = encoder.encode(input);
           const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -95,6 +117,7 @@ export default function Tools() {
       name: 'JWT Decoder',
       decode: () => {
         try {
+          if (input.length > 8000) { setOutput('Input too long'); return; }
           const parts = input.split('.');
           if (parts.length !== 3) throw new Error('Invalid JWT');
           // Handle Base64URL encoding (replace -/_ and add padding)
@@ -110,11 +133,16 @@ export default function Tools() {
       name: 'YAML to JSON',
       convert: () => {
         try {
+          if (input.length > 2048) { setOutput('Input too long (max 2048 chars)'); return; }
           const lines = input.split('\n');
           const obj = {};
           lines.forEach(line => {
-            const [key, value] = line.split(':').map(s => s.trim());
-            if (key) obj[key] = value;
+            if (line.includes(':')) {
+              const colonIndex = line.indexOf(':');
+              const key = line.substring(0, colonIndex).trim();
+              const value = line.substring(colonIndex + 1).trim();
+              if (key) obj[key] = value;
+            }
           });
           setOutput(JSON.stringify(obj, null, 2));
         } catch { setOutput('Error converting YAML') }
@@ -124,22 +152,30 @@ export default function Tools() {
       name: 'MAC Formatter',
       colon: () => {
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
-        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        if (clean.length !== 12 || /[^a-fA-F0-9]/.test(input.trim().replace(/[:.-]/g, ''))) {
+          setOutput('Invalid MAC address format (expecting 12 hex chars)'); return;
+        }
         setOutput(clean.match(/.{1,2}/g).join(':').toUpperCase());
       },
       hyphen: () => {
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
-        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        if (clean.length !== 12 || /[^a-fA-F0-9]/.test(input.trim().replace(/[:.-]/g, ''))) {
+          setOutput('Invalid MAC address format (expecting 12 hex chars)'); return;
+        }
         setOutput(clean.match(/.{1,2}/g).join('-').toUpperCase());
       },
       dot: () => {
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
-        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        if (clean.length !== 12 || /[^a-fA-F0-9]/.test(input.trim().replace(/[:.-]/g, ''))) {
+          setOutput('Invalid MAC address format (expecting 12 hex chars)'); return;
+        }
         setOutput(clean.match(/.{1,4}/g).join('.').toLowerCase());
       },
       continuous: () => {
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
-        if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
+        if (clean.length !== 12 || /[^a-fA-F0-9]/.test(input.trim().replace(/[:.-]/g, ''))) {
+          setOutput('Invalid MAC address format (expecting 12 hex chars)'); return;
+        }
         setOutput(clean.toUpperCase());
       }
     },

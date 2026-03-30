@@ -61,8 +61,19 @@ export default function Prompts() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (title.trim()) {
-      setPrompts([...prompts, { id: Date.now(), title, description, date: new Date().toLocaleDateString() }])
+    const trimmedTitle = title.trim()
+    const trimmedDesc = description.trim()
+
+    if (trimmedTitle) {
+      if (trimmedTitle.length > 100) { alert('Title too long (max 100 chars)'); return; }
+      if (trimmedDesc.length > 2000) { alert('Description too long (max 2000 chars)'); return; }
+
+      setPrompts([...prompts, {
+        id: Date.now(),
+        title: trimmedTitle,
+        description: trimmedDesc,
+        date: new Date().toLocaleDateString()
+      }])
       setTitle('')
       setDescription('')
     }
