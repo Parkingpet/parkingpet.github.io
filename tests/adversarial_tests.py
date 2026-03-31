@@ -5,7 +5,7 @@ def run_adversarial_tests():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        url = "http://localhost:5173"
+        url = "http://localhost:4173"
         print(f"Connecting to {url}...")
         page.goto(url)
         page.wait_for_timeout(2000)

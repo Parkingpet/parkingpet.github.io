@@ -10,7 +10,7 @@ export default function Header() {
         </pre>
       </h1>
       <nav style={styles.nav}>
-        <a href="/" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', '/'); window.location.reload()}} style={styles.navLink} 
+        <a href="./" onClick={(e) => {e.preventDefault(); window.history.pushState(null, '', './'); window.location.reload()}} style={styles.navLink}
            onMouseEnter={(e) => {e.target.style.background = 'rgba(56,189,248,0.2)'; e.target.style.borderColor = '#38bdf8';}}
            onMouseLeave={(e) => {e.target.style.background = 'rgba(17,28,51,.6)'; e.target.style.borderColor = '#23314d';}}>Home</a>
         <a href="#summary" style={styles.navLink}
@@ -73,10 +73,10 @@ export default function Header() {
           <a href={resumeData.personal.linkedin} target="_blank" rel="noopener noreferrer" style={styles.metaLink}>LinkedIn</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/Mustafa_McLinn_Resume_2025.pdf" download style={styles.metaLink}>Resume PDF</a>
+          <a href="./Mustafa_McLinn_Resume_2025.pdf" download style={styles.metaLink}>Resume PDF</a>
         </span>
         <span style={{display: 'inline-block', marginRight: '10px'}}>
-          <a href="/resume.txt" download style={styles.metaLink}>Resume TXT</a>
+          <a href="./resume.txt" download style={styles.metaLink}>Resume TXT</a>
         </span>
       </p>
     </div>
