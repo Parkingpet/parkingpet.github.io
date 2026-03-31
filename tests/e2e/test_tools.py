@@ -4,7 +4,7 @@ def test_tools():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        page.goto("http://localhost:5173")
+        page.goto("http://localhost:4173")
 
         # Wait for the "Downloads" tab to appear
         page.locator("button:has-text('Downloads')").wait_for(state="visible", timeout=10000)
