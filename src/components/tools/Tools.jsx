@@ -21,18 +21,24 @@ export default function Tools() {
   const tools = {
     base64: {
       name: 'Base64',
-      encode: () => setOutput(btoa(input)),
+      encode: () => {
+        if (input.length > 5000) { setOutput('Input too long (max 5000 chars)'); return; }
+        setOutput(btoa(input));
+      },
       decode: () => {
+        if (input.length > 7000) { setOutput('Input too long (max 7000 chars)'); return; }
         try { setOutput(atob(input)) } catch { setOutput('Invalid base64') }
       }
     },
     json: {
       name: 'JSON',
       format: () => {
+        if (input.length > 10000) { setOutput('Input too long (max 10000 chars)'); return; }
         try { setOutput(JSON.stringify(JSON.parse(input), null, 2)) } 
         catch { setOutput('Invalid JSON') }
       },
       minify: () => {
+        if (input.length > 10000) { setOutput('Input too long (max 10000 chars)'); return; }
         try { setOutput(JSON.stringify(JSON.parse(input))) } 
         catch { setOutput('Invalid JSON') }
       }
@@ -49,8 +55,12 @@ export default function Tools() {
     },
     url: {
       name: 'URL',
-      encode: () => setOutput(encodeURIComponent(input)),
+      encode: () => {
+        if (input.length > 5000) { setOutput('Input too long (max 5000 chars)'); return; }
+        setOutput(encodeURIComponent(input));
+      },
       decode: () => {
+        if (input.length > 5000) { setOutput('Input too long (max 5000 chars)'); return; }
         try { setOutput(decodeURIComponent(input)) } 
         catch { setOutput('Invalid URL encoding') }
       }
@@ -109,6 +119,7 @@ export default function Tools() {
     yaml: {
       name: 'YAML to JSON',
       convert: () => {
+        if (input.length > 2048) { setOutput('Input too long (max 2048 chars)'); return; }
         try {
           const lines = input.split('\n');
           const obj = {};
@@ -381,7 +392,7 @@ export default function Tools() {
               <p>Download the official PDF format of the resume.</p>
             </div>
             <a
-              href="/Mustafa_McLinn_Resume_2025.pdf"
+              href="./Mustafa_McLinn_Resume_2025.pdf"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -394,7 +405,7 @@ export default function Tools() {
               <p>Download the plain text format of the resume for ATS parsing.</p>
             </div>
             <a
-              href="/resume.txt"
+              href="./resume.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -407,7 +418,7 @@ export default function Tools() {
               <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
             </div>
             <a
-              href="/devops_cheatsheet.txt"
+              href="./devops_cheatsheet.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
