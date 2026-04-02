@@ -15,8 +15,8 @@ This report documents the findings of the core system audit performed on the Dev
 ## 2. Environment Sanitization & Path Leaks
 
 [ISSUE]: No local path leaks (/home/, /Users/) or physical hardware references (QNAP, "Thoth") found in the current codebase.
-[TEST CASE]: `grep -rn "/home/moose" .` and `grep -rn "Thoth" .`
-[FIX]: No action required. Path sanitization verified.
+[TEST CASE]: `grep -rEi "/home/moose/|Thoth" .`
+[FIX]: No action required. Environment sanitization verified.
 
 ---
 
@@ -63,7 +63,15 @@ This report documents the findings of the core system audit performed on the Dev
 
 ---
 
-## 5. Audit of Requested Automation Scripts
+## 5. Web Integrity & Asset Portability
+
+[ISSUE]: Asset paths (PDF, TXT) and internal routing used absolute paths (e.g., `/resume.txt`), which can cause 404 errors when the application is deployed to a GitHub Pages subpath.
+[TEST CASE]: Deploy the build to a subpath and attempt to download the resume; the browser will look at the domain root instead of the relative path.
+[FIX]: Updated `vite.config.js` to use `base: './'` and refactored all asset links in `Header.jsx` and `Tools.jsx` to use relative paths (e.g., `./resume.txt`).
+
+---
+
+## 6. Audit of Requested Automation Scripts
 
 [ISSUE]: The components "USPS Claim Automation" and "Gemini-to-eBay Parser" specified in the audit objectives were not found anywhere in the repository.
 [TEST CASE]: `grep -riE "USPS|eBay|Gemini|Claim" .` returns no matches in source code (only in this report and documentation).
