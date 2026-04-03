@@ -10,6 +10,10 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
 [FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
 
+[ISSUE]: Absolute paths (e.g., `/resume.txt`) and `base: '/'` in Vite config could break subpath deployments on GitHub Pages.
+[TEST CASE]: Inspect `vite.config.js` and component links.
+[FIX]: Changed `base` to `./` in `vite.config.js` and updated all internal links (resume, PDF, CSS, JS) to use relative paths (`./`).
+
 ---
 
 ## 2. Environment Sanitization & Path Leaks
@@ -47,6 +51,11 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
 [FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
 
+### YAML to JSON Tool: Logic Limitation & DoS Risk
+[ISSUE]: The YAML to JSON converter used a naive `split(':')` which failed on values containing colons (e.g., URLs) and lacked input length constraints.
+[TEST CASE]: Inputting `url: https://example.com` resulted in truncated values.
+[FIX]: Refactored to use `indexOf(':')` for first-occurrence splitting and added a 2048 character input limit.
+
 ---
 
 ## 4. Hardware & Dependency Audit
@@ -75,9 +84,11 @@ This report documents the findings of the core system audit performed on the Dev
 
 - **Build**: Successful (`pnpm run build` on Vite v8.0.2)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
+- **Adversarial Tests**: Verified fixes for Regex, JWT, and YAML (`python3 tests/adversarial_tests.py`)
+- **Core Logic Audit**: Completed "The Triad" testing for IP, MAC, YAML, and Sed/Awk (`python3 tests/audit_tools_test.py`).
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
 - **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
+- **Web Integrity**: Deployment portability ensured via relative path refactoring.
 
 **Auditor:** Jules (AI Assistant)
 **Date:** 2026-03-26

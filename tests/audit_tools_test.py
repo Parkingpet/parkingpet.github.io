@@ -75,6 +75,16 @@ def run_audit_tests():
         # Adversarial (Malformed)
         test_tool("MAC Formatter", "GGHHIIJJKKLL", "Colon", "Invalid", "MAC: Adversarial (Invalid hex)")
 
+        # --- YAML to JSON Tests ---
+        # Happy Path
+        test_tool("YAML to JSON", "key: value\nfoo: bar", "Convert", "\"key\": \"value\"", "YAML: Happy Path")
+        # Boundary (Malformed input - no colon)
+        test_tool("YAML to JSON", "keyvalue", "Convert", "{}", "YAML: Boundary (No colon)")
+        # Adversarial: Mitigation check (Input too long)
+        test_tool("YAML to JSON", "a" * 2100, "Convert", "Input too long", "YAML: Mitigation (Input too long)")
+        # Special case: Colon in value
+        test_tool("YAML to JSON", "url: https://example.com", "Convert", "\"url\": \"https://example.com\"", "YAML: Colon in value")
+
         # --- Sed/Awk Tests ---
         # Happy Path (Find/Replace)
         test_tool("Sed/Awk", "hello\nworld\nhello there", "FindReplace", "world there", "SedAwk: Happy Path (Replace)")
