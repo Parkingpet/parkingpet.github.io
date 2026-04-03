@@ -54,13 +54,18 @@ def run_adversarial_tests():
         test_tool("Regex", "[+\n", "Test", "Error: ", "Malformed Regex Pattern")
 
         # --- JWT Decoder Tests ---
-        # Mocking a Base64URL string with _ and -
-        # Payload: {"id":123,"data":"i_-_"}
-        # Base64: eyJpZCI6MTIzLCJkYXRhIjoiaV8tXyJ9
         test_tool("JWT Decoder", "a.eyJpZCI6MTIzLCJkYXRhIjoiaV8tXyJ9.c", "Decode", "\"id\": 123", "Base64URL support check")
 
         # --- JSON Tool Tests ---
         test_tool("JSON", "{invalid:json}", "Format", "Invalid JSON", "Invalid JSON Syntax")
+
+        # --- YAML Tool Tests ---
+        test_tool("YAML to JSON", "key: value\n- item 1", "Convert", "item 1", "YAML: Malformed input (mixed key and list)")
+        test_tool("YAML to JSON", " " * 3000, "Convert", "{}", "YAML: Extremely long empty input")
+
+        # --- CLI Commands Tests ---
+        # These are reference tools and should return pre-defined commands regardless of input
+        test_tool("CLI Commands", "ls", "Docker", "docker ps", "CLI: Reference check (Docker)")
 
         print("\n--- Summary ---")
         failed = False

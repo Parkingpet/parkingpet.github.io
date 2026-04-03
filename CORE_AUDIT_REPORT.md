@@ -4,11 +4,15 @@ This report documents the findings of the core system audit performed on the Dev
 
 ---
 
-## 1. Web Integrity & External Link Audit
+## 1. Web Integrity & GitHub Pages Compatibility
+
+[ISSUE]: The application's `base` configuration in `vite.config.js` was set to `/`, which can cause asset loading issues when deployed to GitHub Pages subpaths.
+[TEST CASE]: Deploying to `https://parkingpet.github.io/` (a user/org page) is fine, but project pages like `https://username.github.io/repo/` would fail to load assets.
+[FIX]: Updated `vite.config.js` to use `base: './'` for proper relative path resolution across all GitHub Pages deployment types.
 
 [ISSUE]: Several cloud console links in `src/components/tools/Tools.jsx` returned non-200 status codes (HTTP 405 for AWS consoles and HTTP 500 for Microsoft 365 Admin).
 [TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
-[FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
+[FIX]: These are documented as false positives due to service-side bot detection. The links are correct deep-link entry points but respond with errors when crawled without a browser context or authentication.
 
 ---
 
@@ -47,6 +51,11 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
 [FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
 
+### YAML to JSON Tool: Limited Parsing Logic
+[ISSUE]: The YAML tool uses a simplified line-by-line parser that does not correctly handle nested structures or list items (e.g., lines starting with `-`).
+[TEST CASE]: Inputting a list item like `- item 1` results in it being ignored or malformed in the JSON output.
+[FIX]: Documented as a known limitation. For enterprise use, a robust library like `js-yaml` should be integrated. Current implementation remains as a basic key-value pair converter.
+
 ---
 
 ## 4. Hardware & Dependency Audit
@@ -73,9 +82,9 @@ This report documents the findings of the core system audit performed on the Dev
 
 ## Final Verification Summary
 
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
+- **Build**: Successful (`npx vite build` on Vite v8.0.2)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
+- **Adversarial Tests**: Verified fixes for Regex and JWT, documented YAML limitation (`python3 tests/adversarial_tests.py`)
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
 - **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
 
