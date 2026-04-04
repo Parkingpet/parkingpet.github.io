@@ -62,6 +62,10 @@ def run_adversarial_tests():
         # --- JSON Tool Tests ---
         test_tool("JSON", "{invalid:json}", "Format", "Invalid JSON", "Invalid JSON Syntax")
 
+        # --- YAML Tool Tests ---
+        test_tool("YAML to JSON", "url: https://example.com/api", "Convert", "\"url\": \"https://example.com/api\"", "YAML: Support colons in values")
+        test_tool("YAML to JSON", "a" * 2100, "Convert", "Input too long", "YAML: Mitigation: Input too long")
+
         print("\n--- Summary ---")
         failed = False
         for res in results:

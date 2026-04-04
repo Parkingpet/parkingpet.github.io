@@ -74,10 +74,14 @@ export default function Tools() {
         try {
           // ReDoS mitigation: limit pattern and input length
           if (input.length > 1024) throw new Error('Input too long');
-          const [pattern, flags] = input.split('\n');
+          const lines = input.split('\n');
+          const pattern = lines[0];
+          const flags = lines[1];
+          if (!pattern) throw new Error('Pattern is required');
           if (pattern.length > 128) throw new Error('Pattern too long');
           const regex = new RegExp(pattern, flags || '');
-          setOutput(regex.test(input) ? 'Match found' : 'No match');
+          const text = lines.slice(2).join('\n') || input;
+          setOutput(regex.test(text) ? 'Match found' : 'No match');
         } catch (e) { setOutput('Error: ' + e.message) }
       },
       match: () => {
@@ -110,14 +114,19 @@ export default function Tools() {
       name: 'YAML to JSON',
       convert: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const obj = {};
           lines.forEach(line => {
-            const [key, value] = line.split(':').map(s => s.trim());
-            if (key) obj[key] = value;
+            const colonIndex = line.indexOf(':');
+            if (colonIndex !== -1) {
+              const key = line.slice(0, colonIndex).trim();
+              const value = line.slice(colonIndex + 1).trim();
+              if (key) obj[key] = value;
+            }
           });
           setOutput(JSON.stringify(obj, null, 2));
-        } catch { setOutput('Error converting YAML') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     mac: {
@@ -381,7 +390,7 @@ export default function Tools() {
               <p>Download the official PDF format of the resume.</p>
             </div>
             <a
-              href="/Mustafa_McLinn_Resume_2025.pdf"
+              href="./Mustafa_McLinn_Resume_2025.pdf"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -394,7 +403,7 @@ export default function Tools() {
               <p>Download the plain text format of the resume for ATS parsing.</p>
             </div>
             <a
-              href="/resume.txt"
+              href="./resume.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -407,7 +416,7 @@ export default function Tools() {
               <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
             </div>
             <a
-              href="/devops_cheatsheet.txt"
+              href="./devops_cheatsheet.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
