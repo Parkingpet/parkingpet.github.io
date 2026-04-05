@@ -10,7 +10,7 @@ function Router() {
   useEffect(() => {
     const handleNavigation = () => {
       const path = window.location.pathname
-      setPage(path.includes('prompts') ? 'prompts' : 'home')
+      setPage(path.endsWith('prompts') || path.endsWith('prompts/') ? 'prompts' : 'home')
     }
     
     handleNavigation()
