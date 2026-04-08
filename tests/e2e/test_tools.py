@@ -19,22 +19,22 @@ def test_tools():
         # Verify the hrefs
         pdf_href = page.locator("a:has-text('Download PDF')").get_attribute("href")
         txt_href = page.locator("a:has-text('Download TXT')").get_attribute("href")
-        assert "/Mustafa_McLinn_Resume_2025.pdf" in pdf_href
-        assert "/resume.txt" in txt_href
+        assert "Mustafa_McLinn_Resume_2025.pdf" in pdf_href
+        assert "resume.txt" in txt_href
 
         print("Downloads tab verified successfully!")
 
         # Click the Subnet Calc tab
-        page.locator("button:has-text('Subnet Calc')").click()
+        page.get_by_role("button", name="Subnet Calc", exact=True).click()
 
         # Enter CIDR into the textarea
-        page.locator("textarea[placeholder='Input...']").fill("192.168.1.0/24")
+        page.locator("textarea[aria-label='Tool input']").fill("192.168.1.0/24")
 
         # Click calculate
-        page.locator("button:has-text('Calculate')").click()
+        page.get_by_role("button", name="Calculate", exact=True).click()
 
         # Verify the output
-        output_textarea = page.locator("textarea[placeholder='Output will appear here...']")
+        output_textarea = page.locator("textarea[aria-label='Tool output']")
         output_value = output_textarea.input_value()
 
         assert "IP Address: 192.168.1.0" in output_value
