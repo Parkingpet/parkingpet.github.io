@@ -7,15 +7,27 @@ class GoogleCoralMock:
         self.connected = True
         self.model_loaded = False
 
-    def load_model(self, model_path):
+    def set_connected(self, state: bool):
+        """Simulate hardware connection/disconnection."""
+        self.connected = state
+
+    def load_model(self, model_path: str):
+        """Simulate loading a model onto the TPU."""
+        if not isinstance(model_path, str) or not model_path:
+            raise ValueError("Invalid model path")
         if not self.connected:
-            raise Exception("Coral TPU not connected")
+            raise RuntimeError("Coral TPU not connected")
         self.model_loaded = True
         return True
 
     def run_inference(self, data):
+        """Simulate running inference on the TPU."""
+        if not self.connected:
+            raise RuntimeError("Coral TPU not connected")
         if not self.model_loaded:
-            raise Exception("No model loaded")
+            raise RuntimeError("No model loaded")
+        if not data:
+            raise ValueError("Input data cannot be empty")
         return {"status": "success", "result": [0.9, 0.1]}
 
 class TestCoralMock(unittest.TestCase):
