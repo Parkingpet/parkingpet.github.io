@@ -110,14 +110,20 @@ export default function Tools() {
       name: 'YAML to JSON',
       convert: () => {
         try {
+          // DoS mitigation: limit input length
+          if (input.length > 2048) throw new Error('Input too long');
           const lines = input.split('\n');
           const obj = {};
           lines.forEach(line => {
-            const [key, value] = line.split(':').map(s => s.trim());
-            if (key) obj[key] = value;
+            const colonIndex = line.indexOf(':');
+            if (colonIndex !== -1) {
+              const key = line.slice(0, colonIndex).trim();
+              const value = line.slice(colonIndex + 1).trim();
+              if (key) obj[key] = value;
+            }
           });
           setOutput(JSON.stringify(obj, null, 2));
-        } catch { setOutput('Error converting YAML') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     mac: {
