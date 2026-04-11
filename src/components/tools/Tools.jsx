@@ -381,7 +381,7 @@ export default function Tools() {
               <p>Download the official PDF format of the resume.</p>
             </div>
             <a
-              href="/Mustafa_McLinn_Resume_2025.pdf"
+              href="./Mustafa_McLinn_Resume_2025.pdf"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -394,7 +394,7 @@ export default function Tools() {
               <p>Download the plain text format of the resume for ATS parsing.</p>
             </div>
             <a
-              href="/resume.txt"
+              href="./resume.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -407,7 +407,7 @@ export default function Tools() {
               <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
             </div>
             <a
-              href="/devops_cheatsheet.txt"
+              href="./devops_cheatsheet.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
