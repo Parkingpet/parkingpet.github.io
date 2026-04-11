@@ -3,20 +3,24 @@ from unittest.mock import MagicMock
 
 class GoogleCoralMock:
     """Mock for the Google Coral USB Accelerator."""
-    def __init__(self):
-        self.connected = True
+    def __init__(self, simulate_failure=False):
+        self.connected = not simulate_failure
         self.model_loaded = False
 
     def load_model(self, model_path):
         if not self.connected:
-            raise Exception("Coral TPU not connected")
+            raise RuntimeError("Coral TPU not connected")
+        if not model_path:
+            raise ValueError("Model path cannot be empty")
         self.model_loaded = True
         return True
 
     def run_inference(self, data):
         if not self.model_loaded:
-            raise Exception("No model loaded")
-        return {"status": "success", "result": [0.9, 0.1]}
+            raise RuntimeError("No model loaded")
+        if not data:
+            raise ValueError("Input data cannot be empty")
+        return {"status": "success", "result": [0.9, 0.1], "hardware": "mock-coral-tpu"}
 
 class TestCoralMock(unittest.TestCase):
     def test_mock_behavior(self):
