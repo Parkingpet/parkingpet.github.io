@@ -54,12 +54,17 @@ This report documents the findings of the core system audit performed on the Dev
 ### Dependency Poisoning & CVEs
 [ISSUE]: High severity ReDoS vulnerability in `picomatch` (via `vite`).
 [TEST CASE]: `pnpm audit`
-[FIX]: Updated `vite` to version 8.0.2 and implemented a pnpm override for `picomatch` to version 4.0.4.
+[FIX]: Updated `vite` to version 8.0.8 and implemented a pnpm override for `picomatch` to version 4.0.4.
+
+### Web Integrity & Portability
+[ISSUE]: Potential broken paths when deploying to GitHub Pages subpaths.
+[TEST CASE]: Inspect `vite.config.js` and `src/main.jsx`.
+[FIX]: Set `base: './'` in `vite.config.js` and updated routing logic in `src/main.jsx` to use relative path matching (`path.endsWith('prompts')`).
 
 ### Hardware Abstraction
-[ISSUE]: Lack of mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware.
+[ISSUE]: Lack of robust mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments.
 [TEST CASE]: Run `python3 tests/mocks/coral_mock.py`.
-[FIX]: Implemented `tests/mocks/coral_mock.py` to provide a mock interface for hardware dependencies.
+[FIX]: Enhanced `tests/mocks/coral_mock.py` with runtime connection simulation, improved error handling, and input validation.
 
 ---
 
@@ -73,7 +78,7 @@ This report documents the findings of the core system audit performed on the Dev
 
 ## Final Verification Summary
 
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
+- **Build**: Successful (`pnpm run build` on Vite v8.0.8)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
 - **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
