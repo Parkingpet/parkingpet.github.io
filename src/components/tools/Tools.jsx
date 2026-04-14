@@ -21,18 +21,24 @@ export default function Tools() {
   const tools = {
     base64: {
       name: 'Base64',
-      encode: () => setOutput(btoa(input)),
+      encode: () => {
+        if (input.length > 5000) throw new Error('Input too long (max 5000)');
+        setOutput(btoa(input));
+      },
       decode: () => {
+        if (input.length > 7000) throw new Error('Input too long (max 7000)');
         try { setOutput(atob(input)) } catch { setOutput('Invalid base64') }
       }
     },
     json: {
       name: 'JSON',
       format: () => {
+        if (input.length > 10000) throw new Error('Input too long (max 10000)');
         try { setOutput(JSON.stringify(JSON.parse(input), null, 2)) } 
         catch { setOutput('Invalid JSON') }
       },
       minify: () => {
+        if (input.length > 10000) throw new Error('Input too long (max 10000)');
         try { setOutput(JSON.stringify(JSON.parse(input))) } 
         catch { setOutput('Invalid JSON') }
       }
@@ -49,8 +55,12 @@ export default function Tools() {
     },
     url: {
       name: 'URL',
-      encode: () => setOutput(encodeURIComponent(input)),
+      encode: () => {
+        if (input.length > 5000) throw new Error('Input too long (max 5000)');
+        setOutput(encodeURIComponent(input));
+      },
       decode: () => {
+        if (input.length > 5000) throw new Error('Input too long (max 5000)');
         try { setOutput(decodeURIComponent(input)) } 
         catch { setOutput('Invalid URL encoding') }
       }
@@ -110,34 +120,43 @@ export default function Tools() {
       name: 'YAML to JSON',
       convert: () => {
         try {
+          if (input.length > 2048) throw new Error('Input too long (max 2048)');
           const lines = input.split('\n');
           const obj = {};
           lines.forEach(line => {
-            const [key, value] = line.split(':').map(s => s.trim());
-            if (key) obj[key] = value;
+            const colonIndex = line.indexOf(':');
+            if (colonIndex !== -1) {
+              const key = line.slice(0, colonIndex).trim();
+              const value = line.slice(colonIndex + 1).trim();
+              if (key) obj[key] = value;
+            }
           });
           setOutput(JSON.stringify(obj, null, 2));
-        } catch { setOutput('Error converting YAML') }
+        } catch (e) { setOutput('Error: ' + e.message) }
       }
     },
     mac: {
       name: 'MAC Formatter',
       colon: () => {
+        if (input.length > 1000) throw new Error('Input too long (max 1000)');
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
         if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
         setOutput(clean.match(/.{1,2}/g).join(':').toUpperCase());
       },
       hyphen: () => {
+        if (input.length > 1000) throw new Error('Input too long (max 1000)');
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
         if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
         setOutput(clean.match(/.{1,2}/g).join('-').toUpperCase());
       },
       dot: () => {
+        if (input.length > 1000) throw new Error('Input too long (max 1000)');
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
         if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
         setOutput(clean.match(/.{1,4}/g).join('.').toLowerCase());
       },
       continuous: () => {
+        if (input.length > 1000) throw new Error('Input too long (max 1000)');
         const clean = input.replace(/[^a-fA-F0-9]/g, '');
         if (clean.length !== 12) { setOutput('Invalid MAC address length'); return; }
         setOutput(clean.toUpperCase());
@@ -381,7 +400,7 @@ export default function Tools() {
               <p>Download the official PDF format of the resume.</p>
             </div>
             <a
-              href="/Mustafa_McLinn_Resume_2025.pdf"
+              href="./Mustafa_McLinn_Resume_2025.pdf"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -394,7 +413,7 @@ export default function Tools() {
               <p>Download the plain text format of the resume for ATS parsing.</p>
             </div>
             <a
-              href="/resume.txt"
+              href="./resume.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
@@ -407,7 +426,7 @@ export default function Tools() {
               <p>Download a handy plain-text cheat sheet with useful DevOps commands and tips.</p>
             </div>
             <a
-              href="/devops_cheatsheet.txt"
+              href="./devops_cheatsheet.txt"
               download
               style={{...styles.copyButton, textDecoration: 'none', display: 'inline-block'}}
             >
