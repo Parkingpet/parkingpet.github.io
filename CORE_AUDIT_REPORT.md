@@ -1,83 +1,41 @@
-# Core Audit Report: Web Integrity, Security, & Logic
+# Interactive DevOps Resume Platform - Core Audit Report
 
-This report documents the findings of the core system audit performed on the DevOps Resume platform.
+## Audit Objectives & Results
 
----
+### 1. Web Integrity
+[ISSUE]: Asset links for Resume (PDF/TXT) and Cheat Sheet used absolute paths (`/`), which would cause 404 errors when the application is deployed to a subpath (e.g., GitHub Pages `user.github.io/repo/`).
+[TEST CASE]: Deploy to a subpath and attempt to click "Download PDF" or navigate to `/prompts`.
+[FIX]: Updated `vite.config.js` with `base: './'` and refactored `Header.jsx`, `Tools.jsx`, `Prompts.jsx`, and `main.jsx` to use relative paths (`./`) for all internal assets and navigation.
 
-## 1. Web Integrity & External Link Audit
-
-[ISSUE]: Several cloud console links in `src/components/tools/Tools.jsx` returned non-200 status codes (HTTP 405 for AWS consoles and HTTP 500 for Microsoft 365 Admin).
-[TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
-[FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
-
----
-
-## 2. Environment Sanitization & Path Leaks
-
-[ISSUE]: No local path leaks (/home/, /Users/) or physical hardware references (QNAP, "Thoth") found in the current codebase.
+### 2. Environment Sanitization
+[ISSUE]: No hardcoded local paths (e.g., `/home/moose/`) or direct references to the QNAP NAS ("Thoth") were found in the source code.
 [TEST CASE]: `grep -rn "/home/moose" .` and `grep -rn "Thoth" .`
-[FIX]: No action required. Path sanitization verified.
+[FIX]: N/A (Confirmed clean). References to `192.168.x.x` in `Tools.jsx` are legitimate networking examples for the Subnet Calculator.
 
----
+### 3. Adversarial Logic Testing
+[ISSUE]: The "USPS Claim Automation" and "Gemini-to-eBay Parser" components mentioned in the audit objectives are missing from the repository.
+[TEST CASE]: `grep -ri "USPS" .` and `grep -ri "eBay" .`
+[FIX]: Documentation updated to reflect missing components. Audit shifted to hardening existing DevOps tools.
 
-## 3. Adversarial Logic & Tool Vulnerabilities
+[ISSUE]: The YAML to JSON converter was a fragile line-based parser that failed on values containing colons (e.g., URLs).
+[TEST CASE]: Input `url: https://example.com` into the YAML tool.
+[FIX]: Refactored parser to use `indexOf(':')` to split keys and values correctly.
 
-### Regex Tool: ReDoS Vulnerability
-[ISSUE]: The Regex tool was vulnerable to Regular Expression Denial of Service (ReDoS) due to unconstrained pattern length and input size.
-[TEST CASE]: Inputting the pattern `(a+)+$` and test string `aaaaaaaaaaaaaaaaaaaaaaaaaaaa!` would cause excessive CPU consumption.
-[FIX]: Implemented input length limits (1024 chars) and pattern length limits (128 chars) in `src/components/tools/Tools.jsx`.
+[ISSUE]: Several tools (Base64, JSON, MAC Formatter, URL) lacked input length limits, making them susceptible to browser-side DoS from massive "poisoned" inputs.
+[TEST CASE]: Paste a 10MB string into the MAC Formatter.
+[FIX]: Implemented strict length limits (e.g., 1000 chars for MAC, 5000-10000 for JSON/Base64) with user-facing error messages.
 
-### JWT Decoder: Base64URL Encoding Support
-[ISSUE]: The JWT Decoder used standard `atob()`, which fails to decode Base64URL strings containing '-' and '_' (common in JWT tokens).
-[TEST CASE]: Inputting a valid JWT with a payload containing URL-safe characters would return "Invalid JWT token".
-[FIX]: Implemented character replacement (`-` to `+`, `_` to `/`) and padding correction before `atob()` decoding.
+### 4. Hardware Abstraction
+[ISSUE]: The Google Coral USB Accelerator mock was too basic for production-grade CI/CD testing, lacking realistic error handling for connection states.
+[TEST CASE]: Run `python3 tests/mocks/coral_mock.py` and attempt to load a model with `connected=False`.
+[FIX]: Enhanced `CoralMock` with a `connected` state toggle, explicit `ValueError` for invalid inputs, and `RuntimeError` for hardware failures. Integrated "The Triad" testing framework into the mock verification.
 
-### Subnet Calculator: Edge Case Verification
-[ISSUE]: Verified the calculator's handling of /31 and /32 networks (point-to-point and host routes).
-[TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
-[FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
-
-### IP Converter: Missing Octet Validation
-[ISSUE]: The IP Converter allowed out-of-range octets (e.g., 256) and non-numeric inputs, leading to malformed results.
-[TEST CASE]: Inputting `256.0.0.1` into the IP Converter.
-[FIX]: Implemented strict 0-255 octet validation and numeric checks in `src/components/tools/Tools.jsx`.
-
-### Sed/Awk Tool: ReDoS Vulnerability and UI Bug
-[ISSUE]: The Sed/Awk tool lacked input and pattern length limits, making it vulnerable to ReDoS. Additionally, the input textarea was not rendered for this tool.
-[TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
-[FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
-
----
-
-## 4. Hardware & Dependency Audit
-
-### Dependency Poisoning & CVEs
-[ISSUE]: High severity ReDoS vulnerability in `picomatch` (via `vite`).
+### 5. Security Watch
+[ISSUE]: `vite@8.0.2` in `package.json` was identified as having security vulnerabilities.
 [TEST CASE]: `pnpm audit`
-[FIX]: Updated `vite` to version 8.0.2 and implemented a pnpm override for `picomatch` to version 4.0.4.
+[FIX]: Upgraded `vite` to `8.0.8`. `pnpm audit` now returns 0 vulnerabilities.
 
-### Hardware Abstraction
-[ISSUE]: Lack of mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware.
-[TEST CASE]: Run `python3 tests/mocks/coral_mock.py`.
-[FIX]: Implemented `tests/mocks/coral_mock.py` to provide a mock interface for hardware dependencies.
-
----
-
-## 5. Audit of Requested Automation Scripts
-
-[ISSUE]: The components "USPS Claim Automation" and "Gemini-to-eBay Parser" specified in the audit objectives were not found anywhere in the repository.
-[TEST CASE]: `grep -riE "USPS|eBay|Gemini|Claim" .` returns no matches in source code (only in this report and documentation).
-[FIX]: Audit objectives for these specific tools could not be met due to their absence. Recommend verifying if these scripts are intended to be part of a different repository or submodule.
-
----
-
-## Final Verification Summary
-
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
-- **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
-- **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
-- **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
-
-**Auditor:** Jules (AI Assistant)
-**Date:** 2026-03-26
+## Testing Summary
+- **The Triad:** Applied Happy Path, Boundary, and Adversarial tests to all hardened logic.
+- **Fail-Fast:** Verified that malformed inputs (e.g., invalid YAML, oversized JSON) are caught immediately with descriptive errors.
+- **Portability:** Verified that the platform functions correctly in a simulated subpath environment via Playwright.
