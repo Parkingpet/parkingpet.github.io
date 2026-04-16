@@ -4,7 +4,7 @@ def test_tools():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        page.goto("http://localhost:5173")
+        page.goto("http://localhost:4173")
 
         # Wait for the "Downloads" tab to appear
         page.locator("button:has-text('Downloads')").wait_for(state="visible", timeout=10000)
@@ -19,8 +19,8 @@ def test_tools():
         # Verify the hrefs
         pdf_href = page.locator("a:has-text('Download PDF')").get_attribute("href")
         txt_href = page.locator("a:has-text('Download TXT')").get_attribute("href")
-        assert "/Mustafa_McLinn_Resume_2025.pdf" in pdf_href
-        assert "/resume.txt" in txt_href
+        assert "./Mustafa_McLinn_Resume_2025.pdf" in pdf_href
+        assert "./resume.txt" in txt_href
 
         print("Downloads tab verified successfully!")
 
