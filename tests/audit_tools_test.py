@@ -6,7 +6,7 @@ def run_audit_tests():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        url = "http://localhost:5173"
+        url = "http://localhost:4173"
         print(f"Connecting to {url}...")
         try:
             page.goto(url)
