@@ -10,6 +10,11 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
 [FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
 
+### Subpath Deployment & Relative Paths
+[ISSUE]: Using absolute root paths (`/`) for internal links and assets could break the site when deployed to a subpath (e.g., `https://username.github.io/repo-name/`).
+[TEST CASE]: Inspect `src/components/header/Header.jsx` and `src/components/tools/Tools.jsx` for hardcoded `/` links.
+[FIX]: Updated `vite.config.js` with `base: './'` and refactored React components to use relative paths (`./`) for all internal links, `pushState` calls, and asset downloads.
+
 ---
 
 ## 2. Environment Sanitization & Path Leaks
@@ -57,9 +62,9 @@ This report documents the findings of the core system audit performed on the Dev
 [FIX]: Updated `vite` to version 8.0.2 and implemented a pnpm override for `picomatch` to version 4.0.4.
 
 ### Hardware Abstraction
-[ISSUE]: Lack of mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware.
+[ISSUE]: Lack of robust mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware. Initial mock lacked state simulation and input validation.
 [TEST CASE]: Run `python3 tests/mocks/coral_mock.py`.
-[FIX]: Implemented `tests/mocks/coral_mock.py` to provide a mock interface for hardware dependencies.
+[FIX]: Enhanced `tests/mocks/coral_mock.py` with runtime connection state simulation, improved error handling (ValueError, RuntimeError), and input validation to better serve CI/CD environments.
 
 ---
 
@@ -73,11 +78,12 @@ This report documents the findings of the core system audit performed on the Dev
 
 ## Final Verification Summary
 
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
+- **Build**: Successful (`pnpm run build` on Vite v8.0.8)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
 - **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
 - **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
 - **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
+- **Hardware Mock**: Verified enhanced mock (`python3 tests/mocks/coral_mock.py`).
 
 **Auditor:** Jules (AI Assistant)
 **Date:** 2026-03-26
