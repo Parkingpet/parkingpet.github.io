@@ -16,6 +16,19 @@ class GoogleCoralMock:
     def run_inference(self, data):
         if not self.model_loaded:
             raise Exception("No model loaded")
+
+        # Adversarial Logic: Input Validation
+        if not isinstance(data, (list, tuple)):
+            raise ValueError("Invalid input: data must be a list or tuple")
+
+        # Simulation: Invalid input shape
+        if len(data) == 0:
+            raise ValueError("Invalid input shape: empty data")
+
+        # Simulation: TPU Overheating (RuntimeError)
+        if len(data) > 1000:
+            raise RuntimeError("TPU Overheating: Input size too large")
+
         return {"status": "success", "result": [0.9, 0.1]}
 
 class TestCoralMock(unittest.TestCase):

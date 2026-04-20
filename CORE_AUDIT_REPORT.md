@@ -10,6 +10,10 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
 [FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
 
+[ISSUE]: Absolute base path in `vite.config.js` hinders portability for subpath deployments (e.g., GitHub Pages).
+[TEST CASE]: Inspect `vite.config.js` or observe broken assets when served from a subpath.
+[FIX]: Updated `base: '/'` to `base: './'` in `vite.config.js`.
+
 ---
 
 ## 2. Environment Sanitization & Path Leaks
@@ -47,36 +51,50 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
 [FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
 
+### YAML to JSON: Colon Handling and DoS Mitigation
+[ISSUE]: The YAML parser used `split(':')`, which corrupted values containing colons (e.g., URLs). It also lacked input length constraints.
+[TEST CASE]: Input `url: https://example.com` resulted in `{"url": "https"}`.
+[FIX]: Refactored parser to use `indexOf(':')` for splitting and implemented a 2048-character input limit.
+
+### Universal DoS Mitigation for Tools
+[ISSUE]: Several tools (MAC Formatter, URL, JSON, Base64) lacked input length limits, making them vulnerable to Denial of Service via large payloads.
+[TEST CASE]: Inputting >1MB of data into any of these tools.
+[FIX]: Implemented the following length limits in `src/components/tools/Tools.jsx`:
+- MAC Formatter: 1000 chars
+- URL Tool: 5000 chars
+- JSON Tool: 10000 chars
+- Base64: 5000 (encode) / 7000 (decode) chars
+
 ---
 
 ## 4. Hardware & Dependency Audit
 
 ### Dependency Poisoning & CVEs
-[ISSUE]: High severity ReDoS vulnerability in `picomatch` (via `vite`).
+[ISSUE]: High severity vulnerabilities found in `vite` version 8.0.2 (Path traversal, query bypass).
 [TEST CASE]: `pnpm audit`
-[FIX]: Updated `vite` to version 8.0.2 and implemented a pnpm override for `picomatch` to version 4.0.4.
+[FIX]: Updated `vite` to version 8.0.8 (resolved to 8.0.9). Verified 0 vulnerabilities remaining.
 
 ### Hardware Abstraction
-[ISSUE]: Lack of mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware.
+[ISSUE]: Lack of robust adversarial mocks for the Google Coral USB Accelerator.
 [TEST CASE]: Run `python3 tests/mocks/coral_mock.py`.
-[FIX]: Implemented `tests/mocks/coral_mock.py` to provide a mock interface for hardware dependencies.
+[FIX]: Enhanced `tests/mocks/coral_mock.py` with `ValueError` and `RuntimeError` simulations (invalid input shape, TPU overheating) and strict input validation.
 
 ---
 
 ## 5. Audit of Requested Automation Scripts
 
 [ISSUE]: The components "USPS Claim Automation" and "Gemini-to-eBay Parser" specified in the audit objectives were not found anywhere in the repository.
-[TEST CASE]: `grep -riE "USPS|eBay|Gemini|Claim" .` returns no matches in source code (only in this report and documentation).
-[FIX]: Audit objectives for these specific tools could not be met due to their absence. Recommend verifying if these scripts are intended to be part of a different repository or submodule.
+[TEST CASE]: `grep -riE "USPS|eBay|Gemini|Claim" .` returns no matches in source code.
+[FIX]: Audit objectives for these specific tools could not be met due to their absence.
 
 ---
 
 ## Final Verification Summary
 
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
+- **Build**: Successful (`pnpm run build` on Vite v8.0.9)
 - **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
-- **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
+- **Adversarial Tests**: Verified fixes for Regex, JWT, YAML, MAC, and JSON (`python3 tests/adversarial_tests.py`)
+- **Audit Suite**: All functional and boundary tests passed (`python3 tests/audit_tools_test.py`)
 - **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
 
 **Auditor:** Jules (AI Assistant)
