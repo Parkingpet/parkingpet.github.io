@@ -61,6 +61,14 @@ def run_adversarial_tests():
 
         # --- JSON Tool Tests ---
         test_tool("JSON", "{invalid:json}", "Format", "Invalid JSON", "Invalid JSON Syntax")
+        test_tool("JSON", "{\"a\":1}" * 2000, "Format", "Input too long", "JSON: Mitigation (Input too long)")
+
+        # --- YAML to JSON Tests ---
+        test_tool("YAML to JSON", "url: https://example.com/api", "Convert", "https://example.com/api", "YAML: Colon in value")
+        test_tool("YAML to JSON", "key: value\n" * 300, "Convert", "Input too long", "YAML: Mitigation (Input too long)")
+
+        # --- MAC Formatter Tests ---
+        test_tool("MAC Formatter", "0" * 1100, "Colon", "Input too long", "MAC: Mitigation (Input too long)")
 
         print("\n--- Summary ---")
         failed = False
