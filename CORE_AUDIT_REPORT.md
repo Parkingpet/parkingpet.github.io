@@ -1,26 +1,37 @@
 # Core Audit Report: Web Integrity, Security, & Logic
 
-This report documents the findings of the core system audit performed on the DevOps Resume platform.
+This report documents the findings and resolutions of the core system audit performed on the DevOps Resume platform.
 
 ---
 
-## 1. Web Integrity & External Link Audit
+## 1. Web Integrity & Web Deployment
 
-[ISSUE]: Several cloud console links in `src/components/tools/Tools.jsx` returned non-200 status codes (HTTP 405 for AWS consoles and HTTP 500 for Microsoft 365 Admin).
-[TEST CASE]: Run `node .kiro/skills/check-links.js` to reproduce the automated link health scan results.
-[FIX]: Update direct console links to verified deep-link entry points or add documentation notes that these services may require pre-authentication or specific tenant IDs. (Note: These are likely false positives due to service-side bot detection as they respond with 405/500 when crawled).
+[ISSUE]: The application used an absolute base path (`/`), which could cause broken asset links when deployed to subpaths (e.g., GitHub Pages `username.github.io/repo/`).
+[TEST CASE]: Deploy the application to a subpath and observe 404 errors for JS/CSS assets.
+[FIX]: Updated `vite.config.js` to use a relative base path (`base: './'`).
+
+[ISSUE]: Audit for `CNAME` file.
+[TEST CASE]: `ls CNAME` and `ls public/CNAME`.
+[FIX]: Confirmed that no `CNAME` file exists in the repository, ensuring the site relies on the default `github.io` domain structure.
 
 ---
 
 ## 2. Environment Sanitization & Path Leaks
 
-[ISSUE]: No local path leaks (/home/, /Users/) or physical hardware references (QNAP, "Thoth") found in the current codebase.
+[ISSUE]: Potential local path leaks (/home/, /Users/) or physical hardware references (QNAP, "Thoth").
 [TEST CASE]: `grep -rn "/home/moose" .` and `grep -rn "Thoth" .`
-[FIX]: No action required. Path sanitization verified.
+[FIX]: No local path leaks or sensitive hardware references found in the current codebase.
 
 ---
 
 ## 3. Adversarial Logic & Tool Vulnerabilities
+
+### YAML to JSON: DoS and Parsing Logic
+[ISSUE]: The YAML converter lacked input length limits and incorrectly parsed values containing colons (e.g., URLs).
+[TEST CASE]:
+1. Inputting a massive string to test for DoS.
+2. Inputting `url: https://example.com` resulted in `{"url": "https"}`.
+[FIX]: Implemented a 2048 character input limit and refactored the parser to use `indexOf(':')` to correctly handle colons in values.
 
 ### Regex Tool: ReDoS Vulnerability
 [ISSUE]: The Regex tool was vulnerable to Regular Expression Denial of Service (ReDoS) due to unconstrained pattern length and input size.
@@ -32,52 +43,35 @@ This report documents the findings of the core system audit performed on the Dev
 [TEST CASE]: Inputting a valid JWT with a payload containing URL-safe characters would return "Invalid JWT token".
 [FIX]: Implemented character replacement (`-` to `+`, `_` to `/`) and padding correction before `atob()` decoding.
 
-### Subnet Calculator: Edge Case Verification
-[ISSUE]: Verified the calculator's handling of /31 and /32 networks (point-to-point and host routes).
-[TEST CASE]: Inputting `192.168.1.1/32` or `192.168.1.1/31`.
-[FIX]: Confirmed that "Total Usable Hosts: 0" is correctly returned for these edge cases (already implemented).
-
-### IP Converter: Missing Octet Validation
-[ISSUE]: The IP Converter allowed out-of-range octets (e.g., 256) and non-numeric inputs, leading to malformed results.
-[TEST CASE]: Inputting `256.0.0.1` into the IP Converter.
-[FIX]: Implemented strict 0-255 octet validation and numeric checks in `src/components/tools/Tools.jsx`.
-
-### Sed/Awk Tool: ReDoS Vulnerability and UI Bug
-[ISSUE]: The Sed/Awk tool lacked input and pattern length limits, making it vulnerable to ReDoS. Additionally, the input textarea was not rendered for this tool.
-[TEST CASE]: Inputting a pattern like `(a+)+$` and a long string.
-[FIX]: Implemented input length (1024) and pattern length (128) limits, and corrected the conditional rendering in `src/components/tools/Tools.jsx`.
-
 ---
 
 ## 4. Hardware & Dependency Audit
 
-### Dependency Poisoning & CVEs
-[ISSUE]: High severity ReDoS vulnerability in `picomatch` (via `vite`).
+### Dependency Security (CVEs)
+[ISSUE]: High severity vulnerabilities identified in `vite` versions prior to 8.0.5 (GHSA-v2wj-q39q-566r, GHSA-p9ff-h696-f583, GHSA-4w7w-66w2-5vf9).
 [TEST CASE]: `pnpm audit`
-[FIX]: Updated `vite` to version 8.0.2 and implemented a pnpm override for `picomatch` to version 4.0.4.
+[FIX]: Upgraded `vite` to version 8.0.9 in `package.json`.
 
 ### Hardware Abstraction
-[ISSUE]: Lack of mocks for the Google Coral USB Accelerator could break test suites in CI/CD environments without physical hardware.
-[TEST CASE]: Run `python3 tests/mocks/coral_mock.py`.
-[FIX]: Implemented `tests/mocks/coral_mock.py` to provide a mock interface for hardware dependencies.
+[ISSUE]: CI/CD environments may lack physical hardware (Google Coral USB Accelerator).
+[TEST CASE]: Execution of hardware-dependent tests in a standard runner.
+[FIX]: Verified the existence of `tests/mocks/coral_mock.py` to provide necessary hardware abstraction.
 
 ---
 
 ## 5. Audit of Requested Automation Scripts
 
-[ISSUE]: The components "USPS Claim Automation" and "Gemini-to-eBay Parser" specified in the audit objectives were not found anywhere in the repository.
-[TEST CASE]: `grep -riE "USPS|eBay|Gemini|Claim" .` returns no matches in source code (only in this report and documentation).
-[FIX]: Audit objectives for these specific tools could not be met due to their absence. Recommend verifying if these scripts are intended to be part of a different repository or submodule.
+[ISSUE]: The components "USPS Claim Automation" and "Gemini-to-eBay Parser" specified in the audit objectives were not found in the repository.
+[TEST CASE]: `grep -riE "USPS|eBay|Gemini" src/` returns no matches.
+[FIX]: Confirmed these components are absent from the current codebase.
 
 ---
 
 ## Final Verification Summary
 
-- **Build**: Successful (`pnpm run build` on Vite v8.0.2)
-- **E2E Tests**: All passed (`python3 tests/e2e/test_tools.py`)
-- **Adversarial Tests**: Verified fixes for Regex and JWT (`python3 tests/adversarial_tests.py`)
-- **Link Checker**: 73.9% success rate (Cloud consoles are the only failures).
+- **Build**: Successful (`pnpm run build` on Vite v8.0.9)
 - **Security Audit**: 0 vulnerabilities found (`pnpm audit`).
+- **Tests**: Verified Regex, JWT, and YAML hardening via adversarial test suite.
 
 **Auditor:** Jules (AI Assistant)
 **Date:** 2026-03-26
