@@ -11,7 +11,6 @@ import Clients from './components/clients/Clients';
 import MCPServers from './components/mcp/MCPServers';
 import Footer from './components/footer/Footer';
 
-
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -45,7 +44,7 @@ export default function App() {
             const headerHeight = document.querySelector('header')?.offsetHeight || 100;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
-            
+
             window.scrollTo({
               top: offsetPosition,
               behavior: 'smooth'
@@ -79,31 +78,15 @@ export default function App() {
         <div style={styles.container}>
           <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header />
-          <main id="main-content">
-            <div id="summary">
-              <Summary />
-            </div>
-            <div id="skills">
-              <Skills />
-            </div>
-            <div id="projects">
-              <Projects />
-            </div>
-            <div id="experience">
-              <Experience />
-            </div>
-            <div id="education">
-              <Education />
-            </div>
-            <div id="clients">
-              <Clients />
-            </div>
-            <div id="tools">
-              <Tools />
-            </div>
-            <div id="mcp-servers">
-              <MCPServers />
-            </div>
+          <main id="main-content" className="page-main">
+            <section id="summary" className="content-section"><Summary /></section>
+            <section id="skills" className="content-section"><Skills /></section>
+            <section id="projects" className="content-section"><Projects /></section>
+            <section id="experience" className="content-section"><Experience /></section>
+            <section id="education" className="content-section"><Education /></section>
+            <section id="clients" className="content-section"><Clients /></section>
+            <section id="tools" className="content-section"><Tools /></section>
+            <section id="mcp-servers" className="content-section"><MCPServers /></section>
           </main>
           <Footer />
         </div>
@@ -114,15 +97,15 @@ export default function App() {
 
 function ParticleBackground() {
   const canvasRef = useRef(null);
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
+
     const particles = Array.from({length: 30}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -130,13 +113,13 @@ function ParticleBackground() {
       vy: (Math.random() - 0.5) * 0.2,
       r: Math.random() * 1
     }));
-    
+
     const animate = () => {
       ctx.fillStyle = 'rgba(11, 18, 32, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = '#38bdf8';
       ctx.globalAlpha = 0.3;
-      
+
       particles.forEach(p => {
         p.x += p.vx;
         p.y += p.vy;
@@ -146,7 +129,7 @@ function ParticleBackground() {
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       });
-      
+
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#38bdf8';
       particles.forEach((p1, i) => {
@@ -162,21 +145,21 @@ function ParticleBackground() {
           }
         });
       });
-      
+
       requestAnimationFrame(animate);
     };
-    
+
     animate();
-    
+
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   return <canvas ref={canvasRef} style={styles.canvas} />;
 }
 
@@ -220,8 +203,8 @@ const styles = {
     margin: '0 auto',
     padding: '16px 16px 32px',
     color: '#e2e8f0',
-    fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif',
-    lineHeight: 1.1,
+    fontFamily: 'Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    lineHeight: 1.5,
     fontSize: '16px'
   }
 };
