@@ -1,27 +1,9 @@
-/* Unified design: cyber-resume aesthetic */
-:root{
+/* Safe, minimal lower-section styling. Top ASCII/header is intentionally left alone. */
+:root {
   --font-sans: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
 
-  --fs-xs: 12px;
-  --fs-sm: 14px;
-  --fs-base: 16px;
-  --fs-md: 18px;
-  --fs-lg: 20px;
-  --fs-xl: 22px;
-  --fs-2xl: 26px;
-
-  --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-
-  --lh-tight: 1.05;
-  --lh-normal: 1.4;
-
   --color-bg: #060712;
-  --color-surface: #0f1724;
-  --color-border: #182233;
   --color-primary: #00d9ff;
   --color-accent: #8b5cf6;
   --color-cta: #38bdf8;
@@ -29,15 +11,11 @@
   --color-muted: #93a0b8;
 }
 
-html, body { height: 100%; }
-
 body {
   margin: 0;
   background: linear-gradient(180deg, rgba(2,6,23,1) 0%, var(--color-bg) 100%);
   color: var(--color-text);
   font-family: var(--font-sans);
-  font-size: var(--fs-base);
-  line-height: var(--lh-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -213,27 +191,6 @@ body {
   top: 12px;
 }
 
-@media print {
-  body { background: white; color: black; }
-  .content-section {
-    box-shadow: none;
-    border: 1px solid #dfe6ee;
-  }
-}
-
-/* Keep top ASCII/header intact; apply uniform lower-section font stack only below the header */
-#top,
-#top *,
-#top pre,
-#top h1,
-#top p,
-#top a,
-#top span,
-#top div {
-  font-family: inherit !important;
-}
-
-/* Code and input areas stay monospace */
 pre, code, textarea, input, .curlCode, .textarea, .contactValue, code[class], pre[class] {
   font-family: var(--font-mono) !important;
 }
