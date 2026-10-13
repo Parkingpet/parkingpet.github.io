@@ -12,7 +12,7 @@ export default function Clients() {
       <div style={styles.clientsList}>
         {resumeData.clients.map((client, index) => (
           <div key={index} style={styles.clientItem}>
-            <div style={styles.clientLeft}>
+            <div style={styles.clientHeader}>
               {client.link ? (
                 <a
                   href={client.link}
@@ -50,7 +50,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '10px',
-    marginBottom: '12px'
+    marginBottom: '14px'
   },
   badge: {
     display: 'inline-block',
@@ -60,7 +60,8 @@ const styles = {
     padding: '6px 8px',
     fontFamily: 'monospace',
     fontSize: '12px',
-    borderRadius: '6px'
+    borderRadius: '6px',
+    boxShadow: 'inset 0 -6px 18px rgba(0,0,0,0.4)'
   },
   title: {
     color: '#38bdf8',
@@ -70,52 +71,64 @@ const styles = {
     fontFamily: 'monospace'
   },
   clientsList: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px'
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+    alignItems: 'stretch'
   },
   clientItem: {
-    padding: '10px 12px',
-    background: 'rgba(2,6,23,0.65)',
-    border: '1px solid rgba(56,189,248,0.06)',
-    borderRadius: '6px',
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: '12px'
+    minHeight: '150px',
+    padding: '14px 16px',
+    background: 'rgba(2,6,23,0.65)',
+    border: '1px solid rgba(56,189,248,0.12)',
+    borderRadius: '8px',
+    boxShadow: 'inset 0 0 0 1px rgba(56,189,248,0.04)',
+    width: '100%',
+    boxSizing: 'border-box'
   },
-  clientLeft: {
+  clientHeader: {
     display: 'flex',
     alignItems: 'center',
-    gap: '8px'
+    justifyContent: 'space-between',
+    marginBottom: '10px'
   },
   clientBadge: {
     display: 'inline-block',
     background: '#00121a',
     color: '#cfeffd',
     border: '1px solid rgba(56,189,248,0.12)',
-    padding: '6px 8px',
+    padding: '7px 10px',
     fontFamily: 'monospace',
     fontSize: '13px',
-    borderRadius: '6px'
+    borderRadius: '6px',
+    width: '100%',
+    textAlign: 'center',
+    boxSizing: 'border-box'
   },
   clientMeta: {
     display: 'flex',
-    gap: '10px',
-    alignItems: 'center'
+    flexDirection: 'column',
+    gap: '6px',
+    marginTop: 'auto'
   },
   clientLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    width: '100%',
+    display: 'block'
   },
   clientYears: {
     color: '#93a0b8',
-    fontSize: '13px'
+    fontSize: '12px',
+    letterSpacing: '0.04em',
+    textTransform: 'uppercase',
+    fontWeight: 600
   },
   clientDescription: {
-    color: '#cbd5e1',
+    color: '#dfeaf7',
     fontSize: '13px',
-    maxWidth: '480px',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    lineHeight: 1.45
   }
 };
