@@ -191,6 +191,39 @@ body {
   top: 12px;
 }
 
+/* Restore the original header ASCII glitch effect without affecting the rest of the page */
+#top pre,
+#top .ascii {
+  animation: glitch 3s infinite;
+  color: #38bdf8 !important;
+  font-family: monospace !important;
+  line-height: 1.1 !important;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+@keyframes glitch {
+  0%, 90%, 100% {
+    transform: translate(0);
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+  }
+  91% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff00de, -2px 0 #00ffff;
+  }
+  92% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 0 #ff00de, 2px 0 #00ffff;
+  }
+  93% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff00de, -2px 0 #00ffff;
+  }
+  94% {
+    transform: translate(0);
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+  }
+}
+
 pre, code, textarea, input, .curlCode, .textarea, .contactValue, code[class], pre[class] {
   font-family: var(--font-mono) !important;
 }
