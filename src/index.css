@@ -47,12 +47,10 @@ body {
   to { opacity: 1; transform: none; }
 }
 
-/* Preserve the original upper half: keep the existing header and hero visuals intact */
 .page-main {
   display: block;
 }
 
-/* Lower section styling only: AI / DevOps resume aesthetic */
 .content-section {
   margin-top: 10px;
   background: linear-gradient(180deg, rgba(15,23,42,0.82), rgba(8,12,22,0.9));
@@ -66,23 +64,33 @@ body {
 .content-section h2,
 .content-section h3,
 .content-section h4,
-.content-section .title {
-  font-family: var(--font-mono);
-  font-size: var(--fs-lg);
-  margin: 0 0 10px 0;
-  color: var(--color-primary);
-  font-weight: var(--fw-semibold);
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+.content-section .title,
+.content-section .sectionTitle,
+.content-section .toolTitle,
+.content-section .linksTitle,
+.content-section .contactTitle,
+.content-section .company,
+.content-section .categoryTitle {
+  font-family: var(--font-sans) !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 600 !important;
+  color: var(--color-primary) !important;
+  margin: 0 0 8px 0 !important;
 }
 
 .content-section h2::after,
 .content-section h3::after,
 .content-section h4::after,
-.content-section .title::after {
+.content-section .title::after,
+.content-section .sectionTitle::after,
+.content-section .linksTitle::after,
+.content-section .toolTitle::after,
+.content-section .contactTitle::after {
   content: "";
   display: block;
-  width: 58px;
+  width: 52px;
   height: 2px;
   margin-top: 8px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
@@ -91,14 +99,38 @@ body {
 
 .content-section p,
 .content-section li,
+.content-section span,
+.content-section div,
+.content-section a,
+.content-section button,
 .content-section .achievement,
 .content-section .paragraph,
 .content-section .role,
-.content-section .company,
-.content-section .projectTitle {
-  color: var(--color-text);
-  font-size: var(--fs-sm);
-  line-height: 1.45;
+.content-section .projectTitle,
+.content-section .position,
+.content-section .date,
+.content-section .skillsList,
+.content-section .educationText,
+.content-section .clientName,
+.content-section .clientYears,
+.content-section .clientDescription,
+.content-section .linkName,
+.content-section .linkDesc,
+.content-section .contactValue,
+.content-section .contactNote,
+.content-section .tab,
+.content-section .collapseButton,
+.content-section .actionButton,
+.content-section .copyButton,
+.content-section .copyBtn,
+.content-section .linkCard,
+.content-section .cliCard,
+.content-section .cliName,
+.content-section .curlCode {
+  font-family: var(--font-sans) !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  letter-spacing: normal !important;
 }
 
 .content-section ul {
@@ -118,8 +150,8 @@ body {
   border: 1px solid rgba(0, 217, 255, 0.18);
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(139, 92, 246, 0.08));
   color: var(--color-cta);
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-sans) !important;
+  font-size: 12px !important;
   letter-spacing: 0.01em;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -132,7 +164,7 @@ body {
 
 .project {
   padding: 10px 0;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  border-bottom: 1px dashed rgba(255,255,255,0.03);
 }
 
 .project:last-child {
@@ -140,16 +172,21 @@ body {
 }
 
 .company {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans) !important;
   color: var(--color-primary);
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-.projectTitle {
-  color: var(--color-muted);
-  margin-top: 2px;
-  font-size: 13px;
+.projectTitle,
+.position,
+.date,
+.skillsList,
+.educationText,
+.clientDescription,
+.linkDesc,
+.contactNote {
+  color: var(--color-muted) !important;
 }
 
 .projectLink {
@@ -161,20 +198,6 @@ body {
   text-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
 }
 
-/* Keep original header section styling untouched while adding a subtle DevOps feel only below the fold */
-#top,
-#top h1,
-#top pre,
-#top nav,
-#top nav a,
-#top .subtitle,
-#top .meta,
-#top .meta a,
-#top .badges {
-  /* intentionally left to the existing inline styles and original site behavior */
-}
-
-/* accessibility */
 .skip-link {
   position: absolute;
   left: 12px;
@@ -190,11 +213,27 @@ body {
   top: 12px;
 }
 
-/* print friendly */
 @media print {
   body { background: white; color: black; }
   .content-section {
     box-shadow: none;
     border: 1px solid #dfe6ee;
   }
+}
+
+/* Keep top ASCII/header intact; apply uniform lower-section font stack only below the header */
+#top,
+#top *,
+#top pre,
+#top h1,
+#top p,
+#top a,
+#top span,
+#top div {
+  font-family: inherit !important;
+}
+
+/* Code and input areas stay monospace */
+pre, code, textarea, input, .curlCode, .textarea, .contactValue, code[class], pre[class] {
+  font-family: var(--font-mono) !important;
 }
