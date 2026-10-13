@@ -76,7 +76,10 @@ export default function MCPServers() {
           >
             ▼
           </button>
-          <h2 style={styles.title}>MCP Servers</h2>
+          <div style={styles.titleWrap}>
+            <span style={styles.badge}>MCP</span>
+            <h2 style={styles.title}>MCP Servers</h2>
+          </div>
         </div>
       </div>
 
@@ -93,13 +96,13 @@ export default function MCPServers() {
                 style={styles.serverCard}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.boxShadow = '0 12px 30px rgba(56, 189, 248, 0.2)';
+                  e.currentTarget.style.boxShadow = '0 12px 30px rgba(56, 189, 248, 0.12)';
                   e.currentTarget.style.borderColor = '#38bdf8';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.08)';
                 }}
               >
                 <div style={styles.serverHeader}>
@@ -110,11 +113,11 @@ export default function MCPServers() {
                   </div>
                 </div>
                 
-                <div style={styles.serverCategory}>{server.category}</div>
+                <div style={styles.serverCategory}><span style={styles.categoryBadge}>{server.category}</span></div>
                 <div style={styles.serverDescription}>{server.description}</div>
                 
                 <div style={styles.commandSection}>
-                  <div style={styles.commandLabel}>Installation Command:</div>
+                  <div style={styles.commandLabel}><span style={styles.cmdBadge}>CMD</span> Installation Command:</div>
                   <div style={styles.commandText}>{server.command}</div>
                 </div>
               </div>
@@ -143,11 +146,11 @@ export default function MCPServers() {
 
 const styles = {
   container: {
-    background: 'rgba(15, 23, 42, 0.7)',
-    border: '1px solid #23314d',
-    borderRadius: '12px',
-    padding: '24px',
-    marginTop: '24px'
+    background: 'rgba(9, 13, 22, 0.92)',
+    border: '1px solid rgba(56, 189, 248, 0.08)',
+    borderRadius: '8px',
+    padding: '16px',
+    marginTop: '12px'
   },
   headerContainer: {
     display: 'flex',
@@ -159,6 +162,11 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '12px'
+  },
+  titleWrap: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px'
   },
   toggleButton: {
     background: 'none',
@@ -173,33 +181,41 @@ const styles = {
     justifyContent: 'center',
     lineHeight: 1
   },
+  badge: {
+    display: 'inline-block',
+    background: '#00121a',
+    color: '#00d9ff',
+    border: '1px solid rgba(56,189,248,0.14)',
+    padding: '6px 8px',
+    fontFamily: 'monospace',
+    fontSize: '12px',
+    borderRadius: '6px'
+  },
   title: {
     color: '#38bdf8',
     margin: '0',
-    fontSize: '24px',
-    fontWeight: 600,
-    letterSpacing: '-0.01em',
-    borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '12px'
+    fontSize: '18px',
+    fontWeight: 700,
+    fontFamily: 'monospace'
   },
   description: {
     color: '#94a3b8',
-    fontSize: '16px',
-    marginBottom: '24px',
-    lineHeight: 1.6
+    fontSize: '14px',
+    marginBottom: '16px',
+    lineHeight: 1.5
   },
   serversGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-    gap: '20px',
-    marginBottom: '24px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '16px',
+    marginBottom: '16px'
   },
   serverCard: {
-    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(16, 185, 129, 0.02) 100%)',
-    border: '1px solid rgba(56, 189, 248, 0.3)',
-    borderRadius: '10px',
-    padding: '20px',
-    transition: 'all 0.3s ease',
+    background: 'rgba(2,6,23,0.65)',
+    border: '1px solid rgba(56, 189, 248, 0.06)',
+    borderRadius: '8px',
+    padding: '14px',
+    transition: 'all 0.25s ease',
     cursor: 'default',
     position: 'relative',
     overflow: 'hidden'
@@ -208,12 +224,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    marginBottom: '8px'
+    marginBottom: '6px'
   },
   serverName: {
     color: '#38bdf8',
-    fontSize: '18px',
-    fontWeight: 600,
+    fontSize: '16px',
+    fontWeight: 700,
     letterSpacing: '-0.01em'
   },
   serverStatus: {
@@ -222,7 +238,7 @@ const styles = {
     gap: '6px',
     color: '#10b981',
     fontSize: '12px',
-    fontWeight: 500
+    fontWeight: 600
   },
   statusDot: {
     width: '8px',
@@ -232,28 +248,48 @@ const styles = {
     boxShadow: '0 0 8px rgba(16, 185, 129, 0.6)'
   },
   serverCategory: {
-    color: '#f59e0b',
-    fontSize: '14px',
-    fontWeight: 500,
     marginBottom: '8px'
+  },
+  categoryBadge: {
+    display: 'inline-block',
+    background: '#00121a',
+    color: '#ffd580',
+    border: '1px solid rgba(245,158,11,0.06)',
+    padding: '4px 8px',
+    fontFamily: 'monospace',
+    fontSize: '12px',
+    borderRadius: '6px'
   },
   serverDescription: {
     color: '#e2e8f0',
-    fontSize: '14px',
-    lineHeight: 1.5,
-    marginBottom: '16px'
+    fontSize: '13px',
+    lineHeight: 1.4,
+    marginBottom: '12px'
   },
   commandSection: {
-    background: 'rgba(0, 0, 0, 0.3)',
-    border: '1px solid rgba(56, 189, 248, 0.2)',
+    background: 'rgba(0, 0, 0, 0.35)',
+    border: '1px solid rgba(56, 189, 248, 0.06)',
     borderRadius: '6px',
-    padding: '12px'
+    padding: '10px'
   },
   commandLabel: {
-    color: '#94a3b8',
+    color: '#93a0b8',
     fontSize: '12px',
-    fontWeight: 500,
-    marginBottom: '6px'
+    fontWeight: 600,
+    marginBottom: '6px',
+    display: 'flex',
+    gap: '8px',
+    alignItems: 'center'
+  },
+  cmdBadge: {
+    display: 'inline-block',
+    background: '#00121a',
+    color: '#cfeffd',
+    fontFamily: 'monospace',
+    padding: '3px 6px',
+    borderRadius: '4px',
+    fontSize: '11px',
+    border: '1px solid rgba(56,189,248,0.06)'
   },
   commandText: {
     color: '#38bdf8',
@@ -262,17 +298,17 @@ const styles = {
     wordBreak: 'break-all'
   },
   footer: {
-    borderTop: '1px solid rgba(56, 189, 248, 0.2)',
-    paddingTop: '16px',
-    marginTop: '20px'
+    borderTop: '1px solid rgba(56, 189, 248, 0.06)',
+    paddingTop: '12px',
+    marginTop: '12px'
   },
   footerText: {
     color: '#94a3b8',
-    fontSize: '14px',
-    lineHeight: 1.6
+    fontSize: '13px',
+    lineHeight: 1.5
   },
   code: {
-    background: 'rgba(56, 189, 248, 0.1)',
+    background: 'rgba(56, 189, 248, 0.06)',
     color: '#38bdf8',
     padding: '2px 6px',
     borderRadius: '4px',

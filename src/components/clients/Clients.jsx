@@ -4,24 +4,33 @@ import { resumeData } from '../../resumeData';
 export default function Clients() {
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>Clients</h2>
+      <div style={styles.headerRow}>
+        <span style={styles.badge}>CLIENTS</span>
+        <h2 style={styles.title}>Clients</h2>
+      </div>
+
       <div style={styles.clientsList}>
         {resumeData.clients.map((client, index) => (
           <div key={index} style={styles.clientItem}>
-            {client.link ? (
-              <a 
-                href={client.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={styles.clientLink}
-              >
-                {client.name}
-              </a>
-            ) : (
-              <span style={styles.clientName}>{client.name}</span>
-            )}
-            <span style={styles.clientYears}>{client.years}</span>
-            <span style={styles.clientDescription}>— {client.description}</span>
+            <div style={styles.clientLeft}>
+              {client.link ? (
+                <a
+                  href={client.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={styles.clientLink}
+                >
+                  <span style={styles.clientBadge}>{client.name}</span>
+                </a>
+              ) : (
+                <span style={styles.clientBadge}>{client.name}</span>
+              )}
+            </div>
+
+            <div style={styles.clientMeta}>
+              <span style={styles.clientYears}>{client.years}</span>
+              <span style={styles.clientDescription}>— {client.description}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -31,69 +40,81 @@ export default function Clients() {
 
 const styles = {
   container: {
-    background: 'rgba(15, 23, 42, 0.7)',
-    border: '1px solid #23314d',
-    borderRadius: '12px',
-    padding: '24px',
-    marginTop: '24px'
+    background: 'rgba(9, 13, 22, 0.92)',
+    border: '1px solid rgba(56, 189, 248, 0.12)',
+    borderRadius: '8px',
+    padding: '12px',
+    marginTop: '12px'
+  },
+  headerRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px',
+    marginBottom: '12px'
+  },
+  badge: {
+    display: 'inline-block',
+    background: '#00121a',
+    color: '#00d9ff',
+    border: '1px solid rgba(56,189,248,0.14)',
+    padding: '6px 8px',
+    fontFamily: 'monospace',
+    fontSize: '12px',
+    borderRadius: '6px'
   },
   title: {
     color: '#38bdf8',
-    margin: '0 0 24px 0',
-    fontSize: '32px',
-    fontWeight: 600,
-    letterSpacing: '-0.01em',
-    borderBottom: '2px solid rgba(56, 189, 248, 0.3)',
-    paddingBottom: '12px'
+    margin: 0,
+    fontSize: '18px',
+    fontWeight: 700,
+    fontFamily: 'monospace'
   },
   clientsList: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '16px'
+    gap: '10px'
   },
   clientItem: {
-    padding: '12px 16px',
-    background: 'rgba(16, 185, 129, 0.05)',
-    border: '1px solid rgba(16, 185, 129, 0.2)',
-    borderRadius: '8px',
-    transition: 'all 0.3s ease',
+    padding: '10px 12px',
+    background: 'rgba(2,6,23,0.65)',
+    border: '1px solid rgba(56,189,248,0.06)',
+    borderRadius: '6px',
     display: 'flex',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    gap: '12px',
-    flexWrap: 'wrap'
+    gap: '12px'
   },
-  clientHeader: {
+  clientLeft: {
     display: 'flex',
     alignItems: 'center',
-    gap: '8px',
-    flexWrap: 'wrap'
+    gap: '8px'
+  },
+  clientBadge: {
+    display: 'inline-block',
+    background: '#00121a',
+    color: '#cfeffd',
+    border: '1px solid rgba(56,189,248,0.12)',
+    padding: '6px 8px',
+    fontFamily: 'monospace',
+    fontSize: '13px',
+    borderRadius: '6px'
+  },
+  clientMeta: {
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center'
   },
   clientLink: {
-    color: '#38bdf8',
-    fontSize: '14px',
-    fontWeight: 600,
-    textDecoration: 'none',
-    transition: 'all 0.2s ease',
-    cursor: 'pointer',
-    whiteSpace: 'nowrap'
-  },
-  clientName: {
-    color: '#e2e8f0',
-    fontSize: '14px',
-    fontWeight: 600,
-    whiteSpace: 'nowrap'
+    textDecoration: 'none'
   },
   clientYears: {
-    color: '#94a3b8',
-    fontSize: '13px',
-    fontWeight: 500,
-    whiteSpace: 'nowrap'
+    color: '#93a0b8',
+    fontSize: '13px'
   },
   clientDescription: {
     color: '#cbd5e1',
     fontSize: '13px',
-    lineHeight: 1.4,
-    whiteSpace: 'nowrap',
+    maxWidth: '480px',
     overflow: 'hidden',
     textOverflow: 'ellipsis'
   }
