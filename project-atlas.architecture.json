@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Mustafa McLinn project atlas",
+    "output": "project-atlas.html"
+  },
+  "components": [
+    {
+      "id": "p0n0",
+      "type": "external",
+      "label": "ParkingPet",
+      "pos": [
+        16,
+        55
+      ],
+      "size": [
+        166,
+        44
+      ]
+    },
+    {
+      "id": "p0n1",
+      "type": "backend",
+      "label": "Civic technology",
+      "pos": [
+        224,
+        55
+      ],
+      "size": [
+        193,
+        44
+      ]
+    },
+    {
+      "id": "p0n2",
+      "type": "external",
+      "label": "Parking signs, citation maps and reminders",
+      "pos": [
+        462,
+        55
+      ],
+      "size": [
+        360,
+        44
+      ]
+    },
+    {
+      "id": "p1n0",
+      "type": "external",
+      "label": "Teckguy",
+      "pos": [
+        16,
+        125
+      ],
+      "size": [
+        166,
+        44
+      ]
+    },
+    {
+      "id": "p1n1",
+      "type": "backend",
+      "label": "IT consulting",
+      "pos": [
+        224,
+        125
+      ],
+      "size": [
+        193,
+        44
+      ]
+    },
+    {
+      "id": "p1n2",
+      "type": "external",
+      "label": "Support intake and appointment scheduling",
+      "pos": [
+        462,
+        125
+      ],
+      "size": [
+        360,
+        44
+      ]
+    },
+    {
+      "id": "p2n0",
+      "type": "external",
+      "label": "RevisionFX.tech",
+      "pos": [
+        16,
+        195
+      ],
+      "size": [
+        166,
+        44
+      ]
+    },
+    {
+      "id": "p2n1",
+      "type": "backend",
+      "label": "Visual effects support",
+      "pos": [
+        224,
+        195
+      ],
+      "size": [
+        193,
+        44
+      ]
+    },
+    {
+      "id": "p2n2",
+      "type": "external",
+      "label": "Plugin troubleshooting and support resources",
+      "pos": [
+        462,
+        195
+      ],
+      "size": [
+        360,
+        44
+      ]
+    },
+    {
+      "id": "p3n0",
+      "type": "external",
+      "label": "Pleynice",
+      "pos": [
+        16,
+        265
+      ],
+      "size": [
+        166,
+        44
+      ]
+    },
+    {
+      "id": "p3n1",
+      "type": "backend",
+      "label": "Personal projects",
+      "pos": [
+        224,
+        265
+      ],
+      "size": [
+        193,
+        44
+      ]
+    },
+    {
+      "id": "p3n2",
+      "type": "external",
+      "label": "Code experiments and creative work",
+      "pos": [
+        462,
+        265
+      ],
+      "size": [
+        360,
+        44
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "p0e1",
+      "from": "p0n0",
+      "to": "p0n1"
+    },
+    {
+      "id": "p0e2",
+      "from": "p0n1",
+      "to": "p0n2"
+    },
+    {
+      "id": "p1e1",
+      "from": "p1n0",
+      "to": "p1n1"
+    },
+    {
+      "id": "p1e2",
+      "from": "p1n1",
+      "to": "p1n2"
+    },
+    {
+      "id": "p2e1",
+      "from": "p2n0",
+      "to": "p2n1"
+    },
+    {
+      "id": "p2e2",
+      "from": "p2n1",
+      "to": "p2n2"
+    },
+    {
+      "id": "p3e1",
+      "from": "p3n0",
+      "to": "p3n1"
+    },
+    {
+      "id": "p3e2",
+      "from": "p3n1",
+      "to": "p3n2"
+    }
+  ]
+}
