@@ -114,6 +114,17 @@ Personal GitHub profile and project portfolio.
 - Personal GitHub account showcasing various technical projects and contributions
 - Repository collection demonstrating coding skills and project work
 
+## Codex and AI projects
+
+| Project area | How I used AI |
+| :--- | :--- |
+| Portfolio and ParkingPet | Used Codex to publish this portfolio’s documentation and diagrams. Explored parking sign recognition, Oakland citation maps, and reminders for the ParkingPet concept. |
+| Voice assistants | Designed Vapi call flows for Teckguy scheduling, multilingual RE:Vision Effects support, and a campaign information line. |
+| Systems automation | Developed scripts for duplicate photo detection, Windows directory cleanup, and switching shell environments on macOS. Used AI to troubleshoot WSL and GPU configuration. |
+| Integrations | Explored connecting Microsoft To Do and Google Calendar to assistants, and using Model Context Protocol with local tools and Blender. |
+| Creative production | Used Sora and image generation for video storyboards, technical illustrations, brand artwork, and early Android game design. |
+| Research and prototypes | Used AI to develop civic technology proposals, research hardware, and plan a Coral TPU experiment for video deblinking. |
+
 ## Professional experience
 
 ### Teckguy
