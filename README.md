@@ -262,63 +262,45 @@ Ten recurring projects from my available ChatGPT and Codex history, ordered appr
 
 ## Client directory
 
-[Browse the live client directory](https://parkingpet.github.io/#clients) · [Explore the project atlas](#project-atlas)
+[View the stacked client cards](https://parkingpet.github.io/#clients)
 
-Twelve engagements span four practices. Select a practice below for the client list, engagement periods, and delivery details.
+**Charles Bonner Law** · 2004-2005  
+Litigation support and technical assistance during litigation and arbitrations
 
-<details open>
-<summary><strong>Infrastructure and communications</strong> · 3 engagements</summary>
+**David Quan Insurance** · 2012-2014  
+Infrastructure and Microsoft Office and email support
 
-At Lumibuild, the work started at the physical layer: racks, patch terminations, and Cat6a across six buildings. At LANgineers, the service layer was SIP telephony for more than 400 phones. Flo.Solutions brought the same operational focus to tenant administration through HaloPSA and Microsoft Graph.
+**Dr. Cox Dental Office** · 1999-2019  
+22-year partnership providing Dentrix database support and digital X-ray systems
 
-| Client | Period | Engagement |
-| :--- | :--- | :--- |
-| Flo.Solutions | 2024-2025 | HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations |
-| LANgineers | 2014 | Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones |
-| Lumibuild | 2025 | Wired 6 building IDF/MDF, installed racks/keystone jacks and Cat6a for Meter network appliances |
+**Dr. Rathod Dental Office** · 2019-2025  
+X-ray systems, Dentrix support, backups, printers, Server 2022 administration
 
-</details>
+**Eastside Arts Alliance** · 2019  
+Endpoint support, printer setups, Office instruction, email configuration
 
-<details>
-<summary><strong>Media and community arts</strong> · 3 engagements</summary>
+**Flo.Solutions** · 2024-2025  
+HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations
 
-A remote radio studio and a visual effects workstation have different failure modes. Poor Magazine needed storage, streaming, and a reliable path from studio to listener. RevisionFX needed reproducible production and test environments. Eastside Arts Alliance needed everyday endpoint and email support.
+**LANgineers** · 2014  
+Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones
 
-![Remote studio audio flows through the streaming service to listeners](studio-signal.svg)
+**LMI** · 2012  
+Broad small business tech support
 
-| Client | Period | Engagement |
-| :--- | :--- | :--- |
-| Eastside Arts Alliance | 2019 | Endpoint support, printer setups, Office instruction, email configuration |
-| Poor Magazine | 2019-2020 | Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services |
-| RevisionFX | 2004-2024 | Desktop/Hardware support, production and testing environments, developer-adjacent troubleshooting |
+**Lumibuild** · 2025  
+Wired 6 building IDF/MDF, installed racks/keystone jacks and Cat6a for Meter network appliances
 
-</details>
+**Osha Neumann** · 1999-2023  
+Long-term personal support and voice-to-text tooling configuration for two decades
 
-<details>
-<summary><strong>Dental systems</strong> · 2 engagements</summary>
+**Poor Magazine** · 2019-2020  
+Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services
 
-Both practices depended on Dentrix and digital imaging. The work connected the clinical workstation to the database, imaging hardware, and backups that staff relied on during appointments.
+![Remote studio streaming signal path](studio-signal.svg)
 
-| Client | Period | Engagement |
-| :--- | :--- | :--- |
-| Dr. Cox Dental Office | 1999-2019 | 22-year partnership providing Dentrix database support and digital X-ray systems |
-| Dr. Rathod Dental Office | 2019-2025 | X-ray systems, Dentrix support, backups, printers, Server 2022 administration |
-
-</details>
-
-<details>
-<summary><strong>Professional and individual support</strong> · 4 engagements</summary>
-
-These engagements ranged from litigation and arbitration support to voice dictation, email configuration, and small-business infrastructure. The common requirement was making the tools fit the person using them.
-
-| Client | Period | Engagement |
-| :--- | :--- | :--- |
-| Charles Bonner Law | 2004-2005 | Litigation support and technical assistance during litigation and arbitrations |
-| David Quan Insurance | 2012-2014 | Infrastructure and Microsoft Office and email support |
-| LMI | 2012 | Broad small business tech support |
-| Osha Neumann | 1999-2023 | Long-term personal support and voice-to-text tooling configuration for two decades |
-
-</details>
+**RevisionFX** · 2004-2024  
+Desktop/Hardware support, production and testing environments, developer-adjacent troubleshooting
 
 ## Education
 
@@ -476,7 +458,7 @@ Model Context Protocol servers for enhanced DevOps automation and infrastructure
 | Server | Category | Purpose | Command listed on the site |
 | :--- | :--- | :--- | :--- |
 | AWS Documentation MCP | Cloud Services | Access AWS service documentation and best practices | `uvx awslabs.aws-documentation-mcp-server@latest` |
-| GitHub MCP Server | Version Control | Interact with GitHub repositories, issues, and pull requests | `uvx github-mcp-server@latest` |
+| GitHub MCP Server | Version Control | Interact with GitHub repositories, issues, and pull requests | [GitHub installation guide](https://github.com/github/github-mcp-server) |
 | Docker MCP Server | Containerization | Manage Docker containers, images, and compose files | `uvx docker-mcp-server@latest` |
 | Kubernetes MCP Server | Orchestration | Deploy and manage Kubernetes clusters and resources | `uvx kubernetes-mcp-server@latest` |
 | Terraform MCP Server | Infrastructure | Infrastructure as Code management and deployment | `uvx terraform-mcp-server@latest` |
@@ -510,6 +492,78 @@ xychart-beta
 ```
 
 [Repository traffic report (maintainer access)](https://github.com/Parkingpet/parkingpet.github.io/graphs/traffic) · [Commit history](https://github.com/Parkingpet/parkingpet.github.io/commits/main/) · [Pages deployment runs](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
+
+### Publisher-maintained MCP servers
+
+| Server | Use case | Setup |
+| :--- | :--- | :--- |
+| Microsoft Learn | Search Microsoft documentation and retrieve code samples. | [Publisher guide](https://github.com/MicrosoftDocs/mcp) |
+| Playwright MCP | Inspect a browser page and test web interactions. | [Publisher guide](https://github.com/microsoft/playwright-mcp) |
+| MCP Git reference server | Inspect local repository history and diffs. | [Publisher guide](https://github.com/modelcontextprotocol/servers/tree/main/src/git) |
+
+### Where to get skills
+
+Start with the [OpenAI Codex skills catalog](https://github.com/openai/skills) or [Anthropic’s example skills](https://github.com/anthropics/skills). Review the skill’s instructions, bundled scripts, license, and requested access before installing it. Use a reviewed commit when sharing an installation across a team.
+
+## Build a Docker MCP server with a custom skill
+
+This local lab pairs a Python MCP tool that measures UTF-8 text with a Codex skill that tells the agent when and how to use it. Docker carries the server over standard input and output. The client discovers the skill from the project directory.
+
+**1. Create the server and skill in a new project.** Run in a POSIX shell with Docker and the Codex CLI available.
+
+```sh
+mkdir -p text-lab/.agents/skills/text-budget
+cd text-lab
+cat > server.py <<'PY'
+from mcp.server.fastmcp import FastMCP
+
+server = FastMCP("text-lab")
+
+@server.tool()
+def measure_text(text: str) -> dict[str, int]:
+    """Measure Unicode code points and UTF-8 payload size."""
+    return {"code_points": len(text), "utf8_bytes": len(text.encode("utf-8"))}
+
+if __name__ == "__main__":
+    server.run(transport="stdio")
+PY
+cat > Dockerfile <<'DOCKER'
+FROM python:3.12-slim
+WORKDIR /app
+RUN pip install --no-cache-dir 'mcp>=1.9,<2'
+COPY server.py .
+USER 65532:65532
+ENTRYPOINT ["python", "-B", "/app/server.py"]
+DOCKER
+cat > .agents/skills/text-budget/SKILL.md <<'SKILL'
+---
+name: text-budget
+description: Measure the UTF-8 byte size of supplied text against a byte budget.
+---
+Pass the exact supplied text to the text-lab measure_text tool.
+Report code points and UTF-8 bytes separately. If given a byte limit,
+report how many bytes remain or how many bytes exceed the limit.
+SKILL
+```
+
+**2. Build and register the container.** The client launches a disposable process with no network, published ports, or host mounts. Keep standard output reserved for MCP messages.
+
+```sh
+docker build -t text-lab-mcp:local .
+codex mcp add text-lab -- docker run --rm -i --network none --read-only text-lab-mcp:local
+codex mcp list
+codex
+```
+
+**3. Verify the integration.** Start Codex in the project directory, invoke the skill with the prompt below, and check the tool call. For the literal text shown, the expected result is **4 code points, 5 UTF-8 bytes, and 3 bytes remaining**.
+
+```text
+$text-budget Measure café against an 8-byte budget. Exclude the surrounding prose.
+```
+
+To extend the lab, add another typed function decorated with `@server.tool()`, rebuild the image, and update the skill instructions to describe its inputs and expected output. Restart the MCP client after rebuilding. To unregister the server, run `codex mcp remove text-lab`.
+
+[Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk) · [Codex MCP configuration](https://developers.openai.com/codex/mcp/) · [Codex agent skills](https://developers.openai.com/codex/skills/)
 
 ## Application components
 
