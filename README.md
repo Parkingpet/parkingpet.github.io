@@ -1,28 +1,45 @@
-<h1 align="center">Mustafa “Moose” McLinn</h1>
-<p align="center"><strong>Systems engineering · Cloud infrastructure · DevOps</strong><br>Oakland, California</p>
+# Mustafa “Moose” McLinn
 
-```text
-    |\  /|    ___    ___    ___   ____
-    | \/ |   /   \  /   \  / __| | ___|
-    | |  |  | (_) || (_) | \__ \ | _|
-    |_|  |_|  \___/  \___/  |___/ |____|
-```
+**Systems Engineer · Oakland, California**
 
-**[Explore the live portfolio ↗](https://parkingpet.github.io/)** · [Open the toolkit](https://parkingpet.github.io/#tools) · [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9)
+[View my portfolio](https://parkingpet.github.io/) · [Try the DevOps toolkit](https://parkingpet.github.io/#tools) · [Connect on LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9)
 
-I’ve rolled out AWS production updates for a visual effects developer, supported dental imaging systems, and connected a remote studio to a community radio station. This portfolio brings those projects together with the tools I use to troubleshoot infrastructure.
+I’m an independent technology consultant with more than 19 years of experience in systems administration and technical support. I started out building a computer graphics department. Since then, I’ve helped artists troubleshoot rendering workstations, kept dental practices connected to their imaging systems, and built a remote studio for community radio.
 
-## Find your way around
+## Selected work
 
-| Explore | Start here |
+**RE:Vision Effects · Visual effects infrastructure**  
+I supported artists in Japan, India, and Russia using visual effects software on Windows, macOS, and Linux. My work ranged from diagnosing installation and network issues to rolling out production updates on AWS.
+
+**Poor Magazine · Community broadcasting**  
+I built a remote radio studio and set up streaming so contributors could get their programs on air. The work brought together audio routing, networking, and an interest I still pursue as a licensed amateur radio operator.
+
+**LANgineers · Business telephony**  
+I worked on the SIP softswitch serving more than 40 clients, connecting my networking background with the day-to-day demands of business phone service.
+
+[Browse projects](https://parkingpet.github.io/#projects) · [Explore my work history](https://parkingpet.github.io/#experience)
+
+## Technical focus
+
+| Practice | Tools and platforms |
 | :--- | :--- |
-| Engineering work | [Projects](https://parkingpet.github.io/#projects) · [Technical skills](https://parkingpet.github.io/#skills) |
-| Professional background | [Experience](https://parkingpet.github.io/#experience) · [Clients](https://parkingpet.github.io/#clients) · [Education](https://parkingpet.github.io/#education) |
-| Developer resources | [DevOps tools](https://parkingpet.github.io/#tools) · [MCP servers](https://parkingpet.github.io/#mcp-servers) |
+| Identity and endpoint management | Microsoft Entra ID, Active Directory, Okta, Intune, Jamf |
+| Cloud and infrastructure | AWS, Azure, Google Cloud, VMware, Docker |
+| Automation and delivery | PowerShell, Bash, Python, Ansible, GitHub Actions |
+| Networking and voice | DNS, DHCP, VLANs, VPNs, SIP |
+
+## About this repository
+
+This React portfolio includes a [browser toolkit](https://parkingpet.github.io/#tools) for tasks such as formatting JSON and calculating subnets. The [page layout](src/App.jsx) connects the résumé, projects, toolkit, and [MCP resources](https://parkingpet.github.io/#mcp-servers).
+
+<details>
+<summary><strong>Site architecture and local development</strong></summary>
 
 ## From source to site
 
+
 The [deployment workflow](.github/workflows/deploy.yml) builds the React application with Vite. GitHub Pages serves the resulting static files to visitors.
+
 
 ```mermaid
 flowchart TD
@@ -33,8 +50,10 @@ flowchart TD
   pages --> browser[Portfolio in the browser]
 ```
 
+
 <details>
 <summary>Architecture map source for Archify</summary>
+
 
 ```json
 {
@@ -55,11 +74,15 @@ flowchart TD
 }
 ```
 
+
 </details>
+
 
 ## Run locally
 
+
 Use Node.js 24 or newer and pnpm 10.23.0.
+
 
 ```sh
 git clone https://github.com/Parkingpet/parkingpet.github.io.git
@@ -68,6 +91,10 @@ pnpm install
 pnpm dev
 ```
 
+
 Open the URL printed by Vite. To check a production build locally, run `pnpm build` followed by `pnpm preview`.
 
+
 [Page layout](src/App.jsx) · [Components](src/components) · [Deployment history](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml) · [License](LICENSE)
+
+</details>
