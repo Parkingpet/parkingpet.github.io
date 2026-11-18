@@ -262,20 +262,61 @@ Ten recurring projects from my available ChatGPT and Codex history, ordered appr
 
 ## Client directory
 
+[Browse the live client directory](https://parkingpet.github.io/#clients) · [Explore the project atlas](#project-atlas)
+
+Twelve engagements span four practices. Select a practice below for the client list, engagement periods, and delivery details.
+
+<details open>
+<summary><strong>Infrastructure and communications</strong> · 3 engagements</summary>
+
+At Lumibuild, the work started at the physical layer: racks, patch terminations, and Cat6a across six buildings. At LANgineers, the service layer was SIP telephony for more than 400 phones. Flo.Solutions brought the same operational focus to tenant administration through HaloPSA and Microsoft Graph.
+
 | Client | Period | Engagement |
 | :--- | :--- | :--- |
-| RevisionFX | 2004-2024 | Desktop/Hardware support, production and testing environments, developer-adjacent troubleshooting |
-| Poor Magazine | 2019-2020 | Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services |
-| Dr. Rathod Dental Office | 2019-2025 | X-ray systems, Dentrix support, backups, printers, Server 2022 administration |
 | Flo.Solutions | 2024-2025 | HaloPSA API configuration, Microsoft 365 automation via Graph API for MSP operations |
-| Eastside Arts Alliance | 2019 | Endpoint support, printer setups, Office instruction, email configuration |
 | LANgineers | 2014 | Arc SoftSwitch SIP phone deployment for 40+ clients supporting 400+ VoIP phones |
+| Lumibuild | 2025 | Wired 6 building IDF/MDF, installed racks/keystone jacks and Cat6a for Meter network appliances |
+
+</details>
+
+<details>
+<summary><strong>Media and community arts</strong> · 3 engagements</summary>
+
+A remote radio studio and a visual effects workstation have different failure modes. Poor Magazine needed storage, streaming, and a reliable path from studio to listener. RevisionFX needed reproducible production and test environments. Eastside Arts Alliance needed everyday endpoint and email support.
+
+| Client | Period | Engagement |
+| :--- | :--- | :--- |
+| Eastside Arts Alliance | 2019 | Endpoint support, printer setups, Office instruction, email configuration |
+| Poor Magazine | 2019-2020 | Radio station build, remote studio setup, NAS implementation, web services, Mac/PC support, streaming services |
+| RevisionFX | 2004-2024 | Desktop/Hardware support, production and testing environments, developer-adjacent troubleshooting |
+
+</details>
+
+<details>
+<summary><strong>Dental systems</strong> · 2 engagements</summary>
+
+Both practices depended on Dentrix and digital imaging. The work connected the clinical workstation to the database, imaging hardware, and backups that staff relied on during appointments.
+
+| Client | Period | Engagement |
+| :--- | :--- | :--- |
 | Dr. Cox Dental Office | 1999-2019 | 22-year partnership providing Dentrix database support and digital X-ray systems |
+| Dr. Rathod Dental Office | 2019-2025 | X-ray systems, Dentrix support, backups, printers, Server 2022 administration |
+
+</details>
+
+<details>
+<summary><strong>Professional and individual support</strong> · 4 engagements</summary>
+
+These engagements ranged from litigation and arbitration support to voice dictation, email configuration, and small-business infrastructure. The common requirement was making the tools fit the person using them.
+
+| Client | Period | Engagement |
+| :--- | :--- | :--- |
+| Charles Bonner Law | 2004-2005 | Litigation support and technical assistance during litigation and arbitrations |
 | David Quan Insurance | 2012-2014 | Infrastructure and Microsoft Office and email support |
 | LMI | 2012 | Broad small business tech support |
-| Charles Bonner Law | 2004-2005 | Litigation support and technical assistance during litigation and arbitrations |
 | Osha Neumann | 1999-2023 | Long-term personal support and voice-to-text tooling configuration for two decades |
-| Lumibuild | 2025 | Wired 6 building IDF/MDF, installed racks/keystone jacks and Cat6a for Meter network appliances |
+
+</details>
 
 ## Education
 
