@@ -284,6 +284,8 @@ At Lumibuild, the work started at the physical layer: racks, patch terminations,
 
 A remote radio studio and a visual effects workstation have different failure modes. Poor Magazine needed storage, streaming, and a reliable path from studio to listener. RevisionFX needed reproducible production and test environments. Eastside Arts Alliance needed everyday endpoint and email support.
 
+![Remote studio audio flows through the streaming service to listeners](studio-signal.svg)
+
 | Client | Period | Engagement |
 | :--- | :--- | :--- |
 | Eastside Arts Alliance | 2019 | Endpoint support, printer setups, Office instruction, email configuration |
