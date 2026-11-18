@@ -540,7 +540,7 @@ Model Context Protocol servers for enhanced DevOps automation and infrastructure
 
 ## Visitor diagnostics
 
-[Check your browser, operating system, and public IP](https://parkingpet.github.io/visitor.html) · [Browse public visitor reports](https://github.com/Parkingpet/parkingpet.github.io/issues?q=is%3Aissue+in%3Atitle+%22Visitor+diagnostics%22)
+[Check your browser, operating system, and public IP](https://parkingpet.github.io/public/visitor.html) · [Browse public visitor reports](https://github.com/Parkingpet/parkingpet.github.io/issues?q=is%3Aissue+in%3Atitle+%22Visitor+diagnostics%22)
 
 Choose the fields you want to publish, review the report on GitHub, and submit it to add it to the public collection. IP lookup and sharing are optional.
 
