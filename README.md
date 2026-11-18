@@ -1,337 +1,73 @@
-# Mustafa "Moose" McLinn
+<h1 align="center">Mustafa “Moose” McLinn</h1>
+<p align="center"><strong>Systems engineering · Cloud infrastructure · DevOps</strong><br>Oakland, California</p>
 
-> **Interactive DevOps Resume Platform** | React 18.2 + Vite 7.3 | DevOps Toolkit | <180KB Gzipped
-
-[![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
-[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white&style=flat-square)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev)
-[![Node.js](https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white&style=flat-square)](https://nodejs.org)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-
-**[Live Site](https://parkingpet.github.io)** • **[Repository](https://github.com/Parkingpet/parkingpet.github.io)**
-
----
-
-## Performance Highlights
-
-| **Metric** | **Target** | **Actual** |
-|:---|:---:|:---:|
-| Build Time | ~1s | **939ms** |
-| Bundle Size | <180KB | **69.05KB** gzipped |
-| Lighthouse Score | 95+ | **95+** |
-| First Paint | <0.8s | **<0.8s** |
-| Time to Interactive | <1.2s | **<1.2s** |
-| API Response | <25ms p95 | **<18ms** |
-| Uptime | 99.95% | **99.97%** |
-
----
-
-## Key Features
-
-### DevOps Tools Suite (20+ Utilities)
-
-| **Category** | **Tools** |
-|:---|:---|
-| Encoding & Hashing | Base64 • SHA-256 • URL Encoding |
-| Data Processing | JSON • YAML to JSON • Regex |
-| Utilities | Timestamp • UUID • JWT Decoder • MAC Formatter • IP Converter • Subnet Calculator |
-| References | CLI Commands • Infrastructure • DevOps Tools • MS Admin • Sed/Awk |
-
-### Professional Portfolio
-
-| **Section** | **Description** |
-|:---|:---|
-| Summary | Professional overview & core competencies |
-| Skills | Technical expertise organized by category |
-| Projects | Portfolio with descriptions & links |
-| Experience | Work history with key achievements |
-| Education | Educational background |
-| Clients | Notable partnerships & long-term relationships |
-
----
-
-## Technology Stack
-
-### Frontend & Build
-
-| **Layer** | **Technology** |
-|:---|:---|
-| Frontend | React 18.2 • Vite 7.3 • JavaScript ES2020 |
-| Styling | CSS-in-JS • CSS Variables • Grid/Flexbox |
-| State | React Hooks (useState, useEffect, useContext) |
-| API | GraphQL • REST • JSON • Fetch |
-| Build Tools | Vite • ESLint • Prettier |
-
-### Deployment & CI/CD
-
-| **Component** | **Details** |
-|:---|:---|
-| Hosting | GitHub Pages |
-| CI/CD | GitHub Actions |
-| Version Control | Git • GitHub |
-| Authentication | SSH |
-
----
-
-## Project Structure
-
-```
-src/
-├── App.jsx                 # Root component
-├── main.jsx                # Entry point
-├── index.css               # Global styles
-├── resumeData.js           # Data source
-└── components/
-    ├── header/             # Navigation
-    ├── summary/            # Professional summary
-    ├── skills/             # Technical skills
-    ├── tools/              # DevOps tools
-    ├── projects/           # Portfolio
-    ├── experience/         # Work history
-    ├── education/          # Education
-    ├── clients/            # Partnerships
-    ├── loading/            # Loading animation
-    ├── footer/             # Footer
-    └── mcp/                # MCP servers
+```text
+    |\  /|    ___    ___    ___   ____
+    | \/ |   /   \  /   \  / __| | ___|
+    | |  |  | (_) || (_) | \__ \ | _|
+    |_|  |_|  \___/  \___/  |___/ |____|
 ```
 
----
+**[Explore the live portfolio ↗](https://parkingpet.github.io/)** · [Open the toolkit](https://parkingpet.github.io/#tools) · [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9)
 
-## CI/CD Pipeline
+I’ve rolled out AWS production updates for a visual effects developer, supported dental imaging systems, and connected a remote studio to a community radio station. This portfolio brings those projects together with the tools I use to troubleshoot infrastructure.
 
-### GitHub Actions Workflow
+## Find your way around
 
-| **Stage** | **Action** |
-|:---|:---|
-| Trigger | Push to `main` branch |
-| Checks | ESLint • Build verification |
-| Deploy | GitHub Pages deployment |
-| Result | Zero-downtime deployment |
+| Explore | Start here |
+| :--- | :--- |
+| Engineering work | [Projects](https://parkingpet.github.io/#projects) · [Technical skills](https://parkingpet.github.io/#skills) |
+| Professional background | [Experience](https://parkingpet.github.io/#experience) · [Clients](https://parkingpet.github.io/#clients) · [Education](https://parkingpet.github.io/#education) |
+| Developer resources | [DevOps tools](https://parkingpet.github.io/#tools) · [MCP servers](https://parkingpet.github.io/#mcp-servers) |
 
-**Status**: [![Deploy](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Parkingpet/parkingpet.github.io/actions)
+## From source to site
 
----
+The [deployment workflow](.github/workflows/deploy.yml) builds the React application with Vite. GitHub Pages serves the resulting static files to visitors.
 
-## Accessibility & Browser Support
+```mermaid
+flowchart TD
+  push[Push to main] --> build[Vite build]
+  manual[Manual workflow run] --> build
+  build --> artifact[Upload dist artifact]
+  artifact --> pages[Deploy to GitHub Pages]
+  pages --> browser[Portfolio in the browser]
+```
 
-### Accessibility Features
+<details>
+<summary>Architecture map source for Archify</summary>
 
-| **Feature** | **Status** |
-|:---|:---:|
-| Semantic HTML | ✓ |
-| ARIA Labels | ✓ |
-| Keyboard Navigation | ✓ |
-| WCAG AA Contrast | ✓ |
-| Focus Indicators | ✓ |
-| Skip Links | ✓ |
+```json
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {"title": "ParkingPet portfolio", "output": "portfolio.html"},
+  "components": [
+    {"id":"repo","type":"external","label":"Repository","sublabel":"React source","pos":[40,100],"size":[150,64]},
+    {"id":"build","type":"backend","label":"GitHub Actions","sublabel":"Vite build","pos":[260,100],"size":[150,64]},
+    {"id":"pages","type":"cloud","label":"GitHub Pages","sublabel":"Static hosting","pos":[480,100],"size":[150,64]},
+    {"id":"visitor","type":"external","label":"Visitor","sublabel":"Browser","pos":[700,100],"size":[150,64]}
+  ],
+  "connections": [
+    {"id":"checkout","from":"repo","to":"build"},
+    {"id":"publish","from":"build","to":"pages","label":"dist"},
+    {"id":"serve","from":"pages","to":"visitor","label":"HTTPS"}
+  ]
+}
+```
 
-### Browser Compatibility
+</details>
 
-| **Browser** | **Support** |
-|:---|:---:|
-| Chrome | Latest 2 versions |
-| Firefox | Latest 2 versions |
-| Safari | Latest 2 versions |
-| Edge | Latest 2 versions |
-| Mobile | iOS 12+, Android 8+ |
+## Run locally
 
----
+Use Node.js 24 or newer and pnpm 10.23.0.
 
-## Resources & Links
+```sh
+git clone https://github.com/Parkingpet/parkingpet.github.io.git
+cd parkingpet.github.io
+pnpm install
+pnpm dev
+```
 
-### Project Resources
+Open the URL printed by Vite. To check a production build locally, run `pnpm build` followed by `pnpm preview`.
 
-| **Resource** | **Link** |
-|:---|:---|
-| Live Site | https://parkingpet.github.io |
-| GitHub Repo | https://github.com/Parkingpet/parkingpet.github.io |
-| Issues | https://github.com/Parkingpet/parkingpet.github.io/issues |
-| Pull Requests | https://github.com/Parkingpet/parkingpet.github.io/pulls |
-
-### Documentation
-
-| **Resource** | **Link** |
-|:---|:---|
-| React Docs | https://react.dev |
-| Vite Docs | https://vitejs.dev |
-| Node.js Docs | https://nodejs.org/docs |
-| GraphQL | https://graphql.org |
-
----
-
-## Contributing
-
-### Contribution Steps
-
-| **Step** | **Action** |
-|:---|:---|
-| 1 | Fork the repository |
-| 2 | Create a feature branch |
-| 3 | Commit your changes |
-| 4 | Push to your branch |
-| 5 | Open a Pull Request |
-
----
-
-## License & Status
-
-### Project Information
-
-| **Item** | **Value** |
-|:---|:---|
-| License | MIT - See [LICENSE](LICENSE) |
-| Last Updated | March 2026 |
-| Status | Active Development |
-| Uptime | 99.97% |
-| Version | 1.0.0 |
-
----
-
-<div align="center">
-
-### Built with dedication by Parkingpet
-
-[GitHub](https://github.com/Parkingpet) • [LinkedIn](https://www.linkedin.com/in/mustafa-mclinn-a55a9a9) • [Email](mailto:mustafa.mclinn@outlook.com)
-
-</div>
-
----
-
-## DevOps & Development Tools
-
-### Cloud Platforms
-
-| **Platform** | **Services** |
-|:---|:---|
-| AWS | EC2 • S3 • IAM • CloudFront • Route 53 |
-| GCP | Compute • Storage • SQL • Functions • Cloud Run |
-| Azure | Portal • DevOps • Intune • Entra • Admin |
-
-### Containers & Orchestration
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Docker | Container platform & registry |
-| Kubernetes | Container orchestration |
-| Podman | Container engine |
-
-### Infrastructure as Code
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Terraform | Infrastructure automation |
-| Ansible | Configuration management |
-| Chef | Infrastructure automation |
-| Puppet | Infrastructure as Code |
-
-### CI/CD Platforms
-
-| **Platform** | **Features** |
-|:---|:---|
-| GitHub Actions | CI/CD automation |
-| GitLab CI | DevOps platform |
-| Jenkins | Automation server |
-| CircleCI | CI/CD platform |
-| Bitbucket | Git repository |
-
-### Monitoring & Observability
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Prometheus | Metrics monitoring |
-| Grafana | Visualization platform |
-| Datadog | Cloud monitoring |
-| New Relic | Application monitoring |
-| Splunk | Log analysis |
-| Elastic Stack | Search & analytics |
-
-### Databases
-
-| **Database** | **Type** |
-|:---|:---|
-| PostgreSQL | Relational |
-| MongoDB | NoSQL |
-| Redis | In-memory cache |
-| MySQL | Relational |
-| Elasticsearch | Search engine |
-
-### Web Servers & Proxies
-
-| **Server** | **Purpose** |
-|:---|:---|
-| NGINX | Web server & proxy |
-| Apache | Web server |
-| HAProxy | Load balancer |
-
-### Version Control
-
-| **Platform** | **Features** |
-|:---|:---|
-| Git | Version control |
-| GitHub | Repository hosting |
-| GitLab | DevOps platform |
-| Bitbucket | Git hosting |
-
-### Project Management
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Jira | Issue tracking |
-| Confluence | Documentation |
-| Trello | Task management |
-
-### Service Mesh & Discovery
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Consul | Service mesh |
-| Vault | Secrets management |
-| Istio | Service mesh |
-| Linkerd | Service mesh |
-
-### Development Tools
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| VS Code | Code editor |
-| Postman | API testing |
-| Insomnia | API client |
-| Docker Hub | Container registry |
-
-### Documentation & Learning
-
-| **Resource** | **Content** |
-|:---|:---|
-| MDN Web Docs | Web documentation |
-| React Docs | React documentation |
-| Vite Docs | Vite documentation |
-| Node.js Docs | Node.js documentation |
-| GraphQL | GraphQL documentation |
-
-### Testing & Quality
-
-| **Tool** | **Purpose** |
-|:---|:---|
-| Jest | JavaScript testing |
-| Cypress | E2E testing |
-| Lighthouse | Performance audit |
-| SonarQube | Code quality |
-
-### Security
-
-| **Resource** | **Purpose** |
-|:---|:---|
-| OWASP | Security standards |
-| Snyk | Vulnerability scanning |
-| Let's Encrypt | SSL certificates |
-| NIST | Cybersecurity guidelines |
-
-### Package Registries
-
-| **Registry** | **Language** |
-|:---|:---|
-| npm | JavaScript |
-| PyPI | Python |
-| Maven | Java |
-| RubyGems | Ruby |
-| Cargo | Rust |
+[Page layout](src/App.jsx) · [Components](src/components) · [Deployment history](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml) · [License](LICENSE)
