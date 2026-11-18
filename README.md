@@ -84,6 +84,15 @@ Technical depth spans configuration management, container orchestration, infrast
 
 ## Projects
 
+### Project atlas
+
+![Four project tracks connecting ParkingPet, Teckguy, RevisionFX.tech and Pleynice to their focus and applications](project-atlas.svg)
+
+Read each row from left to right. ParkingPet explores how drivers might interpret parking restrictions. Teckguy brings callers from an initial support question to an appointment. RevisionFX.tech focuses on the operating system, host application, and plugin details needed to troubleshoot visual effects software. Pleynice collects smaller personal experiments.
+
+[Open the full-size map](project-atlas.svg) · [Archify diagram source](project-atlas.architecture.json)
+
+
 ### [ParkingPet](https://github.com/Parkingpet)
 
 Smart parking platform concept and public project site.
@@ -100,12 +109,12 @@ Technical support and development resources.
 - GitHub repository for RevisionFX technical resources and support tools
 - Development work supporting video plugin infrastructure and customer solutions
 
-### [Teckguy](https://github.com/teckguy)
+### [Teckguy](https://teckguy.com)
 
-Technical consulting and IT support GitHub profile.
+Technology consulting and support for individuals and small businesses.
 
-- GitHub profile for Teckguy consulting services and technical projects
-- Repository collection for IT infrastructure and automation work
+- Troubleshooting for endpoints, networks, and business phone systems.
+- Voice assistant workflows for support intake and scheduling.
 
 ### [Pleynice](https://github.com/pleynice)
 
@@ -427,6 +436,25 @@ Model Context Protocol servers for enhanced DevOps automation and infrastructure
 | PostgreSQL MCP Server | Database | Database management and query execution | `uvx postgresql-mcp-server@latest` |
 
 [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/)
+
+## Repository traffic
+
+GitHub Traffic reported **1 repository page view from 1 unique visitor** in the 14-day window checked on November 17, 2026. The same report recorded **11 clones from 9 unique cloners**. The Overview page accounted for the recorded view. This dated snapshot measures activity on github.com. Visits to the separately hosted portfolio at parkingpet.github.io fall outside this report.
+
+| GitHub activity | Total | Unique |
+| :--- | ---: | ---: |
+| Repository page views | 1 | 1 visitor |
+| Repository clones | 11 | 9 cloners |
+
+```mermaid
+xychart-beta
+    title "Repository activity in the reporting window"
+    x-axis ["Views", "Visitors", "Clones", "Cloners"]
+    y-axis "Count" 0 --> 12
+    bar [1, 1, 11, 9]
+```
+
+[Repository traffic report (maintainer access)](https://github.com/Parkingpet/parkingpet.github.io/graphs/traffic) · [Commit history](https://github.com/Parkingpet/parkingpet.github.io/commits/main/) · [Pages deployment runs](https://github.com/Parkingpet/parkingpet.github.io/actions/workflows/deploy.yml)
 
 ## Application components
 
