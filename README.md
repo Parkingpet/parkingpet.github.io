@@ -538,6 +538,12 @@ Model Context Protocol servers for enhanced DevOps automation and infrastructure
 
 [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/)
 
+## Visitor diagnostics
+
+[Check your browser, operating system, and public IP](https://parkingpet.github.io/visitor.html) · [Browse public visitor reports](https://github.com/Parkingpet/parkingpet.github.io/issues?q=is%3Aissue+in%3Atitle+%22Visitor+diagnostics%22)
+
+Choose the fields you want to publish, review the report on GitHub, and submit it to add it to the public collection. IP lookup and sharing are optional.
+
 ## Repository traffic
 
 GitHub Traffic reported **1 repository page view from 1 unique visitor** in the 14-day window checked on November 17, 2026. The same report recorded **11 clones from 9 unique cloners**. The Overview page accounted for the recorded view. This dated snapshot measures activity on github.com. Visits to the separately hosted portfolio at parkingpet.github.io fall outside this report.
