@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const mcpServers = [
+  {"name":"Microsoft Learn","description":"Search Microsoft documentation and retrieve code samples.","category":"Documentation","url":"https://github.com/MicrosoftDocs/mcp"},
+  {"name":"Playwright MCP","description":"Inspect a browser page and test web interactions.","category":"Browser testing","url":"https://github.com/microsoft/playwright-mcp"},
+  {"name":"MCP Git reference server","description":"Inspect local repository history and diffs.","category":"Version control","url":"https://github.com/modelcontextprotocol/servers/tree/main/src/git"},
   {
     name: "AWS Documentation MCP",
     description: "Access AWS service documentation and best practices",
@@ -11,7 +14,7 @@ const mcpServers = [
   {
     name: "GitHub MCP Server",
     description: "Interact with GitHub repositories, issues, and pull requests",
-    command: "uvx github-mcp-server@latest",
+    url: "https://github.com/github/github-mcp-server",
     category: "Version Control",
     status: "Active"
   },
@@ -109,33 +112,24 @@ export default function MCPServers() {
                   <div style={styles.serverName}>{server.name}</div>
                   <div style={styles.serverStatus}>
                     <span style={styles.statusDot}></span>
-                    {server.status}
+                    {server.url ? "Publisher guide" : server.status}
                   </div>
                 </div>
                 
                 <div style={styles.serverCategory}><span style={styles.categoryBadge}>{server.category}</span></div>
                 <div style={styles.serverDescription}>{server.description}</div>
                 
-                <div style={styles.commandSection}>
+                {server.url ? <a href={server.url} style={styles.link}>Publisher documentation</a> : <div style={styles.commandSection}>
                   <div style={styles.commandLabel}><span style={styles.cmdBadge}>CMD</span> Installation Command:</div>
                   <div style={styles.commandText}>{server.command}</div>
-                </div>
+                </div>}
               </div>
             ))}
           </div>
           
           <div style={styles.footer}>
             <div style={styles.footerText}>
-              <strong>Note:</strong> MCP servers require <code style={styles.code}>uv</code> and <code style={styles.code}>uvx</code> to be installed. 
-              Install with: <code style={styles.code}>pip install uv</code> or visit{' '}
-              <a 
-                href="https://docs.astral.sh/uv/getting-started/installation/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={styles.link}
-              >
-                uv installation guide
-              </a>
+              <a style={styles.link} href="https://github.com/Parkingpet/parkingpet.github.io#build-a-docker-mcp-server-with-a-custom-skill">Build a Docker MCP server with a custom skill</a> · <a style={styles.link} href="https://github.com/openai/skills">OpenAI skills</a> · <a style={styles.link} href="https://github.com/anthropics/skills">Anthropic skills</a>
             </div>
           </div>
         </>
